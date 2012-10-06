@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iAiaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iAiaAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* iAiaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iAiaViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
+		E6249757118F7B9F00D9BA93 /* cscImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E6249756118F7B9F00D9BA93 /* cscImage.png */; };
+		E62497F7118F816C00D9BA93 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E62497F6118F816C00D9BA93 /* icon.png */; };
+		E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */; };
+		E686F4B1116E529800FE7ADE /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */; };
+		E686F4B3116E530700FE7ADE /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E686F4B2116E530700FE7ADE /* PersonTableViewCell.xib */; };
+		E68F18661196BFA5002E9644 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F185B1196BFA5002E9644 /* NSObject+SBJSON.m */; };
+		E68F18671196BFA5002E9644 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F185D1196BFA5002E9644 /* NSString+SBJSON.m */; };
+		E68F18681196BFA5002E9644 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F185F1196BFA5002E9644 /* SBJSON.m */; };
+		E68F18691196BFA5002E9644 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F18611196BFA5002E9644 /* SBJsonBase.m */; };
+		E68F186A1196BFA5002E9644 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F18631196BFA5002E9644 /* SBJsonParser.m */; };
+		E68F186B1196BFA5002E9644 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E68F18651196BFA5002E9644 /* SBJsonWriter.m */; };
+		E694B7561189F9B2000B5D82 /* ContractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7551189F9B2000B5D82 /* ContractTableViewCell.m */; };
+		E694B7591189F9E1000B5D82 /* FinancialEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */; };
+		E694B77E118A00D2000B5D82 /* ContractTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E694B77D118A00D2000B5D82 /* ContractTableViewCell.xib */; };
+		E694B780118A00F5000B5D82 /* FinancialEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E694B77F118A00F5000B5D82 /* FinancialEventTableViewCell.xib */; };
+		E694B799118A01CF000B5D82 /* PersonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B798118A01CF000B5D82 /* PersonDataSource.m */; };
+		E694B79C118A01E0000B5D82 /* ContractDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B79B118A01E0000B5D82 /* ContractDataSource.m */; };
+		E694B7A1118A01F2000B5D82 /* FinancialEventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */; };
+		E6B11441119215AE008D8026 /* PersonFacadeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B11440119215AE008D8026 /* PersonFacadeModel.m */; };
+		E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF051190C046007AA368 /* ContractDetailViewController.m */; };
+		E6E5BF081190C046007AA368 /* ContractDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E5BF061190C046007AA368 /* ContractDetailViewController.xib */; };
+		E6E5BF131190C0EE007AA368 /* FinancialEventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF111190C0EE007AA368 /* FinancialEventDetailsViewController.m */; };
+		E6E5BF141190C0EE007AA368 /* FinancialEventsDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E5BF121190C0EE007AA368 /* FinancialEventsDetailsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iAiaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAiaAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iAiaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAiaAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iAia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* iAiaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iAiaViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* iAiaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAiaViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAiaViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAia_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iAia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E6249756118F7B9F00D9BA93 /* cscImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cscImage.png; sourceTree = "<group>"; };
+		E62497F6118F816C00D9BA93 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+contentFromSource.h"; sourceTree = "<group>"; };
+		E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+contentFromSource.m"; sourceTree = "<group>"; };
+		E686F4AF116E529800FE7ADE /* PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewCell.h; sourceTree = "<group>"; };
+		E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewCell.m; sourceTree = "<group>"; };
+		E686F4B2116E530700FE7ADE /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		E68F18591196BFA5002E9644 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		E68F185A1196BFA5002E9644 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		E68F185B1196BFA5002E9644 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		E68F185C1196BFA5002E9644 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		E68F185D1196BFA5002E9644 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		E68F185E1196BFA5002E9644 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		E68F185F1196BFA5002E9644 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		E68F18601196BFA5002E9644 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		E68F18611196BFA5002E9644 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		E68F18621196BFA5002E9644 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		E68F18631196BFA5002E9644 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		E68F18641196BFA5002E9644 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		E68F18651196BFA5002E9644 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		E694B7541189F9B2000B5D82 /* ContractTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractTableViewCell.h; sourceTree = "<group>"; };
+		E694B7551189F9B2000B5D82 /* ContractTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractTableViewCell.m; sourceTree = "<group>"; };
+		E694B7571189F9E1000B5D82 /* FinancialEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventTableViewCell.h; sourceTree = "<group>"; };
+		E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialEventTableViewCell.m; sourceTree = "<group>"; };
+		E694B77D118A00D2000B5D82 /* ContractTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContractTableViewCell.xib; sourceTree = "<group>"; };
+		E694B77F118A00F5000B5D82 /* FinancialEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinancialEventTableViewCell.xib; sourceTree = "<group>"; };
+		E694B797118A01CF000B5D82 /* PersonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDataSource.h; sourceTree = "<group>"; };
+		E694B798118A01CF000B5D82 /* PersonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDataSource.m; sourceTree = "<group>"; };
+		E694B79A118A01E0000B5D82 /* ContractDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDataSource.h; sourceTree = "<group>"; };
+		E694B79B118A01E0000B5D82 /* ContractDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractDataSource.m; sourceTree = "<group>"; };
+		E694B79F118A01F2000B5D82 /* FinancialEventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventDataSource.h; sourceTree = "<group>"; };
+		E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialEventDataSource.m; sourceTree = "<group>"; };
+		E6B1143F119215AE008D8026 /* PersonFacadeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonFacadeModel.h; sourceTree = "<group>"; };
+		E6B11440119215AE008D8026 /* PersonFacadeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonFacadeModel.m; sourceTree = "<group>"; };
+		E6E5BF041190C046007AA368 /* ContractDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDetailViewController.h; sourceTree = "<group>"; };
+		E6E5BF051190C046007AA368 /* ContractDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractDetailViewController.m; sourceTree = "<group>"; };
+		E6E5BF061190C046007AA368 /* ContractDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContractDetailViewController.xib; path = Classes/ContractDetailViewController.xib; sourceTree = "<group>"; };
+		E6E5BF101190C0EE007AA368 /* FinancialEventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventDetailsViewController.h; sourceTree = "<group>"; };
+		E6E5BF111190C0EE007AA368 /* FinancialEventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialEventDetailsViewController.m; sourceTree = "<group>"; };
+		E6E5BF121190C0EE007AA368 /* FinancialEventsDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FinancialEventsDetailsViewController.xib; path = Classes/FinancialEventsDetailsViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E6838E83119649EC00F792F9 /* JSON */,
+				E694B796118A01A4000B5D82 /*  Model & Datasources */,
+				E694B795118A018C000B5D82 /* Cells */,
+				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iAiaAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* iAiaViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */,
+				E6E5BF041190C046007AA368 /* ContractDetailViewController.h */,
+				E6E5BF051190C046007AA368 /* ContractDetailViewController.m */,
+				E6E5BF101190C0EE007AA368 /* FinancialEventDetailsViewController.h */,
+				E6E5BF111190C0EE007AA368 /* FinancialEventDetailsViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iAia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* iAia-Info.plist */,
+				E62497F6118F816C00D9BA93 /* icon.png */,
+				E6249756118F7B9F00D9BA93 /* cscImage.png */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				2899E5210DE3E06400AC0155 /* iAiaViewController.xib */,
+				E686F4B2116E530700FE7ADE /* PersonTableViewCell.xib */,
+				E694B77D118A00D2000B5D82 /* ContractTableViewCell.xib */,
+				E694B77F118A00F5000B5D82 /* FinancialEventTableViewCell.xib */,
+				E6E5BF061190C046007AA368 /* ContractDetailViewController.xib */,
+				E6E5BF121190C0EE007AA368 /* FinancialEventsDetailsViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6838E83119649EC00F792F9 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				E68F18591196BFA5002E9644 /* JSON.h */,
+				E68F185A1196BFA5002E9644 /* NSObject+SBJSON.h */,
+				E68F185B1196BFA5002E9644 /* NSObject+SBJSON.m */,
+				E68F185C1196BFA5002E9644 /* NSString+SBJSON.h */,
+				E68F185D1196BFA5002E9644 /* NSString+SBJSON.m */,
+				E68F185E1196BFA5002E9644 /* SBJSON.h */,
+				E68F185F1196BFA5002E9644 /* SBJSON.m */,
+				E68F18601196BFA5002E9644 /* SBJsonBase.h */,
+				E68F18611196BFA5002E9644 /* SBJsonBase.m */,
+				E68F18621196BFA5002E9644 /* SBJsonParser.h */,
+				E68F18631196BFA5002E9644 /* SBJsonParser.m */,
+				E68F18641196BFA5002E9644 /* SBJsonWriter.h */,
+				E68F18651196BFA5002E9644 /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		E694B795118A018C000B5D82 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E686F4AF116E529800FE7ADE /* PersonTableViewCell.h */,
+				E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */,
+				E694B7541189F9B2000B5D82 /* ContractTableViewCell.h */,
+				E694B7551189F9B2000B5D82 /* ContractTableViewCell.m */,
+				E694B7571189F9E1000B5D82 /* FinancialEventTableViewCell.h */,
+				E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */,
+				E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */,
+				E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		E694B796118A01A4000B5D82 /*  Model & Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				E6B1143F119215AE008D8026 /* PersonFacadeModel.h */,
+				E6B11440119215AE008D8026 /* PersonFacadeModel.m */,
+				E694B797118A01CF000B5D82 /* PersonDataSource.h */,
+				E694B798118A01CF000B5D82 /* PersonDataSource.m */,
+				E694B79A118A01E0000B5D82 /* ContractDataSource.h */,
+				E694B79B118A01E0000B5D82 /* ContractDataSource.m */,
+				E694B79F118A01F2000B5D82 /* FinancialEventDataSource.h */,
+				E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */,
+			);
+			name = " Model & Datasources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iAia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iAia" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iAia;
+			productName = iAia;
+			productReference = 1D6058910D05DD3D006BFB54 /* iAia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "GH Portefait";
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iAia" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iAia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* iAiaViewController.xib in Resources */,
+				E686F4B3116E530700FE7ADE /* PersonTableViewCell.xib in Resources */,
+				E694B77E118A00D2000B5D82 /* ContractTableViewCell.xib in Resources */,
+				E694B780118A00F5000B5D82 /* FinancialEventTableViewCell.xib in Resources */,
+				E6249757118F7B9F00D9BA93 /* cscImage.png in Resources */,
+				E62497F7118F816C00D9BA93 /* icon.png in Resources */,
+				E6E5BF081190C046007AA368 /* ContractDetailViewController.xib in Resources */,
+				E6E5BF141190C0EE007AA368 /* FinancialEventsDetailsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iAiaAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */,
+				E686F4B1116E529800FE7ADE /* PersonTableViewCell.m in Sources */,
+				E694B7561189F9B2000B5D82 /* ContractTableViewCell.m in Sources */,
+				E694B7591189F9E1000B5D82 /* FinancialEventTableViewCell.m in Sources */,
+				E694B799118A01CF000B5D82 /* PersonDataSource.m in Sources */,
+				E694B79C118A01E0000B5D82 /* ContractDataSource.m in Sources */,
+				E694B7A1118A01F2000B5D82 /* FinancialEventDataSource.m in Sources */,
+				E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */,
+				E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */,
+				E6E5BF131190C0EE007AA368 /* FinancialEventDetailsViewController.m in Sources */,
+				E6B11441119215AE008D8026 /* PersonFacadeModel.m in Sources */,
+				E68F18661196BFA5002E9644 /* NSObject+SBJSON.m in Sources */,
+				E68F18671196BFA5002E9644 /* NSString+SBJSON.m in Sources */,
+				E68F18681196BFA5002E9644 /* SBJSON.m in Sources */,
+				E68F18691196BFA5002E9644 /* SBJsonBase.m in Sources */,
+				E68F186A1196BFA5002E9644 /* SBJsonParser.m in Sources */,
+				E68F186B1196BFA5002E9644 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iAia_Prefix.pch;
+				INFOPLIST_FILE = "iAia-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = iAia;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iAia_Prefix.pch;
+				INFOPLIST_FILE = "iAia-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = iAia;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gh Portefait (A9A53XBYWC)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_SYMBOL_SEPARATION = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = YES;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				SDKROOT = iphonesimulator3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = YES;
+				SDKROOT = iphonesimulator3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iAia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iAia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

@@ -1,0 +1,32 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ContractDisplayExtract xmlns="http://www.csc.com/graphtalk/aia/" xmlns:gtx="graphtalk.aia.extension">
+            <Environment>
+                <Profiles>
+                    <String>all_user</String>
+                </Profiles>
+                <UserID>GTADMIN</UserID>
+            </Environment>
+            <Contract>
+                <ProductIdentifier>INV_UL</ProductIdentifier>
+                <!--<ProductIdentifier>INV%</ProductIdentifier>-->
+                <RoleList>
+                    <PartyRole>
+                        <Person>
+                            <!--<FirstName>14</FirstName>                            
+                            <LastName>UL</LastName>-->
+                            <ClientNumber>PRSN0000430</ClientNumber>
+                        </Person>
+                        <!--<Organization>                            
+                        	<LegalName>2RP_COLL</LegalName>                            
+                        	<TradeName>TRNAME</TradeName>			    
+                        	<ClientNumber>ORGN0000219</ClientNumber>                        
+                        </Organization>-->
+                    </PartyRole>
+                </RoleList>
+                <!--<Number>IUL00000348</Number>-->
+                <Number>IUL0%</Number>
+            </Contract>
+        </ContractDisplayExtract>
+    </soap:Body>
+</soap:Envelope>

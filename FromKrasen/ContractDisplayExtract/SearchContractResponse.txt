@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ContractDisplayExtractResponse xmlns="http://www.csc.com/graphtalk/aia/">
+            <ContractList>
+                <Contract>
+                    <DisplayId>INV_UL/IUL00000101 : Mr 14 UL/Mrs 14 UL_CO - In Force - Effective on 02/01/2009</DisplayId>
+                    <ExtensionList/>
+                    <Number>IUL00000101</Number>
+                </Contract>
+                <Contract>
+                    <DisplayId>INV_UL/IUL00000139 : Mr 14 UL/Mrs 14 UL_CO - In Force - Effective on 02/01/2009</DisplayId>
+                    <ExtensionList/>
+                    <Number>IUL00000139</Number>
+                </Contract>
+                <Contract>
+                    <DisplayId>INV_UL/IUL00000348 : Mr 14 UL - In Force - Effective on 30/09/2011</DisplayId>
+                    <ExtensionList/>
+                    <Number>IUL00000348</Number>
+                </Contract>
+            </ContractList>
+            <ReturnStatus>
+                <Code>WM_SUCCESS</Code>
+                <ErrorList/>
+            </ReturnStatus>
+        </ContractDisplayExtractResponse>
+    </soap:Body>
+</soap:Envelope>

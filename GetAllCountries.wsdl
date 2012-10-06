@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:gt="http://www.csc.com/graphtalk/aia/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.csc.com/graphtalk/aia/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.csc.com/graphtalk/aia/">
+      <xsd:element name="GetAllCountries">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="Environment" type="gt:WMEnv" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAllCountriesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="PostalAddressList" type="gt:ArrayOfPostalAddress" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReturnStatus" type="gt:WMStatus" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="Object" abstract="true">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="WMEnv">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="ActivityIdentifier" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="DataProfiles" type="gt:ArrayOfString" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="EffectiveDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Mode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Profiles" type="gt:ArrayOfString" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="UserData" type="gt:ArrayOfProp" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="UserID" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Workqueues" type="gt:ArrayOfString" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Prop">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Value" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="WMStatus">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="Code" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Context" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="ErrorList" type="gt:ArrayOfError" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Error">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="Code" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Level" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Message" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="MessageDetailList" type="gt:ArrayOfString" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Source" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="Fault">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="StackTrace" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PostalAddress">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="EffectiveDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="EndDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="ExtensionList" type="gt:ArrayOfExtensionElement" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StartDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressCategory" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressCategoryLabel" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressIdentifier" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Confidential" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Invalid" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Preferred" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CountryCode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddresseeName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Apartment" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Building" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CityCode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CityName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CountyName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="DistrictLine" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="GeographicalZoneName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="House" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="INSEECode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="LocalName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="POBox" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="PhoneList" type="gt:ArrayOfPhoneAddress" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="ResidenceLine" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StreetLine" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StreetName" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StreetNumber" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StreetType" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="TaxAddress" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Text" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Type" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="TypeLabel" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ExtensionElement">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="ExtensionList" type="gt:ArrayOfExtensionElement" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Identifier" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Value" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="PhoneAddress">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="gt:Object">
+            <xsd:sequence>
+              <xsd:element minOccurs="0" maxOccurs="1" name="EffectiveDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="EndDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="ExtensionList" type="gt:ArrayOfExtensionElement" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StartDate" nillable="true" type="xsd:date" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressCategory" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressCategoryLabel" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="AddressIdentifier" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Confidential" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Invalid" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Preferred" type="xsd:boolean" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CountryCode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Availability1" type="gt:ArrayOfString" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="Availability2" type="gt:ArrayOfString" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="CountryPhoneCode" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="EndTime1" type="xsd:time" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="EndTime2" type="xsd:time" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="PhoneType" type="xsd:string" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StartTime1" type="xsd:time" />
+              <xsd:element minOccurs="0" maxOccurs="1" name="StartTime2" type="xsd:time" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfProp">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Prop" nillable="true" type="gt:Prop" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfError">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="gt:Error" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="String" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPhoneAddress">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="PhoneAddress" nillable="true" type="gt:PhoneAddress" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfPostalAddress">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="PostalAddress" nillable="true" type="gt:PostalAddress" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfExtensionElement">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="ExtensionElement" nillable="true" type="gt:ExtensionElement" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="GetAllCountriesSoapIn">
+    <part name="parameters" element="gt:GetAllCountries" />
+  </message>
+  <message name="GetAllCountriesSoapOut">
+    <part name="parameters" element="gt:GetAllCountriesResponse" />
+  </message>
+  <portType name="WorkManagementClientSoap">
+    <operation name="GetAllCountries">
+      <input message="gt:GetAllCountriesSoapIn" />
+      <output message="gt:GetAllCountriesSoapOut" />
+    </operation>
+  </portType>
+  <binding name="WorkManagementClientSoap" type="gt:WorkManagementClientSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GetAllCountries">
+      <soap:operation soapAction="GetAllCountries" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WorkManagementClient">
+    <port name="WorkManagementClientSoap" binding="gt:WorkManagementClientSoap">
+      <soap:address location="http://localhost:26117" />
+    </port>
+  </service>
+</definitions>

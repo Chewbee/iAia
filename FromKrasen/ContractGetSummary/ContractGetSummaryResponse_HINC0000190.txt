@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ContractGetSummaryResponse xmlns="http://www.csc.com/graphtalk/aia/">
+            <Contract>
+                <ExtensionList>
+                    <ExtensionElement>
+                        <ExtensionList/>
+                    </ExtensionElement>
+                </ExtensionList>
+                <StartDate>2012-01-01</StartDate>
+                <BillingList>
+                    <Billing>
+                        <Amount>493.0</Amount>
+                        <BankAccount>
+                            <BankCode>14428</BankCode>
+                            <BranchCode>00001</BranchCode>
+                            <AccountKey>13</AccountKey>
+                            <AccountNumber>34534534534</AccountNumber>
+                        </BankAccount>
+                        <Frequency>monthly</Frequency>
+                        <NextDueDate>2012-01-01</NextDueDate>
+                        <Payer>
+                            <Person>
+                                <ExtensionList/>
+                                <BankAccountList>
+                                    <BankAccount>
+                                        <BankCode>14428</BankCode>
+                                        <BranchCode>00001</BranchCode>
+                                        <AccountKey>13</AccountKey>
+                                        <AccountNumber>34534534534</AccountNumber>
+                                    </BankAccount>
+                                </BankAccountList>
+                                <ClientNumber>PRSN0001321</ClientNumber>
+                                <PostalAddressList>
+                                    <PostalAddress>
+                                        <CityName>PARIS</CityName>
+                                        <CountyName>FRANCE</CountyName>
+                                        <PostalCode>75009</PostalCode>
+                                        <ResidenceLine/>
+                                        <StreetLine>12 Rue DE LONDRES</StreetLine>
+                                        <Text>Preferred, Private, 12 Rue DE LONDRES, 75009, PARIS,FRANCE</Text>
+                                    </PostalAddress>
+                                </PostalAddressList>
+                                <BirthDate>1971-11-11</BirthDate>
+                                <FirstName>Jean</FirstName>
+                                <LastName>MARTIN</LastName>
+                                <MaidenName/>
+                                <PersonTitle>mister</PersonTitle>
+                            </Person>
+                            <RoleType>owner</RoleType>
+                        </Payer>
+                        <PaymentType>direct_debit</PaymentType>
+                        <Status>in_force</Status>
+                    </Billing>
+                </BillingList>
+                <CoverageFundList/>
+                <CoverageList/>
+                <CurrencyCode>eur</CurrencyCode>
+                <Duration>
+                    <RenewalDay>1</RenewalDay>
+                    <Unit>Year(s)</Unit>
+                    <Value>999</Value>
+                </Duration>
+                <Number>HINC0000190</Number>
+                <OperationList/>
+                <PackageList/>
+                <ProductIdentifier>HE_MULT</ProductIdentifier>
+                <ProductLabel>Medical Expenses - Multiprotection Plan</ProductLabel>
+                <ProductOption>
+                    <CoverageList/>
+                    <Identifier>opt1</Identifier>
+                    <Label>Multiprotection Plan</Label>
+                    <PackageList>
+                        <Package>
+                            <CoverageList>
+                                <Coverage>
+                                    <DisplayId>Special Customer Program 4 : HINC0000190 (Individuel)</DisplayId>
+                                    <EndDate xsi:nil="true"/>
+                                    <ExtensionList>
+                                        <ExtensionElement/>
+                                        <ExtensionElement/>
+                                    </ExtensionList>
+                                    <StartDate>2012-01-01</StartDate>
+                                    <BeneficiaryList/>
+                                    <Identifier>4</Identifier>
+                                    <Label>Special Customer Program</Label>
+                                    <MembershipList>
+                                        <Membership>
+                                            <Main>true</Main>
+                                            <Person>
+                                                <ExtensionList/>
+                                                <BankAccountList>
+                                                    <BankAccount>
+                                                        <BankCode>14428</BankCode>
+                                                        <BranchCode>00001</BranchCode>
+                                                        <AccountKey>13</AccountKey>
+                                                        <AccountNumber>34534534534</AccountNumber>
+                                                    </BankAccount>
+                                                </BankAccountList>
+                                                <ClientNumber>PRSN0001321</ClientNumber>
+                                                <PostalAddressList>
+                                                    <PostalAddress>
+                                                        <CityName>PARIS</CityName>
+                                                        <CountyName>FRANCE</CountyName>
+                                                        <PostalCode>75009</PostalCode>
+                                                        <ResidenceLine/>
+                                                        <StreetLine>12 Rue DE LONDRES</StreetLine>
+                                                        <Text>Preferred, Private, 12 Rue DE LONDRES, 75009, PARIS,FRANCE</Text>
+                                                    </PostalAddress>
+                                                </PostalAddressList>
+                                                <BirthDate>1971-11-11</BirthDate>
+                                                <FirstName>Jean</FirstName>
+                                                <LastName>MARTIN</LastName>
+                                                <MaidenName/>
+                                                <PersonTitle>mister</PersonTitle>
+                                            </Person>
+                                            <Type>insured</Type>
+                                        </Membership>
+                                    </MembershipList>
+                                </Coverage>
+                                <Coverage>
+                                    <DisplayId>Additional Benefit 5 : HINC0000190 (Individuel)</DisplayId>
+                                    <EndDate xsi:nil="true"/>
+                                    <ExtensionList>
+                                        <ExtensionElement/>
+                                        <ExtensionElement/>
+                                    </ExtensionList>
+                                    <StartDate>2012-01-01</StartDate>
+                                    <BeneficiaryList/>
+                                    <Identifier>5</Identifier>
+                                    <Label>Additional Benefit</Label>
+                                    <Amount>20000.0</Amount>
+                                    <AmountType>lump_sum_benefit</AmountType>
+                                    <MembershipList>
+                                        <Membership>
+                                            <Main>true</Main>
+                                            <Person>
+                                                <ExtensionList/>
+                                                <BankAccountList>
+                                                    <BankAccount>
+                                                        <BankCode>14428</BankCode>
+                                                        <BranchCode>00001</BranchCode>
+                                                        <AccountKey>13</AccountKey>
+                                                        <AccountNumber>34534534534</AccountNumber>
+                                                    </BankAccount>
+                                                </BankAccountList>
+                                                <ClientNumber>PRSN0001321</ClientNumber>
+                                                <PostalAddressList>
+                                                    <PostalAddress>
+                                                        <CityName>PARIS</CityName>
+                                                        <CountyName>FRANCE</CountyName>
+                                                        <PostalCode>75009</PostalCode>
+                                                        <ResidenceLine/>
+                                                        <StreetLine>12 Rue DE LONDRES</StreetLine>
+                                                        <Text>Preferred, Private, 12 Rue DE LONDRES, 75009, PARIS,FRANCE</Text>
+                                                    </PostalAddress>
+                                                </PostalAddressList>
+                                                <BirthDate>1971-11-11</BirthDate>
+                                                <FirstName>Jean</FirstName>
+                                                <LastName>MARTIN</LastName>
+                                                <MaidenName/>
+                                                <PersonTitle>mister</PersonTitle>
+                                            </Person>
+                                            <Type>insured</Type>
+                                        </Membership>
+                                    </MembershipList>
+                                </Coverage>
+                            </CoverageList>
+                            <Identifier>3</Identifier>
+                            <Label>Additional Coverage</Label>
+                        </Package>
+                        <Package>
+                            <CoverageList>
+                                <Coverage>
+                                    <DisplayId>Medical Expenses 2 : HINC0000190 (Individuel)</DisplayId>
+                                    <EndDate xsi:nil="true"/>
+                                    <ExtensionList>
+                                        <ExtensionElement/>
+                                        <ExtensionElement/>
+                                    </ExtensionList>
+                                    <StartDate>2012-01-01</StartDate>
+                                    <BeneficiaryList/>
+                                    <Identifier>2</Identifier>
+                                    <Label>Medical Expenses</Label>
+                                    <MembershipList>
+                                        <Membership>
+                                            <Main>true</Main>
+                                            <Person>
+                                                <ExtensionList/>
+                                                <BankAccountList>
+                                                    <BankAccount>
+                                                        <BankCode>14428</BankCode>
+                                                        <BranchCode>00001</BranchCode>
+                                                        <AccountKey>13</AccountKey>
+                                                        <AccountNumber>34534534534</AccountNumber>
+                                                    </BankAccount>
+                                                </BankAccountList>
+                                                <ClientNumber>PRSN0001321</ClientNumber>
+                                                <PostalAddressList>
+                                                    <PostalAddress>
+                                                        <CityName>PARIS</CityName>
+                                                        <CountyName>FRANCE</CountyName>
+                                                        <PostalCode>75009</PostalCode>
+                                                        <ResidenceLine/>
+                                                        <StreetLine>12 Rue DE LONDRES</StreetLine>
+                                                        <Text>Preferred, Private, 12 Rue DE LONDRES, 75009, PARIS,FRANCE</Text>
+                                                    </PostalAddress>
+                                                </PostalAddressList>
+                                                <BirthDate>1971-11-11</BirthDate>
+                                                <FirstName>Jean</FirstName>
+                                                <LastName>MARTIN</LastName>
+                                                <MaidenName/>
+                                                <PersonTitle>mister</PersonTitle>
+                                            </Person>
+                                            <Type>insured</Type>
+                                        </Membership>
+                                    </MembershipList>
+                                </Coverage>
+                            </CoverageList>
+                            <Identifier>1</Identifier>
+                            <Label>Basic Coverage</Label>
+                        </Package>
+                    </PackageList>
+                </ProductOption>
+                <ProductType>health</ProductType>
+                <RoleList>
+                    <PartyRole>
+                        <Person>
+                            <ExtensionList/>
+                            <BankAccountList>
+                                <BankAccount>
+                                    <BankCode>14428</BankCode>
+                                    <BranchCode>00001</BranchCode>
+                                    <AccountKey>13</AccountKey>
+                                    <AccountNumber>34534534534</AccountNumber>
+                                </BankAccount>
+                            </BankAccountList>
+                            <ClientNumber>PRSN0001321</ClientNumber>
+                            <PostalAddressList>
+                                <PostalAddress>
+                                    <CityName>PARIS</CityName>
+                                    <CountyName>FRANCE</CountyName>
+                                    <PostalCode>75009</PostalCode>
+                                    <ResidenceLine/>
+                                    <StreetLine>12 Rue DE LONDRES</StreetLine>
+                                    <Text>Preferred, Private, 12 Rue DE LONDRES, 75009, PARIS,FRANCE</Text>
+                                </PostalAddress>
+                            </PostalAddressList>
+                            <BirthDate>1971-11-11</BirthDate>
+                            <FirstName>Jean</FirstName>
+                            <LastName>MARTIN</LastName>
+                            <MaidenName/>
+                            <PersonTitle>mister</PersonTitle>
+                        </Person>
+                        <RoleType>owner</RoleType>
+                    </PartyRole>
+                    <PartyRole>
+                        <DistributorDetail>
+                            <AgentType>Area Manager(CREG)</AgentType>
+                        </DistributorDetail>
+                        <Identifier>AP00000001</Identifier>
+                        <Person>
+                            <ExtensionList/>
+                            <BankAccountList>
+                                <BankAccount>
+                                    <BankCode>62108</BankCode>
+                                    <BranchCode>00001</BranchCode>
+                                    <AccountKey>46</AccountKey>
+                                    <AccountNumber>11111111111</AccountNumber>
+                                </BankAccount>
+                            </BankAccountList>
+                            <ClientNumber>273549</ClientNumber>
+                            <PostalAddressList>
+                                <PostalAddress>
+                                    <CityName>CAEN</CityName>
+                                    <CountyName>FRANCE</CountyName>
+                                    <PostalCode>14000</PostalCode>
+                                    <ResidenceLine/>
+                                    <StreetLine>4 Avenue DU GENERAL LAPERRINE</StreetLine>
+                                    <Text>Preferred, Professional, 4 Avenue DU GENERAL LAPERRINE, 14000, CAEN,FRANCE</Text>
+                                </PostalAddress>
+                            </PostalAddressList>
+                            <BirthDate>1974-05-05</BirthDate>
+                            <FirstName>Jean</FirstName>
+                            <LastName>RENAULT</LastName>
+                            <MaidenName/>
+                            <PersonTitle>mister</PersonTitle>
+                        </Person>
+                        <RoleType>distributor</RoleType>
+                    </PartyRole>
+                </RoleList>
+                <Status>in_force</Status>
+                <TotalCashValue>0.0</TotalCashValue>
+            </Contract>
+            <ReturnStatus>
+                <Code>WM_SUCCESS</Code>
+                <ErrorList/>
+            </ReturnStatus>
+        </ContractGetSummaryResponse>
+    </soap:Body>
+</soap:Envelope>

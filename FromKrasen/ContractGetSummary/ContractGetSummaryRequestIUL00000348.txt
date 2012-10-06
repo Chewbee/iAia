@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ContractGetSummary xmlns="http://www.csc.com/graphtalk/aia/" xmlns:gtx="graphtalk.aia.extension">
+            <Environment>
+                <Profiles>
+                    <String>all_user</String>
+                </Profiles>
+                <UserID>GTADMIN</UserID>
+            </Environment>
+            <ActivityRequest>
+                <EffectiveDate>2012-10-04</EffectiveDate>
+            </ActivityRequest>
+            <Contract>
+                <Number>IUL00000348</Number>
+            </Contract>
+        </ContractGetSummary>
+    </soap:Body>
+</soap:Envelope>
