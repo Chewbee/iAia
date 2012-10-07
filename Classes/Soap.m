@@ -265,7 +265,8 @@
 		
 		// Return as long
 		if([type isEqualToString:@"long"] || [type isEqualToString:@"unsignedlong"]) {
-			return [NSNumber numberWithLong:[value longLongValue]];
+            return (@([value longLongValue]));
+			//return [NSNumber numberWithLong:[value longLongValue]];
 		}
 		
 		// Return as short
@@ -417,13 +418,15 @@
 		return value;
 	}
 	if([toType isEqualToString: @"bool"]) {
-		return [NSNumber numberWithBool:(([[value lowercaseString] isEqualToString: @"true"]) ? YES : NO)];
+        return (@(([[value lowercaseString] isEqualToString: @"true"]) ? YES : NO));
+		// return [NSNumber numberWithBool:(([[value lowercaseString] isEqualToString: @"true"]) ? YES : NO)];
 	}
 	if([toType isEqualToString: @"int"]) {
 		return @([value intValue]);
 	}
 	if([toType isEqualToString: @"long"]) {
-		return [NSNumber numberWithLong:[value longLongValue]];
+        return ( @([value longLongValue])) ;
+		//return [NSNumber numberWithLong:[value longLongValue]];
 	}
 	if([toType isEqualToString: @"double"]) {
 		return @([value doubleValue]);
