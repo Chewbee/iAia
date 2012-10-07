@@ -16,7 +16,6 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
         // Initialization code
-		
     }
     return self;
 }
@@ -41,10 +40,7 @@
 - (IBAction)RefreshButtonPressed:(id)sender {
 
     [refreshButton setHidden:TRUE];
-    [activityIndicator setHidden:FALSE];
-    [activityIndicator startAnimating];
-    [statusImage setImage:[UIImage imageNamed:@"lg-alert0-glass"]];
-    
-    //FIXME: [personDataSource getPersonInformationWith:nil ] ;
+    [statusImage setImage:[UIImage imageNamed:@"lg-alertO-glass"]];
+    ///FIXME: [aPersonDataSource getPersonInformationWith:nil ] ;
 }
 @end
