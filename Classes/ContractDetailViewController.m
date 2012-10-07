@@ -22,6 +22,12 @@
 - (void)viewDidUnload {
     [super viewDidUnload];
 }
+//
+-(void) viewDidLoad
+{
+    [super viewDidLoad];
+    [self setTitle:[[self contract] DisplayId]];
+}
 
 
 @end

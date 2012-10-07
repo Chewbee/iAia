@@ -17,16 +17,17 @@
     }
     return self;
 }
-
-
+//
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
-
-
-
+//
+-(void) cellContentFromDataSource: (id) aDataSource forRow: (NSInteger)row
+{
+    [self setContract:[aDataSource getContractFromIdx:row]];
+    [[self contractLblCtl ] setText: [[self contract] DisplayId] ];
+}
 
 @end

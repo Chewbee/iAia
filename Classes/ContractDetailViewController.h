@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CSCContract.h"
 
 @interface ContractDetailViewController : UITableViewController {
 
 	
 }
-
+@property (nonatomic,strong) CSCContract *contract ; 
 @end

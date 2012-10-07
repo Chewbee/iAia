@@ -176,18 +176,18 @@
     }
 
 - (void)dealloc
-    {
+{
     for (CXMLNode *theNode in nodePool)
-        {
+    {
         [theNode invalidate];
-        }
-
+    }
+    
     nodePool = NULL;
     //
-    xmlFreeDoc((xmlDocPtr)_node);
-    _node = NULL;
+    ///FIXME: GH commented the following out as this crashes
+    //xmlFreeDoc((xmlDocPtr)_node);    _node = NULL;
     //
-    }
+}
 
 //- (NSString *)characterEncoding;
 //- (NSString *)version;

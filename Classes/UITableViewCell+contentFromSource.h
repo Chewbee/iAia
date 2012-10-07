@@ -10,6 +10,6 @@
 
 @interface UITableViewCell ( UITableViewCell_contentFromSource ) 
 
--(void) cellContentFromDataSource: (id) aPersonDataSource with: (NSString*) key ; 
+-(void) cellContentFromDataSource: (id) aDataSource forRow: (NSInteger)row;
 
 @end

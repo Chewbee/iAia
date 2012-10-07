@@ -31,18 +31,12 @@
 		}
 			break;
 		case 1:
-			// the contract list capped to ten
-		{
-			///TODO:get the number of contract from the datasource
-			return 2 ;
-		}
+            return [[dataController contractDataSource]contractCount ] ;
 			break;
 		case 2:
-			// last  financial events capped to ten
 		{
 			///TODO: get the last ten financial movements from the datasource
-			
-			return 3 ;
+            return 3 ;
 		}
 			break;
 	}
@@ -59,13 +53,14 @@
 		case 0:
 		{
 			@try {
+                /*
 				[headerText setString:[[[self.dataController personDataSource] title] capitalizedString]];
                 [headerText appendString:@" " ];
 				[headerText appendString:[[[self.dataController personDataSource] firstName]capitalizedString]];
                 [headerText appendString:@" "] ;
 				[headerText appendString:[[[self.dataController personDataSource] name] capitalizedString]];
                 [headerText appendString:@" " ];
-				
+				*/
 			}
 			@catch (NSException * e) {
 				[headerText setString: @"PlaceHolder Text"] ;
@@ -76,7 +71,10 @@
 		}
 			break;
 		case 1:
-			[headerText setString:  @"Contracts"] ;
+        {
+            NSString *contractHeader = [ NSString stringWithFormat:@"List of the %d In-force contracts",[[dataController contractDataSource]contractCount ]]  ;
+            [headerText setString:contractHeader ] ;
+        }
 			break;
 		case 2:
 			[headerText setString:  @"Financial activities"] ;
@@ -148,7 +146,7 @@
 		{
 			cell = (PersonTableViewCell*) [self cellFromCellClass: [PersonTableViewCell class] inTableView:tableView withReuseId:@"PersonCell"];
             
-            [cell cellContentFromDataSource: [self.dataController personDataSource] with: @"12345" ] ;
+            [cell cellContentFromDataSource: [self.dataController personDataSource] forRow: indexPath.row] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -158,7 +156,7 @@
 		{
             cell = (ContractTableViewCell*) [self cellFromCellClass: [ContractTableViewCell class] inTableView:tableView withReuseId:@"ContractCell"];
 
-			[cell cellContentFromDataSource: [self.dataController contractDataSource] with: @"12345" ] ;
+			[cell cellContentFromDataSource: [self.dataController contractDataSource] forRow: indexPath.row] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -168,7 +166,7 @@
 		{
             cell = (FinancialEventTableViewCell*) [self cellFromCellClass: [FinancialEventTableViewCell class] inTableView:tableView withReuseId:@"FinancialCell"];
             
-			[cell cellContentFromDataSource: [self.dataController contractDataSource] with: @"12345" ] ;
+			[cell cellContentFromDataSource: [self.dataController contractDataSource] forRow: indexPath.row ] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -186,7 +184,9 @@
     NSLog(@" In prepareForSegue ");
     if ([[segue identifier] isEqualToString:@"ContractDetails"]) {
         NSLog(@"In ContractDetails prepareForSegue ");
-       // NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow] ;
+        ContractTableViewCell * ctvc = (ContractTableViewCell*)[self tableView:[self tableView] cellForRowAtIndexPath:selectedRowIndex];
+        [segue.destinationViewController setContract:[ctvc contract]];
     }
     if ([[segue identifier] isEqualToString:@"FinancialDetails"]) {
         NSLog(@"In FinancialDetails prepareForSegue ");
@@ -197,16 +197,19 @@
 
 #pragma mark -
 #pragma view methods
+- (void)viewDidLoad
+{
+    [self initializeDataSources];
+    //
+    [self customizeNavigationBar];
+    [self customizeToolbar];
+    //
+    [(UITableView* )[self view]reloadData];
+}
 //
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:NO] ;
-    [self initializeDataSources];
-    
-    [self customizeNavigationBar];
-    [self customizeToolbar];
-    
-    [(UITableView* )[self view]reloadData];
 }
 //
 - (void) initializeDataSources {

@@ -17,7 +17,11 @@
     
 }
 @property BOOL dataReady ;
+@property (nonatomic,strong) NSMutableArray *contracts ;
+
 +(ContractDataSource*) sharedInstance ; 
 //
 -(void) refreshData;
+-(NSInteger) contractCount ;
+-(CSCContract*) getContractFromIdx:(NSInteger) idx ;
 @end

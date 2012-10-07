@@ -16,7 +16,7 @@
 @synthesize title, firstName, name, clientNumber , dateOfBirth, maritalStatus , professionalStatus ; 
 
 #pragma mark -
-#pragma mark alloc and dealloc
+#pragma mark Singleton & init
 
 // Singleton implemention
 +(PersonDataSource*) sharedInstance {
@@ -35,19 +35,10 @@
 	}
 	return self ; 
 }
-//
--(void) dealloc {
-
-	 ;
-	 ;
-    
-     ;
-}
 #pragma mark -
 #pragma mark Fetching info from anywhere
 //
 -(void) basicQuery {
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:YES] ; 
 	//
     /*
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
@@ -63,15 +54,14 @@
 -(void) getPersonInformationWith:(NSString*) aCustomerKey {
 	
 	///TODO check that the data are more than a minute old if not return as the data  are fresh enough NSDATE
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:YES] ; 
-	
+	NSLog(@"getPersonInformationWith");
 	[self InitiateAsynchronousQuery];
 }
 //
 //
 -(void) processWebServiceReturn:(NSMutableString*) aReturnString
 {
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ; 
+	 
 }
 
 - (void) FreeReturningBuffers {
