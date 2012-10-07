@@ -32,8 +32,8 @@
                                         <CountyName>FRANCE</CountyName>
                                         <PostalCode>75018</PostalCode>
                                         <ResidenceLine/>
-                                        <StreetLine>12 Allée Voltaire</StreetLine>
-                                        <Text>Preferred, Private, 12 Allée Voltaire, 75018, PARIS,FRANCE</Text>
+                                        <StreetLine>12 Allee Voltaire</StreetLine>
+                                        <Text>Preferred, Private, 12 Allee Voltaire, 75018, PARIS,FRANCE</Text>
                                     </PostalAddress>
                                 </PostalAddressList>
                                 <BirthDate>1940-12-12</BirthDate>
@@ -127,8 +127,8 @@
                                             <CountyName>FRANCE</CountyName>
                                             <PostalCode>75018</PostalCode>
                                             <ResidenceLine/>
-                                            <StreetLine>12 Allée Voltaire</StreetLine>
-                                            <Text>Preferred, Private, 12 Allée Voltaire, 75018, PARIS,FRANCE</Text>
+                                            <StreetLine>12 Allï¿½e Voltaire</StreetLine>
+                                            <Text>Preferred, Private, 12 Allï¿½e Voltaire, 75018, PARIS,FRANCE</Text>
                                         </PostalAddress>
                                     </PostalAddressList>
                                     <BirthDate>1940-12-12</BirthDate>
@@ -226,8 +226,8 @@
                                     <CountyName>FRANCE</CountyName>
                                     <PostalCode>75018</PostalCode>
                                     <ResidenceLine/>
-                                    <StreetLine>12 Allée Voltaire</StreetLine>
-                                    <Text>Preferred, Private, 12 Allée Voltaire, 75018, PARIS,FRANCE</Text>
+                                    <StreetLine>12 Allï¿½e Voltaire</StreetLine>
+                                    <Text>Preferred, Private, 12 Allï¿½e Voltaire, 75018, PARIS,FRANCE</Text>
                                 </PostalAddress>
                             </PostalAddressList>
                             <BirthDate>1940-12-12</BirthDate>
