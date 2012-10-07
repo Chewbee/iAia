@@ -78,10 +78,6 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="gray" id="csD-tK-LuA">
-                                            <rect key="frame" x="20" y="28" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </activityIndicatorView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d8z-I9-CUz">
                                             <rect key="frame" x="204" y="18" width="40" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -112,7 +108,6 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <outlet property="activityIndicator" destination="csD-tK-LuA" id="YY8-fp-dHH"/>
                                     <outlet property="clientNumberLabel" destination="Wrl-vy-KSE" id="MDc-0g-mLE"/>
                                     <outlet property="dateOfBirthLabel" destination="WSc-gw-GCL" id="Ip3-WF-fdv"/>
                                     <outlet property="lastUpdateLabel" destination="Clk-BU-y6o" id="1bl-bL-8qo"/>
@@ -314,37 +309,6 @@
         <image name="lg-failed-glass.png" width="80" height="90"/>
         <image name="refresh.png" width="128" height="128"/>
     </resources>
-    <classes>
-        <class className="ContractDetailViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractDetailViewController.h"/>
-        </class>
-        <class className="ContractTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractTableViewCell.h"/>
-        </class>
-        <class className="FinancialEventTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FinancialEventTableViewCell.h"/>
-        </class>
-        <class className="FinancialEventsDetailsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FinancialEventsDetailsViewController.h"/>
-        </class>
-        <class className="PersonTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonTableViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="RefreshButtonPressed:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="clientNumberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateOfBirthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastUpdateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="maritalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="professionalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="statusImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="iAiaViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iAiaViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
