@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
+		E619F0AA16218C5600FED188 /* iAIADataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E619F0A916218C5600FED188 /* iAIADataController.m */; };
 		E6249757118F7B9F00D9BA93 /* cscImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E6249756118F7B9F00D9BA93 /* cscImage.png */; };
 		E62497F7118F816C00D9BA93 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E62497F6118F816C00D9BA93 /* icon.png */; };
 		E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */; };
@@ -322,6 +323,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAia_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iAia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E619F0A816218C5600FED188 /* iAIADataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAIADataController.h; sourceTree = "<group>"; };
+		E619F0A916218C5600FED188 /* iAIADataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAIADataController.m; sourceTree = "<group>"; };
 		E6249756118F7B9F00D9BA93 /* cscImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cscImage.png; sourceTree = "<group>"; };
 		E62497F6118F816C00D9BA93 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+contentFromSource.h"; sourceTree = "<group>"; };
@@ -1025,6 +1028,8 @@
 				E694B79B118A01E0000B5D82 /* ContractDataSource.m */,
 				E694B79F118A01F2000B5D82 /* FinancialEventDataSource.h */,
 				E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */,
+				E619F0A816218C5600FED188 /* iAIADataController.h */,
+				E619F0A916218C5600FED188 /* iAIADataController.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -1969,6 +1974,7 @@
 				E6EA559516202BE1001FCF0D /* CXMLNode_XPathExtensions.m in Sources */,
 				E6EA559616202BE1001FCF0D /* CXMLNode.m in Sources */,
 				E6EA559F1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m in Sources */,
+				E619F0AA16218C5600FED188 /* iAIADataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
