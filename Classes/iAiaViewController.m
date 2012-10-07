@@ -15,7 +15,7 @@
 @implementation iAiaViewController
 
 @synthesize personViewCell, contractViewCell, eventViewCell ;
-@synthesize personDataSource , contractDataSource , financialEventDataSource ;
+@synthesize dataController  ;
 
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -59,9 +59,12 @@
 		case 0:
 		{
 			@try {
-				[headerText setString:[[[self personDataSource] title] capitalizedString]]; [headerText appendString:@" " ];
-				[headerText appendString:[[[self personDataSource] firstName]capitalizedString]]; [headerText appendString:@" "] ;
-				[headerText appendString:[[[self personDataSource] name] capitalizedString]];[headerText appendString:@" " ];
+				[headerText setString:[[[self.dataController personDataSource] title] capitalizedString]];
+                [headerText appendString:@" " ];
+				[headerText appendString:[[[self.dataController personDataSource] firstName]capitalizedString]];
+                [headerText appendString:@" "] ;
+				[headerText appendString:[[[self.dataController personDataSource] name] capitalizedString]];
+                [headerText appendString:@" " ];
 				
 			}
 			@catch (NSException * e) {
@@ -145,7 +148,7 @@
 		{
 			cell = (PersonTableViewCell*) [self cellFromCellClass: [PersonTableViewCell class] inTableView:tableView withReuseId:@"PersonCell"];
             
-            [cell cellContentFromDataSource: personDataSource with: @"12345" ] ;
+            [cell cellContentFromDataSource: [self.dataController personDataSource] with: @"12345" ] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -155,7 +158,7 @@
 		{
             cell = (ContractTableViewCell*) [self cellFromCellClass: [ContractTableViewCell class] inTableView:tableView withReuseId:@"ContractCell"];
 
-			[cell cellContentFromDataSource: contractDataSource with: @"12345" ] ;
+			[cell cellContentFromDataSource: [self.dataController contractDataSource] with: @"12345" ] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -165,7 +168,7 @@
 		{
             cell = (FinancialEventTableViewCell*) [self cellFromCellClass: [FinancialEventTableViewCell class] inTableView:tableView withReuseId:@"FinancialCell"];
             
-			[cell cellContentFromDataSource: contractDataSource with: @"12345" ] ;
+			[cell cellContentFromDataSource: [self.dataController contractDataSource] with: @"12345" ] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -191,44 +194,9 @@
     }
 }
 #pragma mark interactions
--(void) refreshButtonPressed {
-    
-    if (_activityButtonItem) {
-         ;
-        _activityButtonItem = nil ;
-    }
-    if (_activityIndicator) {
-        _activityIndicator = nil ;
-    }
-    if (_refreshButtonItem) {
-         ;
-        _refreshButtonItem = nil ;
-    }
-    
-    _refreshButtonItem = self.navigationItem.rightBarButtonItem ;
-    
-    CGRect theFrame = CGRectMake(0,0,20,20) ;
-    _activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:theFrame];
-    [_activityIndicator startAnimating];
-    _activityButtonItem = [[UIBarButtonItem alloc]initWithCustomView:_activityIndicator];
-    
-    self.navigationItem.rightBarButtonItem = _activityButtonItem ;
-    
-    //FIXME: [personDataSource getPersonInformationWith:nil ] ;
-    
-    [(UITableView* )[self view]reloadData];
-} ;
+
 #pragma mark -
 #pragma view methods
-
-- (void) initializeDataSources {
-    personDataSource = [PersonDataSource sharedInstance] ;
-    contractDataSource = [ContractDataSource sharedInstance] ;
-    financialEventDataSource = [FinancialEventDataSource sharedInstance ] ;
-    
-    [personDataSource basicQuery] ;
-    [contractDataSource refreshData] ;
-}
 //
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -239,26 +207,19 @@
     [self customizeToolbar];
     
     [(UITableView* )[self view]reloadData];
-    
 }
+//
+- (void) initializeDataSources {
+    
+    dataController  = [iAIADataController sharedInstance ] ;
+    [dataController query] ;
+}
+//
 -(void) customizeNavigationBar {
-    
-    // create a UIBarButton
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc ]
-                                           initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                           target:self
-                                           action:@selector(refreshButtonPressed)];
-    
-    
-    self.navigationItem.rightBarButtonItem=rightBarButtonItem ;
-    //
-    
     //logo CSC
     UIImage *cscImage = [UIImage imageNamed:@"cscImage.png" ] ;
     UIImageView *iView = [[UIImageView alloc]initWithImage:cscImage ] ;
     self.navigationItem.titleView = iView ;
-    
-     ;
 }
 -(void) customizeToolbar
 {

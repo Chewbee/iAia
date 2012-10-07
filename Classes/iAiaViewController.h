@@ -10,13 +10,11 @@
 
 #import "UITableViewCell+contentFromSource.h"
 
+#import "iAIADataController.h"
+
 #import "PersonTableViewCell.h"
 #import "ContractTableViewCell.h"
 #import "FinancialEventTableViewCell.h"
-
-#import "PersonDataSource.h"
-#import "ContractDataSource.h"
-#import "FinancialEventDataSource.h"
 
 #import "PersonTableViewFooter.h"
 
@@ -29,11 +27,8 @@
 	PersonTableViewCell			* personViewCell ; 
 	ContractTableViewCell		* contractViewCell ; 
 	FinancialEventTableViewCell	* eventViewCell ; 	
-	
-	PersonDataSource			* __weak personDataSource ; 
-	ContractDataSource			* __weak contractDataSource ; 
-	FinancialEventDataSource	* __weak financialEventDataSource ;
-	
+		
+    iAIADataController          * __weak dataController ; 
 	
 	UIActivityIndicatorView		* _activityIndicator ;
 	UIBarButtonItem				* _refreshButtonItem ; 
@@ -44,12 +39,8 @@
 @property (nonatomic, strong)  PersonTableViewCell			* personViewCell ; 
 @property (nonatomic, strong)  ContractTableViewCell		* contractViewCell ; 
 @property (nonatomic, strong)  FinancialEventTableViewCell	* eventViewCell ; 
+@property (weak) iAIADataController* dataController ;
 
-@property ( weak) PersonDataSource                          * personDataSource ;
-@property ( weak) ContractDataSource						* contractDataSource ; 
-@property ( weak) FinancialEventDataSource                  * financialEventDataSource ;
-
--(void) refreshButtonPressed ; 
 -(void) customizeNavigationBar ; 
 -(void) customizeToolbar;
 
