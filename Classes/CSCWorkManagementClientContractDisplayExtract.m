@@ -22,23 +22,33 @@
     
 	service.logging = YES;
 	
-    if (self->cscContract == nil) {
-        cscContract = [[CSCContract alloc]init];
-        CSCPartyRole *role = [[CSCPartyRole alloc]init];
-        CSCPerson *dude = [[CSCPerson alloc]init] ;
-        [dude setFirstName:@"Georges-Henry"];
-        [dude setLastName:@"PORTEFAIT"];
-        [dude setClientNumber:clientNumber];
-        [role setPerson:dude];
-        [cscContract.RoleList addObject:role];
-    }
+    CSCContract *cscContract = [[CSCContract alloc]init];
+    CSCPartyRole *role = [[CSCPartyRole alloc]init];
+    CSCPerson *dude = [[CSCPerson alloc]init] ;
+    /*
+     [dude setFirstName:@"Georges-Henry"];
+    [dude setLastName:@"PORTEFAIT"];
+    */
+    [dude setClientNumber:clientNumber];
+    [role setPerson:dude];
+    [cscContract.RoleList addObject:role];
+    
 	// Returns NSMutableArray*.
 	[service ContractDisplayExtract:self action:@selector(ContractDisplayExtractHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
 }
 // Handle the response from ContractDisplayExtract.
-- (void) ContractDisplayExtractHandler: (id) value {
+- (void) ContractDisplayExtractHandler: (id) value
+{
+    // Do something with the NSMutableArray* result
+    NSMutableArray* result = (NSMutableArray*)value ;
+    //
+    [self setServiceAnswer:result] ;
+    [self setFaulty:FALSE];
     
-        
+#ifdef MOCKING
+    NSLog(@"Mocking returns");
+    return ;
+#else
 	// Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
@@ -48,27 +58,19 @@
         [self setFaulty:TRUE];
 		return;
 	}
-    
 	// Handle faults
 	if([value isKindOfClass:[SoapFault class]]) {
-        NSString *errorMsg = [(NSError*)value localizedDescription] ;
+        NSString *errorMsg = [(SoapFault*)value faultString] ;
         NSLog(@"SOAP FAULT :%@", value);
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Fault" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alertView show] ;
-
-		
         [self setFaulty:TRUE];
 		return;
-	}
-    
-	// Do something with the NSMutableArray* result
-    NSMutableArray* result = (NSMutableArray*)value ;
-    self->serviceAnswer = result ;
-    [self setFaulty:FALSE];
-	NSLog(@"ContractDisplayExtract returned the value: %@", self->serviceAnswer);
-    
-}
 
+        NSLog(@"ContractDisplayExtract returned the value: %@", [self serviceAnswer]);
+#endif
+}
+//
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [alertView dismissWithClickedButtonIndex:0 animated:TRUE ] ; 

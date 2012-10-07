@@ -7,11 +7,10 @@
 
 @interface CSCWorkManagementClientContractDisplayExtract : NSObject <UIAlertViewDelegate>
 {
-    CSCContract     *cscContract ;
-    NSMutableArray  *serviceAnswer ;
 }
 
 @property (nonatomic, assign, getter=isFaulty) BOOL faulty ;
+@property (nonatomic,strong) NSMutableArray* serviceAnswer ;
 
 -(void)invokeService;
 
