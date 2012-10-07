@@ -5,7 +5,7 @@
  */
 #import "CSCContract.h"
 
-@interface CSCWorkManagementClientContractDisplayExtract : NSObject
+@interface CSCWorkManagementClientContractDisplayExtract : NSObject <UIAlertViewDelegate>
 {
     CSCContract     *cscContract ;
     NSMutableArray  *serviceAnswer ;

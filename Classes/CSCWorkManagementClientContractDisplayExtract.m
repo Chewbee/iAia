@@ -38,16 +38,25 @@
 // Handle the response from ContractDisplayExtract.
 - (void) ContractDisplayExtractHandler: (id) value {
     
+        
 	// Handle errors
 	if([value isKindOfClass:[NSError class]]) {
+        NSString *errorMsg = [(NSError*)value localizedDescription] ;
 		NSLog(@"ERROR : %@", value);
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show] ;
         [self setFaulty:TRUE];
 		return;
 	}
     
 	// Handle faults
 	if([value isKindOfClass:[SoapFault class]]) {
-		NSLog(@"SOAP FAULT :%@", value);
+        NSString *errorMsg = [(NSError*)value localizedDescription] ;
+        NSLog(@"SOAP FAULT :%@", value);
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Fault" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView show] ;
+
+		
         [self setFaulty:TRUE];
 		return;
 	}
@@ -60,5 +69,9 @@
     
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [alertView dismissWithClickedButtonIndex:0 animated:TRUE ] ; 
+}
 
 @end
