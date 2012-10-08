@@ -181,16 +181,13 @@
 #pragma mark Segue Stuff
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@" In prepareForSegue ");
-    if ([[segue identifier] isEqualToString:@"ContractDetails"]) {
-        NSLog(@"In ContractDetails prepareForSegue ");
-        NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow] ;
-        ContractTableViewCell * ctvc = (ContractTableViewCell*)[self tableView:[self tableView] cellForRowAtIndexPath:selectedRowIndex];
+    if ([[segue identifier] isEqualToString:@"ContractDetails"])
+    {
+        ContractTableViewCell * ctvc = (ContractTableViewCell*)[self tableView:[self tableView] cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
         [segue.destinationViewController setContract:[ctvc contract]];
     }
-    if ([[segue identifier] isEqualToString:@"FinancialDetails"]) {
-        NSLog(@"In FinancialDetails prepareForSegue ");
-        // NSIndexPath *selectedRowIndex = [self.tableView indexPathForSelectedRow];
+    if ([[segue identifier] isEqualToString:@"FinancialDetails"])
+    {
     }
 }
 #pragma mark interactions
