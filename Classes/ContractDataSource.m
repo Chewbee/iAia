@@ -69,9 +69,6 @@ static ContractDataSource * _theContractDataSource = nil ;
     NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
     //  searching for Contract nodes
     nodes = [doc nodesForXPath:@"//*[local-name()='Contract']" namespaceMappings:dict error:&err];
-    
-    NSLog(@"Resultnodes: %@", nodes);
-    
     for (CXMLNode *node in nodes)
     {
         // creating contract objects from content
