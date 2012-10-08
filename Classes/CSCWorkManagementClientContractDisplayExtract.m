@@ -46,13 +46,11 @@
     [self setFaulty:FALSE];
     
 #ifdef MOCKING
-    NSLog(@"Mocking returns");
     return ;
 #else
 	// Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
-		NSLog(@"ERROR : %@", value);
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alertView show] ;
         [self setFaulty:TRUE];
@@ -61,13 +59,10 @@
 	// Handle faults
 	if([value isKindOfClass:[SoapFault class]]) {
         NSString *errorMsg = [(SoapFault*)value faultString] ;
-        NSLog(@"SOAP FAULT :%@", value);
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Fault" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alertView show] ;
         [self setFaulty:TRUE];
 		return;
-
-        NSLog(@"ContractDisplayExtract returned the value: %@", [self serviceAnswer]);
 #endif
 }
 //
