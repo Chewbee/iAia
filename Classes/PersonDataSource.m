@@ -54,7 +54,6 @@
 -(void) getPersonInformationWith:(NSString*) aCustomerKey {
 	
 	///TODO check that the data are more than a minute old if not return as the data  are fresh enough NSDATE
-	NSLog(@"getPersonInformationWith");
 	[self InitiateAsynchronousQuery];
 }
 //
@@ -96,19 +95,15 @@
 #pragma mark NSURLConnection delegates
 //
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	NSLog(@"connection didFailWithError %@",[error localizedFailureReason]);
 	[self FreeReturningBuffers] ;
 }
 //
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	[_webServiceReturnedData appendData:data] ;
-	NSLog(@"Receiving data ... ") ; 
 }
 //
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	_webServiceReturnedString = [[NSMutableString alloc ] initWithData:_webServiceReturnedData encoding:NSUTF8StringEncoding];
-	NSLog(@"Data reception completes %@",_webServiceReturnedString);
-	
 	///FIXME: HARDCODED Stub returning a predefined JSON String
 	
      [_webServiceReturnedString setString:@"{\"title\":\"Mr\",\"name\":\"alonso\",\"firstName\":\"fernando\",\"dateOfBirth\":\"01/08/1971\",\"maritalStatus\":\"Single\",\"professionalStatus\":\"Active\",\"clientNumber\":\"321\"}"] ;
