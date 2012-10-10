@@ -32,7 +32,7 @@
 			self.Profiles = [[NSMutableArray alloc] init];
             [self.Profiles addObject:@"all_user"];
 			self.UserData = [[NSMutableArray alloc] init];
-			self.UserID = @"GPORTEFAIT";
+			self.UserID = @"CSCUSR1";
 			self.Workqueues = [[NSMutableArray alloc] init];
 
 		}

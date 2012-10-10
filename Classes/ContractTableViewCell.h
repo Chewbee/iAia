@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContractDataSource.h"
 #import "CSCContract.h"
+#import "iAIADataController.h"
 
 @interface ContractTableViewCell : UITableViewCell {
 
 }
+@property (strong,nonatomic) iAIADataController* dataController ;
 @property (strong, nonatomic) IBOutlet UILabel *contractLblCtl;
 @property (strong,nonatomic) CSCContract *contract ; 
 @end

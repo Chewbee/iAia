@@ -9,21 +9,21 @@
 #import <Foundation/Foundation.h>
 
 #import "PersonDataSource.h"
-#import "ContractDataSource.h"
-#import "FinancialEventDataSource.h"
+#import "serviceListContract.h"
+#import "serviceContractGetSummary.h"
 
 @interface iAIADataController : NSObject
 {
-    PersonDataSource			* __weak personDataSource ;
-	ContractDataSource			* __weak contractDataSource ;
-	FinancialEventDataSource	* __weak financialEventDataSource ;
-    
 }
-@property ( weak) PersonDataSource                          * personDataSource ;
-@property ( weak) ContractDataSource						* contractDataSource ;
-@property ( weak) FinancialEventDataSource                  * financialEventDataSource ;
+@property (nonatomic, weak) PersonDataSource        * personDataSource ;
+@property (nonatomic,strong) NSMutableArray         * contracts ;
 
+#pragma mark Init stuff
 +(iAIADataController*) sharedInstance ;
 -(id)init ;
+#pragma mark Request
 -(void)query ;
+#pragma mark contract related methods
+-(CSCContract*) getContractFromIdx:(NSInteger)row ;
+-(NSInteger) contractCount ;
 @end

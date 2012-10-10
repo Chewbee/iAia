@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "CSCContract.h"
+#import "iAIADataController.h"
+
 
 @interface ContractDetailViewController : UITableViewController {
 
 	
 }
-@property (nonatomic,strong) CSCContract *contract ; 
+@property (nonatomic,strong) CSCContract *contract ;
+@property (nonatomic,weak) iAIADataController *dataController ;
 @end

@@ -26,6 +26,13 @@
     // Configure the view for the selected state
 }
 
+-(void) cellContentFromDataSource: (id) aDataSource forRow: (NSInteger)row
+{
+    if ([self dataController] == nil) {
+        [self setDataController:aDataSource];
+    }
+}
+
 
 
 

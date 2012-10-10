@@ -7,9 +7,9 @@
 //
 
 #import "iAiaViewController.h"
+#import "UITableViewCell+contentFromSource.h"
 
-
-#define PERSON_HEIGHT	208
+#define PERSON_HEIGHT	149
 #define OTHER_HEIGHT	44
 
 @implementation iAiaViewController
@@ -31,7 +31,7 @@
 		}
 			break;
 		case 1:
-            return [[dataController contractDataSource]contractCount ] ;
+            return [ [self dataController] contractCount ] ;
 			break;
 		case 2:
 		{
@@ -72,7 +72,7 @@
 			break;
 		case 1:
         {
-            NSString *contractHeader = [ NSString stringWithFormat:@"List of the %d In-force contracts",[[dataController contractDataSource]contractCount ]]  ;
+            NSString *contractHeader = [ NSString stringWithFormat:@"List of the %d In-force contracts",[[self dataController] contractCount ]]  ;
             [headerText setString:contractHeader ] ;
         }
 			break;
@@ -146,7 +146,7 @@
 		{
 			cell = (PersonTableViewCell*) [self cellFromCellClass: [PersonTableViewCell class] inTableView:tableView withReuseId:@"PersonCell"];
             
-            [cell cellContentFromDataSource: [self.dataController personDataSource] forRow: indexPath.row] ;
+            [cell cellContentFromDataSource: [self dataController ] personForRow: indexPath.row] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -156,7 +156,7 @@
 		{
             cell = (ContractTableViewCell*) [self cellFromCellClass: [ContractTableViewCell class] inTableView:tableView withReuseId:@"ContractCell"];
 
-			[cell cellContentFromDataSource: [self.dataController contractDataSource] forRow: indexPath.row] ;
+			[cell cellContentFromDataSource: [self dataController] contractForRow: indexPath.row] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -166,7 +166,7 @@
 		{
             cell = (FinancialEventTableViewCell*) [self cellFromCellClass: [FinancialEventTableViewCell class] inTableView:tableView withReuseId:@"FinancialCell"];
             
-			[cell cellContentFromDataSource: [self.dataController contractDataSource] forRow: indexPath.row ] ;
+			//[cell cellContentFromDataSource: [self dataController] contractForRow: indexPath.row ] ;
 			[self tableView:tableView titleForHeaderInSection:indexPath.section] ;
 			indexPaths = @[indexPath] ;
 			[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
@@ -185,13 +185,17 @@
     {
         ContractTableViewCell * ctvc = (ContractTableViewCell*)[self tableView:[self tableView] cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
         [segue.destinationViewController setContract:[ctvc contract]];
+        [segue.destinationViewController setDataController:dataController];
     }
     if ([[segue identifier] isEqualToString:@"FinancialDetails"])
     {
     }
 }
 #pragma mark interactions
-
+-(void) refreshButtonPressed {
+    [[self dataController] query];
+    [(UITableView* )[self view]reloadData];
+}
 #pragma mark -
 #pragma view methods
 - (void)viewDidLoad
@@ -216,6 +220,14 @@
 }
 //
 -(void) customizeNavigationBar {
+    // create a UIBarButton
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc ]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                           target:self
+                                           action:@selector(refreshButtonPressed)];
+    
+    
+    self.navigationItem.rightBarButtonItem=rightBarButtonItem ;
     //logo CSC
     UIImage *cscImage = [UIImage imageNamed:@"cscImage.png" ] ;
     UIImageView *iView = [[UIImageView alloc]initWithImage:cscImage ] ;
@@ -225,18 +237,4 @@
 {
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
-- (void)viewDidUnload {
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (Class) cellClassForSection:(int) section {
-    return nil ;
-}
-
 @end

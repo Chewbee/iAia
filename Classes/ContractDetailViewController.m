@@ -26,7 +26,9 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
+    ///TODO: Load the detail of the contract through Web service
     [self setTitle:[[self contract] DisplayId]];
+    //[[self dataController]  requestContractListDetails ];
 }
 
 

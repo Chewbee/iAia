@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "iAIADataController.h"
 
 @interface FinancialEventTableViewCell : UITableViewCell {
 
 }
+@property (strong,nonatomic) iAIADataController* dataController ;
 
 @end

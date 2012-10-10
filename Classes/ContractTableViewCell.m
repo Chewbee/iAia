@@ -24,10 +24,13 @@
     // Configure the view for the selected state
 }
 //
--(void) cellContentFromDataSource: (id) aDataSource forRow: (NSInteger)row
+-(void) cellContentFromDataSource: (id) aDataSource contractForRow: (NSInteger)row
 {
-    [self setContract:[aDataSource getContractFromIdx:row]];
-    [[self contractLblCtl ] setText: [[self contract] DisplayId] ];
+    if ([self dataController] == nil) {
+        [self setDataController:aDataSource];
+    }
+    [self setContract:[aDataSource getContractFromIdx:row]] ;
+    [[self contractLblCtl ] setText: [[self contract] DisplayId] ] ;
 }
 
 @end

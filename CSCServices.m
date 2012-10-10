@@ -55,9 +55,9 @@
 #pragma mark Getter Overrides
 
 
--(CSCContractDisplayExtractService*)contractDisplayExtractService{
+-(serviceListContract*)contractDisplayExtractService {
 	if(contractDisplayExtractService == nil) {
-		contractDisplayExtractService = [[CSCContractDisplayExtractService alloc] init];
+		contractDisplayExtractService = [[serviceListContract alloc] init];
 	}
 	return contractDisplayExtractService;
 }

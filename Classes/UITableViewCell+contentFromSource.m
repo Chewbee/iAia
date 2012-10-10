@@ -11,8 +11,11 @@
 
 @implementation UITableViewCell ( UITableViewCell_contentFromSource )
 
--(void) cellContentFromDataSource: (id) aDataSource forRow: (NSInteger)row
+-(void) cellContentFromDataSource: (id) aDataSource contractForRow: (NSInteger)row
 {
-
+}
+-(void) cellContentFromDataSource: (id) aDataSource personForRow: (NSInteger)row;
+{
+    
 }
 @end

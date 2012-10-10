@@ -14,24 +14,28 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
 		E619F0AA16218C5600FED188 /* iAIADataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E619F0A916218C5600FED188 /* iAIADataController.m */; };
-		E619F0B21621A24400FED188 /* SearchContractRequest.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0AC1621A24400FED188 /* SearchContractRequest.txt */; };
-		E619F0B31621A24400FED188 /* SearchContractResponse.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0AD1621A24400FED188 /* SearchContractResponse.txt */; };
-		E619F0B41621A24400FED188 /* ContractGetSummaryRequest_HINC0000190.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0AE1621A24400FED188 /* ContractGetSummaryRequest_HINC0000190.txt */; };
-		E619F0B51621A24400FED188 /* ContractGetSummaryRequestIUL00000348.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0AF1621A24400FED188 /* ContractGetSummaryRequestIUL00000348.txt */; };
-		E619F0B61621A24400FED188 /* ContractGetSummaryResponse_HINC0000190.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0B01621A24400FED188 /* ContractGetSummaryResponse_HINC0000190.txt */; };
-		E619F0B71621A24400FED188 /* ContractGetSummaryResponse_IUL00000348.txt in Resources */ = {isa = PBXBuildFile; fileRef = E619F0B11621A24400FED188 /* ContractGetSummaryResponse_IUL00000348.txt */; };
 		E6249757118F7B9F00D9BA93 /* cscImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E6249756118F7B9F00D9BA93 /* cscImage.png */; };
 		E62497F7118F816C00D9BA93 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E62497F6118F816C00D9BA93 /* icon.png */; };
+		E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */; };
 		E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */; };
 		E684CB9A161C3ACA001D3BDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E684CB99161C3ACA001D3BDC /* Default-568h@2x.png */; };
 		E686F4B1116E529800FE7ADE /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */; };
 		E694B7561189F9B2000B5D82 /* ContractTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7551189F9B2000B5D82 /* ContractTableViewCell.m */; };
 		E694B7591189F9E1000B5D82 /* FinancialEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */; };
 		E694B799118A01CF000B5D82 /* PersonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B798118A01CF000B5D82 /* PersonDataSource.m */; };
-		E694B79C118A01E0000B5D82 /* ContractDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B79B118A01E0000B5D82 /* ContractDataSource.m */; };
-		E694B7A1118A01F2000B5D82 /* FinancialEventDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */; };
 		E694B829118A1B17000B5D82 /* PersonTableViewFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E694B827118A1B17000B5D82 /* PersonTableViewFooter.m */; };
 		E69B7CC5130B3CBE00B7DD18 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E69B7CC4130B3CBE00B7DD18 /* Settings.bundle */; };
+		E69EE1551622D3C1005C82C6 /* ContractGetSummary.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1541622D3C0005C82C6 /* ContractGetSummary.wsdl */; };
+		E69EE1591622D51B005C82C6 /* ContractDisplayExtract.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1581622D51B005C82C6 /* ContractDisplayExtract.wsdl */; };
+		E69EE1631622D938005C82C6 /* serviceContractGetSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = E69EE1621622D937005C82C6 /* serviceContractGetSummary.m */; };
+		E69EE1661622D9AF005C82C6 /* CSCActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E69EE1651622D9AF005C82C6 /* CSCActivityRequest.m */; };
+		E69EE1681622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1671622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml */; };
+		E69EE16B1622DB71005C82C6 /* SearchContractRequest.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1691622DB71005C82C6 /* SearchContractRequest.xml */; };
+		E69EE16C1622DB71005C82C6 /* SearchContractResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE16A1622DB71005C82C6 /* SearchContractResponse.xml */; };
+		E69EE1711622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE16E1622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml */; };
+		E69EE1721622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE16F1622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml */; };
+		E69EE1731622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1701622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml */; };
+		E69EE17F162344FB005C82C6 /* UIViewController+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69EE17E162344FB005C82C6 /* UIViewController+dataController.m */; };
 		E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF051190C046007AA368 /* ContractDetailViewController.m */; };
 		E6E5BF131190C0EE007AA368 /* FinancialEventsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF111190C0EE007AA368 /* FinancialEventsDetailsViewController.m */; };
 		E6EA544D16202B67001FCF0D /* CSCAcceptanceDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA525E16202B66001FCF0D /* CSCAcceptanceDecision.m */; };
@@ -279,7 +283,7 @@
 		E6EA553F16202B67001FCF0D /* CSCWebSiteAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544216202B67001FCF0D /* CSCWebSiteAddress.m */; };
 		E6EA554016202B67001FCF0D /* CSCWMEnv.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544416202B67001FCF0D /* CSCWMEnv.m */; };
 		E6EA554116202B67001FCF0D /* CSCWMStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544616202B67001FCF0D /* CSCWMStatus.m */; };
-		E6EA554216202B67001FCF0D /* CSCContractDisplayExtractService.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544816202B67001FCF0D /* CSCContractDisplayExtractService.m */; };
+		E6EA554216202B67001FCF0D /* ServiceListContract.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544816202B67001FCF0D /* ServiceListContract.m */; };
 		E6EA554316202B67001FCF0D /* CSCWriteOffAdjustment.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544A16202B67001FCF0D /* CSCWriteOffAdjustment.m */; };
 		E6EA554416202B67001FCF0D /* Soap+Prefix.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA544C16202B67001FCF0D /* Soap+Prefix.m */; };
 		E6EA556116202BA1001FCF0D /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA554716202BA1001FCF0D /* NSData+Base64.m */; };
@@ -309,7 +313,6 @@
 		E6EA559516202BE1001FCF0D /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA558616202BE1001FCF0D /* CXMLNode_XPathExtensions.m */; };
 		E6EA559616202BE1001FCF0D /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA558816202BE1001FCF0D /* CXMLNode.m */; };
 		E6EA559816202D5B001FCF0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */; };
-		E6EA559F1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA559E1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m */; };
 		E6F8DD8C16207D070046F9B8 /* StoryboardPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DD8E16207D070046F9B8 /* StoryboardPhone.storyboard */; };
 		E6F8DDE21620A1840046F9B8 /* lg-alertO-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */; };
 		E6F8DDE31620A1840046F9B8 /* lg-failed-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */; };
@@ -331,14 +334,10 @@
 		8D1107310486CEB800E47090 /* iAia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		E619F0A816218C5600FED188 /* iAIADataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAIADataController.h; sourceTree = "<group>"; };
 		E619F0A916218C5600FED188 /* iAIADataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAIADataController.m; sourceTree = "<group>"; };
-		E619F0AC1621A24400FED188 /* SearchContractRequest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SearchContractRequest.txt; path = FromKrasen/ContractDisplayExtract/SearchContractRequest.txt; sourceTree = "<group>"; };
-		E619F0AD1621A24400FED188 /* SearchContractResponse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SearchContractResponse.txt; path = FromKrasen/ContractDisplayExtract/SearchContractResponse.txt; sourceTree = "<group>"; };
-		E619F0AE1621A24400FED188 /* ContractGetSummaryRequest_HINC0000190.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContractGetSummaryRequest_HINC0000190.txt; path = FromKrasen/ContractGetSummary/ContractGetSummaryRequest_HINC0000190.txt; sourceTree = "<group>"; };
-		E619F0AF1621A24400FED188 /* ContractGetSummaryRequestIUL00000348.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContractGetSummaryRequestIUL00000348.txt; path = FromKrasen/ContractGetSummary/ContractGetSummaryRequestIUL00000348.txt; sourceTree = "<group>"; };
-		E619F0B01621A24400FED188 /* ContractGetSummaryResponse_HINC0000190.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContractGetSummaryResponse_HINC0000190.txt; path = FromKrasen/ContractGetSummary/ContractGetSummaryResponse_HINC0000190.txt; sourceTree = "<group>"; };
-		E619F0B11621A24400FED188 /* ContractGetSummaryResponse_IUL00000348.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContractGetSummaryResponse_IUL00000348.txt; path = FromKrasen/ContractGetSummary/ContractGetSummaryResponse_IUL00000348.txt; sourceTree = "<group>"; };
 		E6249756118F7B9F00D9BA93 /* cscImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cscImage.png; sourceTree = "<group>"; };
 		E62497F6118F816C00D9BA93 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+dataController.h"; sourceTree = "<group>"; };
+		E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+dataController.m"; sourceTree = "<group>"; };
 		E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+contentFromSource.h"; sourceTree = "<group>"; };
 		E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+contentFromSource.m"; sourceTree = "<group>"; };
 		E684CB99161C3ACA001D3BDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -350,13 +349,23 @@
 		E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialEventTableViewCell.m; sourceTree = "<group>"; };
 		E694B797118A01CF000B5D82 /* PersonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDataSource.h; sourceTree = "<group>"; };
 		E694B798118A01CF000B5D82 /* PersonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDataSource.m; sourceTree = "<group>"; };
-		E694B79A118A01E0000B5D82 /* ContractDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDataSource.h; sourceTree = "<group>"; };
-		E694B79B118A01E0000B5D82 /* ContractDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractDataSource.m; sourceTree = "<group>"; };
-		E694B79F118A01F2000B5D82 /* FinancialEventDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventDataSource.h; sourceTree = "<group>"; };
-		E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinancialEventDataSource.m; sourceTree = "<group>"; };
 		E694B826118A1B17000B5D82 /* PersonTableViewFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewFooter.h; sourceTree = "<group>"; };
 		E694B827118A1B17000B5D82 /* PersonTableViewFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewFooter.m; sourceTree = "<group>"; };
 		E69B7CC4130B3CBE00B7DD18 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
+		E69EE1541622D3C0005C82C6 /* ContractGetSummary.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ContractGetSummary.wsdl; sourceTree = "<group>"; };
+		E69EE1581622D51B005C82C6 /* ContractDisplayExtract.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ContractDisplayExtract.wsdl; path = FromKrasen/ContractDisplayExtract/ContractDisplayExtract.wsdl; sourceTree = "<group>"; };
+		E69EE1611622D937005C82C6 /* serviceContractGetSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = serviceContractGetSummary.h; path = ../serviceContractGetSummary.h; sourceTree = "<group>"; };
+		E69EE1621622D937005C82C6 /* serviceContractGetSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceContractGetSummary.m; path = ../serviceContractGetSummary.m; sourceTree = "<group>"; };
+		E69EE1641622D9AF005C82C6 /* CSCActivityRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCActivityRequest.h; sourceTree = "<group>"; };
+		E69EE1651622D9AF005C82C6 /* CSCActivityRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCActivityRequest.m; sourceTree = "<group>"; };
+		E69EE1671622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ContractGetSummaryResponse_IUL00000348.xml; path = FromKrasen/ContractGetSummary/ContractGetSummaryResponse_IUL00000348.xml; sourceTree = "<group>"; };
+		E69EE1691622DB71005C82C6 /* SearchContractRequest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SearchContractRequest.xml; path = FromKrasen/ContractDisplayExtract/SearchContractRequest.xml; sourceTree = "<group>"; };
+		E69EE16A1622DB71005C82C6 /* SearchContractResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SearchContractResponse.xml; path = FromKrasen/ContractDisplayExtract/SearchContractResponse.xml; sourceTree = "<group>"; };
+		E69EE16E1622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ContractGetSummaryRequest_HINC0000190.xml; path = FromKrasen/ContractGetSummary/ContractGetSummaryRequest_HINC0000190.xml; sourceTree = "<group>"; };
+		E69EE16F1622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ContractGetSummaryRequestIUL00000348.xml; path = FromKrasen/ContractGetSummary/ContractGetSummaryRequestIUL00000348.xml; sourceTree = "<group>"; };
+		E69EE1701622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ContractGetSummaryResponse_HINC0000190.xml; path = FromKrasen/ContractGetSummary/ContractGetSummaryResponse_HINC0000190.xml; sourceTree = "<group>"; };
+		E69EE17D162344FB005C82C6 /* UIViewController+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+dataController.h"; sourceTree = "<group>"; };
+		E69EE17E162344FB005C82C6 /* UIViewController+dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+dataController.m"; sourceTree = "<group>"; };
 		E6E5BF041190C046007AA368 /* ContractDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDetailViewController.h; sourceTree = "<group>"; };
 		E6E5BF051190C046007AA368 /* ContractDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractDetailViewController.m; sourceTree = "<group>"; };
 		E6E5BF101190C0EE007AA368 /* FinancialEventsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventsDetailsViewController.h; sourceTree = "<group>"; };
@@ -851,8 +860,8 @@
 		E6EA544416202B67001FCF0D /* CSCWMEnv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCWMEnv.m; sourceTree = "<group>"; };
 		E6EA544516202B67001FCF0D /* CSCWMStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCWMStatus.h; sourceTree = "<group>"; };
 		E6EA544616202B67001FCF0D /* CSCWMStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCWMStatus.m; sourceTree = "<group>"; };
-		E6EA544716202B67001FCF0D /* CSCContractDisplayExtractService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCContractDisplayExtractService.h; sourceTree = "<group>"; };
-		E6EA544816202B67001FCF0D /* CSCContractDisplayExtractService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCContractDisplayExtractService.m; sourceTree = "<group>"; };
+		E6EA544716202B67001FCF0D /* ServiceListContract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceListContract.h; path = ../ServiceListContract.h; sourceTree = "<group>"; };
+		E6EA544816202B67001FCF0D /* ServiceListContract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceListContract.m; path = ../ServiceListContract.m; sourceTree = "<group>"; };
 		E6EA544916202B67001FCF0D /* CSCWriteOffAdjustment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCWriteOffAdjustment.h; sourceTree = "<group>"; };
 		E6EA544A16202B67001FCF0D /* CSCWriteOffAdjustment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCWriteOffAdjustment.m; sourceTree = "<group>"; };
 		E6EA544B16202B67001FCF0D /* Soap+Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Soap+Prefix.h"; sourceTree = "<group>"; };
@@ -912,8 +921,6 @@
 		E6EA558816202BE1001FCF0D /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
 		E6EA558916202BE1001FCF0D /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		E6EA559D1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCWorkManagementClientContractDisplayExtract.h; sourceTree = "<group>"; };
-		E6EA559E1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCWorkManagementClientContractDisplayExtract.m; sourceTree = "<group>"; };
 		E6F8DD8D16207D070046F9B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/StoryboardPhone.storyboard; sourceTree = "<group>"; };
 		E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-alertO-glass.png"; sourceTree = "<group>"; };
 		E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-failed-glass.png"; sourceTree = "<group>"; };
@@ -942,7 +949,6 @@
 				E6EA556E16202BBE001FCF0D /* TouchXML */,
 				E6EA554516202B81001FCF0D /* SOAP */,
 				E6EA525C16202B43001FCF0D /* CSC */,
-				E694B825118A1AD7000B5D82 /* Footer */,
 				E694B796118A01A4000B5D82 /* DataSources */,
 				E694B795118A018C000B5D82 /* Cells */,
 				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
@@ -953,7 +959,6 @@
 				E6E5BF051190C046007AA368 /* ContractDetailViewController.m */,
 				E6E5BF101190C0EE007AA368 /* FinancialEventsDetailsViewController.h */,
 				E6E5BF111190C0EE007AA368 /* FinancialEventsDetailsViewController.m */,
-				E69B7CC4130B3CBE00B7DD18 /* Settings.bundle */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -971,7 +976,6 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -981,6 +985,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				29B97317FDCFA39411CA2CEA /* Resources */,
 				32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -990,6 +995,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E69B7CC4130B3CBE00B7DD18 /* Settings.bundle */,
+				E69EE1531622D3A9005C82C6 /* WSDL */,
 				E619F0AB1621A1E500FED188 /* XML samples */,
 				E6F8DDE51620A2B80046F9B8 /* refresh.png */,
 				E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */,
@@ -1018,19 +1025,27 @@
 		E619F0AB1621A1E500FED188 /* XML samples */ = {
 			isa = PBXGroup;
 			children = (
-				E619F0AC1621A24400FED188 /* SearchContractRequest.txt */,
-				E619F0AD1621A24400FED188 /* SearchContractResponse.txt */,
-				E619F0AE1621A24400FED188 /* ContractGetSummaryRequest_HINC0000190.txt */,
-				E619F0AF1621A24400FED188 /* ContractGetSummaryRequestIUL00000348.txt */,
-				E619F0B01621A24400FED188 /* ContractGetSummaryResponse_HINC0000190.txt */,
-				E619F0B11621A24400FED188 /* ContractGetSummaryResponse_IUL00000348.txt */,
+				E69EE16D1622DB96005C82C6 /* SearchContractRequest */,
+				E69EE1741622DC1C005C82C6 /* ContractGetSummary */,
 			);
 			name = "XML samples";
+			sourceTree = "<group>";
+		};
+		E65E07D51625F740002034FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E69EE1611622D937005C82C6 /* serviceContractGetSummary.h */,
+				E69EE1621622D937005C82C6 /* serviceContractGetSummary.m */,
+				E6EA544716202B67001FCF0D /* ServiceListContract.h */,
+				E6EA544816202B67001FCF0D /* ServiceListContract.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		E694B795118A018C000B5D82 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E694B825118A1AD7000B5D82 /* Footer */,
 				E686F4AF116E529800FE7ADE /* PersonTableViewCell.h */,
 				E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */,
 				E694B7541189F9B2000B5D82 /* ContractTableViewCell.h */,
@@ -1039,6 +1054,10 @@
 				E694B7581189F9E1000B5D82 /* FinancialEventTableViewCell.m */,
 				E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */,
 				E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */,
+				E69EE17D162344FB005C82C6 /* UIViewController+dataController.h */,
+				E69EE17E162344FB005C82C6 /* UIViewController+dataController.m */,
+				E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */,
+				E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1046,14 +1065,9 @@
 		E694B796118A01A4000B5D82 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				E6EA559D1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.h */,
-				E6EA559E1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m */,
+				E65E07D51625F740002034FC /* Services */,
 				E694B797118A01CF000B5D82 /* PersonDataSource.h */,
 				E694B798118A01CF000B5D82 /* PersonDataSource.m */,
-				E694B79A118A01E0000B5D82 /* ContractDataSource.h */,
-				E694B79B118A01E0000B5D82 /* ContractDataSource.m */,
-				E694B79F118A01F2000B5D82 /* FinancialEventDataSource.h */,
-				E694B7A0118A01F2000B5D82 /* FinancialEventDataSource.m */,
 				E619F0A816218C5600FED188 /* iAIADataController.h */,
 				E619F0A916218C5600FED188 /* iAIADataController.m */,
 			);
@@ -1069,9 +1083,40 @@
 			name = Footer;
 			sourceTree = "<group>";
 		};
+		E69EE1531622D3A9005C82C6 /* WSDL */ = {
+			isa = PBXGroup;
+			children = (
+				E69EE1541622D3C0005C82C6 /* ContractGetSummary.wsdl */,
+				E69EE1581622D51B005C82C6 /* ContractDisplayExtract.wsdl */,
+			);
+			name = WSDL;
+			sourceTree = "<group>";
+		};
+		E69EE16D1622DB96005C82C6 /* SearchContractRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E69EE1691622DB71005C82C6 /* SearchContractRequest.xml */,
+				E69EE16A1622DB71005C82C6 /* SearchContractResponse.xml */,
+			);
+			name = SearchContractRequest;
+			sourceTree = "<group>";
+		};
+		E69EE1741622DC1C005C82C6 /* ContractGetSummary */ = {
+			isa = PBXGroup;
+			children = (
+				E69EE16E1622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml */,
+				E69EE16F1622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml */,
+				E69EE1701622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml */,
+				E69EE1671622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml */,
+			);
+			name = ContractGetSummary;
+			sourceTree = "<group>";
+		};
 		E6EA525C16202B43001FCF0D /* CSC */ = {
 			isa = PBXGroup;
 			children = (
+				E69EE1641622D9AF005C82C6 /* CSCActivityRequest.h */,
+				E69EE1651622D9AF005C82C6 /* CSCActivityRequest.m */,
 				E6EA525D16202B66001FCF0D /* CSCAcceptanceDecision.h */,
 				E6EA525E16202B66001FCF0D /* CSCAcceptanceDecision.m */,
 				E6EA525F16202B66001FCF0D /* CSCAdditionalClauseDetail.h */,
@@ -1562,8 +1607,6 @@
 				E6EA544416202B67001FCF0D /* CSCWMEnv.m */,
 				E6EA544516202B67001FCF0D /* CSCWMStatus.h */,
 				E6EA544616202B67001FCF0D /* CSCWMStatus.m */,
-				E6EA544716202B67001FCF0D /* CSCContractDisplayExtractService.h */,
-				E6EA544816202B67001FCF0D /* CSCContractDisplayExtractService.m */,
 				E6EA544916202B67001FCF0D /* CSCWriteOffAdjustment.h */,
 				E6EA544A16202B67001FCF0D /* CSCWriteOffAdjustment.m */,
 				E6EA544B16202B67001FCF0D /* Soap+Prefix.h */,
@@ -1702,12 +1745,14 @@
 				E6F8DDE31620A1840046F9B8 /* lg-failed-glass.png in Resources */,
 				E6F8DDE41620A1840046F9B8 /* lg-success-glass.png in Resources */,
 				E6F8DDE61620A2B80046F9B8 /* refresh.png in Resources */,
-				E619F0B21621A24400FED188 /* SearchContractRequest.txt in Resources */,
-				E619F0B31621A24400FED188 /* SearchContractResponse.txt in Resources */,
-				E619F0B41621A24400FED188 /* ContractGetSummaryRequest_HINC0000190.txt in Resources */,
-				E619F0B51621A24400FED188 /* ContractGetSummaryRequestIUL00000348.txt in Resources */,
-				E619F0B61621A24400FED188 /* ContractGetSummaryResponse_HINC0000190.txt in Resources */,
-				E619F0B71621A24400FED188 /* ContractGetSummaryResponse_IUL00000348.txt in Resources */,
+				E69EE1551622D3C1005C82C6 /* ContractGetSummary.wsdl in Resources */,
+				E69EE1591622D51B005C82C6 /* ContractDisplayExtract.wsdl in Resources */,
+				E69EE1681622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml in Resources */,
+				E69EE16B1622DB71005C82C6 /* SearchContractRequest.xml in Resources */,
+				E69EE16C1622DB71005C82C6 /* SearchContractResponse.xml in Resources */,
+				E69EE1711622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml in Resources */,
+				E69EE1721622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml in Resources */,
+				E69EE1731622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1725,8 +1770,6 @@
 				E694B7561189F9B2000B5D82 /* ContractTableViewCell.m in Sources */,
 				E694B7591189F9E1000B5D82 /* FinancialEventTableViewCell.m in Sources */,
 				E694B799118A01CF000B5D82 /* PersonDataSource.m in Sources */,
-				E694B79C118A01E0000B5D82 /* ContractDataSource.m in Sources */,
-				E694B7A1118A01F2000B5D82 /* FinancialEventDataSource.m in Sources */,
 				E694B829118A1B17000B5D82 /* PersonTableViewFooter.m in Sources */,
 				E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */,
 				E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */,
@@ -1976,7 +2019,7 @@
 				E6EA553F16202B67001FCF0D /* CSCWebSiteAddress.m in Sources */,
 				E6EA554016202B67001FCF0D /* CSCWMEnv.m in Sources */,
 				E6EA554116202B67001FCF0D /* CSCWMStatus.m in Sources */,
-				E6EA554216202B67001FCF0D /* CSCContractDisplayExtractService.m in Sources */,
+				E6EA554216202B67001FCF0D /* ServiceListContract.m in Sources */,
 				E6EA554316202B67001FCF0D /* CSCWriteOffAdjustment.m in Sources */,
 				E6EA554416202B67001FCF0D /* Soap+Prefix.m in Sources */,
 				E6EA556116202BA1001FCF0D /* NSData+Base64.m in Sources */,
@@ -2005,8 +2048,11 @@
 				E6EA559416202BE1001FCF0D /* CXMLNode_PrivateExtensions.m in Sources */,
 				E6EA559516202BE1001FCF0D /* CXMLNode_XPathExtensions.m in Sources */,
 				E6EA559616202BE1001FCF0D /* CXMLNode.m in Sources */,
-				E6EA559F1620375D001FCF0D /* CSCWorkManagementClientContractDisplayExtract.m in Sources */,
 				E619F0AA16218C5600FED188 /* iAIADataController.m in Sources */,
+				E69EE1631622D938005C82C6 /* serviceContractGetSummary.m in Sources */,
+				E69EE1661622D9AF005C82C6 /* CSCActivityRequest.m in Sources */,
+				E69EE17F162344FB005C82C6 /* UIViewController+dataController.m in Sources */,
+				E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

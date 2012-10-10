@@ -50,18 +50,18 @@
 	
 	// Make sure the network is available
 	if([SoapReachability connectedToNetwork] == NO) {
-		NSError* error = [NSError errorWithDomain:@"SudzC" code:400 userInfo:@{NSLocalizedDescriptionKey: @"The network is not available"}];
+		NSError* error = [NSError errorWithDomain:@"CSC" code:400 userInfo:@{NSLocalizedDescriptionKey: @"The network is not available"}];
 		[self handleError: error];
 	}
 	
 	// Make sure we can reach the host
 	if([SoapReachability hostAvailable:url.host] == NO) {
-		NSError* error = [NSError errorWithDomain:@"SudzC" code:410 userInfo:@{NSLocalizedDescriptionKey: @"The host is not available"}];
+		NSError* error = [NSError errorWithDomain:@"CSC" code:410 userInfo:@{NSLocalizedDescriptionKey: @"The host is not available"}];
 		[self handleError: error];
 	}
 	
 	// Output the URL if logging is enabled
-	if(logging) {
+	if( logging ) {
 		NSLog(@"Loading: %@", url.absoluteString);
 	}
 	
@@ -75,7 +75,7 @@
 		[request addValue: @"text/xml; charset=utf-8" forHTTPHeaderField: @"Content-Type"];
 		[request setHTTPBody: [postData dataUsingEncoding: NSUTF8StringEncoding]];
 		if(self.logging) {
-			NSLog(@"%@", postData);
+			NSLog(@"Postdata: %@", postData);
 		}
 	}
 	
@@ -103,7 +103,7 @@
 		}
 	}
 	if(self.logging) {
-		NSLog(@"Error: %@", error.localizedDescription);
+		NSLog(@"Error in SOAP Request: %@", error.localizedDescription);
 	}
 }
 
@@ -114,7 +114,7 @@
 		[self.defaultHandler onfault:fault];
 	}
 	if(self.logging) {
-		NSLog(@"Fault: %@", fault);
+		NSLog(@"Fault in SOAP Request: %@", fault);
 	}
 }
 
