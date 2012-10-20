@@ -208,6 +208,10 @@
     [(UITableView* )[self view]reloadData];
 }
 //
+-(void) reload
+{
+   [(UITableView* )[self view]reloadData]; ;
+}
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:NO] ;
@@ -216,6 +220,7 @@
 - (void) initializeDataSources {
     
     dataController  = [iAIADataController sharedInstance ] ;
+    [dataController setViewController:self];
     [dataController query] ;
 }
 //

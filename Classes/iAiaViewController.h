@@ -43,6 +43,7 @@
 
 -(void) customizeNavigationBar ; 
 -(void) customizeToolbar;
+-(void) reload;
 
 -(id)cellFromCellClass: (Class)theClass inTableView:(UITableView*)theTable withReuseId:(NSString*) reuseId ;
 
