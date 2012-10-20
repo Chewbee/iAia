@@ -263,7 +263,7 @@
 		if(self = [super init])
 		{
 			// self.serviceUrl = @"http://localhost:10101";
-            self.serviceUrl = @"http://ec2-176-34-70-43.eu-west-1.compute.amazonaws.com:8080";
+            self.serviceUrl = @"http://ec2-46-137-35-33.eu-west-1.compute.amazonaws.com:8080";
 			self.namespace = @"http://www.csc.com/graphtalk/aia/";
 			self.headers = nil;
 			self.logging = NO;
