@@ -10,21 +10,10 @@
 
 @interface PersonDataSource : NSObject {
 	
-	NSString	* clientNumber ;
-	
-	NSString	* title ; 
-	NSString	* firstName ; 
-	NSString	* name ; 
-	NSString	* dateOfBirth ;
-	NSString	* maritalStatus ;
-	NSString	* professionalStatus ; 
-	
-	NSMutableString		* _webServiceReturnedString ; 
+    NSMutableString		* _webServiceReturnedString ;
 	NSMutableData		* _webServiceReturnedData ; 
 	
 }
-
-
 @property	(nonatomic, strong) NSString * clientNumber ;
 @property	(nonatomic, strong) NSString * title ;  
 @property	(nonatomic, strong) NSString * firstName ; 
