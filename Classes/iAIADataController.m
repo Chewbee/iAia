@@ -50,6 +50,7 @@
     //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    // mocked is now a user setting
     if (mocked) {
         [self searchContractMockUp];
         return ;
@@ -74,7 +75,7 @@
         [dude setClientNumber:clientNumber];
         [role setPerson:dude];
         [cscContract.RoleList addObject:role];
-        [cscContract setNumber:@"IUL0%"];
+        [cscContract setNumber:@"%"];
         
         // Returns NSMutableArray*.
         [service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
