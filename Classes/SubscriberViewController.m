@@ -32,8 +32,13 @@
     // if the family structure is only one adult, hide the segmented control
     if ([[self fastQuoteModel]familyStructure]== 0 || [[self fastQuoteModel]familyStructure]== 4) {
         [self.subscriberSegmented setHidden:TRUE];
+        [self.mediBankImage setHidden:FALSE];
     }
-    else [self.subscriberSegmented setHidden:FALSE];
+    else
+    {
+        [self.subscriberSegmented setHidden:FALSE];
+        [self.mediBankImage setHidden:TRUE];
+    }
     // register segmented control action
     [self.subscriberSegmented addTarget:self
                          action:@selector(segmentedClicked:)
@@ -50,6 +55,7 @@
 - (void)viewDidUnload {
     [self setSubscriberSegmented:nil];
     [self setDatePicker:nil];
+    [self setMediBankImage:nil];
     [super viewDidUnload];
 }
 //

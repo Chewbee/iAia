@@ -15,6 +15,7 @@
 }
 @property (strong, nonatomic) IBOutlet UISegmentedControl *subscriberSegmented;
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIImageView *mediBankImage;
 - (IBAction)segmentedClicked:(id)sender;
 - (IBAction)datePickerSelect:(id)sender;
 @property (nonatomic,strong)FastQuoteModel* fastQuoteModel ;
