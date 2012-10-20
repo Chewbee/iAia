@@ -7,10 +7,9 @@
 //
 
 #import "iAIADataController.h"
+#import "iAiaViewController.h"
 
 @implementation iAIADataController
-
-@synthesize personDataSource  ;
 
 #pragma mark -
 // Singleton implemention
@@ -26,23 +25,26 @@
 -(id)init
 {
     if (self = [super init]) {
-        personDataSource =[PersonDataSource sharedInstance] ;
+        [self setPersonDataSource:[PersonDataSource sharedInstance]] ;
         if ([self contracts] == nil){
             [self setContracts:[NSMutableArray array]];
         }
+        [self setErrorStatus:FALSE];
         return self ;
     }
     return nil ;
 }
+//
 -(void)query
 {
+    [self setErrorStatus:FALSE];
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:YES] ;
     [[self contracts]removeAllObjects];
     [self invokeServiceContractList] ;
 }
 //
 #pragma mark -
-#pragma Service invocation
+#pragma mark Service invocation
 - (void)invokeServiceContractList
 {
 #ifdef MOCKING
@@ -74,20 +76,32 @@
     [cscContract setNumber:@"IUL0%"];
 
 	// Returns NSMutableArray*.
-	[service ContractDisplayExtract:self action:@selector(ContractDisplayExtractHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
+	[service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
+#endif
+}
+//
+- (void)invokeServiceContractSummary:(NSString*) contractNumber {
+#ifdef MOCKING
+    [self contractGetSummaryMockUp];
+    return ;
+#else
+    //     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
+    //
+    //     NSString *login = [defaults stringForKey:@"login_preference" ] ;
+    //     NSString *password = [defaults stringForKey:@"password_preference" ] ;
+    // Create the service
+    serviceContractGetSummary* service = [serviceContractGetSummary service] ;
+	service.logging = YES;
+
+    // Returns CSCContract*.
+    [service ContractGetSummary:self action:@selector(ServiceContractSummaryHandler:) Environment: [[CSCWMEnv alloc] init] ActivityRequest: [[CSCActivityRequest alloc] init] Contract: [[CSCContract alloc] init]];
 #endif
 }
 #pragma mark -
 #pragma mark Service returns
-// Handle the response from ContractDisplayExtract.
-- (void) ContractDisplayExtractHandler: (id) value
+// Handle the response from invokeServiceContractList.
+- (void) ServiceContractListHandler: (id) value
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
-    // Do something with the NSMutableArray* result
-    [self setContracts: (NSMutableArray*)value ];
-#ifdef MOCKING
-    return ;
-#else
 	// Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
@@ -104,30 +118,14 @@
         [alertView show] ;
 		return;
     }
-#endif
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    // Do something with the NSMutableArray* result
+    [self setContracts: (NSMutableArray*)value ];
+    [[self viewController ] reload];
 }
 //
-- (void)invokeServiceContractSummary {
-
-    /*
-     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-
-     NSString *login = [defaults stringForKey:@"login_preference" ] ;
-     NSString *password = [defaults stringForKey:@"password_preference" ] ;
-     */
-    // Create the service
-	// serviceContractGetSummary* service = [serviceContractGetSummary serviceWithUsername:login andPassword:password];
-    serviceContractGetSummary* service = [serviceContractGetSummary service] ;
-	service.logging = YES;
-
-#ifdef MOCKUP
-#else
-    // Returns CSCContract*.
-	[service ContractGetSummary:self action:@selector(ContractGetSummaryHandler:) Environment: [[CSCWMEnv alloc] init] ActivityRequest: [[CSCActivityRequest alloc] init] Contract: [[CSCContract alloc] init]];
-#endif
-}
-// Handle the response from ContractGetSummary.
-- (void) ContractGetSummaryHandler: (id) value {
+// Handle the response from invokeServiceContractSummary.
+- (void) ServiceContractSummaryHandler: (id) value {
 
 	// Handle errors
 	if([value isKindOfClass:[NSError class]]) {
@@ -143,18 +141,22 @@
 	// Do something with the CSCContract* result
     CSCContract* result = (CSCContract*)value;
 	NSLog(@"ContractGetSummary returned the value: %@", result);
+    [self setErrorStatus:FALSE];
 }
 //
+#pragma mark alert box
 - (void)alertView:(UIAlertView *)aView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [aView dismissWithClickedButtonIndex:0 animated:TRUE ] ;
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self setErrorStatus:TRUE] ;
 }
 //
 #pragma mark -
 #pragma mark XML flow parsing
--(void) populateContractArrayWithData:(NSData*) XMLDataFlow
+-(NSMutableArray*) populateContractArrayWithData:(NSData*) XMLDataFlow
 {
+    NSMutableArray *resultArray = [NSMutableArray array] ; 
     NSError *err = nil ;
     NSData *XMLData =nil;
     XMLData = XMLDataFlow;
@@ -172,9 +174,10 @@
         // creating contract objects from content
         CSCContract *contract= [CSCContract createWithNode:node];
         if (contract) {
-            [self.contracts addObject:contract] ;
+            [resultArray addObject:contract] ;
         }
     }
+    return resultArray ; 
 }
 #pragma mark -
 #pragma mark mockup
@@ -186,7 +189,7 @@
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
     //
-    [self populateContractArrayWithData:(NSData*) XMLData];
+    [self setContracts:[self populateContractArrayWithData:(NSData*) XMLData]];
     
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
 }
@@ -199,7 +202,7 @@
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
     //
-    [self populateContractArrayWithData:(NSData*) XMLData];
+    [self setContractsDetailed:[self populateContractArrayWithData:(NSData*) XMLData]];
 }
 #pragma mark -
 #pragma mark Content management

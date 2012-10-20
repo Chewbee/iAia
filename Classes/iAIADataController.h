@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "PersonDataSource.h"
 #import "serviceListContract.h"
 #import "serviceContractGetSummary.h"
+//#import "iAiaViewController.h"
+@class iAiaViewController ; 
 
 @interface iAIADataController : NSObject
 {
 }
-@property (nonatomic, weak) PersonDataSource        * personDataSource ;
+@property (nonatomic,assign)BOOL                      errorStatus ;
+@property (nonatomic,strong) PersonDataSource        * personDataSource ;
 @property (nonatomic,strong) NSMutableArray         * contracts ;
+@property (nonatomic,strong) NSMutableArray         * contractsDetailed ;
+@property (atomic,strong) SoapRequest               *soapRequest ;
+@property (nonatomic, weak) iAiaViewController      *viewController ;
 
 #pragma mark Init stuff
 +(iAIADataController*) sharedInstance ;
@@ -26,4 +31,5 @@
 #pragma mark contract related methods
 -(CSCContract*) getContractFromIdx:(NSInteger)row ;
 -(NSInteger) contractCount ;
+- (void)invokeServiceContractSummary:(NSString*) contractNumber ;
 @end
