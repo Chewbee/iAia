@@ -216,12 +216,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="medi2.jpg" id="lta-f7-OmU">
-                                <rect key="frame" x="20" y="263" width="280" height="140"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" id="lta-f7-OmU">
+                                <rect key="frame" x="20" y="251" width="280" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" id="lyL-1o-Fhf">
-                                <rect key="frame" x="20" y="63" width="280" height="216"/>
+                                <rect key="frame" x="20" y="60" width="280" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="familyPicker"/>
                                 <connections>
@@ -296,8 +296,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" id="ZY8-yM-z5a">
+                                <rect key="frame" x="20" y="251" width="280" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="DoK-a2-y3z">
-                                <rect key="frame" x="20" y="63" width="280" height="216"/>
+                                <rect key="frame" x="20" y="60" width="280" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="372183186.75848699">
                                     <!--2012-10-17 16:13:06 +0000-->
@@ -365,6 +369,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="DoK-a2-y3z" id="F15-Zp-7Nq"/>
+                        <outlet property="mediBankImage" destination="ZY8-yM-z5a" id="QVB-Id-9WF"/>
                         <outlet property="subscriberSegmented" destination="1AM-2o-iJV" id="Dqu-bP-gYq"/>
                     </connections>
                 </viewController>
@@ -380,12 +385,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="64" width="320" height="372"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="medi2.jpg" id="VMZ-sN-P8o">
-                                <rect key="frame" x="20" y="263" width="280" height="140"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" id="VMZ-sN-P8o">
+                                <rect key="frame" x="20" y="251" width="280" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" id="6ei-Vl-7D8">
-                                <rect key="frame" x="20" y="63" width="280" height="216"/>
+                                <rect key="frame" x="20" y="60" width="280" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="familyPicker"/>
                                 <connections>
@@ -522,7 +527,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="medi2.jpg" width="323" height="156"/>
+        <image name="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" width="1000" height="315"/>
         <image name="request_quote_icon.png" width="309" height="419"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
