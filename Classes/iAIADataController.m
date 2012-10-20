@@ -47,55 +47,55 @@
 #pragma mark Service invocation
 - (void)invokeServiceContractList
 {
-#ifdef MOCKING
-    [self searchContractMockUp];
-    return ;
-#else
-	// Create the service
+    //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-    /*
-     NSString *login = [defaults stringForKey:@"login_preference" ] ;
-     NSString *password = [defaults stringForKey:@"password_preference" ] ;
-     */
-    NSString *clientNumber = [defaults stringForKey:@"number_preference" ] ;
-
-	// ServiceListContract* service = [ServiceListContract serviceWithUsername:login andPassword:password] ;
-    serviceListContract *service = [serviceListContract service] ;
-	service.logging = YES;
-
-    CSCContract *cscContract = [[CSCContract alloc]init];
-    CSCPartyRole *role = [[CSCPartyRole alloc]init];
-    CSCPerson *dude = [[CSCPerson alloc]init] ;
-    /*
-     [dude setFirstName:@"Georges-Henry"];
-     [dude setLastName:@"PORTEFAIT"];
-     */
-    [dude setClientNumber:clientNumber];
-    [role setPerson:dude];
-    [cscContract.RoleList addObject:role];
-    [cscContract setNumber:@"IUL0%"];
-
-	// Returns NSMutableArray*.
-	[service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
-#endif
+    BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    if (mocked) {
+        [self searchContractMockUp];
+        return ;
+    } else {
+        /*
+         NSString *login = [defaults stringForKey:@"login_preference" ] ;
+         NSString *password = [defaults stringForKey:@"password_preference" ] ;
+         */
+        NSString *clientNumber = [defaults stringForKey:@"number_preference" ] ;
+        
+        // ServiceListContract* service = [ServiceListContract serviceWithUsername:login andPassword:password] ;
+        serviceListContract *service = [serviceListContract service] ;
+        service.logging = YES;
+        
+        CSCContract *cscContract = [[CSCContract alloc]init];
+        CSCPartyRole *role = [[CSCPartyRole alloc]init];
+        CSCPerson *dude = [[CSCPerson alloc]init] ;
+        /*
+         [dude setFirstName:@"Georges-Henry"];
+         [dude setLastName:@"PORTEFAIT"];
+         */
+        [dude setClientNumber:clientNumber];
+        [role setPerson:dude];
+        [cscContract.RoleList addObject:role];
+        [cscContract setNumber:@"IUL0%"];
+        
+        // Returns NSMutableArray*.
+        [service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
+    }
 }
 //
 - (void)invokeServiceContractSummary:(NSString*) contractNumber {
-#ifdef MOCKING
-    [self contractGetSummaryMockUp];
-    return ;
-#else
-    //     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     //
-    //     NSString *login = [defaults stringForKey:@"login_preference" ] ;
-    //     NSString *password = [defaults stringForKey:@"password_preference" ] ;
-    // Create the service
-    serviceContractGetSummary* service = [serviceContractGetSummary service] ;
-	service.logging = YES;
-
-    // Returns CSCContract*.
-    [service ContractGetSummary:self action:@selector(ServiceContractSummaryHandler:) Environment: [[CSCWMEnv alloc] init] ActivityRequest: [[CSCActivityRequest alloc] init] Contract: [[CSCContract alloc] init]];
-#endif
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
+    BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    if (mocked) {
+        [self contractGetSummaryMockUp];
+        return ;
+    } else {
+        // Create the service
+        serviceContractGetSummary* service = [serviceContractGetSummary service] ;
+        service.logging = YES;
+        
+        // Returns CSCContract*.
+        [service ContractGetSummary:self action:@selector(ServiceContractSummaryHandler:) Environment: [[CSCWMEnv alloc] init] ActivityRequest: [[CSCActivityRequest alloc] init] Contract: [[CSCContract alloc] init]];
+    }
 }
 #pragma mark -
 #pragma mark Service returns
@@ -185,7 +185,7 @@
 {
     //  using local resource file in mockup mode
     NSString *XMLPath = nil ;
-    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"SearchContractResponse.txt"];
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"SearchContractResponse.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
     //
