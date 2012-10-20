@@ -26,10 +26,26 @@
 -(void) viewDidLoad
 {
     [super viewDidLoad];
-    ///TODO: Load the detail of the contract through Web service
+
     [self setTitle:[[self contract] DisplayId]];
-    //[[self dataController]  requestContractListDetails ];
+    [[self dataController]invokeServiceContractSummary:[[self contract]Number] ];
 }
 
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[[self dataController]contractsDetailed]count];
+}
+// according to sections the cell type is different
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = nil ;
 
+    cell = [tableView dequeueReusableCellWithIdentifier:@"ContractDetail"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ContractDetail"];
+    }
+    //[cell cellContentFromDataSource: [self dataController ] personForRow: indexPath.row] ;
+  	return cell;
+}
 @end
