@@ -28,6 +28,8 @@
 	<true/>
 	<key>UIMainStoryboardFile</key>
 	<string>StoryboardPhone</string>
+	<key>UIMainStoryboardFile~ipad</key>
+	<string>StoryboardiPad</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 </dict>
