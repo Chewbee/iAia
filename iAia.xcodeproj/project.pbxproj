@@ -328,6 +328,7 @@
 		E6F8DDE21620A1840046F9B8 /* lg-alertO-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */; };
 		E6F8DDE31620A1840046F9B8 /* lg-failed-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */; };
 		E6F8DDE41620A1840046F9B8 /* lg-success-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */; };
+		E6F8DDE61620A2B80046F9B8 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE51620A2B80046F9B8 /* refresh.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -952,6 +953,7 @@
 		E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-alertO-glass.png"; sourceTree = "<group>"; };
 		E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-failed-glass.png"; sourceTree = "<group>"; };
 		E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-success-glass.png"; sourceTree = "<group>"; };
+		E6F8DDE51620A2B80046F9B8 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1018,12 +1020,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DAA1A174163345E100AB7704 /* get_quote_button.png */,
 				E69B7CC4130B3CBE00B7DD18 /* Settings.bundle */,
 				E69EE1531622D3A9005C82C6 /* WSDL */,
 				E619F0AB1621A1E500FED188 /* XML samples */,
 				DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */,
 				E6F8DD8E16207D070046F9B8 /* StoryboardPhone.storyboard */,
-				DAA1A174163345E100AB7704 /* get_quote_button.png */,
+				E6F8DDE51620A2B80046F9B8 /* refresh.png */,
 				E6C877A9162F1FFC0083218B /* medi2.jpg */,
 				DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */,
 				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
@@ -1796,6 +1799,7 @@
 				E6F8DDE21620A1840046F9B8 /* lg-alertO-glass.png in Resources */,
 				E6F8DDE31620A1840046F9B8 /* lg-failed-glass.png in Resources */,
 				E6F8DDE41620A1840046F9B8 /* lg-success-glass.png in Resources */,
+				E6F8DDE61620A2B80046F9B8 /* refresh.png in Resources */,
 				E69EE1551622D3C1005C82C6 /* ContractGetSummary.wsdl in Resources */,
 				E69EE1591622D51B005C82C6 /* ContractDisplayExtract.wsdl in Resources */,
 				E69EE1681622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml in Resources */,
