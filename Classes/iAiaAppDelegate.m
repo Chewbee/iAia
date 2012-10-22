@@ -14,7 +14,13 @@
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
+
+    // Register the preference defaults early.
+    NSDictionary *appDefaults = [NSDictionary
+                                 dictionaryWithObject:@"ec2-46-137-35-33.eu-west-1" forKey:@"server"];
+
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+
 	[self.window makeKeyAndVisible];
     return TRUE ;
 }
