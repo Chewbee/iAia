@@ -192,9 +192,10 @@
     }
 }
 #pragma mark interactions
--(void) refreshButtonPressed {
+- (IBAction)refreshPressed:(id)sender {
+    [[self refreshButtonItem ] setEnabled:FALSE] ;
+    [[self activityIndicator] setHidden:FALSE];
     [[self dataController] query];
-    [(UITableView* )[self view]reloadData];
 }
 #pragma mark -
 #pragma view methods
@@ -210,7 +211,9 @@
 //
 -(void) reload
 {
-   [(UITableView* )[self view]reloadData]; ;
+    [[self refreshButtonItem ] setEnabled:TRUE] ;
+    [[self activityIndicator] setHidden:TRUE];
+    [(UITableView* )[self view]reloadData]; ;
 }
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -224,15 +227,17 @@
     [dataController query] ;
 }
 //
+
+
 -(void) customizeNavigationBar {
     // create a UIBarButton
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc ]
-                                           initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
-                                           target:self
-                                           action:@selector(refreshButtonPressed)];
-    
-    
-    self.navigationItem.rightBarButtonItem=rightBarButtonItem ;
+//    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc ]
+//                                           initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+//                                           target:self
+//                                           action:@selector(refreshPressed)];
+//    
+//    
+//    self.navigationItem.rightBarButtonItem=rightBarButtonItem ;
     //logo CSC
     UIImage *cscImage = [UIImage imageNamed:@"cscImage.png" ] ;
     UIImageView *iView = [[UIImageView alloc]initWithImage:cscImage ] ;
@@ -241,5 +246,10 @@
 -(void) customizeToolbar
 {
     
+}
+- (void)viewDidUnload {
+    [self setRefreshButtonItem:nil];
+    [self setActivityIndicator:nil];
+    [super viewDidUnload];
 }
 @end

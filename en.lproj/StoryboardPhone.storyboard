@@ -148,7 +148,16 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="F0d-V8-HJH"/>
+                    <navigationItem key="navigationItem" id="F0d-V8-HJH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="kIf-UI-MMh">
+                            <connections>
+                                <action selector="refreshPressed:" destination="Gae-oa-RCf" id="BFP-MS-9Ki"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="refreshButtonItem" destination="kIf-UI-MMh" id="h9J-x3-95X"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhl-1S-5dY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -586,6 +595,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </class>
         <class className="iAiaViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/iAiaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshPressed:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="refreshButtonItem" candidateClass="UIBarButtonItem"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

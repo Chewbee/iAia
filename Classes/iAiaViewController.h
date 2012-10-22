@@ -28,19 +28,18 @@
 	ContractTableViewCell		* contractViewCell ; 
 	FinancialEventTableViewCell	* eventViewCell ; 	
 		
-    iAIADataController          * __weak dataController ; 
-	
-	UIActivityIndicatorView		* _activityIndicator ;
-	UIBarButtonItem				* _refreshButtonItem ; 
-	UIBarButtonItem				* _activityButtonItem ; 
+    iAIADataController          * __weak dataController ;
 	
 }
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButtonItem;
 @property (nonatomic, strong)  PersonTableViewCell			* personViewCell ; 
 @property (nonatomic, strong)  ContractTableViewCell		* contractViewCell ; 
 @property (nonatomic, strong)  FinancialEventTableViewCell	* eventViewCell ; 
 @property (weak) iAIADataController* dataController ;
 
+- (IBAction)refreshPressed:(id)sender;
 -(void) customizeNavigationBar ; 
 -(void) customizeToolbar;
 -(void) reload;

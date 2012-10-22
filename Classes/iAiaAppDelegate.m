@@ -20,7 +20,9 @@
                                  dictionaryWithObject:@"ec2-46-137-35-33.eu-west-1" forKey:@"server"];
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
-
+    //
+    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //
 	[self.window makeKeyAndVisible];
     return TRUE ;
 }
