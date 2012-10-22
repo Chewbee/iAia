@@ -2196,8 +2196,8 @@
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Gh Portefait";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gh Portefait";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2210,8 +2210,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = iAia;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "5807DB20-93AF-41DE-8AE2-B0B25F09DBE9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5807DB20-93AF-41DE-8AE2-B0B25F09DBE9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
