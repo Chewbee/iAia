@@ -36,7 +36,7 @@
 		case 2:
 		{
 			///TODO: get the last ten financial movements from the datasource
-            return 3 ;
+            return 0 ;
 		}
 			break;
 	}
@@ -76,8 +76,8 @@
             [headerText setString:contractHeader ] ;
         }
 			break;
-		case 2:
-			[headerText setString:  @"Financial activities"] ;
+		//case 2:
+			// [headerText setString:  @"Financial activities"] ;
 	}
     
 	return headerText;
@@ -95,10 +95,10 @@
 			
 			break;
 		case 1:
-			footerText =  [NSString stringWithFormat: @"List of all the inforce contracts" ];
+			// footerText =  [NSString stringWithFormat: @"List of all the inforce contracts" ];
 			break;
-		case 2:
-			footerText = [NSString stringWithFormat:  @"Latest financials movements"] ;
+		//case 2:
+			// footerText = [NSString stringWithFormat:  @"Latest financials movements"] ;
 	}
 	
 	return footerText ;
