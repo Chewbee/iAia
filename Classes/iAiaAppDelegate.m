@@ -17,7 +17,7 @@
 
     // Register the preference defaults early.
     NSDictionary *appDefaults = [NSDictionary
-                                 dictionaryWithObject:@"ec2-46-137-35-33.eu-west-1" forKey:@"server"];
+                                 dictionaryWithObjects:@[@"ec2-46-137-35-33.eu-west-1",@"PRSN0000430"] forKeys:@[@"server",@"number_preference"]];
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     //

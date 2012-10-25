@@ -75,7 +75,7 @@
         [dude setClientNumber:clientNumber];
         [role setPerson:dude];
         [cscContract.RoleList addObject:role];
-        [cscContract setNumber:@"%"];
+        [cscContract setNumber:@"IUL0%"];
         
         // Returns NSMutableArray*.
         [service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];

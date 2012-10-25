@@ -237,7 +237,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <scene sceneID="g0j-6O-CR9">
             <objects>
                 <tableViewController id="IBl-13-i43" customClass="iAiaViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="SIq-w2-GLF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="100" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="SIq-w2-GLF">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -387,53 +387,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" width="1000" height="315"/>
         <image name="get_quote_button.png" width="400" height="400"/>
     </resources>
-    <classes>
-        <class className="ContractTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contractLblCtl" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CoverageSelectorViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageSelectorViewController.h"/>
-        </class>
-        <class className="FinancialEventTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FinancialEventTableViewCell.h"/>
-        </class>
-        <class className="PersonTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonTableViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="RefreshButtonPressed:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="clientNumberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateOfBirthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastUpdateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="maritalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="professionalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="statusImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="iAiaViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iAiaViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshPressed:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="refreshButtonItem" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="iPadQuoteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadQuoteViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="datePickerSelect:"/>
-                <relationship kind="action" name="segmentedClicked:"/>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="familyPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="subscriberSegmented" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
