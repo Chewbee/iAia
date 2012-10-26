@@ -1,0 +1,16 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ProductExtract xmlns="http://www.csc.com/graphtalk/aia/" xmlns:gtx="graphtalk.aia.extension">
+            <Environment>
+                <Profiles>
+                    <String>all_user</String>
+                </Profiles>
+                <UserID>KKARAGIO</UserID>
+            </Environment>
+            <Contract>
+                <ProductIdentifier>HE_MEDI01</ProductIdentifier>
+            </Contract>
+        </ProductExtract>
+    </soap:Body>
+</soap:Envelope>
