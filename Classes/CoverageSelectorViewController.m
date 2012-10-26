@@ -7,6 +7,7 @@
 //
 
 #import "CoverageSelectorViewController.h"
+#import "CoverageViewCell.h"
 
 @interface CoverageSelectorViewController ()
 
@@ -22,7 +23,10 @@
     }
     return self;
 }
-
+//
+-(void) viewWillLoad {
+    [self.tableView registerClass:[CoverageViewCell class] forCellReuseIdentifier:@"QuoteCell" ] ;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,9 +43,62 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark - Web Service stuff
+-(void) getTariff
+{
+    //
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
+    BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    // mocked is now a user setting
+    if (mocked) {
+        [self getTariffMockup];
+        return ;
+    } else {
+        NSString *login = [defaults stringForKey:@"login_preference" ] ;
+        NSString *password = [defaults stringForKey:@"password_preference" ] ;
+        ServiceGetTariff  *service = [ServiceGetTariff serviceWithUsername:login andPassword:password] ;
+        // get the params
+        [service  CalculationOfPremium: self action:@selector(ServiceGetTariffHandler:)
+                           Environment: [[CSCWMEnv alloc] init]
+                       FamilyStructure: [[self fastQuoteModel ] familyString]
+                                  State:[[self fastQuoteModel]stateString ]
+                         BirthDateList:[NSMutableArray arrayWithArray:[[self fastQuoteModel] birthDatesArray]]
+                              Contract: nil ];
+    }
+    
+}
+#pragma mark -
+#pragma mark Service returns
+// Handle the response from invokeServiceContractList.
+- (void) ServiceGetTariffHandler: (id) value
+{
+	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    // Handle errors
+	if([value isKindOfClass:[NSError class]]) {
+        NSString *errorMsg = [(NSError*)value localizedDescription] ;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+		return;
+	}
+	// Handle faults
+	if([value isKindOfClass:[SoapFault class]]) {
+        NSString *errorMsg = [(SoapFault*)value faultString] ;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Fault" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+		return;
+    }
+    // Do something with the NSMutableArray* result
+    //TODO: do the work
+//    [self setContracts: (NSMutableArray*)value ];
+    
+}
+-(void) getTariffMockup
+{
+    ;
+}
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -50,17 +107,75 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    switch (section) {
+		case 0:
+            return 1;
+		case 1:
+            return 5;
+    }
     return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"QouteCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    UITableViewCell *cell = nil ;
+	int section = indexPath.section ;
+	NSArray *indexPaths = nil ;
     // Configure the cell...
+    // Young 107 166 208
+    // BAsic 57 132 190
+    // Mid 43 107 139
+    // TOP 17 61 96
+    // Ultra 88 40 114
+
+    // Young    0.4196	0.6510	0.8157
+    // Basic    0.2235	0.5176	0.7451
+    // Mid      0.1686	0.4196	0.5451
+    // Top      0.0667	0.2392	0.3765
+    // Ultra    0.3451	0.1569	0.4471
+    UIColor *young =    [UIColor colorWithRed:0.4196 green:0.6510 blue:0.8157 alpha:1.0f] ;
+    UIColor *basic =    [UIColor colorWithRed:0.2235 green:0.5176 blue:0.7451 alpha:1.0f] ;
+    UIColor *mid =      [UIColor colorWithRed:0.1686 green:0.4196 blue:0.5451 alpha:1.0f] ;
+    UIColor *top =      [UIColor colorWithRed:0.0667 green:0.2392 blue:0.3765 alpha:1.0f] ;
+    UIColor *ultra =    [UIColor colorWithRed:0.3451 green:0.1569 blue:0.4471 alpha:1.0f] ;
+    
+    switch (section) {
+		case 0:
+		{
+            cell = [tableView dequeueReusableCellWithIdentifier:@"QuoteCell"] ;
+            break;
+		}
+        case 1:
+		{
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
+            
+            switch (indexPath.row) {
+                case 0:
+                    [cell setBackgroundColor: young] ;
+                    break;
+                case 1:
+                    [cell setBackgroundColor: basic ] ;
+                    break ;
+                case 2:
+                    [cell setBackgroundColor: mid ] ;
+                    break;
+                case 3:
+                    [cell setBackgroundColor: top ] ;
+                    break ;
+                case 4:
+                    [cell setBackgroundColor: ultra ] ;
+                    break;
+                default:
+                    [cell setBackgroundColor: [UIColor blackColor] ] ;
+                    break;
+            }
+            
+            break ;
+		}
+    }
+    [self tableView:tableView titleForHeaderInSection:indexPath.section] ;
+    indexPaths = @[indexPath] ;
+    [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
     
     return cell;
 }

@@ -28,10 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self setFamilyStructure:@[@"Single",@"Couple",@"Family",@"Family w/o minor",@"Single family"]];
-    [self setStates:@[@"Australian Capital Territory",@"New South Wales",@"Queensland",@"Southern Australia",@"Tasmania",@"Victoria",@"Western Australia"]];
-	[self setFastQuoteModel:[[FastQuoteModel alloc]init]];
-    [[self fastQuoteModel] invokeServiceProductExtract:@"HE_%" ];
+    [self setFastQuoteModel:[[FastQuoteModel alloc]init]];
+    [self setFamilyStructure:[[self fastQuoteModel] familyStructureArray] ] ;
+    [self setStates:[[self fastQuoteModel] statesArray ]];
 }
 -(void)viewWillAppear:(BOOL)animated
 {

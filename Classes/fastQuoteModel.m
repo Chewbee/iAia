@@ -16,8 +16,41 @@
         [self setFamilyStructure:0];
         [self setBirthDates:[[NSMutableDictionary alloc ]init]];
         [self setState:0];
+
+        // Do any additional setup after loading the view.
+        [self setFamilyStructureDic:@{
+         @"single3"         : @"Single",
+         @"partner1"        : @"Couple",
+         @"married"         : @"Family" ,
+         @"divorced"        : @"Family w/o minor" ,
+         @"divorced"        : @"Single family"
+         }] ;
+        [self setFamilyStructureArray:@[@"Single", @"Couple", @"Family" , @"Family w/o minor" , @"Single family"]] ;
+
+        [self setStatesDic:@{
+         @"ACT" : @"Australian Capital Territory",
+         @"NSW" : @"New South Wales",
+         @"QLD" : @"Queensland",
+         @"SA"  : @"Southern Australia",
+         @"TAS" : @"Tasmania",
+         @"VIC" : @"Victoria",
+         @"WA"  : @"Western Australia"}];
+        [self setStatesArray:@[@"Australian Capital Territory", @"New South Wales", @"Queensland", @"Southern Australia", @"Tasmania", @"Victoria",  @"Western Australia"]];
     }
     return self ;
+}
+- (NSString*) familyString
+{
+    return ( [ [self familyStructureDic ]objectForKey:[[self familyStructureArray ]  objectAtIndex:[self familyStructure ]]] ) ;
+}
+- (NSString*) stateString
+{
+    return ( [ [self statesDic ]objectForKey:[[self statesArray ]  objectAtIndex:[self state ]]] ) ;
+}
+-(NSArray*) birthDatesArray
+{
+    NSArray *resultArray = @[[self.birthDates objectForKey:@"subscriber"],[self.birthDates objectForKey:@"partner"]];
+    return resultArray ;
 }
 //
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier {

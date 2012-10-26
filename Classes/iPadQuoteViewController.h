@@ -13,6 +13,8 @@
 //
 @property (nonatomic,strong)NSArray *familyStructure ;
 @property (nonatomic,strong)NSArray *states ;
+
+
 @property (nonatomic,strong)FastQuoteModel* fastQuoteModel ;
 //
 @property (weak, nonatomic) IBOutlet UIPickerView *familyPicker;

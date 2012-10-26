@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "fastQuoteModel.h"
+#import "ServiceGetTariff.h"
 
 
 @interface CoverageSelectorViewController : UITableViewController
 
 
 @property (nonatomic,strong)FastQuoteModel* fastQuoteModel ;
+@property (nonatomic,strong)NSString    *familyStructure ;
 
+
+-(void) getTariff ;
 
 @end
