@@ -55,16 +55,14 @@
         [self searchContractMockUp];
         return ;
     } else {
-        /*
-         NSString *login = [defaults stringForKey:@"login_preference" ] ;
-         NSString *password = [defaults stringForKey:@"password_preference" ] ;
-         */
         NSString *clientNumber = [defaults stringForKey:@"number_preference" ] ;
-        
-        // ServiceListContract* service = [ServiceListContract serviceWithUsername:login andPassword:password] ;
-        serviceListContract *service = [serviceListContract service] ;
+
+        NSString *login = [defaults stringForKey:@"login_preference" ] ;
+        NSString *password = [defaults stringForKey:@"password_preference" ] ;
+        serviceListContract  *service = [serviceListContract serviceWithUsername:login andPassword:password] ;
+        //serviceListContract *service = [serviceListContract service] ;
         service.logging = YES;
-        
+
         CSCContract *cscContract = [[CSCContract alloc]init];
         CSCPartyRole *role = [[CSCPartyRole alloc]init];
         CSCPerson *dude = [[CSCPerson alloc]init] ;
@@ -76,7 +74,7 @@
         [role setPerson:dude];
         [cscContract.RoleList addObject:role];
         [cscContract setNumber:@"IUL0%"];
-        
+
         // Returns NSMutableArray*.
         [service ContractDisplayExtract:self action:@selector(ServiceContractListHandler:) Environment: [[CSCWMEnv alloc] init] Contract: cscContract ];
     }
