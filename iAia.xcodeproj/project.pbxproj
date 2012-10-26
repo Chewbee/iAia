@@ -42,6 +42,19 @@
 		E69EE1721622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE16F1622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml */; };
 		E69EE1731622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml in Resources */ = {isa = PBXBuildFile; fileRef = E69EE1701622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml */; };
 		E69EE17F162344FB005C82C6 /* UIViewController+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E69EE17E162344FB005C82C6 /* UIViewController+dataController.m */; };
+		E6A4FCF8163A68F7004053CC /* ProductExtract.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = E6A4FCF4163A68F7004053CC /* ProductExtract.wsdl */; };
+		E6A4FCF9163A68F7004053CC /* ProductExtractRequest.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6A4FCF5163A68F7004053CC /* ProductExtractRequest.xml */; };
+		E6A4FCFA163A68F7004053CC /* ProductExtractResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6A4FCF6163A68F7004053CC /* ProductExtractResponse.xml */; };
+		E6A4FCFB163A68F7004053CC /* Web Service ProductExtract.docx in Resources */ = {isa = PBXBuildFile; fileRef = E6A4FCF7163A68F7004053CC /* Web Service ProductExtract.docx */; };
+		E6A4FCFE163A6A20004053CC /* serviceProductExtract.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FCFD163A6A20004053CC /* serviceProductExtract.m */; };
+		E6A4FD01163A7C3D004053CC /* CSCAny.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD00163A7C3D004053CC /* CSCAny.m */; };
+		E6A4FD04163A7C6D004053CC /* CSCArrayOfFootnote.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD03163A7C6D004053CC /* CSCArrayOfFootnote.m */; };
+		E6A4FD0A163A7CBF004053CC /* CSCFootnote.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD09163A7CBF004053CC /* CSCFootnote.m */; };
+		E6A4FD0D163A7D43004053CC /* CSCArrayOfIndexation.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD0C163A7D43004053CC /* CSCArrayOfIndexation.m */; };
+		E6A4FD10163A7DDD004053CC /* CSCArrayOfPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD0F163A7DDD004053CC /* CSCArrayOfPreference.m */; };
+		E6A4FD13163A7DFC004053CC /* CSCChoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD12163A7DFC004053CC /* CSCChoiceItem.m */; };
+		E6A4FD16163A7E69004053CC /* CSCArrayOfHealthDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD15163A7E69004053CC /* CSCArrayOfHealthDomain.m */; };
+		E6A4FD19163A7EEA004053CC /* CSCArrayOfPersonDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD18163A7EEA004053CC /* CSCArrayOfPersonDetail.m */; };
 		E6C877A6162F0FFF0083218B /* QuoteFamilyStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877A5162F0FFE0083218B /* QuoteFamilyStructureViewController.m */; };
 		E6C877AA162F1FFC0083218B /* medi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6C877A9162F1FFC0083218B /* medi2.jpg */; };
 		E6C877AD162F22260083218B /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AC162F22260083218B /* SubscriberViewController.m */; };
@@ -324,10 +337,48 @@
 		E6EA559516202BE1001FCF0D /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA558616202BE1001FCF0D /* CXMLNode_XPathExtensions.m */; };
 		E6EA559616202BE1001FCF0D /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA558816202BE1001FCF0D /* CXMLNode.m */; };
 		E6EA559816202D5B001FCF0D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */; };
+		E6F6BFAA163A8637009EDEDB /* CSCNote.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFA9163A8637009EDEDB /* CSCNote.m */; };
+		E6F6BFAD163A8669009EDEDB /* CSCBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFAC163A8669009EDEDB /* CSCBuilding.m */; };
+		E6F6BFB0163A8689009EDEDB /* CSCReference.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFAF163A8689009EDEDB /* CSCReference.m */; };
+		E6F6BFB3163A86A3009EDEDB /* CSCInformationReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFB2163A86A3009EDEDB /* CSCInformationReceipt.m */; };
+		E6F6BFB6163A86D1009EDEDB /* CSCUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFB5163A86D1009EDEDB /* CSCUsage.m */; };
+		E6F6C212163A8931009EDEDB /* CSCArrayOfChoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6BFD9163A8930009EDEDB /* CSCArrayOfChoiceItem.m */; };
+		E6F6C26A163A8931009EDEDB /* CSCAutomobile.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C089163A8930009EDEDB /* CSCAutomobile.m */; };
+		E6F6C26B163A8931009EDEDB /* CSCAutomobileUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C08B163A8930009EDEDB /* CSCAutomobileUsage.m */; };
+		E6F6C275163A8931009EDEDB /* CSCBuildingUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C09F163A8930009EDEDB /* CSCBuildingUsage.m */; };
+		E6F6C276163A8931009EDEDB /* CSCBus.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0A1163A8930009EDEDB /* CSCBus.m */; };
+		E6F6C277163A8931009EDEDB /* CSCCaravan.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0A3163A8930009EDEDB /* CSCCaravan.m */; };
+		E6F6C288163A8931009EDEDB /* CSCCriterion.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0C5163A8930009EDEDB /* CSCCriterion.m */; };
+		E6F6C28E163A8931009EDEDB /* CSCDirectPaymentCard.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0D1163A8930009EDEDB /* CSCDirectPaymentCard.m */; };
+		E6F6C293163A8931009EDEDB /* CSCDwelling.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0DB163A8930009EDEDB /* CSCDwelling.m */; };
+		E6F6C294163A8931009EDEDB /* CSCDwellingUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C0DD163A8930009EDEDB /* CSCDwellingUsage.m */; };
+		E6F6C2AE163A8931009EDEDB /* CSCHealthInsurer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C111163A8930009EDEDB /* CSCHealthInsurer.m */; };
+		E6F6C2D9163A8931009EDEDB /* CSCMoped.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C167163A8931009EDEDB /* CSCMoped.m */; };
+		E6F6C2DA163A8931009EDEDB /* CSCMotorcycle.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C169163A8931009EDEDB /* CSCMotorcycle.m */; };
+		E6F6C2DB163A8931009EDEDB /* CSCMotorisedVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C16B163A8931009EDEDB /* CSCMotorisedVehicle.m */; };
+		E6F6C2E6163A8931009EDEDB /* CSCOutputDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C181163A8931009EDEDB /* CSCOutputDocument.m */; };
+		E6F6C2F8163A8931009EDEDB /* CSCPropertyPark.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1A5163A8931009EDEDB /* CSCPropertyPark.m */; };
+		E6F6C2FA163A8931009EDEDB /* CSCQuestionnaire.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1A9163A8931009EDEDB /* CSCQuestionnaire.m */; };
+		E6F6C313163A8931009EDEDB /* CSCTrailer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1DB163A8931009EDEDB /* CSCTrailer.m */; };
+		E6F6C314163A8931009EDEDB /* CSCTrailerUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1DD163A8931009EDEDB /* CSCTrailerUsage.m */; };
+		E6F6C315163A8931009EDEDB /* CSCTruck.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1DF163A8931009EDEDB /* CSCTruck.m */; };
+		E6F6C316163A8931009EDEDB /* CSCTruckCamper.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1E1163A8931009EDEDB /* CSCTruckCamper.m */; };
+		E6F6C317163A8931009EDEDB /* CSCTruckUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1E3163A8931009EDEDB /* CSCTruckUsage.m */; };
+		E6F6C31C163A8931009EDEDB /* CSCVan.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1ED163A8931009EDEDB /* CSCVan.m */; };
+		E6F6C324163A8931009EDEDB /* CSCWorkManagementClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E6F6C1FD163A8931009EDEDB /* CSCWorkManagementClient.m */; };
 		E6F8DD8C16207D070046F9B8 /* StoryboardPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DD8E16207D070046F9B8 /* StoryboardPhone.storyboard */; };
 		E6F8DDE21620A1840046F9B8 /* lg-alertO-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */; };
 		E6F8DDE31620A1840046F9B8 /* lg-failed-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */; };
 		E6F8DDE41620A1840046F9B8 /* lg-success-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */; };
+		E6FA58DC163A84740016CCD1 /* CSCPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58DB163A84740016CCD1 /* CSCPreference.m */; };
+		E6FA58DF163A84990016CCD1 /* CSCHealthDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58DE163A84990016CCD1 /* CSCHealthDomain.m */; };
+		E6FA58E2163A84DD0016CCD1 /* CSCArrayOfProductOption.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58E1163A84DD0016CCD1 /* CSCArrayOfProductOption.m */; };
+		E6FA58E5163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58E4163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.m */; };
+		E6FA58E8163A854D0016CCD1 /* CSCArrayOfInformationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58E7163A854D0016CCD1 /* CSCArrayOfInformationRequest.m */; };
+		E6FA58EB163A85690016CCD1 /* CSCHealthBeneficiary.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58EA163A85690016CCD1 /* CSCHealthBeneficiary.m */; };
+		E6FA58EE163A859C0016CCD1 /* CSCInformationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58ED163A859C0016CCD1 /* CSCInformationRequest.m */; };
+		E6FA58F1163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58F0163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.m */; };
+		E6FA58F4163A85FF0016CCD1 /* CSCWMActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = E6FA58F3163A85FF0016CCD1 /* CSCWMActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,6 +435,27 @@
 		E69EE1701622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ContractGetSummaryResponse_HINC0000190.xml; path = FromKrasen/ContractGetSummary/ContractGetSummaryResponse_HINC0000190.xml; sourceTree = "<group>"; };
 		E69EE17D162344FB005C82C6 /* UIViewController+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+dataController.h"; sourceTree = "<group>"; };
 		E69EE17E162344FB005C82C6 /* UIViewController+dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+dataController.m"; sourceTree = "<group>"; };
+		E6A4FCF4163A68F7004053CC /* ProductExtract.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductExtract.wsdl; sourceTree = "<group>"; };
+		E6A4FCF5163A68F7004053CC /* ProductExtractRequest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ProductExtractRequest.xml; sourceTree = "<group>"; };
+		E6A4FCF6163A68F7004053CC /* ProductExtractResponse.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ProductExtractResponse.xml; sourceTree = "<group>"; };
+		E6A4FCF7163A68F7004053CC /* Web Service ProductExtract.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Web Service ProductExtract.docx"; sourceTree = "<group>"; };
+		E6A4FCFC163A6A20004053CC /* serviceProductExtract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceProductExtract.h; sourceTree = "<group>"; };
+		E6A4FCFD163A6A20004053CC /* serviceProductExtract.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceProductExtract.m; sourceTree = "<group>"; };
+		E6A4FD00163A7C3D004053CC /* CSCAny.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCAny.m; sourceTree = "<group>"; };
+		E6A4FD02163A7C6D004053CC /* CSCArrayOfFootnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfFootnote.h; sourceTree = "<group>"; };
+		E6A4FD03163A7C6D004053CC /* CSCArrayOfFootnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfFootnote.m; sourceTree = "<group>"; };
+		E6A4FD08163A7CBF004053CC /* CSCFootnote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCFootnote.h; sourceTree = "<group>"; };
+		E6A4FD09163A7CBF004053CC /* CSCFootnote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCFootnote.m; sourceTree = "<group>"; };
+		E6A4FD0B163A7D43004053CC /* CSCArrayOfIndexation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfIndexation.h; sourceTree = "<group>"; };
+		E6A4FD0C163A7D43004053CC /* CSCArrayOfIndexation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfIndexation.m; sourceTree = "<group>"; };
+		E6A4FD0E163A7DDD004053CC /* CSCArrayOfPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfPreference.h; sourceTree = "<group>"; };
+		E6A4FD0F163A7DDD004053CC /* CSCArrayOfPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfPreference.m; sourceTree = "<group>"; };
+		E6A4FD11163A7DFC004053CC /* CSCChoiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCChoiceItem.h; sourceTree = "<group>"; };
+		E6A4FD12163A7DFC004053CC /* CSCChoiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCChoiceItem.m; sourceTree = "<group>"; };
+		E6A4FD14163A7E69004053CC /* CSCArrayOfHealthDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfHealthDomain.h; sourceTree = "<group>"; };
+		E6A4FD15163A7E69004053CC /* CSCArrayOfHealthDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfHealthDomain.m; sourceTree = "<group>"; };
+		E6A4FD17163A7EEA004053CC /* CSCArrayOfPersonDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfPersonDetail.h; sourceTree = "<group>"; };
+		E6A4FD18163A7EEA004053CC /* CSCArrayOfPersonDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfPersonDetail.m; sourceTree = "<group>"; };
 		E6C877A4162F0FFE0083218B /* QuoteFamilyStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteFamilyStructureViewController.h; sourceTree = "<group>"; };
 		E6C877A5162F0FFE0083218B /* QuoteFamilyStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteFamilyStructureViewController.m; sourceTree = "<group>"; };
 		E6C877A9162F1FFC0083218B /* medi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = medi2.jpg; sourceTree = "<group>"; };
@@ -948,10 +1020,87 @@
 		E6EA558816202BE1001FCF0D /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
 		E6EA558916202BE1001FCF0D /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
 		E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E6F6BFA8163A8637009EDEDB /* CSCNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCNote.h; sourceTree = "<group>"; };
+		E6F6BFA9163A8637009EDEDB /* CSCNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCNote.m; sourceTree = "<group>"; };
+		E6F6BFAB163A8669009EDEDB /* CSCBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCBuilding.h; sourceTree = "<group>"; };
+		E6F6BFAC163A8669009EDEDB /* CSCBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCBuilding.m; sourceTree = "<group>"; };
+		E6F6BFAE163A8689009EDEDB /* CSCReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCReference.h; sourceTree = "<group>"; };
+		E6F6BFAF163A8689009EDEDB /* CSCReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCReference.m; sourceTree = "<group>"; };
+		E6F6BFB1163A86A3009EDEDB /* CSCInformationReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCInformationReceipt.h; sourceTree = "<group>"; };
+		E6F6BFB2163A86A3009EDEDB /* CSCInformationReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCInformationReceipt.m; sourceTree = "<group>"; };
+		E6F6BFB4163A86D1009EDEDB /* CSCUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCUsage.h; sourceTree = "<group>"; };
+		E6F6BFB5163A86D1009EDEDB /* CSCUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCUsage.m; sourceTree = "<group>"; };
+		E6F6BFC2163A8930009EDEDB /* CSCAny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCAny.h; path = Generated/CSCAny.h; sourceTree = "<group>"; };
+		E6F6BFD8163A8930009EDEDB /* CSCArrayOfChoiceItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCArrayOfChoiceItem.h; path = Generated/CSCArrayOfChoiceItem.h; sourceTree = "<group>"; };
+		E6F6BFD9163A8930009EDEDB /* CSCArrayOfChoiceItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCArrayOfChoiceItem.m; path = Generated/CSCArrayOfChoiceItem.m; sourceTree = "<group>"; };
+		E6F6C088163A8930009EDEDB /* CSCAutomobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCAutomobile.h; path = Generated/CSCAutomobile.h; sourceTree = "<group>"; };
+		E6F6C089163A8930009EDEDB /* CSCAutomobile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCAutomobile.m; path = Generated/CSCAutomobile.m; sourceTree = "<group>"; };
+		E6F6C08A163A8930009EDEDB /* CSCAutomobileUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCAutomobileUsage.h; path = Generated/CSCAutomobileUsage.h; sourceTree = "<group>"; };
+		E6F6C08B163A8930009EDEDB /* CSCAutomobileUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCAutomobileUsage.m; path = Generated/CSCAutomobileUsage.m; sourceTree = "<group>"; };
+		E6F6C09E163A8930009EDEDB /* CSCBuildingUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCBuildingUsage.h; path = Generated/CSCBuildingUsage.h; sourceTree = "<group>"; };
+		E6F6C09F163A8930009EDEDB /* CSCBuildingUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCBuildingUsage.m; path = Generated/CSCBuildingUsage.m; sourceTree = "<group>"; };
+		E6F6C0A0163A8930009EDEDB /* CSCBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCBus.h; path = Generated/CSCBus.h; sourceTree = "<group>"; };
+		E6F6C0A1163A8930009EDEDB /* CSCBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCBus.m; path = Generated/CSCBus.m; sourceTree = "<group>"; };
+		E6F6C0A2163A8930009EDEDB /* CSCCaravan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCCaravan.h; path = Generated/CSCCaravan.h; sourceTree = "<group>"; };
+		E6F6C0A3163A8930009EDEDB /* CSCCaravan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCCaravan.m; path = Generated/CSCCaravan.m; sourceTree = "<group>"; };
+		E6F6C0C4163A8930009EDEDB /* CSCCriterion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCCriterion.h; path = Generated/CSCCriterion.h; sourceTree = "<group>"; };
+		E6F6C0C5163A8930009EDEDB /* CSCCriterion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCCriterion.m; path = Generated/CSCCriterion.m; sourceTree = "<group>"; };
+		E6F6C0D0163A8930009EDEDB /* CSCDirectPaymentCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCDirectPaymentCard.h; path = Generated/CSCDirectPaymentCard.h; sourceTree = "<group>"; };
+		E6F6C0D1163A8930009EDEDB /* CSCDirectPaymentCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCDirectPaymentCard.m; path = Generated/CSCDirectPaymentCard.m; sourceTree = "<group>"; };
+		E6F6C0DA163A8930009EDEDB /* CSCDwelling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCDwelling.h; path = Generated/CSCDwelling.h; sourceTree = "<group>"; };
+		E6F6C0DB163A8930009EDEDB /* CSCDwelling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCDwelling.m; path = Generated/CSCDwelling.m; sourceTree = "<group>"; };
+		E6F6C0DC163A8930009EDEDB /* CSCDwellingUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCDwellingUsage.h; path = Generated/CSCDwellingUsage.h; sourceTree = "<group>"; };
+		E6F6C0DD163A8930009EDEDB /* CSCDwellingUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCDwellingUsage.m; path = Generated/CSCDwellingUsage.m; sourceTree = "<group>"; };
+		E6F6C110163A8930009EDEDB /* CSCHealthInsurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCHealthInsurer.h; path = Generated/CSCHealthInsurer.h; sourceTree = "<group>"; };
+		E6F6C111163A8930009EDEDB /* CSCHealthInsurer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCHealthInsurer.m; path = Generated/CSCHealthInsurer.m; sourceTree = "<group>"; };
+		E6F6C166163A8931009EDEDB /* CSCMoped.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCMoped.h; path = Generated/CSCMoped.h; sourceTree = "<group>"; };
+		E6F6C167163A8931009EDEDB /* CSCMoped.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCMoped.m; path = Generated/CSCMoped.m; sourceTree = "<group>"; };
+		E6F6C168163A8931009EDEDB /* CSCMotorcycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCMotorcycle.h; path = Generated/CSCMotorcycle.h; sourceTree = "<group>"; };
+		E6F6C169163A8931009EDEDB /* CSCMotorcycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCMotorcycle.m; path = Generated/CSCMotorcycle.m; sourceTree = "<group>"; };
+		E6F6C16A163A8931009EDEDB /* CSCMotorisedVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCMotorisedVehicle.h; path = Generated/CSCMotorisedVehicle.h; sourceTree = "<group>"; };
+		E6F6C16B163A8931009EDEDB /* CSCMotorisedVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCMotorisedVehicle.m; path = Generated/CSCMotorisedVehicle.m; sourceTree = "<group>"; };
+		E6F6C180163A8931009EDEDB /* CSCOutputDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCOutputDocument.h; path = Generated/CSCOutputDocument.h; sourceTree = "<group>"; };
+		E6F6C181163A8931009EDEDB /* CSCOutputDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCOutputDocument.m; path = Generated/CSCOutputDocument.m; sourceTree = "<group>"; };
+		E6F6C1A4163A8931009EDEDB /* CSCPropertyPark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCPropertyPark.h; path = Generated/CSCPropertyPark.h; sourceTree = "<group>"; };
+		E6F6C1A5163A8931009EDEDB /* CSCPropertyPark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCPropertyPark.m; path = Generated/CSCPropertyPark.m; sourceTree = "<group>"; };
+		E6F6C1A8163A8931009EDEDB /* CSCQuestionnaire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCQuestionnaire.h; path = Generated/CSCQuestionnaire.h; sourceTree = "<group>"; };
+		E6F6C1A9163A8931009EDEDB /* CSCQuestionnaire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCQuestionnaire.m; path = Generated/CSCQuestionnaire.m; sourceTree = "<group>"; };
+		E6F6C1DA163A8931009EDEDB /* CSCTrailer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCTrailer.h; path = Generated/CSCTrailer.h; sourceTree = "<group>"; };
+		E6F6C1DB163A8931009EDEDB /* CSCTrailer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCTrailer.m; path = Generated/CSCTrailer.m; sourceTree = "<group>"; };
+		E6F6C1DC163A8931009EDEDB /* CSCTrailerUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCTrailerUsage.h; path = Generated/CSCTrailerUsage.h; sourceTree = "<group>"; };
+		E6F6C1DD163A8931009EDEDB /* CSCTrailerUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCTrailerUsage.m; path = Generated/CSCTrailerUsage.m; sourceTree = "<group>"; };
+		E6F6C1DE163A8931009EDEDB /* CSCTruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCTruck.h; path = Generated/CSCTruck.h; sourceTree = "<group>"; };
+		E6F6C1DF163A8931009EDEDB /* CSCTruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCTruck.m; path = Generated/CSCTruck.m; sourceTree = "<group>"; };
+		E6F6C1E0163A8931009EDEDB /* CSCTruckCamper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCTruckCamper.h; path = Generated/CSCTruckCamper.h; sourceTree = "<group>"; };
+		E6F6C1E1163A8931009EDEDB /* CSCTruckCamper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCTruckCamper.m; path = Generated/CSCTruckCamper.m; sourceTree = "<group>"; };
+		E6F6C1E2163A8931009EDEDB /* CSCTruckUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCTruckUsage.h; path = Generated/CSCTruckUsage.h; sourceTree = "<group>"; };
+		E6F6C1E3163A8931009EDEDB /* CSCTruckUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCTruckUsage.m; path = Generated/CSCTruckUsage.m; sourceTree = "<group>"; };
+		E6F6C1EC163A8931009EDEDB /* CSCVan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCVan.h; path = Generated/CSCVan.h; sourceTree = "<group>"; };
+		E6F6C1ED163A8931009EDEDB /* CSCVan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCVan.m; path = Generated/CSCVan.m; sourceTree = "<group>"; };
+		E6F6C1FC163A8931009EDEDB /* CSCWorkManagementClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCWorkManagementClient.h; path = Generated/CSCWorkManagementClient.h; sourceTree = "<group>"; };
+		E6F6C1FD163A8931009EDEDB /* CSCWorkManagementClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCWorkManagementClient.m; path = Generated/CSCWorkManagementClient.m; sourceTree = "<group>"; };
 		E6F8DD8D16207D070046F9B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/StoryboardPhone.storyboard; sourceTree = "<group>"; };
 		E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-alertO-glass.png"; sourceTree = "<group>"; };
 		E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-failed-glass.png"; sourceTree = "<group>"; };
 		E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lg-success-glass.png"; sourceTree = "<group>"; };
+		E6FA58DA163A84740016CCD1 /* CSCPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCPreference.h; sourceTree = "<group>"; };
+		E6FA58DB163A84740016CCD1 /* CSCPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCPreference.m; sourceTree = "<group>"; };
+		E6FA58DD163A84990016CCD1 /* CSCHealthDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCHealthDomain.h; sourceTree = "<group>"; };
+		E6FA58DE163A84990016CCD1 /* CSCHealthDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCHealthDomain.m; sourceTree = "<group>"; };
+		E6FA58E0163A84DD0016CCD1 /* CSCArrayOfProductOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfProductOption.h; sourceTree = "<group>"; };
+		E6FA58E1163A84DD0016CCD1 /* CSCArrayOfProductOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfProductOption.m; sourceTree = "<group>"; };
+		E6FA58E3163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfHealthBeneficiary.h; sourceTree = "<group>"; };
+		E6FA58E4163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfHealthBeneficiary.m; sourceTree = "<group>"; };
+		E6FA58E6163A854D0016CCD1 /* CSCArrayOfInformationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfInformationRequest.h; sourceTree = "<group>"; };
+		E6FA58E7163A854D0016CCD1 /* CSCArrayOfInformationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfInformationRequest.m; sourceTree = "<group>"; };
+		E6FA58E9163A85690016CCD1 /* CSCHealthBeneficiary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCHealthBeneficiary.h; sourceTree = "<group>"; };
+		E6FA58EA163A85690016CCD1 /* CSCHealthBeneficiary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCHealthBeneficiary.m; sourceTree = "<group>"; };
+		E6FA58EC163A859C0016CCD1 /* CSCInformationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCInformationRequest.h; sourceTree = "<group>"; };
+		E6FA58ED163A859C0016CCD1 /* CSCInformationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCInformationRequest.m; sourceTree = "<group>"; };
+		E6FA58EF163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfOrganizationDetail.h; sourceTree = "<group>"; };
+		E6FA58F0163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfOrganizationDetail.m; sourceTree = "<group>"; };
+		E6FA58F2163A85FF0016CCD1 /* CSCWMActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCWMActivity.h; sourceTree = "<group>"; };
+		E6FA58F3163A85FF0016CCD1 /* CSCWMActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCWMActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1052,6 +1201,7 @@
 		E619F0AB1621A1E500FED188 /* XML samples */ = {
 			isa = PBXGroup;
 			children = (
+				E6A4FCF2163A68BD004053CC /* ProductRequest */,
 				E69EE16D1622DB96005C82C6 /* SearchContractRequest */,
 				E69EE1741622DC1C005C82C6 /* ContractGetSummary */,
 			);
@@ -1061,6 +1211,8 @@
 		E65E07D51625F740002034FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E6A4FCFC163A6A20004053CC /* serviceProductExtract.h */,
+				E6A4FCFD163A6A20004053CC /* serviceProductExtract.m */,
 				E69EE1611622D937005C82C6 /* serviceContractGetSummary.h */,
 				E69EE1621622D937005C82C6 /* serviceContractGetSummary.m */,
 				E6EA544716202B67001FCF0D /* ServiceListContract.h */,
@@ -1113,6 +1265,7 @@
 		E69EE1531622D3A9005C82C6 /* WSDL */ = {
 			isa = PBXGroup;
 			children = (
+				E6A4FCF3163A68F7004053CC /* ProductExtract */,
 				E69EE1541622D3C0005C82C6 /* ContractGetSummary.wsdl */,
 				E69EE1581622D51B005C82C6 /* ContractDisplayExtract.wsdl */,
 			);
@@ -1137,6 +1290,24 @@
 				E69EE1671622DAE2005C82C6 /* ContractGetSummaryResponse_IUL00000348.xml */,
 			);
 			name = ContractGetSummary;
+			sourceTree = "<group>";
+		};
+		E6A4FCF2163A68BD004053CC /* ProductRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ProductRequest;
+			sourceTree = "<group>";
+		};
+		E6A4FCF3163A68F7004053CC /* ProductExtract */ = {
+			isa = PBXGroup;
+			children = (
+				E6A4FCF4163A68F7004053CC /* ProductExtract.wsdl */,
+				E6A4FCF5163A68F7004053CC /* ProductExtractRequest.xml */,
+				E6A4FCF6163A68F7004053CC /* ProductExtractResponse.xml */,
+				E6A4FCF7163A68F7004053CC /* Web Service ProductExtract.docx */,
+			);
+			path = ProductExtract;
 			sourceTree = "<group>";
 		};
 		E6C877B1162F249C0083218B /* View controllers */ = {
@@ -1165,16 +1336,18 @@
 		E6EA525C16202B43001FCF0D /* CSC */ = {
 			isa = PBXGroup;
 			children = (
-				E69EE1641622D9AF005C82C6 /* CSCActivityRequest.h */,
-				E69EE1651622D9AF005C82C6 /* CSCActivityRequest.m */,
 				E6EA525D16202B66001FCF0D /* CSCAcceptanceDecision.h */,
 				E6EA525E16202B66001FCF0D /* CSCAcceptanceDecision.m */,
+				E69EE1641622D9AF005C82C6 /* CSCActivityRequest.h */,
+				E69EE1651622D9AF005C82C6 /* CSCActivityRequest.m */,
 				E6EA525F16202B66001FCF0D /* CSCAdditionalClauseDetail.h */,
 				E6EA526016202B66001FCF0D /* CSCAdditionalClauseDetail.m */,
 				E6EA526116202B66001FCF0D /* CSCAfterEffect.h */,
 				E6EA526216202B66001FCF0D /* CSCAfterEffect.m */,
 				E6EA526316202B66001FCF0D /* CSCAllocation.h */,
 				E6EA526416202B66001FCF0D /* CSCAllocation.m */,
+				E6F6BFC2163A8930009EDEDB /* CSCAny.h */,
+				E6A4FD00163A7C3D004053CC /* CSCAny.m */,
 				E6EA526516202B66001FCF0D /* CSCArrayOfAcceptanceDecision.h */,
 				E6EA526616202B66001FCF0D /* CSCArrayOfAcceptanceDecision.m */,
 				E6EA526716202B66001FCF0D /* CSCArrayOfAdditionalClauseDetail.h */,
@@ -1195,6 +1368,8 @@
 				E6EA527616202B66001FCF0D /* CSCArrayOfBilling.m */,
 				E6EA527716202B66001FCF0D /* CSCArrayOfBillItem.h */,
 				E6EA527816202B66001FCF0D /* CSCArrayOfBillItem.m */,
+				E6F6BFD8163A8930009EDEDB /* CSCArrayOfChoiceItem.h */,
+				E6F6BFD9163A8930009EDEDB /* CSCArrayOfChoiceItem.m */,
 				E6EA527916202B66001FCF0D /* CSCArrayOfClaimEventPeriod.h */,
 				E6EA527A16202B66001FCF0D /* CSCArrayOfClaimEventPeriod.m */,
 				E6EA527B16202B66001FCF0D /* CSCArrayOfClaimFolder.h */,
@@ -1235,16 +1410,22 @@
 				E6EA529E16202B66001FCF0D /* CSCArrayOfFinancialActivity.m */,
 				E6EA529F16202B66001FCF0D /* CSCArrayOfFinancialOption.h */,
 				E6EA52A016202B66001FCF0D /* CSCArrayOfFinancialOption.m */,
+				E6A4FD02163A7C6D004053CC /* CSCArrayOfFootnote.h */,
+				E6A4FD03163A7C6D004053CC /* CSCArrayOfFootnote.m */,
 				E6EA52A116202B66001FCF0D /* CSCArrayOfFundsAllocation.h */,
 				E6EA52A216202B66001FCF0D /* CSCArrayOfFundsAllocation.m */,
 				E6EA52A316202B66001FCF0D /* CSCArrayOfGeneralConditions.h */,
 				E6EA52A416202B66001FCF0D /* CSCArrayOfGeneralConditions.m */,
 				E6EA52A516202B66001FCF0D /* CSCArrayOfHealthAllocation.h */,
 				E6EA52A616202B66001FCF0D /* CSCArrayOfHealthAllocation.m */,
+				E6FA58E3163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.h */,
+				E6FA58E4163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.m */,
 				E6EA52A716202B66001FCF0D /* CSCArrayOfHealthCondition.h */,
 				E6EA52A816202B66001FCF0D /* CSCArrayOfHealthCondition.m */,
 				E6EA52A916202B66001FCF0D /* CSCArrayOfHealthConditionalLimit.h */,
 				E6EA52AA16202B66001FCF0D /* CSCArrayOfHealthConditionalLimit.m */,
+				E6A4FD14163A7E69004053CC /* CSCArrayOfHealthDomain.h */,
+				E6A4FD15163A7E69004053CC /* CSCArrayOfHealthDomain.m */,
 				E6EA52AB16202B66001FCF0D /* CSCArrayOfHealthFormula.h */,
 				E6EA52AC16202B66001FCF0D /* CSCArrayOfHealthFormula.m */,
 				E6EA52AD16202B66001FCF0D /* CSCArrayOfHealthFormulaItem.h */,
@@ -1257,6 +1438,10 @@
 				E6EA52B416202B66001FCF0D /* CSCArrayOfHouseholdTax.m */,
 				E6EA52B516202B66001FCF0D /* CSCArrayOfIdentityDocument.h */,
 				E6EA52B616202B66001FCF0D /* CSCArrayOfIdentityDocument.m */,
+				E6A4FD0B163A7D43004053CC /* CSCArrayOfIndexation.h */,
+				E6A4FD0C163A7D43004053CC /* CSCArrayOfIndexation.m */,
+				E6FA58E6163A854D0016CCD1 /* CSCArrayOfInformationRequest.h */,
+				E6FA58E7163A854D0016CCD1 /* CSCArrayOfInformationRequest.m */,
 				E6EA52B716202B66001FCF0D /* CSCArrayOfInjuryCompensation.h */,
 				E6EA52B816202B66001FCF0D /* CSCArrayOfInjuryCompensation.m */,
 				E6EA52B916202B66001FCF0D /* CSCArrayOfInsuredGroup.h */,
@@ -1291,6 +1476,8 @@
 				E6EA52D616202B66001FCF0D /* CSCArrayOfOperation.m */,
 				E6EA52D716202B66001FCF0D /* CSCArrayOfOperationAllocation.h */,
 				E6EA52D816202B66001FCF0D /* CSCArrayOfOperationAllocation.m */,
+				E6FA58EF163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.h */,
+				E6FA58F0163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.m */,
 				E6EA52D916202B66001FCF0D /* CSCArrayOfPackage.h */,
 				E6EA52DA16202B66001FCF0D /* CSCArrayOfPackage.m */,
 				E6EA52DB16202B66001FCF0D /* CSCArrayOfPartyRelationship.h */,
@@ -1305,12 +1492,18 @@
 				E6EA52E416202B66001FCF0D /* CSCArrayOfPeriod.m */,
 				E6EA52E516202B66001FCF0D /* CSCArrayOfPersonalIncome.h */,
 				E6EA52E616202B66001FCF0D /* CSCArrayOfPersonalIncome.m */,
+				E6A4FD17163A7EEA004053CC /* CSCArrayOfPersonDetail.h */,
+				E6A4FD18163A7EEA004053CC /* CSCArrayOfPersonDetail.m */,
 				E6EA52E716202B66001FCF0D /* CSCArrayOfPhoneAddress.h */,
 				E6EA52E816202B66001FCF0D /* CSCArrayOfPhoneAddress.m */,
 				E6EA52E916202B66001FCF0D /* CSCArrayOfPostalAddress.h */,
 				E6EA52EA16202B66001FCF0D /* CSCArrayOfPostalAddress.m */,
+				E6A4FD0E163A7DDD004053CC /* CSCArrayOfPreference.h */,
+				E6A4FD0F163A7DDD004053CC /* CSCArrayOfPreference.m */,
 				E6EA52EB16202B66001FCF0D /* CSCArrayOfPremiumAdjustment.h */,
 				E6EA52EC16202B66001FCF0D /* CSCArrayOfPremiumAdjustment.m */,
+				E6FA58E0163A84DD0016CCD1 /* CSCArrayOfProductOption.h */,
+				E6FA58E1163A84DD0016CCD1 /* CSCArrayOfProductOption.m */,
 				E6EA52ED16202B66001FCF0D /* CSCArrayOfProp.h */,
 				E6EA52EE16202B66001FCF0D /* CSCArrayOfProp.m */,
 				E6EA52EF16202B66001FCF0D /* CSCArrayOfQuestionAnswer.h */,
@@ -1351,6 +1544,10 @@
 				E6EA531216202B66001FCF0D /* CSCArrayOfWebSiteAddress.m */,
 				E6EA531316202B66001FCF0D /* CSCAutoLoss.h */,
 				E6EA531416202B66001FCF0D /* CSCAutoLoss.m */,
+				E6F6C088163A8930009EDEDB /* CSCAutomobile.h */,
+				E6F6C089163A8930009EDEDB /* CSCAutomobile.m */,
+				E6F6C08A163A8930009EDEDB /* CSCAutomobileUsage.h */,
+				E6F6C08B163A8930009EDEDB /* CSCAutomobileUsage.m */,
 				E6EA531516202B66001FCF0D /* CSCBankAccount.h */,
 				E6EA531616202B66001FCF0D /* CSCBankAccount.m */,
 				E6EA531716202B66001FCF0D /* CSCBankingLoan.h */,
@@ -1365,8 +1562,18 @@
 				E6EA532016202B66001FCF0D /* CSCBilling.m */,
 				E6EA532116202B66001FCF0D /* CSCBillItem.h */,
 				E6EA532216202B66001FCF0D /* CSCBillItem.m */,
+				E6F6BFAB163A8669009EDEDB /* CSCBuilding.h */,
+				E6F6BFAC163A8669009EDEDB /* CSCBuilding.m */,
 				E6EA532316202B66001FCF0D /* CSCBuildingLoss.h */,
 				E6EA532416202B66001FCF0D /* CSCBuildingLoss.m */,
+				E6F6C09E163A8930009EDEDB /* CSCBuildingUsage.h */,
+				E6F6C09F163A8930009EDEDB /* CSCBuildingUsage.m */,
+				E6F6C0A0163A8930009EDEDB /* CSCBus.h */,
+				E6F6C0A1163A8930009EDEDB /* CSCBus.m */,
+				E6F6C0A2163A8930009EDEDB /* CSCCaravan.h */,
+				E6F6C0A3163A8930009EDEDB /* CSCCaravan.m */,
+				E6A4FD11163A7DFC004053CC /* CSCChoiceItem.h */,
+				E6A4FD12163A7DFC004053CC /* CSCChoiceItem.m */,
 				E6EA532516202B66001FCF0D /* CSCClaimCause.h */,
 				E6EA532616202B66001FCF0D /* CSCClaimCause.m */,
 				E6EA532716202B66001FCF0D /* CSCClaimDeathTax.h */,
@@ -1397,6 +1604,8 @@
 				E6EA534016202B66001FCF0D /* CSCCoverageMembership.m */,
 				E6EA534116202B66001FCF0D /* CSCCreditCard.h */,
 				E6EA534216202B66001FCF0D /* CSCCreditCard.m */,
+				E6F6C0C4163A8930009EDEDB /* CSCCriterion.h */,
+				E6F6C0C5163A8930009EDEDB /* CSCCriterion.m */,
 				E6EA534316202B66001FCF0D /* CSCDamage.h */,
 				E6EA534416202B66001FCF0D /* CSCDamage.m */,
 				E6EA534516202B66001FCF0D /* CSCDeathCoverage.h */,
@@ -1407,6 +1616,8 @@
 				E6EA534A16202B66001FCF0D /* CSCDebt.m */,
 				E6EA534B16202B66001FCF0D /* CSCDirectDebitMandate.h */,
 				E6EA534C16202B66001FCF0D /* CSCDirectDebitMandate.m */,
+				E6F6C0D0163A8930009EDEDB /* CSCDirectPaymentCard.h */,
+				E6F6C0D1163A8930009EDEDB /* CSCDirectPaymentCard.m */,
 				E6EA534D16202B66001FCF0D /* CSCDisbursementSplit.h */,
 				E6EA534E16202B66001FCF0D /* CSCDisbursementSplit.m */,
 				E6EA534F16202B66001FCF0D /* CSCDistributorDetail.h */,
@@ -1415,6 +1626,10 @@
 				E6EA535216202B66001FCF0D /* CSCDriver.m */,
 				E6EA535316202B66001FCF0D /* CSCDuration.h */,
 				E6EA535416202B66001FCF0D /* CSCDuration.m */,
+				E6F6C0DA163A8930009EDEDB /* CSCDwelling.h */,
+				E6F6C0DB163A8930009EDEDB /* CSCDwelling.m */,
+				E6F6C0DC163A8930009EDEDB /* CSCDwellingUsage.h */,
+				E6F6C0DD163A8930009EDEDB /* CSCDwellingUsage.m */,
 				E6EA535516202B66001FCF0D /* CSCEMailAddress.h */,
 				E6EA535616202B66001FCF0D /* CSCEMailAddress.m */,
 				E6EA535716202B66001FCF0D /* CSCEmployeeGroup.h */,
@@ -1435,6 +1650,8 @@
 				E6EA536616202B67001FCF0D /* CSCFinancialActivity.m */,
 				E6EA536716202B67001FCF0D /* CSCFinancialOption.h */,
 				E6EA536816202B67001FCF0D /* CSCFinancialOption.m */,
+				E6A4FD08163A7CBF004053CC /* CSCFootnote.h */,
+				E6A4FD09163A7CBF004053CC /* CSCFootnote.m */,
 				E6EA536916202B67001FCF0D /* CSCFormulaDfn.h */,
 				E6EA536A16202B67001FCF0D /* CSCFormulaDfn.m */,
 				E6EA536B16202B67001FCF0D /* CSCFundsAllocation.h */,
@@ -1445,6 +1662,8 @@
 				E6EA537016202B67001FCF0D /* CSCHealthAddressee.m */,
 				E6EA537116202B67001FCF0D /* CSCHealthAllocation.h */,
 				E6EA537216202B67001FCF0D /* CSCHealthAllocation.m */,
+				E6FA58E9163A85690016CCD1 /* CSCHealthBeneficiary.h */,
+				E6FA58EA163A85690016CCD1 /* CSCHealthBeneficiary.m */,
 				E6EA537316202B67001FCF0D /* CSCHealthBenefit.h */,
 				E6EA537416202B67001FCF0D /* CSCHealthBenefit.m */,
 				E6EA537516202B67001FCF0D /* CSCHealthCondition.h */,
@@ -1453,12 +1672,16 @@
 				E6EA537816202B67001FCF0D /* CSCHealthConditionalLimit.m */,
 				E6EA537916202B67001FCF0D /* CSCHealthCoverageDetail.h */,
 				E6EA537A16202B67001FCF0D /* CSCHealthCoverageDetail.m */,
+				E6FA58DD163A84990016CCD1 /* CSCHealthDomain.h */,
+				E6FA58DE163A84990016CCD1 /* CSCHealthDomain.m */,
 				E6EA537B16202B67001FCF0D /* CSCHealthEstimate.h */,
 				E6EA537C16202B67001FCF0D /* CSCHealthEstimate.m */,
 				E6EA537D16202B67001FCF0D /* CSCHealthFormula.h */,
 				E6EA537E16202B67001FCF0D /* CSCHealthFormula.m */,
 				E6EA537F16202B67001FCF0D /* CSCHealthFormulaItem.h */,
 				E6EA538016202B67001FCF0D /* CSCHealthFormulaItem.m */,
+				E6F6C110163A8930009EDEDB /* CSCHealthInsurer.h */,
+				E6F6C111163A8930009EDEDB /* CSCHealthInsurer.m */,
 				E6EA538116202B67001FCF0D /* CSCHealthInvoice.h */,
 				E6EA538216202B67001FCF0D /* CSCHealthInvoice.m */,
 				E6EA538316202B67001FCF0D /* CSCHealthItem.h */,
@@ -1479,6 +1702,10 @@
 				E6EA539216202B67001FCF0D /* CSCIndexation.m */,
 				E6EA539316202B67001FCF0D /* CSCIndicators.h */,
 				E6EA539416202B67001FCF0D /* CSCIndicators.m */,
+				E6F6BFB1163A86A3009EDEDB /* CSCInformationReceipt.h */,
+				E6F6BFB2163A86A3009EDEDB /* CSCInformationReceipt.m */,
+				E6FA58EC163A859C0016CCD1 /* CSCInformationRequest.h */,
+				E6FA58ED163A859C0016CCD1 /* CSCInformationRequest.m */,
 				E6EA539516202B67001FCF0D /* CSCInjuryCompensation.h */,
 				E6EA539616202B67001FCF0D /* CSCInjuryCompensation.m */,
 				E6EA539716202B67001FCF0D /* CSCInsuranceCertificate.h */,
@@ -1539,12 +1766,20 @@
 				E6EA53CE16202B67001FCF0D /* CSCMoneyIn.m */,
 				E6EA53CF16202B67001FCF0D /* CSCMoneyOut.h */,
 				E6EA53D016202B67001FCF0D /* CSCMoneyOut.m */,
+				E6F6C166163A8931009EDEDB /* CSCMoped.h */,
+				E6F6C167163A8931009EDEDB /* CSCMoped.m */,
+				E6F6C168163A8931009EDEDB /* CSCMotorcycle.h */,
+				E6F6C169163A8931009EDEDB /* CSCMotorcycle.m */,
+				E6F6C16A163A8931009EDEDB /* CSCMotorisedVehicle.h */,
+				E6F6C16B163A8931009EDEDB /* CSCMotorisedVehicle.m */,
 				E6EA53D116202B67001FCF0D /* CSCNationalHealthOffice.h */,
 				E6EA53D216202B67001FCF0D /* CSCNationalHealthOffice.m */,
 				E6EA53D316202B67001FCF0D /* CSCNetworkActivation.h */,
 				E6EA53D416202B67001FCF0D /* CSCNetworkActivation.m */,
 				E6EA53D516202B67001FCF0D /* CSCNetworkMembership.h */,
 				E6EA53D616202B67001FCF0D /* CSCNetworkMembership.m */,
+				E6F6BFA8163A8637009EDEDB /* CSCNote.h */,
+				E6F6BFA9163A8637009EDEDB /* CSCNote.m */,
 				E6EA53D716202B67001FCF0D /* CSCObject.h */,
 				E6EA53D816202B67001FCF0D /* CSCObject.m */,
 				E6EA53D916202B67001FCF0D /* CSCOperation.h */,
@@ -1557,6 +1792,8 @@
 				E6EA53E016202B67001FCF0D /* CSCOrganizationDetail.m */,
 				E6EA53E116202B67001FCF0D /* CSCOrganizationProfile.h */,
 				E6EA53E216202B67001FCF0D /* CSCOrganizationProfile.m */,
+				E6F6C180163A8931009EDEDB /* CSCOutputDocument.h */,
+				E6F6C181163A8931009EDEDB /* CSCOutputDocument.m */,
 				E6EA53E316202B67001FCF0D /* CSCPackage.h */,
 				E6EA53E416202B67001FCF0D /* CSCPackage.m */,
 				E6EA53E516202B67001FCF0D /* CSCPartyRelationship.h */,
@@ -1581,6 +1818,8 @@
 				E6EA53F816202B67001FCF0D /* CSCPhoneAddress.m */,
 				E6EA53F916202B67001FCF0D /* CSCPostalAddress.h */,
 				E6EA53FA16202B67001FCF0D /* CSCPostalAddress.m */,
+				E6FA58DA163A84740016CCD1 /* CSCPreference.h */,
+				E6FA58DB163A84740016CCD1 /* CSCPreference.m */,
 				E6EA53FB16202B67001FCF0D /* CSCPremium.h */,
 				E6EA53FC16202B67001FCF0D /* CSCPremium.m */,
 				E6EA53FD16202B67001FCF0D /* CSCPremiumAdjustment.h */,
@@ -1589,10 +1828,16 @@
 				E6EA540016202B67001FCF0D /* CSCProductOption.m */,
 				E6EA540116202B67001FCF0D /* CSCProp.h */,
 				E6EA540216202B67001FCF0D /* CSCProp.m */,
+				E6F6C1A4163A8931009EDEDB /* CSCPropertyPark.h */,
+				E6F6C1A5163A8931009EDEDB /* CSCPropertyPark.m */,
 				E6EA540316202B67001FCF0D /* CSCQuestionAnswer.h */,
 				E6EA540416202B67001FCF0D /* CSCQuestionAnswer.m */,
+				E6F6C1A8163A8931009EDEDB /* CSCQuestionnaire.h */,
+				E6F6C1A9163A8931009EDEDB /* CSCQuestionnaire.m */,
 				E6EA540516202B67001FCF0D /* CSCRecourseRecovery.h */,
 				E6EA540616202B67001FCF0D /* CSCRecourseRecovery.m */,
+				E6F6BFAE163A8689009EDEDB /* CSCReference.h */,
+				E6F6BFAF163A8689009EDEDB /* CSCReference.m */,
 				E6EA540716202B67001FCF0D /* CSCRegimeObligatoire.h */,
 				E6EA540816202B67001FCF0D /* CSCRegimeObligatoire.m */,
 				E6EA540916202B67001FCF0D /* CSCRegistration.h */,
@@ -1637,12 +1882,26 @@
 				E6EA543016202B67001FCF0D /* CSCTaxSystem.m */,
 				E6EA543116202B67001FCF0D /* CSCTechnicalOperation.h */,
 				E6EA543216202B67001FCF0D /* CSCTechnicalOperation.m */,
+				E6F6C1DA163A8931009EDEDB /* CSCTrailer.h */,
+				E6F6C1DB163A8931009EDEDB /* CSCTrailer.m */,
+				E6F6C1DC163A8931009EDEDB /* CSCTrailerUsage.h */,
+				E6F6C1DD163A8931009EDEDB /* CSCTrailerUsage.m */,
+				E6F6C1DE163A8931009EDEDB /* CSCTruck.h */,
+				E6F6C1DF163A8931009EDEDB /* CSCTruck.m */,
+				E6F6C1E0163A8931009EDEDB /* CSCTruckCamper.h */,
+				E6F6C1E1163A8931009EDEDB /* CSCTruckCamper.m */,
+				E6F6C1E2163A8931009EDEDB /* CSCTruckUsage.h */,
+				E6F6C1E3163A8931009EDEDB /* CSCTruckUsage.m */,
 				E6EA543316202B67001FCF0D /* CSCUnitLinkedFund.h */,
 				E6EA543416202B67001FCF0D /* CSCUnitLinkedFund.m */,
 				E6EA543516202B67001FCF0D /* CSCUnitLinkedFundItem.h */,
 				E6EA543616202B67001FCF0D /* CSCUnitLinkedFundItem.m */,
+				E6F6BFB4163A86D1009EDEDB /* CSCUsage.h */,
+				E6F6BFB5163A86D1009EDEDB /* CSCUsage.m */,
 				E6EA543716202B67001FCF0D /* CSCValue.h */,
 				E6EA543816202B67001FCF0D /* CSCValue.m */,
+				E6F6C1EC163A8931009EDEDB /* CSCVan.h */,
+				E6F6C1ED163A8931009EDEDB /* CSCVan.m */,
 				E6EA543916202B67001FCF0D /* CSCVariableDfn.h */,
 				E6EA543A16202B67001FCF0D /* CSCVariableDfn.m */,
 				E6EA543B16202B67001FCF0D /* CSCVehicleDamage.h */,
@@ -1653,12 +1912,17 @@
 				E6EA544016202B67001FCF0D /* CSCWaitingPeriod.m */,
 				E6EA544116202B67001FCF0D /* CSCWebSiteAddress.h */,
 				E6EA544216202B67001FCF0D /* CSCWebSiteAddress.m */,
+				E6FA58F2163A85FF0016CCD1 /* CSCWMActivity.h */,
+				E6FA58F3163A85FF0016CCD1 /* CSCWMActivity.m */,
 				E6EA544316202B67001FCF0D /* CSCWMEnv.h */,
 				E6EA544416202B67001FCF0D /* CSCWMEnv.m */,
 				E6EA544516202B67001FCF0D /* CSCWMStatus.h */,
 				E6EA544616202B67001FCF0D /* CSCWMStatus.m */,
+				E6F6C1FC163A8931009EDEDB /* CSCWorkManagementClient.h */,
+				E6F6C1FD163A8931009EDEDB /* CSCWorkManagementClient.m */,
 				E6EA544916202B67001FCF0D /* CSCWriteOffAdjustment.h */,
 				E6EA544A16202B67001FCF0D /* CSCWriteOffAdjustment.m */,
+				E6F6BFB7163A8930009EDEDB /* Generated */,
 				E6EA544B16202B67001FCF0D /* Soap+Prefix.h */,
 				E6EA544C16202B67001FCF0D /* Soap+Prefix.m */,
 			);
@@ -1732,6 +1996,13 @@
 				E6EA558916202BE1001FCF0D /* TouchXML.h */,
 			);
 			name = TouchXML;
+			sourceTree = "<group>";
+		};
+		E6F6BFB7163A8930009EDEDB /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1809,6 +2080,10 @@
 				DA8666811633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg in Resources */,
 				DAA1A16F1633381800AB7704 /* StoryboardiPad.storyboard in Resources */,
 				DAA1A175163345E100AB7704 /* get_quote_button.png in Resources */,
+				E6A4FCF8163A68F7004053CC /* ProductExtract.wsdl in Resources */,
+				E6A4FCF9163A68F7004053CC /* ProductExtractRequest.xml in Resources */,
+				E6A4FCFA163A68F7004053CC /* ProductExtractResponse.xml in Resources */,
+				E6A4FCFB163A68F7004053CC /* Web Service ProductExtract.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2144,6 +2419,53 @@
 				E6C877B4162F24D40083218B /* fastQuoteModel.m in Sources */,
 				E651540F162F4F8200EEC4CF /* CoverageSelectorViewController.m in Sources */,
 				DAA1A17316333CFB00AB7704 /* iPadQuoteViewController.m in Sources */,
+				E6A4FCFE163A6A20004053CC /* serviceProductExtract.m in Sources */,
+				E6A4FD01163A7C3D004053CC /* CSCAny.m in Sources */,
+				E6A4FD04163A7C6D004053CC /* CSCArrayOfFootnote.m in Sources */,
+				E6A4FD0A163A7CBF004053CC /* CSCFootnote.m in Sources */,
+				E6A4FD0D163A7D43004053CC /* CSCArrayOfIndexation.m in Sources */,
+				E6A4FD10163A7DDD004053CC /* CSCArrayOfPreference.m in Sources */,
+				E6A4FD13163A7DFC004053CC /* CSCChoiceItem.m in Sources */,
+				E6A4FD16163A7E69004053CC /* CSCArrayOfHealthDomain.m in Sources */,
+				E6A4FD19163A7EEA004053CC /* CSCArrayOfPersonDetail.m in Sources */,
+				E6FA58DC163A84740016CCD1 /* CSCPreference.m in Sources */,
+				E6FA58DF163A84990016CCD1 /* CSCHealthDomain.m in Sources */,
+				E6FA58E2163A84DD0016CCD1 /* CSCArrayOfProductOption.m in Sources */,
+				E6FA58E5163A85200016CCD1 /* CSCArrayOfHealthBeneficiary.m in Sources */,
+				E6FA58E8163A854D0016CCD1 /* CSCArrayOfInformationRequest.m in Sources */,
+				E6FA58EB163A85690016CCD1 /* CSCHealthBeneficiary.m in Sources */,
+				E6FA58EE163A859C0016CCD1 /* CSCInformationRequest.m in Sources */,
+				E6FA58F1163A85B50016CCD1 /* CSCArrayOfOrganizationDetail.m in Sources */,
+				E6FA58F4163A85FF0016CCD1 /* CSCWMActivity.m in Sources */,
+				E6F6BFAA163A8637009EDEDB /* CSCNote.m in Sources */,
+				E6F6BFAD163A8669009EDEDB /* CSCBuilding.m in Sources */,
+				E6F6BFB0163A8689009EDEDB /* CSCReference.m in Sources */,
+				E6F6BFB3163A86A3009EDEDB /* CSCInformationReceipt.m in Sources */,
+				E6F6BFB6163A86D1009EDEDB /* CSCUsage.m in Sources */,
+				E6F6C212163A8931009EDEDB /* CSCArrayOfChoiceItem.m in Sources */,
+				E6F6C26A163A8931009EDEDB /* CSCAutomobile.m in Sources */,
+				E6F6C26B163A8931009EDEDB /* CSCAutomobileUsage.m in Sources */,
+				E6F6C275163A8931009EDEDB /* CSCBuildingUsage.m in Sources */,
+				E6F6C276163A8931009EDEDB /* CSCBus.m in Sources */,
+				E6F6C277163A8931009EDEDB /* CSCCaravan.m in Sources */,
+				E6F6C288163A8931009EDEDB /* CSCCriterion.m in Sources */,
+				E6F6C28E163A8931009EDEDB /* CSCDirectPaymentCard.m in Sources */,
+				E6F6C293163A8931009EDEDB /* CSCDwelling.m in Sources */,
+				E6F6C294163A8931009EDEDB /* CSCDwellingUsage.m in Sources */,
+				E6F6C2AE163A8931009EDEDB /* CSCHealthInsurer.m in Sources */,
+				E6F6C2D9163A8931009EDEDB /* CSCMoped.m in Sources */,
+				E6F6C2DA163A8931009EDEDB /* CSCMotorcycle.m in Sources */,
+				E6F6C2DB163A8931009EDEDB /* CSCMotorisedVehicle.m in Sources */,
+				E6F6C2E6163A8931009EDEDB /* CSCOutputDocument.m in Sources */,
+				E6F6C2F8163A8931009EDEDB /* CSCPropertyPark.m in Sources */,
+				E6F6C2FA163A8931009EDEDB /* CSCQuestionnaire.m in Sources */,
+				E6F6C313163A8931009EDEDB /* CSCTrailer.m in Sources */,
+				E6F6C314163A8931009EDEDB /* CSCTrailerUsage.m in Sources */,
+				E6F6C315163A8931009EDEDB /* CSCTruck.m in Sources */,
+				E6F6C316163A8931009EDEDB /* CSCTruckCamper.m in Sources */,
+				E6F6C317163A8931009EDEDB /* CSCTruckUsage.m in Sources */,
+				E6F6C31C163A8931009EDEDB /* CSCVan.m in Sources */,
+				E6F6C324163A8931009EDEDB /* CSCWorkManagementClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

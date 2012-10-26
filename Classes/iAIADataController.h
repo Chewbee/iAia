@@ -10,7 +10,8 @@
 #import "PersonDataSource.h"
 #import "serviceListContract.h"
 #import "serviceContractGetSummary.h"
-//#import "iAiaViewController.h"
+#import "serviceProductExtract.h"
+
 @class iAiaViewController ; 
 
 @interface iAIADataController : NSObject

@@ -31,6 +31,7 @@
     [self setFamilyStructure:@[@"Single",@"Couple",@"Family",@"Family w/o minor",@"Single family"]];
     [self setStates:@[@"Australian Capital Territory",@"New South Wales",@"Queensland",@"Southern Australia",@"Tasmania",@"Victoria",@"Western Australia"]];
 	[self setFastQuoteModel:[[FastQuoteModel alloc]init]];
+    [[self fastQuoteModel] invokeServiceProductExtract:@"HE_%" ];
 }
 -(void)viewWillAppear:(BOOL)animated
 {

@@ -103,7 +103,8 @@
 // Handle the response from invokeServiceContractList.
 - (void) ServiceContractListHandler: (id) value
 {
-	// Handle errors
+	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    // Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -119,7 +120,6 @@
         [alertView show] ;
 		return;
     }
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
     // Do something with the NSMutableArray* result
     [self setContracts: (NSMutableArray*)value ];
     [[self viewController ] reload];

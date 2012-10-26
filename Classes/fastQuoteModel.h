@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "serviceProductExtract.h"
+
 
 @interface FastQuoteModel : NSObject
 
+@property (nonatomic,assign)BOOL                      errorStatus ;
 @property (nonatomic,assign)NSInteger           familyStructure;
 @property (nonatomic,strong)NSMutableDictionary  *birthDates;
 @property (nonatomic,assign)NSInteger           state;
+@property (nonatomic,strong) NSMutableArray         *productDetail ;
+
+- (void)invokeServiceProductExtract:(NSString*) productIdentifier;
 @end
