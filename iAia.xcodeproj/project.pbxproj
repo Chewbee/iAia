@@ -19,6 +19,7 @@
 		DA0F75D6163AFD2C001CB9E2 /* CSCArrayOfDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D5163AFD2C001CB9E2 /* CSCArrayOfDate.m */; };
 		DA0F75DA163AFD5F001CB9E2 /* CSCArrayOfReal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */; };
 		DA0F75DD163B2F84001CB9E2 /* QuoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75DC163B2F84001CB9E2 /* QuoteCell.m */; };
+		DA0F75DF163B3ADB001CB9E2 /* iaza18061850530500.gif in Resources */ = {isa = PBXBuildFile; fileRef = DA0F75DE163B3ADB001CB9E2 /* iaza18061850530500.gif */; };
 		DA8666811633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */; };
 		DAA1A16F1633381800AB7704 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */; };
 		DAA1A17316333CFB00AB7704 /* iPadQuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA1A17216333CFB00AB7704 /* iPadQuoteViewController.m */; };
@@ -409,6 +410,7 @@
 		DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfReal.m; sourceTree = "<group>"; };
 		DA0F75DB163B2F84001CB9E2 /* QuoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteCell.h; sourceTree = "<group>"; };
 		DA0F75DC163B2F84001CB9E2 /* QuoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteCell.m; sourceTree = "<group>"; };
+		DA0F75DE163B3ADB001CB9E2 /* iaza18061850530500.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = iaza18061850530500.gif; sourceTree = "<group>"; };
 		DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Medibank-Logo+Tag-Spectrum1_CMYK.jpg"; sourceTree = "<group>"; };
 		DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
 		DAA1A17116333CFB00AB7704 /* iPadQuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadQuoteViewController.h; sourceTree = "<group>"; };
@@ -1190,6 +1192,7 @@
 				E6C877A9162F1FFC0083218B /* medi2.jpg */,
 				DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */,
 				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
+				DA0F75DE163B3ADB001CB9E2 /* iaza18061850530500.gif */,
 				E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */,
 				E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */,
 				E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */,
@@ -2116,6 +2119,7 @@
 				E6A4FCFA163A68F7004053CC /* ProductExtractResponse.xml in Resources */,
 				E6A4FCFB163A68F7004053CC /* Web Service ProductExtract.docx in Resources */,
 				DA0F75CB163AFAD4001CB9E2 /* CalculationOfPremium.wsdl in Resources */,
+				DA0F75DF163B3ADB001CB9E2 /* iaza18061850530500.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
