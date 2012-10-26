@@ -15,7 +15,6 @@
 		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
 		DA0F75C6163AF253001CB9E2 /* CoverageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75C5163AF253001CB9E2 /* CoverageViewCell.m */; };
 		DA0F75CB163AFAD4001CB9E2 /* CalculationOfPremium.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */; };
-		DA0F75CC163AFAD4001CB9E2 /* Web Serice CalculationOfPremium.docx in Resources */ = {isa = PBXBuildFile; fileRef = DA0F75CA163AFAD4001CB9E2 /* Web Serice CalculationOfPremium.docx */; };
 		DA0F75CF163AFB97001CB9E2 /* ServiceGetTariff.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75CE163AFB97001CB9E2 /* ServiceGetTariff.m */; };
 		DA0F75D6163AFD2C001CB9E2 /* CSCArrayOfDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D5163AFD2C001CB9E2 /* CSCArrayOfDate.m */; };
 		DA0F75DA163AFD5F001CB9E2 /* CSCArrayOfReal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */; };
@@ -402,7 +401,6 @@
 		DA0F75C4163AF253001CB9E2 /* CoverageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageViewCell.h; sourceTree = "<group>"; };
 		DA0F75C5163AF253001CB9E2 /* CoverageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageViewCell.m; sourceTree = "<group>"; };
 		DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CalculationOfPremium.wsdl; sourceTree = "<group>"; };
-		DA0F75CA163AFAD4001CB9E2 /* Web Serice CalculationOfPremium.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Web Serice CalculationOfPremium.docx"; sourceTree = "<group>"; };
 		DA0F75CD163AFB97001CB9E2 /* ServiceGetTariff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceGetTariff.h; sourceTree = "<group>"; };
 		DA0F75CE163AFB97001CB9E2 /* ServiceGetTariff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceGetTariff.m; sourceTree = "<group>"; };
 		DA0F75D4163AFD2C001CB9E2 /* CSCArrayOfDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfDate.h; sourceTree = "<group>"; };
@@ -1218,7 +1216,6 @@
 			isa = PBXGroup;
 			children = (
 				DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */,
-				DA0F75CA163AFAD4001CB9E2 /* Web Serice CalculationOfPremium.docx */,
 			);
 			path = "Web Service CalculationOfPremium";
 			sourceTree = "<group>";
@@ -2119,7 +2116,6 @@
 				E6A4FCFA163A68F7004053CC /* ProductExtractResponse.xml in Resources */,
 				E6A4FCFB163A68F7004053CC /* Web Service ProductExtract.docx in Resources */,
 				DA0F75CB163AFAD4001CB9E2 /* CalculationOfPremium.wsdl in Resources */,
-				DA0F75CC163AFAD4001CB9E2 /* Web Serice CalculationOfPremium.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,22 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        _coverages = @{
+        @67	: @"Young Hospital No Excess",
+        @52	: @"Basic Hospital Excess $250" ,
+        @68	: @"Basic Hospital Excess $500",
+        @53	: @"Mid Hospital No Excess",
+        @69	: @"Mid Hospital Excess $250",
+        @70	: @"Mid Hospital Excess $500",
+        @54	: @"Top Hospital No Excess",
+        @71	: @"Top Hospital $250",
+        @72	: @"Top Hospital $500",
+        @73	: @"Basic Extras 55% back",
+        @74	: @"Basic Extras 70% back",
+        @40	: @"Top Extras 55% back",
+        @41	: @"Top Extras 70% back",
+        @42	: @"Top Extras 85% back",
+        @63	: @"Ultra Health Cover"};
     }
     return self;
 }
@@ -33,7 +49,7 @@
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -60,12 +76,12 @@
         // get the params
         [service  CalculationOfPremium: self action:@selector(ServiceGetTariffHandler:)
                            Environment: [[CSCWMEnv alloc] init]
-                       FamilyStructure: [[self fastQuoteModel ] familyString]
-                                  State:[[self fastQuoteModel]stateString ]
+                       FamilyStructure: [[self fastQuoteModel] familyString]
+                                 State:[[self fastQuoteModel]stateString ]
                          BirthDateList:[NSMutableArray arrayWithArray:[[self fastQuoteModel] birthDatesArray]]
                               Contract: nil ];
     }
-    
+
 }
 #pragma mark -
 #pragma mark Service returns
@@ -91,12 +107,18 @@
     }
     // Do something with the NSMutableArray* result
     //TODO: do the work
-//    [self setContracts: (NSMutableArray*)value ];
-    
+    //    [self setContracts: (NSMutableArray*)value ];
+
 }
 -(void) getTariffMockup
 {
-    ;
+    //  using local resource file in mockup mode
+    NSString *XMLPath = nil ;
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponse.xml"];
+    NSData *XMLData =nil;
+    XMLData = [NSData dataWithContentsOfFile:XMLPath];
+    //FIXME: IT IS a product that is returned
+    //[self setProductDetail:[self populateContractArrayWithData:(NSData*) XMLData]];
 }
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -122,12 +144,7 @@
 	int section = indexPath.section ;
 	NSArray *indexPaths = nil ;
     // Configure the cell...
-    // Young 107 166 208
-    // BAsic 57 132 190
-    // Mid 43 107 139
-    // TOP 17 61 96
-    // Ultra 88 40 114
-
+    // http://themecraft.net/www/medibank.com.au
     // Young    0.4196	0.6510	0.8157
     // Basic    0.2235	0.5176	0.7451
     // Mid      0.1686	0.4196	0.5451
@@ -138,7 +155,7 @@
     UIColor *mid =      [UIColor colorWithRed:0.1686 green:0.4196 blue:0.5451 alpha:1.0f] ;
     UIColor *top =      [UIColor colorWithRed:0.0667 green:0.2392 blue:0.3765 alpha:1.0f] ;
     UIColor *ultra =    [UIColor colorWithRed:0.3451 green:0.1569 blue:0.4471 alpha:1.0f] ;
-    
+
     switch (section) {
 		case 0:
 		{
@@ -148,7 +165,7 @@
         case 1:
 		{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
-            
+
             switch (indexPath.row) {
                 case 0:
                     [cell setBackgroundColor: young] ;
@@ -169,55 +186,55 @@
                     [cell setBackgroundColor: [UIColor blackColor] ] ;
                     break;
             }
-            
+
             break ;
 		}
     }
     [self tableView:tableView titleForHeaderInSection:indexPath.section] ;
     indexPaths = @[indexPath] ;
     [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
-    
+
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 

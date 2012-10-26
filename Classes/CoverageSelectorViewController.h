@@ -13,7 +13,7 @@
 
 @interface CoverageSelectorViewController : UITableViewController
 
-
+@property (nonatomic,strong) NSDictionary* coverages ; 
 @property (nonatomic,strong)FastQuoteModel* fastQuoteModel ;
 @property (nonatomic,strong)NSString    *familyStructure ;
 
