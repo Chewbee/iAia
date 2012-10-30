@@ -225,9 +225,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" text="Coverage" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" id="epW-VO-EXF">
-                                            <rect key="frame" x="78" y="24" width="173" height="50"/>
+                                            <rect key="frame" x="78" y="24" width="547" height="50"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
@@ -255,16 +255,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2205" y="42"/>
         </scene>
-        <!--Contract Detail View Controller-->
+        <!--Coverage Detail View Controller-->
         <scene sceneID="9nW-6D-F0v">
             <objects>
-                <viewController id="bmX-ra-J9w" customClass="ContractDetailViewController" sceneMemberID="viewController">
+                <viewController id="bmX-ra-J9w" customClass="CoverageDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pn1-Kw-zEy">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="MU5-De-HK3">
+                                <rect key="frame" x="15" y="178" width="733" height="713"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="0PV-DS-lwr"/>
+                    <connections>
+                        <outlet property="CoverageTextView" destination="MU5-De-HK3" id="vIV-zT-lRt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWO-E1-NvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

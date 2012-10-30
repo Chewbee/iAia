@@ -23,7 +23,7 @@
 @property (nonatomic,strong)FastQuoteModel      *fastQuoteModel ;
 @property (nonatomic,strong)NSString            *familyStructure ;
 
-@property (nonatomic,strong) NSMutableArray     *productOptions ;
+@property (nonatomic,strong) NSDictionary     *productOptions ;
 @property (nonatomic,strong) NSMutableArray     *coverageArray ;
 
 

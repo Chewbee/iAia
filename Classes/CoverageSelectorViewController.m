@@ -44,6 +44,8 @@
 //
 -(void) viewWillLoad {
     [self.tableView registerClass:[CoverageViewCell class] forCellReuseIdentifier:@"QuoteCell" ] ;
+    // header view
+    [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
 }
 - (void)viewDidLoad
 {
@@ -60,7 +62,7 @@
 //
 -(void) viewDidAppear:(BOOL)animated
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    
 }
 - (void)didReceiveMemoryWarning
 {
@@ -70,6 +72,7 @@
 #pragma mark - Web Service stuff
 -(void) getTariff
 {
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
     //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     BOOL mocked = [defaults boolForKey:@"mocked"] ;
@@ -134,9 +137,9 @@
 }
 #pragma mark -
 #pragma mark XML flow parsing
--(NSMutableArray*) populateOptionArrayWithData:(NSData*) XMLDataFlow
+-(NSMutableDictionary*) populateOptionArrayWithData:(NSData*) XMLDataFlow
 {
-    NSMutableArray *resultArray = [NSMutableArray array] ;
+    NSMutableDictionary *result = [[NSMutableDictionary alloc]init] ;
     NSError *err = nil ;
     NSData *XMLData =nil;
     XMLData = [self conformInputString: XMLDataFlow ];
@@ -157,16 +160,17 @@
             CSCProductOption *productOption = nil;
             productOption = [CSCProductOption createWithNode:node];
             if (productOption) {
-                [resultArray addObject:productOption] ;
+                [result setObject:productOption forKey:[productOption Label]] ;
             }
         }
     }
     @catch ( NSException *exception )
     {
-        //TODO:being here prevents a crash ... but it is not a solution 
+        // Being here prevents a crash in case the data are not in UTF-8
+        // BUT conformInputString solves the case for now
     }
     
-    return resultArray ;
+    return result ;
 }
 //
 -(NSMutableArray*) populateCoverageArrayWithData:(NSData*) XMLDataFlow
@@ -200,7 +204,7 @@
     {
         //TODO:being here prevents a crash ... but it is not a solution
     }
-
+//  NSArray* reversedArray = [[resultArray reverseObjectEnumerator] allObjects];
     return resultArray ;
 }
 //
@@ -237,7 +241,7 @@
 		case 0:
             return 1;
 		case 1:
-            return 5;
+            return [[self coverageArray]count];
     }
     return 0;
 }
@@ -268,29 +272,23 @@
         case 1:
 		{
             cell = (CoverageViewCell*)[tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
-            [[(CoverageViewCell*)cell coverageLabel] setText:[[[self coverageArray] objectAtIndex: indexPath.row ]DisplayId]];
-            switch (indexPath.row) {
-                case 0:
-                    [cell setBackgroundColor: young] ;
-                    break;
-                case 1:
-                    [cell setBackgroundColor: basic ] ;
-                    break ;
-                case 2:
-                    [cell setBackgroundColor: mid ] ;
-                    break;
-                case 3:
-                    [cell setBackgroundColor: top ] ;
-                    break ;
-                case 4:
-                    [cell setBackgroundColor: ultra ] ;
-                    break;
-                default:
-                    [cell setBackgroundColor: [UIColor blackColor] ] ;
-                    break;
-            }
-            break ;
-		}
+            
+            // Assign the coverage itself to the cell
+            [(CoverageViewCell*)cell setCoverage:[[self coverageArray] objectAtIndex: indexPath.row ]];
+            NSString *coverageDisplayId = [[(CoverageViewCell*)cell coverage]DisplayId];
+            [[(CoverageViewCell*)cell coverageLabel] setText:coverageDisplayId];
+            
+            if ([coverageDisplayId hasPrefix:@"YOUNG"])
+                [cell setBackgroundColor: young] ;
+            else if ([coverageDisplayId hasPrefix:@"BASIC"])
+                [cell setBackgroundColor: basic ] ;
+            else if ([coverageDisplayId hasPrefix:@"MID"])
+                [cell setBackgroundColor: mid ] ;
+            else if ([coverageDisplayId hasPrefix:@"TOP"])
+                [cell setBackgroundColor: top ] ;
+            else if ([coverageDisplayId hasPrefix:@"ULTRA"])
+                [cell setBackgroundColor: ultra ] ;
+        }
     }
     //FIXME: why the hell do we have those lines
     //[self tableView:tableView viewForHeaderInSection:indexPath.section] ;
@@ -378,7 +376,7 @@
     if ([segue.identifier isEqualToString:@"detailCoverage"])
     {
         CoverageDetailViewController *targetVC = (CoverageDetailViewController*)segue.destinationViewController;
-        //FIXME: pass the cell
+        [targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
     }
 }
 //
