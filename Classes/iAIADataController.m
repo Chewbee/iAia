@@ -29,7 +29,6 @@
         if ([self contracts] == nil){
             [self setContracts:[NSMutableArray array]];
         }
-        [self setErrorStatus:FALSE];
         return self ;
     }
     return nil ;
@@ -37,7 +36,6 @@
 //
 -(void)query
 {
-    [self setErrorStatus:FALSE];
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:YES] ;
     [[self contracts]removeAllObjects];
     [self invokeServiceContractList] ;
@@ -60,8 +58,12 @@
         NSString *login = [defaults stringForKey:@"login_preference" ] ;
         NSString *password = [defaults stringForKey:@"password_preference" ] ;
         serviceListContract  *service = [serviceListContract serviceWithUsername:login andPassword:password] ;
-        //serviceListContract *service = [serviceListContract service] ;
-        service.logging = YES;
+        service.logging = YES ;
+        // header for security
+        NSMutableDictionary * headers = [[NSMutableDictionary alloc]init];
+        SoapLiteral *soapLiteral =[SoapLiteral literalWithString: @"<user>CSCUSR1</user><password>CSCUSR1 's Password</password>"];
+        [headers setValue:soapLiteral forKey:@"header"];
+        [service setHeaders: headers];
 
         CSCContract *cscContract = [[CSCContract alloc]init];
         CSCPartyRole *role = [[CSCPartyRole alloc]init];
@@ -120,14 +122,14 @@
     }
     // Do something with the NSMutableArray* result
     [self setContracts: (NSMutableArray*)value ];
-    [[self viewController ] reload];
+    [self wrappingUp];
 }
 //
 // Handle the response from invokeServiceContractSummary.
 - (void) ServiceContractSummaryHandler: (id) value {
 
 	// Handle errors
-	if([value isKindOfClass:[NSError class]]) {
+	if([value isKindOfClass:[CSCError class]]) {
 		NSLog(@"%@", value);
 		return;
 	}
@@ -140,15 +142,14 @@
 	// Do something with the CSCContract* result
     CSCContract* result = (CSCContract*)value;
 	NSLog(@"ContractGetSummary returned the value: %@", result);
-    [self setErrorStatus:FALSE];
+    [self wrappingUp];
 }
 //
 #pragma mark alert box
 - (void)alertView:(UIAlertView *)aView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [aView dismissWithClickedButtonIndex:0 animated:TRUE ] ;
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
-    [self setErrorStatus:TRUE] ;
+    [self wrappingUp];
 }
 //
 #pragma mark -
@@ -178,6 +179,12 @@
 }
 #pragma mark -
 #pragma mark mockup
+- (void)wrappingUp
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [[self viewController ] reload];
+}
+
 -(void) searchContractMockUp
 {
     //  using local resource file in mockup mode
@@ -188,7 +195,7 @@
     //
     [self setContracts:[self populateContractArrayWithData:(NSData*) XMLData]];
     
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self wrappingUp];
 }
 //
 -(void) contractGetSummaryMockUp
@@ -200,6 +207,7 @@
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
     //
     [self setContractsDetailed:[self populateContractArrayWithData:(NSData*) XMLData]];
+    [self wrappingUp];
 }
 #pragma mark -
 #pragma mark Content management

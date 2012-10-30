@@ -6,11 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Quote-->
         <scene sceneID="w4L-Jc-37e">
             <objects>
                 <navigationController definesPresentationContext="YES" id="PAc-tb-ozh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="pg1-5B-BeP"/>
+                    <tabBarItem key="tabBarItem" title="Quote" image="request_quote_icon.png" id="pg1-5B-BeP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqL-wo-MZs">
                         <autoresizingMask key="autoresizingMask"/>
@@ -152,10 +152,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1275" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Contract Detail View Controller-->
         <scene sceneID="yp6-eQ-lBo">
             <objects>
-                <viewController id="xmx-sw-TEn" sceneMemberID="viewController">
+                <viewController id="xmx-sw-TEn" customClass="ContractDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="454-SJ-ASR">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -301,11 +301,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-643" y="-530"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Contracts-->
         <scene sceneID="bpO-H9-4uc">
             <objects>
                 <navigationController definesPresentationContext="YES" id="gbf-I3-jY2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="n9p-Q6-5Cj"/>
+                    <tabBarItem key="tabBarItem" title="Contracts" image="contract-icon.png" id="n9p-Q6-5Cj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bsY-bj-ua4">
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,7 +418,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <connections>
                                     <outlet property="contractLblCtl" destination="Wed-D7-yj2" id="GBV-sd-4jA"/>
-                                    <segue destination="xmx-sw-TEn" kind="push" id="gr4-lj-BPd"/>
+                                    <segue destination="xmx-sw-TEn" kind="push" identifier="ContractDetail" id="gr4-lj-BPd"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FinancialCell" textLabel="Len-QA-YfA" detailTextLabel="lmP-yE-etg" style="IBUITableViewCellStyleSubtitle" id="zkV-kb-7LI" customClass="FinancialEventTableViewCell">
@@ -470,8 +470,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" width="1000" height="315"/>
+        <image name="contract-icon.png" width="30" height="27"/>
         <image name="get_quote_button.png" width="400" height="400"/>
         <image name="icon-checkmark.png" width="54" height="56"/>
+        <image name="request_quote_icon.png" width="30" height="41"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>

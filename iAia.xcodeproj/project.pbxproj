@@ -33,6 +33,17 @@
 		E6399C0D163EBA9800C8119A /* CoverageHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */; };
 		E64D8050163FC72A0036CE2D /* icon-checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D804F163FC72A0036CE2D /* icon-checkmark.png */; };
 		E64D8052163FDE0C0036CE2D /* ProductExtractResponseNew.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */; };
+		E64D805A1640184F0036CE2D /* Request Flow Variant 2_4.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80531640184F0036CE2D /* Request Flow Variant 2_4.xml */; };
+		E64D805B1640184F0036CE2D /* Request Flow Variant 2_3.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80541640184F0036CE2D /* Request Flow Variant 2_3.xml */; };
+		E64D805C1640184F0036CE2D /* Request Flow Variant 2_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80551640184F0036CE2D /* Request Flow Variant 2_2.xml */; };
+		E64D805D1640184F0036CE2D /* Request Flow Variant 2_1 (2).xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80561640184F0036CE2D /* Request Flow Variant 2_1 (2).xml */; };
+		E64D805E1640184F0036CE2D /* Request Flow Variant 1_3.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80571640184F0036CE2D /* Request Flow Variant 1_3.xml */; };
+		E64D805F1640184F0036CE2D /* Request Flow Variant 1_2.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80581640184F0036CE2D /* Request Flow Variant 1_2.xml */; };
+		E64D80601640184F0036CE2D /* Request Flow Variant 1_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D80591640184F0036CE2D /* Request Flow Variant 1_1.xml */; };
+		E64D806216402C7F0036CE2D /* Response Flow Variant 1_3.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D806116402C7C0036CE2D /* Response Flow Variant 1_3.xml */; };
+		E64D806416402C880036CE2D /* Response Flow Variant 2_3.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D806316402C880036CE2D /* Response Flow Variant 2_3.xml */; };
+		E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D8066164080550036CE2D /* serviceConfigurator.m */; };
+		E64D806B16408A150036CE2D /* contract-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D806A16408A150036CE2D /* contract-icon.png */; };
 		E651540F162F4F8200EEC4CF /* CoverageSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */; };
 		E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */; };
 		E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */; };
@@ -68,7 +79,6 @@
 		E6A4FD16163A7E69004053CC /* CSCArrayOfHealthDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD15163A7E69004053CC /* CSCArrayOfHealthDomain.m */; };
 		E6A4FD19163A7EEA004053CC /* CSCArrayOfPersonDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A4FD18163A7EEA004053CC /* CSCArrayOfPersonDetail.m */; };
 		E6C877A6162F0FFF0083218B /* QuoteFamilyStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877A5162F0FFE0083218B /* QuoteFamilyStructureViewController.m */; };
-		E6C877AA162F1FFC0083218B /* medi2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6C877A9162F1FFC0083218B /* medi2.jpg */; };
 		E6C877AD162F22260083218B /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AC162F22260083218B /* SubscriberViewController.m */; };
 		E6C877B0162F223B0083218B /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AF162F223B0083218B /* StateViewController.m */; };
 		E6C877B4162F24D40083218B /* fastQuoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877B3162F24D40083218B /* fastQuoteModel.m */; };
@@ -432,6 +442,18 @@
 		E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverageHeaderViewController.xib; sourceTree = "<group>"; };
 		E64D804F163FC72A0036CE2D /* icon-checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-checkmark.png"; sourceTree = "<group>"; };
 		E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ProductExtractResponseNew.xml; sourceTree = "<group>"; };
+		E64D80531640184F0036CE2D /* Request Flow Variant 2_4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_4.xml"; sourceTree = "<group>"; };
+		E64D80541640184F0036CE2D /* Request Flow Variant 2_3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_3.xml"; sourceTree = "<group>"; };
+		E64D80551640184F0036CE2D /* Request Flow Variant 2_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_2.xml"; sourceTree = "<group>"; };
+		E64D80561640184F0036CE2D /* Request Flow Variant 2_1 (2).xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_1 (2).xml"; sourceTree = "<group>"; };
+		E64D80571640184F0036CE2D /* Request Flow Variant 1_3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 1_3.xml"; sourceTree = "<group>"; };
+		E64D80581640184F0036CE2D /* Request Flow Variant 1_2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 1_2.xml"; sourceTree = "<group>"; };
+		E64D80591640184F0036CE2D /* Request Flow Variant 1_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 1_1.xml"; sourceTree = "<group>"; };
+		E64D806116402C7C0036CE2D /* Response Flow Variant 1_3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Response Flow Variant 1_3.xml"; sourceTree = "<group>"; };
+		E64D806316402C880036CE2D /* Response Flow Variant 2_3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Response Flow Variant 2_3.xml"; sourceTree = "<group>"; };
+		E64D8065164080550036CE2D /* serviceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serviceConfigurator.h; sourceTree = "<group>"; };
+		E64D8066164080550036CE2D /* serviceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = serviceConfigurator.m; sourceTree = "<group>"; };
+		E64D806A16408A150036CE2D /* contract-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contract-icon.png"; sourceTree = "<group>"; };
 		E651540D162F4F8200EEC4CF /* CoverageSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageSelectorViewController.h; sourceTree = "<group>"; };
 		E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageSelectorViewController.m; sourceTree = "<group>"; };
 		E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+dataController.h"; sourceTree = "<group>"; };
@@ -488,7 +510,6 @@
 		E6A4FD18163A7EEA004053CC /* CSCArrayOfPersonDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfPersonDetail.m; sourceTree = "<group>"; };
 		E6C877A4162F0FFE0083218B /* QuoteFamilyStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteFamilyStructureViewController.h; sourceTree = "<group>"; };
 		E6C877A5162F0FFE0083218B /* QuoteFamilyStructureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteFamilyStructureViewController.m; sourceTree = "<group>"; };
-		E6C877A9162F1FFC0083218B /* medi2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = medi2.jpg; sourceTree = "<group>"; };
 		E6C877AB162F22260083218B /* SubscriberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriberViewController.h; sourceTree = "<group>"; };
 		E6C877AC162F22260083218B /* SubscriberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriberViewController.m; sourceTree = "<group>"; };
 		E6C877AE162F223B0083218B /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
@@ -1219,6 +1240,15 @@
 		DA0F75C8163AFAD4001CB9E2 /* Web Service CalculationOfPremium */ = {
 			isa = PBXGroup;
 			children = (
+				E64D80531640184F0036CE2D /* Request Flow Variant 2_4.xml */,
+				E64D80541640184F0036CE2D /* Request Flow Variant 2_3.xml */,
+				E64D80551640184F0036CE2D /* Request Flow Variant 2_2.xml */,
+				E64D80561640184F0036CE2D /* Request Flow Variant 2_1 (2).xml */,
+				E64D80571640184F0036CE2D /* Request Flow Variant 1_3.xml */,
+				E64D80581640184F0036CE2D /* Request Flow Variant 1_2.xml */,
+				E64D80591640184F0036CE2D /* Request Flow Variant 1_1.xml */,
+				E64D806116402C7C0036CE2D /* Response Flow Variant 1_3.xml */,
+				E64D806316402C880036CE2D /* Response Flow Variant 2_3.xml */,
 				DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */,
 			);
 			path = "Web Service CalculationOfPremium";
@@ -1252,6 +1282,8 @@
 				E69EE1621622D937005C82C6 /* serviceContractGetSummary.m */,
 				E6EA544716202B67001FCF0D /* ServiceListContract.h */,
 				E6EA544816202B67001FCF0D /* ServiceListContract.m */,
+				E64D8065164080550036CE2D /* serviceConfigurator.h */,
+				E64D8066164080550036CE2D /* serviceConfigurator.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -1952,7 +1984,6 @@
 				E6EA544616202B67001FCF0D /* CSCWMStatus.m */,
 				E6EA544916202B67001FCF0D /* CSCWriteOffAdjustment.h */,
 				E6EA544A16202B67001FCF0D /* CSCWriteOffAdjustment.m */,
-				E6F6BFB7163A8930009EDEDB /* Generated */,
 				E6EA544B16202B67001FCF0D /* Soap+Prefix.h */,
 				E6EA544C16202B67001FCF0D /* Soap+Prefix.m */,
 			);
@@ -2031,11 +2062,11 @@
 		E6F1D51E163EC67F00F7093F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E64D806A16408A150036CE2D /* contract-icon.png */,
+				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
 				E64D804F163FC72A0036CE2D /* icon-checkmark.png */,
 				DAA1A174163345E100AB7704 /* get_quote_button.png */,
-				E6C877A9162F1FFC0083218B /* medi2.jpg */,
 				DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */,
-				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
 				E6F8DDDF1620A1840046F9B8 /* lg-alertO-glass.png */,
 				E6F8DDE01620A1840046F9B8 /* lg-failed-glass.png */,
 				E6F8DDE11620A1840046F9B8 /* lg-success-glass.png */,
@@ -2065,13 +2096,6 @@
 				E6C877B3162F24D40083218B /* fastQuoteModel.m */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		E6F6BFB7163A8930009EDEDB /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2144,7 +2168,6 @@
 				E69EE1711622DC06005C82C6 /* ContractGetSummaryRequest_HINC0000190.xml in Resources */,
 				E69EE1721622DC06005C82C6 /* ContractGetSummaryRequestIUL00000348.xml in Resources */,
 				E69EE1731622DC06005C82C6 /* ContractGetSummaryResponse_HINC0000190.xml in Resources */,
-				E6C877AA162F1FFC0083218B /* medi2.jpg in Resources */,
 				E62A13D01630457B00967FB8 /* request_quote_icon.png in Resources */,
 				DA8666811633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg in Resources */,
 				DAA1A16F1633381800AB7704 /* StoryboardiPad.storyboard in Resources */,
@@ -2158,6 +2181,16 @@
 				E6399C0D163EBA9800C8119A /* CoverageHeaderViewController.xib in Resources */,
 				E64D8050163FC72A0036CE2D /* icon-checkmark.png in Resources */,
 				E64D8052163FDE0C0036CE2D /* ProductExtractResponseNew.xml in Resources */,
+				E64D805A1640184F0036CE2D /* Request Flow Variant 2_4.xml in Resources */,
+				E64D805B1640184F0036CE2D /* Request Flow Variant 2_3.xml in Resources */,
+				E64D805C1640184F0036CE2D /* Request Flow Variant 2_2.xml in Resources */,
+				E64D805D1640184F0036CE2D /* Request Flow Variant 2_1 (2).xml in Resources */,
+				E64D805E1640184F0036CE2D /* Request Flow Variant 1_3.xml in Resources */,
+				E64D805F1640184F0036CE2D /* Request Flow Variant 1_2.xml in Resources */,
+				E64D80601640184F0036CE2D /* Request Flow Variant 1_1.xml in Resources */,
+				E64D806216402C7F0036CE2D /* Response Flow Variant 1_3.xml in Resources */,
+				E64D806416402C880036CE2D /* Response Flow Variant 2_3.xml in Resources */,
+				E64D806B16408A150036CE2D /* contract-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2546,6 +2579,7 @@
 				DAE4C3CD163C701600112C65 /* QuoteCell.m in Sources */,
 				E6399C0C163EBA9800C8119A /* CoverageHeaderViewController.m in Sources */,
 				E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */,
+				E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

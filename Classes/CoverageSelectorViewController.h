@@ -26,6 +26,8 @@
 @property (nonatomic,strong) NSDictionary     *productOptions ;
 @property (nonatomic,strong) NSMutableArray     *coverageArray ;
 
+@property (nonatomic, weak) CSCContract         *contract ; 
+
 
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
 

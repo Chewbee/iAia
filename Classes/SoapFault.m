@@ -23,7 +23,7 @@
 }
 
 + (SoapFault*) faultWithXMLDocument: (CXMLDocument*) document {
-	return [SoapFault faultWithXMLElement: [Soap getNode: [document rootElement] withName: @"Fault"]];
+	return [SoapFault faultWithXMLElement: [Soap getNode: [document rootElement] withName: @"soap:Fault"]];
 }
 
 + (SoapFault*) faultWithXMLElement: (CXMLNode*) element {

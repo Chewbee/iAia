@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <CalculationOfPremiumResponse xmlns="http://www.csc.com/graphtalk/aia/">
+            <PremiumList>
+                <Premium>14.87</Premium>
+                <Premium>27.65</Premium>
+                <Premium>24.41</Premium>
+                <Premium>48.05</Premium>
+                <Premium>42.83</Premium>
+                <Premium>38.75</Premium>
+                <Premium>50.1</Premium>
+                <Premium>44.4</Premium>
+                <Premium>40.14</Premium>
+                <Premium>29.16</Premium>
+                <Premium>10.49</Premium>
+                <Premium>17.02</Premium>
+                <Premium>24.63</Premium>
+                <Premium>32.18</Premium>
+                <Premium>112.46</Premium>
+            </PremiumList>
+            <ReturnStatus>
+                <Code>WM_SUCCESS</Code>
+                <ErrorList/>
+            </ReturnStatus>
+        </CalculationOfPremiumResponse>
+    </soap:Body>
+</soap:Envelope>

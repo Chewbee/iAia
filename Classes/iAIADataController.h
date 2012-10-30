@@ -17,7 +17,6 @@
 @interface iAIADataController : NSObject
 {
 }
-@property (nonatomic,assign)BOOL                      errorStatus ;
 @property (nonatomic,strong) PersonDataSource        * personDataSource ;
 @property (nonatomic,strong) NSMutableArray         * contracts ;
 @property (nonatomic,strong) NSMutableArray         * contractsDetailed ;

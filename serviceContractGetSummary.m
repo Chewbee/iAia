@@ -254,6 +254,7 @@
 #import "CSCSavingsScheme.h"
 #import "CSCPackage.h"
 #import "CSCContract.h"
+#import "serviceConfigurator.h"
 
 /* Implementation of the service */
 				
@@ -263,16 +264,7 @@
 	{
 		if(self = [super init])
 		{
-            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-            NSString *theService = [[NSMutableString alloc] initWithString:@"http://"] ;
-            theService =[theService stringByAppendingString: [defaults stringForKey:@"server" ]];
-            theService = [theService stringByAppendingString:@".compute.amazonaws.com:8080" ];
-
-            self.serviceUrl = theService;
-
-			self.namespace = @"http://www.csc.com/graphtalk/aia/";
-			self.headers = nil;
-			self.logging = NO;
+            [[serviceConfigurator sharedInstance]configureService:self];
 		}
 		return self;
 	}

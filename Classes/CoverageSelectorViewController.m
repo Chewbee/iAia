@@ -56,8 +56,8 @@
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    [self getTariff] ;
+    [self productExtract];
+    //[self getTariff] ;
 }
 //
 -(void) viewDidAppear:(BOOL)animated
@@ -69,7 +69,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark - Web Service stuff
+#pragma mark - Get tarif Web Service stuff
 -(void) getTariff
 {
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
@@ -94,8 +94,6 @@
     }
 
 }
-#pragma mark -
-#pragma mark Service returns
 // Handle the response from invokeServiceContractList.
 - (void) ServiceGetTariffHandler: (id) value
 {
@@ -118,7 +116,12 @@
     }
     // Do something with the NSMutableArray* result
     //TODO: Check Efficiency
-    [self setProductOptions: (NSMutableArray*)value ];
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithCapacity:2] ;
+    for (CSCProductOption *productOption  in value)
+    {
+            [dic setObject:productOption forKey:[productOption Label]] ;
+    }
+    [self setProductOptions: dic];
     [self.tableView  reloadData ] ;
 
 }
@@ -132,11 +135,78 @@
 
     [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
     [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
-    
+
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
 }
-#pragma mark -
-#pragma mark XML flow parsing
+//
+#pragma mark - productExtract Web Service stuff
+-(void) productExtract
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    //
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
+    BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    // mocked is now a user setting
+    if (mocked) {
+        [self getTariffMockup];
+        return ;
+    } else {
+        NSString *login = [defaults stringForKey:@"login_preference" ] ;
+        NSString *password = [defaults stringForKey:@"password_preference" ] ;
+        serviceProductExtract *service = [serviceProductExtract serviceWithUsername:login andPassword:password] ;
+        // get the params
+        CSCContract *cscContract = [[CSCContract alloc] init];
+        [cscContract setProductIdentifier:@"HE_MEDI01"];
+        [service ProductExtract: self action: @selector(ServiceProductExtractHandler:)
+                    Environment: [[CSCWMEnv alloc] init]
+                ActivityRequest: [[CSCActivityRequest alloc]init]
+                       Contract: cscContract] ;
+    }
+
+}
+// Handle the response from invokeServiceContractList.
+- (void) ServiceProductExtractHandler: (id) value
+{
+	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    // Handle errors
+	if([value isKindOfClass:[NSError class]]) {
+        NSString *errorMsg = [(NSError*)value localizedDescription] ;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+		return;
+	}
+	// Handle faults
+	if([value isKindOfClass:[SoapFault class]]) {
+        NSString *errorMsg = [(SoapFault*)value faultString] ;
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Fault" message:errorMsg delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+		return;
+    }
+    // Do something with the * result which is a contract
+    CSCProductOption *producOptions = (CSCProductOption*) value ;
+//    for (CSCProductOption *pOption in contract.) {
+//        ;
+//    }
+
+    [self.tableView  reloadData ] ;
+}
+//
+-(void) productExtractMockup
+{
+    //  using local resource file in mockup mode
+    NSString *XMLPath = nil ;
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponseNew.xml"];
+    NSData *XMLData =nil;
+    XMLData = [NSData dataWithContentsOfFile:XMLPath];
+
+    [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
+    [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
+
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+}
+//
 -(NSMutableDictionary*) populateOptionArrayWithData:(NSData*) XMLDataFlow
 {
     NSMutableDictionary *result = [[NSMutableDictionary alloc]init] ;
@@ -169,7 +239,7 @@
         // Being here prevents a crash in case the data are not in UTF-8
         // BUT conformInputString solves the case for now
     }
-    
+
     return result ;
 }
 //
@@ -202,30 +272,10 @@
     }
     @catch ( NSException *exception )
     {
-        //TODO:being here prevents a crash ... but it is not a solution
+        // Beiing here prevents a crash ... but it is not a solution
     }
-//  NSArray* reversedArray = [[resultArray reverseObjectEnumerator] allObjects];
+    //  NSArray* reversedArray = [[resultArray reverseObjectEnumerator] allObjects];
     return resultArray ;
-}
-//
--(NSData*) conformInputString:(NSData* )data
-{
-    NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
-
-    responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    if (!responseStringASCII) // ASCII is not working, will try utf-8!
-        responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    else
-    {
-        //  ASCII is working, but check if UTF8 gives less characters
-        responseStringUTF8  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        if(responseStringUTF8 != nil && [responseStringUTF8 length] < [responseStringASCII length])
-            responseString  =   responseStringUTF8 ;
-        else
-            responseString  =   responseStringASCII ;
-    }
-    NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
-    return returnedData ;
 }
 //
 #pragma mark - Table view data source
@@ -385,4 +435,25 @@
 //
 //}
 //
+//
+#pragma mark - TOOLS
+-(NSData*) conformInputString:(NSData* )data
+{
+    NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
+
+    responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    if (!responseStringASCII) // ASCII is not working, will try utf-8!
+        responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    else
+    {
+        //  ASCII is working, but check if UTF8 gives less characters
+        responseStringUTF8  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if(responseStringUTF8 != nil && [responseStringUTF8 length] < [responseStringASCII length])
+            responseString  =   responseStringUTF8 ;
+        else
+            responseString  =   responseStringASCII ;
+    }
+    NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
+    return returnedData ;
+}
 @end

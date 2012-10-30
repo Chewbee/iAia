@@ -98,7 +98,6 @@
 	// Do something with the CSCContract* result
     CSCContract* result = (CSCContract*)value;
 	NSLog(@"ServiceProductExtractHandler returned the value: %@", result);
-    [self setErrorStatus:FALSE];
 }
 //
 -(void) productExtractMockUp
@@ -144,7 +143,6 @@
 {
     [aView dismissWithClickedButtonIndex:0 animated:TRUE ] ;
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
-    [self setErrorStatus:TRUE] ;
 }
 //
 @end

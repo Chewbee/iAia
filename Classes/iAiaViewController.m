@@ -181,16 +181,15 @@
 #pragma mark Segue Stuff
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"ContractDetails"])
+    ContractTableViewCell * ctvc = (ContractTableViewCell*) sender ;
+    if ([segue.identifier isEqualToString:@"ContractDetail"])
     {
-        ContractTableViewCell * ctvc = (ContractTableViewCell*)[self tableView:[self tableView] cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
-        [segue.destinationViewController setContract:[ctvc contract]];
-        [segue.destinationViewController setDataController:dataController];
-    }
-    if ([[segue identifier] isEqualToString:@"FinancialDetails"])
-    {
+        ContractDetailViewController *targetVC = (ContractDetailViewController*)segue.destinationViewController;
+        [targetVC setContract:[ctvc contract]];
+        [targetVC setDataController:dataController];
     }
 }
+//
 #pragma mark interactions
 - (IBAction)refreshPressed:(id)sender {
     [[self refreshButtonItem ] setEnabled:FALSE] ;
