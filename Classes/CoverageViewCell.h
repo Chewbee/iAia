@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CSCCoverage.h"
 
 @interface CoverageViewCell : UITableViewCell
 
+@property (nonatomic,strong) IBOutlet UIImageView *checkview;
+@property (nonatomic, strong) CSCCoverage *coverage ; 
 @end

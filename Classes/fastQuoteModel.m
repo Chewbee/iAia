@@ -49,7 +49,11 @@
 }
 -(NSArray*) birthDatesArray
 {
-    NSArray *resultArray = @[[self.birthDates objectForKey:@"subscriber"],[self.birthDates objectForKey:@"partner"]];
+    NSArray *resultArray = nil ;
+    
+    if ([self.birthDates count] )
+        resultArray = @[[self.birthDates objectForKey:@"subscriber"],[self.birthDates objectForKey:@"partner"]] ;
+
     return resultArray ;
 }
 //

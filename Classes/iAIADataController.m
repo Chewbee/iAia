@@ -168,13 +168,11 @@
     //  searching for Contract nodes
     nodes = [doc nodesForXPath:@"//*[local-name()='Contract']" namespaceMappings:dict error:&err];
     // namespace
-    for (CXMLNode *node in nodes)
+    for (CXMLNode *node in nodes)         // creating contract objects from content
     {
-        // creating contract objects from content
         CSCContract *contract= [CSCContract createWithNode:node];
-        if (contract) {
+        if (contract)
             [resultArray addObject:contract] ;
-        }
     }
     return resultArray ; 
 }

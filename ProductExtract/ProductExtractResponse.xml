@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+Ôªø<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <soap:Body>
         <ProductExtractResponse xmlns="http://www.csc.com/graphtalk/aia/">
@@ -90,43 +90,43 @@
                                                 <TextList>
                                                     <String>ACTES D'IMAGERIE</String>
                                                     <String>*ADE - ACTES D' ECHOGRAPHIE, ADI - ACTES D'IMAGERIE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                  <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                  <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>TRANSPORT</String>
                                                     <String>*TR - TRANSPORT</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>
                            <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>AUXILIAIRES MEDICAUX</String>
                                                     <String>*AMI - ACTES INFIRMIERS, AMK - ACTES DE KINESITHERAPIE, AMO - </String>
                                                     <String>*ORTHOPHONIE, AMP - SOINS PEDICURE, AMY - SEANCES ORTHOPTIE, ATM - </String>
                                                     <String>*ACTES TECHNIQUES MEDICAUX, DAUX - INDEMNITE DEPLACEMENT AUXILIAIRE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                  <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                  <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>ANALYSES MEDICALES</String>
                                                     <String>*B - ACTES BIOLOGIE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>
                            <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>CONSULTATIONS &amp; VISITES</String>
                                                     <String>*C - CONSULTATION MEDICALE, CNP - CONSULTATION NEURO-PSYCHIATRE, CS - </String>
                                                     <String>*CONSULTATION SPECIALISTE, ID - INDEMNITE DEPLACEMENT MEDECIN, V - </String>
                                                     <String>*VISITE MEDICALE, VNP - VISITE SPECIALISTE NEUROPSY, VS - VISITE </String>
                                                     <String>*SPECIALISTE, CSC - CONSULT CARDIOLOGUE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>CURE THERMALE</String>
                                                     <String>*FTH - SOINS CURE THERMALE, HTH - CURE THERMALE HEBERGEMENT, STH - </String>
                                                     <String>*CURE THERMALE, TTH - CURE THERMALE TRANSPORT</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>APPAREILLAGE &amp; AUDITION</String>
                                                     <String>*PA - APPAREILLAGE, PAU - PROTHESE AUDITIVE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈSociale</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√©Sociale</String>
 			<String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>PHARMACIE</String>
                                                     <String>*PAN - PANSEMENT, PH1 - PHARMACIE A 100%, PH2 - PHARMACIE A 15%, PH4 - </String>
                                                     <String>*PHARMACIE A 35%, PH7 - PHARMACIE A 65%</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>
                             <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>DENTAIRE</String>
                                                     <String>*SC - SOINS DENTAIRES, SPR - PROTHESE DENTAIRE ACCEPTEE, TO - </String>
                                                     <String>*ORTHODONTIE ACCEPTEE</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>DENTAIRE NR</String>
                                                     <String>*IMPL - IMPLANTOLOGIE HN, SPRNR - PROTHESE DENTAIRE NON PRISE EN </String>
                                                     <String>*CHARGE, TONR - ORTHODONTIE NON PRISE EN CHARGE, INLA - INLAYS &amp; </String>
@@ -146,13 +146,13 @@
                                                     <String>**180.00 EUR</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>MAJORATIONS DIVERSES</String>
                                                     <String>*MAJD - MAJORATIONS DIVERSES</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>
 <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>HOSPITALISATION</String>
                                                     <String>*GHS - FRAIS DE SEJOUR HOSPITALIER, MREP - MAISON DE REPOS, ADA - </String>
                                                     <String>*ACTES D'ANESTHESIE, ACO - ACTES D' OBSTETRIQUE, ADC - ACTES DE </String>
                                                     <String>*CHIRURGIE, HON - HONORAIRES</String>
-                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement SÈcuritÈ Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>**300 % of the rate of basis Minus 100 % du remboursement S√©curit√© Sociale</String>                                                    <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>CHAMBRE PARTICULIERE</String>
                                                     <String>*SHO - CHAMBRE PARTICULIERE</String>
                                                     <String>**70.00 EUR by day</String>
@@ -267,7 +267,7 @@
                                                     <String>OPTIQUE</String>
                                                     <String>*LEN - LENTILLES ACCEPTEES, LUN - OPTIQUE MONTURE</String>
                                                     <String>**By person</String>
-                                                    <String>**180.00 EUR Minus 100 % du remboursement SÈcuritÈ Sociale</String>
+                                                    <String>**180.00 EUR Minus 100 % du remboursement S√©curit√© Sociale</String>
                                                     <String>**On  1 Year compared to entry date</String>                                                <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>VERRES</String>
                                                     <String>*VER - OPTIQUE VERRES</String>
@@ -399,26 +399,26 @@
                                                 <TextList>
                                                     <String>*CNP - CONSULTATION NEURO-PSYCHIATRE</String>
                                                     <String>**Minimum refunding : 100 % of the rate of basis Minus 100 % du </String>
-                                                    <String>**remboursement SÈcuritÈ Sociale - Not Applied</String>
+                                                    <String>**remboursement S√©curit√© Sociale - Not Applied</String>
                                                     <String>**Part exceeds no PEC  : 12.00 EUR by act - Not Applied</String>                                               <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>*VNP - VISITE SPECIALISTE NEUROPSY</String>
                                                     <String>**Minimum refunding : 100 % of the rate of basis Minus 100 % du </String>
-                                                    <String>**remboursement SÈcuritÈ Sociale - Not Applied</String>
+                                                    <String>**remboursement S√©curit√© Sociale - Not Applied</String>
                                                     <String>**Part exceeds no PEC  : 11.05 EUR by act - Not Applied</String>                                             <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>*VS - VISITE SPECIALISTE</String>
                                                     <String>**Minimum refunding : 100 % of the rate of basis Minus 100 % du </String>
-                                                    <String>**remboursement SÈcuritÈ Sociale - Not Applied</String>
+                                                    <String>**remboursement S√©curit√© Sociale - Not Applied</String>
                                                     <String>**Part exceeds no PEC  : 8.42 EUR by act - Not Applied</String>                                              <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>*CSC - CONSULT CARDIOLOGUE</String>
                                                     <String>**Minimum refunding : 100 % of the rate of basis Minus 100 % du </String>
-                                                    <String>**remboursement SÈcuritÈ Sociale - Not Applied</String>
+                                                    <String>**remboursement S√©curit√© Sociale - Not Applied</String>
                                                     <String>**Part exceeds no PEC  : 12.27 EUR by act - Not Applied</String>                                                <String>------------------------------------------------------------------------------------------------------------</String>
                                                     <String>*PH7 - PHARMACIE A 65%, PH4 - PHARMACIE A 35%, PH2 - PHARMACIE A 15%, </String>
                                                     <String>*PH1 - PHARMACIE A 100%, V - VISITE MEDICALE, C - CONSULTATION </String>
                                                     <String>*MEDICALE, B - ACTES BIOLOGIE, ADI - ACTES D'IMAGERIE, ADE - ACTES D' </String>
                                                     <String>*ECHOGRAPHIE</String>
                                                     <String>**Minimum refunding : 100 % of the rate of basis Minus 100 % du </String>
-                                                    <String>**remboursement SÈcuritÈ Sociale - Not Applied</String>
+                                                    <String>**remboursement S√©curit√© Sociale - Not Applied</String>
                                                     <String>**Part exceeds no PEC  : 8.00 EUR by act - Not Applied</String>                                                <String>------------------------------------------------------------------------------------------------------------</String>
                                                 </TextList>
                                                 <Type>rspnsblty</Type>

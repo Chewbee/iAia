@@ -8,6 +8,7 @@
 
 #import "CoverageSelectorViewController.h"
 #import "CoverageViewCell.h"
+#import <Foundation/NSException.h>
 
 @interface CoverageSelectorViewController ()
 
@@ -39,6 +40,7 @@
     }
     return self;
 }
+#pragma mark - View related stuff
 //
 -(void) viewWillLoad {
     [self.tableView registerClass:[CoverageViewCell class] forCellReuseIdentifier:@"QuoteCell" ] ;
@@ -48,12 +50,18 @@
     [super viewDidLoad];
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self getTariff] ;
 }
-
+//
+-(void) viewDidAppear:(BOOL)animated
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -106,8 +114,9 @@
 		return;
     }
     // Do something with the NSMutableArray* result
-    //TODO: do the work
-    //    [self setContracts: (NSMutableArray*)value ];
+    //TODO: Check Efficiency
+    [self setProductOptions: (NSMutableArray*)value ];
+    [self.tableView  reloadData ] ;
 
 }
 -(void) getTariffMockup
@@ -117,9 +126,104 @@
     XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponse.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
-    //FIXME: IT IS a product that is returned
-    //[self setProductDetail:[self populateContractArrayWithData:(NSData*) XMLData]];
+
+    [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
+    [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
+    
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
 }
+#pragma mark -
+#pragma mark XML flow parsing
+-(NSMutableArray*) populateOptionArrayWithData:(NSData*) XMLDataFlow
+{
+    NSMutableArray *resultArray = [NSMutableArray array] ;
+    NSError *err = nil ;
+    NSData *XMLData =nil;
+    XMLData = [self conformInputString: XMLDataFlow ];
+
+    CXMLDocument *doc = nil ;
+    doc = [[CXMLDocument alloc] initWithData:XMLData options:0 error:&err];
+    //
+    NSArray *nodes = nil ;
+    // namespace
+    NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
+    //  searching for Contract nodes
+    nodes = [doc nodesForXPath:@"//*[local-name()='ProductOption']" namespaceMappings:dict error:&err];
+    // namespace
+    @try {
+        for (CXMLNode *node in nodes)
+        {
+            // creating contract objects from content
+            CSCProductOption *productOption = nil;
+            productOption = [CSCProductOption createWithNode:node];
+            if (productOption) {
+                [resultArray addObject:productOption] ;
+            }
+        }
+    }
+    @catch ( NSException *exception )
+    {
+        //TODO:being here prevents a crash ... but it is not a solution 
+    }
+    
+    return resultArray ;
+}
+//
+-(NSMutableArray*) populateCoverageArrayWithData:(NSData*) XMLDataFlow
+{
+    NSMutableArray *resultArray = [NSMutableArray array] ;
+    NSError *err = nil ;
+    NSData *XMLData =nil;
+    XMLData = [self conformInputString: XMLDataFlow ];
+
+    CXMLDocument *doc = nil ;
+    doc = [[CXMLDocument alloc] initWithData:XMLData options:0 error:&err];
+    //
+    NSArray *nodes = nil ;
+    // namespace
+    NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
+    //  searching for Contract nodes
+    nodes = [doc nodesForXPath:@"//*[local-name()='Coverage']" namespaceMappings:dict error:&err];
+    // namespace
+    @try {
+        for (CXMLNode *node in nodes)
+        {
+            // creating contract objects from content
+            CSCCoverage *coverage = nil;
+            coverage = [CSCCoverage createWithNode:node];
+            if (coverage    ) {
+                [resultArray   addObject:coverage] ;
+            }
+        }
+    }
+    @catch ( NSException *exception )
+    {
+        //TODO:being here prevents a crash ... but it is not a solution
+    }
+
+    return resultArray ;
+}
+//
+-(NSData*) conformInputString:(NSData* )data
+{
+    NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
+
+    responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    if (!responseStringASCII) // ASCII is not working, will try utf-8!
+        responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    else
+    {
+        //  ASCII is working, but check if UTF8 gives less characters
+        responseStringUTF8  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if(responseStringUTF8 != nil && [responseStringUTF8 length] < [responseStringASCII length])
+            responseString  =   responseStringUTF8 ;
+        else
+            responseString  =   responseStringASCII ;
+    }
+    NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
+    return returnedData ;
+}
+//
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -137,7 +241,7 @@
     }
     return 0;
 }
-
+//
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = nil ;
@@ -190,13 +294,28 @@
             break ;
 		}
     }
-    [self tableView:tableView titleForHeaderInSection:indexPath.section] ;
+    [self tableView:tableView viewForHeaderInSection:indexPath.section] ;
     indexPaths = @[indexPath] ;
     [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
 
     return cell;
 }
-
+//
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section==0) {
+        return [[self coverageHeaderView ]view] ;
+    }
+    return nil;
+}
+//
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 220 ;
+    }
+    return 0 ;
+}
 /*
  // Override to support conditional editing of the table view.
  - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -237,16 +356,36 @@
  */
 
 #pragma mark - Table view delegate
-
+// trick to allow accesory segue in IOS 5 (usually do not work)
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier: @"detailCoverage" sender: [tableView cellForRowAtIndexPath: indexPath]];
+}
+//
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
+    [cell.checkview setHidden:TRUE];
+}
+//
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
+    [cell.checkview setHidden:FALSE];
 }
-
+#pragma mark - Segue Stuff
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"detailCoverage"])
+    {
+        CoverageDetailViewController *targetVC = (CoverageDetailViewController*)segue.destinationViewController;
+        //FIXME: pass the cell
+    }
+}
+//
+//- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+//{
+//
+//}
+//
 @end

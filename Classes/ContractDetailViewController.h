@@ -11,7 +11,7 @@
 #import "iAIADataController.h"
 
 
-@interface ContractDetailViewController : UITableViewController {
+@interface ContractDetailViewController :UIViewController {
 
 	
 }
