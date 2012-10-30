@@ -31,6 +31,8 @@
 		E6399C08163E97B000C8119A /* ProductExtractResponse.xml in Resources */ = {isa = PBXBuildFile; fileRef = E6399C07163E97B000C8119A /* ProductExtractResponse.xml */; };
 		E6399C0C163EBA9800C8119A /* CoverageHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6399C0A163EBA9800C8119A /* CoverageHeaderViewController.m */; };
 		E6399C0D163EBA9800C8119A /* CoverageHeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */; };
+		E64D8050163FC72A0036CE2D /* icon-checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D804F163FC72A0036CE2D /* icon-checkmark.png */; };
+		E64D8052163FDE0C0036CE2D /* ProductExtractResponseNew.xml in Resources */ = {isa = PBXBuildFile; fileRef = E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */; };
 		E651540F162F4F8200EEC4CF /* CoverageSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */; };
 		E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */; };
 		E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */; };
@@ -428,6 +430,8 @@
 		E6399C09163EBA9800C8119A /* CoverageHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageHeaderViewController.h; sourceTree = "<group>"; };
 		E6399C0A163EBA9800C8119A /* CoverageHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageHeaderViewController.m; sourceTree = "<group>"; };
 		E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverageHeaderViewController.xib; sourceTree = "<group>"; };
+		E64D804F163FC72A0036CE2D /* icon-checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-checkmark.png"; sourceTree = "<group>"; };
+		E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ProductExtractResponseNew.xml; sourceTree = "<group>"; };
 		E651540D162F4F8200EEC4CF /* CoverageSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageSelectorViewController.h; sourceTree = "<group>"; };
 		E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageSelectorViewController.m; sourceTree = "<group>"; };
 		E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+dataController.h"; sourceTree = "<group>"; };
@@ -1323,6 +1327,7 @@
 		E6A4FCF3163A68F7004053CC /* ProductExtract */ = {
 			isa = PBXGroup;
 			children = (
+				E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */,
 				E6399C07163E97B000C8119A /* ProductExtractResponse.xml */,
 				E6A4FCF4163A68F7004053CC /* ProductExtract.wsdl */,
 				E6A4FCF5163A68F7004053CC /* ProductExtractRequest.xml */,
@@ -2026,6 +2031,7 @@
 		E6F1D51E163EC67F00F7093F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E64D804F163FC72A0036CE2D /* icon-checkmark.png */,
 				DAA1A174163345E100AB7704 /* get_quote_button.png */,
 				E6C877A9162F1FFC0083218B /* medi2.jpg */,
 				DA8666801633279000563C27 /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */,
@@ -2150,6 +2156,8 @@
 				DAE4C3CA163C473800112C65 /* CoverageCell.xib in Resources */,
 				E6399C08163E97B000C8119A /* ProductExtractResponse.xml in Resources */,
 				E6399C0D163EBA9800C8119A /* CoverageHeaderViewController.xib in Resources */,
+				E64D8050163FC72A0036CE2D /* icon-checkmark.png in Resources */,
+				E64D8052163FDE0C0036CE2D /* ProductExtractResponseNew.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

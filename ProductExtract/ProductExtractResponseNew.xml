@@ -1,0 +1,1839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ProductExtractResponse xmlns="http://www.csc.com/graphtalk/aia/">
+            <Contract>
+                <BillingList>
+                    <Billing>
+                        <ExtensionList>
+                            <ExtensionElement>
+                                <Identifier>billing_frequency_type_label</Identifier>
+                                <Value>Anniversary</Value>
+                            </ExtensionElement>
+                            <ExtensionElement>
+                                <ExtensionList>
+                                    <ExtensionElement>
+                                        <Identifier>stddrdb</Identifier>
+                                        <Value>Direct Debit</Value>
+                                    </ExtensionElement>
+                                    <ExtensionElement>
+                                        <Identifier>bank_card</Identifier>
+                                        <Value>Credit card</Value>
+                                    </ExtensionElement>
+                                </ExtensionList>
+                                <Identifier>billing_payment_type_list</Identifier>
+                            </ExtensionElement>
+                        </ExtensionList>
+                        <BillReceiver>owner</BillReceiver>
+                        <BillReceiverLabel>Owner</BillReceiverLabel>
+                        <DirectDebitDay>1</DirectDebitDay>
+                        <DirectDebitDayList>
+                            <String>1</String>
+                            <String>2</String>
+                            <String>3</String>
+                            <String>4</String>
+                            <String>5</String>
+                            <String>6</String>
+                            <String>7</String>
+                            <String>8</String>
+                            <String>9</String>
+                            <String>10</String>
+                            <String>11</String>
+                            <String>12</String>
+                            <String>13</String>
+                            <String>14</String>
+                            <String>15</String>
+                            <String>16</String>
+                            <String>17</String>
+                            <String>18</String>
+                            <String>19</String>
+                            <String>20</String>
+                            <String>21</String>
+                            <String>22</String>
+                            <String>23</String>
+                            <String>24</String>
+                            <String>25</String>
+                            <String>26</String>
+                            <String>27</String>
+                            <String>28</String>
+                            <String>29</String>
+                            <String>30</String>
+                            <String>31</String>
+                        </DirectDebitDayList>
+                        <DueDateType>in_advance</DueDateType>
+                        <DueDateTypeLabel>In Advance</DueDateTypeLabel>
+                        <Frequency>monthly</Frequency>
+                        <FrequencyLabel>Monthly</FrequencyLabel>
+                        <FrequencyLabelList>
+                            <String>Monthly</String>
+                            <String>Quarterly</String>
+                            <String>Semi-Annual</String>
+                            <String>Annual</String>
+                        </FrequencyLabelList>
+                        <FrequencyList>
+                            <String>monthly</String>
+                            <String>quaterly</String>
+                            <String>semi_annual</String>
+                            <String>annual</String>
+                        </FrequencyList>
+                        <FrequencyType>anniversary</FrequencyType>
+                        <PaymentType>stddrdb</PaymentType>
+                        <PaymentTypeLabel>Direct Debit</PaymentTypeLabel>
+                        <Type>regular_premium</Type>
+                    </Billing>
+                </BillingList>
+                <ClauseList/>
+                <CoverageFundList/>
+                <CoverageList/>
+                <CurrencyCode>AUD</CurrencyCode>
+                <FinancialOptionList/>
+                <GeneralConditionsList/>
+                <InsuranceType>individual</InsuranceType>
+                <MaximumAge>100</MaximumAge>
+                <MinimumAge>16</MinimumAge>
+                <PackageList/>
+                <ProductIdentifier>HE_MEDI01</ProductIdentifier>
+                <ProductLabel>Private Health Insurance</ProductLabel>
+                <ProductType>health</ProductType>
+                <TaxType/>
+                <Term>fixed_term</Term>
+            </Contract>
+            <ProductOptionList>
+                <ProductOption>
+                    <CoverageList>
+                        <Coverage>
+                            <Eligibility>optional</Eligibility>
+                            <Identifier>75</Identifier>
+                            <Label>Ultra Health Cover</Label>
+                            <HealthCoverageDetail>
+                                <AccidentOption>false</AccidentOption>
+                                <AssignmentMode>family</AssignmentMode>
+                                <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                <FormulaList>
+                                    <HealthFormula>
+                                        <DisplayId>ULTRA_HEALTH - ULTRA HEALTH of the theme MEDI</DisplayId>
+                                        <Identifier>ULTRA_HEALTH</Identifier>
+                                        <ItemList>
+                                            <HealthFormulaItem>
+                                                <TextList>
+                                                    <String>HOSPITALIZATION</String>
+                                                    <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                    <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                    <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                    <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                    <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                    <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                    <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                    <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                    <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                    <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                    <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                    <String>**25 % of the rate of convention</String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>EXTRA SERVICES</String>
+                                                    <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, BLOOD - BLOOD </String>
+                                                    <String>*GLUCOSE &amp; BLOOD PRESSURE MONITORS, BREAT - BREATHING APPLIANCES, CHI </String>
+                                                    <String>*- CHIROPRACTIC &amp; OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - </String>
+                                                    <String>*DIETETICS, EYETH - EYE THERAPY, GDENT - GENERAL DENTAL, HEAID - </String>
+                                                    <String>*HEARING AIDS, HERES - ACCESS TO HEALTH RESOURCES, HESCR - HEALTH </String>
+                                                    <String>*SCREENING SERVICES, HESUB - HEALTH SUBSCRIPTIONS, HONUR - HOME </String>
+                                                    <String>*NURSING, LASE - LASER EYE SURGERY, MDEN - DENTAL PREVENT. TREATMENT &amp; </String>
+                                                    <String>*EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - OCCUPATIONAL THERAPY, </String>
+                                                    <String>*OPTIC - OPICAL ITEMS, ORTH - ORTHODONTIC TREATMENT, PHA - </String>
+                                                    <String>*PRESCRIPTION PHARMACEUTICALS, PHY - PHYSIOTHERAPY, POD - PODIATRY, </String>
+                                                    <String>*PRHOS - PRIVATE HOSPITAL ACC. &amp; EMERGENCY FEES, SDEN - SURGICAL </String>
+                                                    <String>*DENTAL PROCEDURES, SPEE - SPEECH THERAPY</String>
+                                                    <String>**100 % of the actual charge</String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                </TextList>
+                                                <Type>calculation_formula</Type>
+                                                <TypeLabel>Basic Calculation</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>limitation</Type>
+                                                <TypeLabel>Limits</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>deductible</Type>
+                                                <TypeLabel>Deductibles</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList>
+                                                    <String>2 MONTHS</String>
+                                                    <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                    <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                    <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                    <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                    <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                    <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PLAST - </String>
+                                                    <String>*PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA </String>
+                                                    <String>*- REHABILITATION TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, </String>
+                                                    <String>*REN - RENAL DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                    <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH, AP&amp;PR - HEALTH APPLIANCES &amp; </String>
+                                                    <String>*EXTERNAL PROSTHESES, CHI - CHIROPRACTIC &amp; OSTEOPATHY, CLIN - CLINICAL </String>
+                                                    <String>*PSYCHOLOGY, DIETE - DIETETICS, EYETH - EYE THERAPY, HERES - ACCESS TO </String>
+                                                    <String>*HEALTH RESOURCES, HESCR - HEALTH SCREENING SERVICES, HESUB - HEALTH </String>
+                                                    <String>*SUBSCRIPTIONS, HONUR - HOME NURSING, LASE - LASER EYE SURGERY, MDEN - </String>
+                                                    <String>*DENTAL PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, </String>
+                                                    <String>*OCCTH - OCCUPATIONAL THERAPY, PHA - PRESCRIPTION PHARMACEUTICALS, PHY </String>
+                                                    <String>*- PHYSIOTHERAPY, POD - PODIATRY, PRHOS - PRIVATE HOSPITAL ACC. &amp; </String>
+                                                    <String>*EMERGENCY FEES, SPEE - SPEECH THERAPY</String>
+                                                    <String>**By person   On  2 Months </String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>6 MONTHS</String>
+                                                    <String>*OPTIC - OPICAL ITEMS</String>
+                                                    <String>**By person   On  6 Months </String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>12 MONTHS</String>
+                                                    <String>*BREAT - BREATHING APPLIANCES, ORTH - ORTHODONTIC TREATMENT, GDENT - </String>
+                                                    <String>*GENERAL DENTAL, SDEN - SURGICAL DENTAL PROCEDURES, OBS - </String>
+                                                    <String>*OBSTETRICS-RELATED SERVICES</String>
+                                                    <String>**By person   On  12 Months </String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>24 MONTHS</String>
+                                                    <String>*BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE MONITORS</String>
+                                                    <String>**By person   On  24 Months </String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                    <String>36 MONTHS</String>
+                                                    <String>*HEAID - HEARING AIDS</String>
+                                                    <String>**By person   On  36 Months </String>
+                                                    <String>------------------------------------------------------------------------------------------------------------</String>
+                                                </TextList>
+                                                <Type>waiting_period</Type>
+                                                <TypeLabel>Waiting periods</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>maximum_units</Type>
+                                                <TypeLabel>Maximum acts</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>message</Type>
+                                                <TypeLabel>Messages</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>age_limit</Type>
+                                                <TypeLabel>Age limits</TypeLabel>
+                                            </HealthFormulaItem>
+                                            <HealthFormulaItem>
+                                                <TextList/>
+                                                <Type>rspnsblty</Type>
+                                                <TypeLabel>Responsibility</TypeLabel>
+                                            </HealthFormulaItem>
+                                        </ItemList>
+                                        <Label>ULTRA HEALTH</Label>
+                                    </HealthFormula>
+                                </FormulaList>
+                                <Level>level_1</Level>
+                                <LevelLabel>Base Coverage</LevelLabel>
+                                <MaternityOption>false</MaternityOption>
+                                <PayeeTitle>insured</PayeeTitle>
+                                <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                            </HealthCoverageDetail>
+                            <MaximumAge>100</MaximumAge>
+                            <MinimumAge>16</MinimumAge>
+                            <Type>health</Type>
+                        </Coverage>
+                    </CoverageList>
+                    <Identifier>opt3</Identifier>
+                    <Label>Ultra Health Cover</Label>
+                    <PackageList/>
+                </ProductOption>
+                <ProductOption>
+                    <CoverageList/>
+                    <Identifier>opt2</Identifier>
+                    <Label>Modular Health Offer</Label>
+                    <PackageList>
+                        <Package>
+                            <CoverageList>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>73</Identifier>
+                                    <Label>Basic Extras 55% back</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>BASIC_EXTRAS_55% - BASIC EXTRAS 55% BACK of the theme MEDI</DisplayId>
+                                                <Identifier>BASIC_EXTRAS_55%</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>BASIC EXTRAS 55% BACK</String>
+                                                            <String>*MDEN - DENTAL PREVENT. TREATMENT &amp; EXAMINATION, CHI - CHIROPRACTIC &amp; </String>
+                                                            <String>*OSTEOPATHY, NAT - NATURAL THERAPIES, OPTIC - OPICAL ITEMS, PHY - </String>
+                                                            <String>*PHYSIOTHERAPY, SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**55 % of the actual charge</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$150 ANNUAL LIMIT</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person</String>
+                                                            <String>**150.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$300 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*PHY - PHYSIOTHERAPY, CHI - CHIROPRACTIC &amp; OSTEOPATHY, NAT - NATURAL </String>
+                                                            <String>*THERAPIES</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**300.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$400 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*MDEN - DENTAL PREVENT. TREATMENT &amp; EXAMINATION, SDEN - SURGICAL </String>
+                                                            <String>*DENTAL PROCEDURES</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**400.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*CHI - CHIROPRACTIC &amp; OSTEOPATHY, MDEN - DENTAL PREVENT. TREATMENT &amp; </String>
+                                                            <String>*EXAMINATION, NAT - NATURAL THERAPIES, PHY - PHYSIOTHERAPY</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>6 MONTHS</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person   On  6 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>BASIC EXTRAS 55% BACK</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>74</Identifier>
+                                    <Label>Basic Extras 70% back</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>BASIC_EXTRAS_70% - BASIC EXTRAS 70% BACK of the theme MEDI</DisplayId>
+                                                <Identifier>BASIC_EXTRAS_70%</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>BASIC EXTRAS 70% BACK</String>
+                                                            <String>*MDEN - DENTAL PREVENT. TREATMENT &amp; EXAMINATION, CHI - CHIROPRACTIC &amp; </String>
+                                                            <String>*OSTEOPATHY, NAT - NATURAL THERAPIES, OPTIC - OPICAL ITEMS, PHY - </String>
+                                                            <String>*PHYSIOTHERAPY, SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**70 % of the actual charge</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$200 ANNUAL LIMIT</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person</String>
+                                                            <String>**200.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$450 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*PHY - PHYSIOTHERAPY, CHI - CHIROPRACTIC &amp; OSTEOPATHY, NAT - NATURAL </String>
+                                                            <String>*THERAPIES</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**450.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$750 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*MDEN - DENTAL PREVENT. TREATMENT &amp; EXAMINATION, SDEN - SURGICAL </String>
+                                                            <String>*DENTAL PROCEDURES</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**750.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*CHI - CHIROPRACTIC &amp; OSTEOPATHY, MDEN - DENTAL PREVENT. TREATMENT &amp; </String>
+                                                            <String>*EXAMINATION, NAT - NATURAL THERAPIES, PHY - PHYSIOTHERAPY</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>6 MONTHS</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person   On  6 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>BASIC EXTRAS 70% BACK</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>79</Identifier>
+                                    <Label>Top Extra 55% back</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_EXTRAS_55% - TOP EXTRAS 55% BACK of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_EXTRAS_55%</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>TOP EXTRAS 55% BACK</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, BLOOD - BLOOD </String>
+                                                            <String>*GLUCOSE &amp; BLOOD PRESSURE MONITORS, BREAT - BREATHING APPLIANCES, CHI </String>
+                                                            <String>*- CHIROPRACTIC &amp; OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - </String>
+                                                            <String>*DIETETICS, EYETH - EYE THERAPY, GDENT - GENERAL DENTAL, HEAID - </String>
+                                                            <String>*HEARING AIDS, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, OPTIC - OPICAL ITEMS, ORTH - ORTHODONTIC </String>
+                                                            <String>*TREATMENT, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - PHYSIOTHERAPY, </String>
+                                                            <String>*POD - PODIATRY, SDEN - SURGICAL DENTAL PROCEDURES, SPEE - SPEECH </String>
+                                                            <String>*THERAPY</String>
+                                                            <String>**55 % of the actual charge</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$150 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*BREAT - BREATHING APPLIANCES, BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE </String>
+                                                            <String>*MONITORS</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**150.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$200 ANNUAL LIMIT</String>
+                                                            <String>*OPTIC - OPICAL ITEMS, CHI - CHIROPRACTIC &amp; OSTEOPATHY, NAT - NATURAL </String>
+                                                            <String>*THERAPIES, PHA - PRESCRIPTION PHARMACEUTICALS, POD - PODIATRY, CLIN - </String>
+                                                            <String>*CLINICAL PSYCHOLOGY, SPEE - SPEECH THERAPY, EYETH - EYE THERAPY, </String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, DIETE - DIETETICS, </String>
+                                                            <String>*OCCTH - OCCUPATIONAL THERAPY</String>
+                                                            <String>**By person</String>
+                                                            <String>**200.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$300 ANNUAL LIMIT</String>
+                                                            <String>*PHY - PHYSIOTHERAPY</String>
+                                                            <String>**By person</String>
+                                                            <String>**300.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$400 ANNUAL LIMIT</String>
+                                                            <String>*HEAID - HEARING AIDS</String>
+                                                            <String>**By person</String>
+                                                            <String>**400.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$500 ANNUAL LIMIT</String>
+                                                            <String>*GDENT - GENERAL DENTAL</String>
+                                                            <String>**By person</String>
+                                                            <String>**500.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$800 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*MDEN - DENTAL PREVENT. TREATMENT &amp; EXAMINATION, SDEN - SURGICAL </String>
+                                                            <String>*DENTAL PROCEDURES</String>
+                                                            <String>**By person  (Accumulated treatments)</String>
+                                                            <String>**800.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$1200 LIFE TIME LIMIT</String>
+                                                            <String>*ORTH - ORTHODONTIC TREATMENT</String>
+                                                            <String>**By person</String>
+                                                            <String>**1 200.00 AUD</String>
+                                                            <String>**On  99 Years compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, CHI - CHIROPRACTIC &amp; </String>
+                                                            <String>*OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - DIETETICS, EYETH - </String>
+                                                            <String>*EYE THERAPY, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - </String>
+                                                            <String>*PHYSIOTHERAPY, POD - PODIATRY, SPEE - SPEECH THERAPY</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>6 MONTHS</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person   On  6 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*BREAT - BREATHING APPLIANCES, ORTH - ORTHODONTIC TREATMENT, SDEN - </String>
+                                                            <String>*SURGICAL DENTAL PROCEDURES, GDENT - GENERAL DENTAL</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>24 MONTHS</String>
+                                                            <String>*BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE MONITORS</String>
+                                                            <String>**By person   On  24 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>36 MONTHS</String>
+                                                            <String>*HEAID - HEARING AIDS</String>
+                                                            <String>**By person   On  36 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP EXTRAS 55% BACK</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>80</Identifier>
+                                    <Label>Top Extras 70% back</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_EXTRAS_70% - TOP EXTRAS 70% BACK of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_EXTRAS_70%</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>TOP EXTRAS 55% BACK</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, BLOOD - BLOOD </String>
+                                                            <String>*GLUCOSE &amp; BLOOD PRESSURE MONITORS, BREAT - BREATHING APPLIANCES, CHI </String>
+                                                            <String>*- CHIROPRACTIC &amp; OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - </String>
+                                                            <String>*DIETETICS, EYETH - EYE THERAPY, GDENT - GENERAL DENTAL, HEAID - </String>
+                                                            <String>*HEARING AIDS, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, OPTIC - OPICAL ITEMS, ORTH - ORTHODONTIC </String>
+                                                            <String>*TREATMENT, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - PHYSIOTHERAPY, </String>
+                                                            <String>*POD - PODIATRY, SDEN - SURGICAL DENTAL PROCEDURES, SPEE - SPEECH </String>
+                                                            <String>*THERAPY</String>
+                                                            <String>**55 % of the actual charge</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$200 ANNUAL COMBINED LIMIT</String>
+                                                            <String>*BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE MONITORS, BREAT - BREATHING </String>
+                                                            <String>*APPLIANCES</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$225 ANNUAL LIMIT</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$300 ANNUAL LIMIT</String>
+                                                            <String>*NAT - NATURAL THERAPIES</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$400 ANNUAL LIMIT</String>
+                                                            <String>*CHI - CHIROPRACTIC &amp; OSTEOPATHY, PHA - PRESCRIPTION PHARMACEUTICALS, </String>
+                                                            <String>*POD - PODIATRY, DIETE - DIETETICS, CLIN - CLINICAL PSYCHOLOGY, OCCTH </String>
+                                                            <String>*- OCCUPATIONAL THERAPY, SPEE - SPEECH THERAPY, EYETH - EYE THERAPY, </String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$600 ANNUAL LIMIT</String>
+                                                            <String>*PHY - PHYSIOTHERAPY</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$800 ANNUAL LIMIT</String>
+                                                            <String>*HEAID - HEARING AIDS</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$1000 ANNUAL LIMIT</String>
+                                                            <String>*GDENT - GENERAL DENTAL</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>$2400 LIFE TIME LIMIT</String>
+                                                            <String>*ORTH - ORTHODONTIC TREATMENT</String>
+                                                            <String>**Warning, method not terminated</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, CHI - CHIROPRACTIC &amp; </String>
+                                                            <String>*OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - DIETETICS, EYETH - </String>
+                                                            <String>*EYE THERAPY, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - </String>
+                                                            <String>*PHYSIOTHERAPY, POD - PODIATRY, SPEE - SPEECH THERAPY</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>6 MONTHS</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person   On  6 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*BREAT - BREATHING APPLIANCES, ORTH - ORTHODONTIC TREATMENT, GDENT - </String>
+                                                            <String>*GENERAL DENTAL, SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>24 MONTHS</String>
+                                                            <String>*BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE MONITORS</String>
+                                                            <String>**By person   On  24 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>36 MONTHS</String>
+                                                            <String>*HEAID - HEARING AIDS</String>
+                                                            <String>**By person   On  36 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP EXTRAS 70% BACK</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>81</Identifier>
+                                    <Label>Top Extras 85% back</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_EXTRAS_85% - TOP EXTRAS 85% BACK of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_EXTRAS_85%</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>TOP EXTRAS 55% BACK</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, BLOOD - BLOOD </String>
+                                                            <String>*GLUCOSE &amp; BLOOD PRESSURE MONITORS, BREAT - BREATHING APPLIANCES, CHI </String>
+                                                            <String>*- CHIROPRACTIC &amp; OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - </String>
+                                                            <String>*DIETETICS, EYETH - EYE THERAPY, GDENT - GENERAL DENTAL, HEAID - </String>
+                                                            <String>*HEARING AIDS, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, OPTIC - OPICAL ITEMS, ORTH - ORTHODONTIC </String>
+                                                            <String>*TREATMENT, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - PHYSIOTHERAPY, </String>
+                                                            <String>*POD - PODIATRY, SDEN - SURGICAL DENTAL PROCEDURES, SPEE - SPEECH </String>
+                                                            <String>*THERAPY</String>
+                                                            <String>**55 % of the actual charge</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*AP&amp;PR - HEALTH APPLIANCES &amp; EXTERNAL PROSTHESES, CHI - CHIROPRACTIC &amp; </String>
+                                                            <String>*OSTEOPATHY, CLIN - CLINICAL PSYCHOLOGY, DIETE - DIETETICS, EYETH - </String>
+                                                            <String>*EYE THERAPY, HERES - ACCESS TO HEALTH RESOURCES, MDEN - DENTAL </String>
+                                                            <String>*PREVENT. TREATMENT &amp; EXAMINATION, NAT - NATURAL THERAPIES, OCCTH - </String>
+                                                            <String>*OCCUPATIONAL THERAPY, PHA - PRESCRIPTION PHARMACEUTICALS, PHY - </String>
+                                                            <String>*PHYSIOTHERAPY, POD - PODIATRY, SPEE - SPEECH THERAPY</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>6 MONTHS</String>
+                                                            <String>*OPTIC - OPICAL ITEMS</String>
+                                                            <String>**By person   On  6 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*BREAT - BREATHING APPLIANCES, ORTH - ORTHODONTIC TREATMENT, GDENT - </String>
+                                                            <String>*GENERAL DENTAL, SDEN - SURGICAL DENTAL PROCEDURES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>24 MONTHS</String>
+                                                            <String>*BLOOD - BLOOD GLUCOSE &amp; BLOOD PRESSURE MONITORS</String>
+                                                            <String>**By person   On  24 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>36 MONTHS</String>
+                                                            <String>*HEAID - HEARING AIDS</String>
+                                                            <String>**By person   On  36 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP EXTRAS 85% BACK</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                            </CoverageList>
+                            <Identifier>39</Identifier>
+                            <Label>Extras</Label>
+                        </Package>
+                        <Package>
+                            <CoverageList>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>67</Identifier>
+                                    <Label>Young Hospital No Excess</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>YOUNG_HOSP - YOUNG HOSPITAL of the theme MEDI</DisplayId>
+                                                <Identifier>YOUNG_HOSP</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>YOUNG_HOSPITAL</String>
+                                                            <String>*COLO - COLONOSCOPIES, AMB - AMBULANCE SERVICES, APTR - APPENDICITIS </String>
+                                                            <String>*TREATMENT, KNEE - KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., SHOU - </String>
+                                                            <String>*SHOULDER RECONST. SURGERY &amp; INVESTIG., REMTA - REMOVAL OF TONSILS &amp; </String>
+                                                            <String>*ADENOIDS, SURWT - SURGICAL REMOVAL OF WISDOM TEETH, PALIA - PALIATIVE </String>
+                                                            <String>*CARE, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION TREATMENT</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*COLO - COLONOSCOPIES, AMB - AMBULANCE SERVICES, APTR - APPENDICITIS </String>
+                                                            <String>*TREATMENT, KNEE - KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - </String>
+                                                            <String>*PALIATIVE CARE, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>YOUNG HOSPITAL</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>35</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>76</Identifier>
+                                    <Label>Basic Hospital Excess $250</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>BASIC_HOSP_250 - BASIC HOSPITAL $250 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>BASIC_HOSP_250</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>BASIC HOSPITAL $250</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, APTR - APPENDICITIS TREATMENT, COLO - </String>
+                                                            <String>*COLONOSCOPIES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA </String>
+                                                            <String>*- PALIATIVE CARE, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$250 EXCESS</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH </String>
+                                                            <String>*MEDI, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, KNEE - </String>
+                                                            <String>*KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PSYC </String>
+                                                            <String>*- PSYCHIATRIC TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - </String>
+                                                            <String>*REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; </String>
+                                                            <String>*INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**250.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH </String>
+                                                            <String>*MEDI, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, KNEE - </String>
+                                                            <String>*KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PSYC </String>
+                                                            <String>*- PSYCHIATRIC TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - </String>
+                                                            <String>*REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; </String>
+                                                            <String>*INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>BASIC HOSPITAL $250 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>68</Identifier>
+                                    <Label>Basic Hospital Excess $500</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>BASIC_HOSP_500 - BASIC HOSPITAL $500 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>BASIC_HOSP_500</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>BASIC HOSPITAL $500 EXCESS</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, APTR - APPENDICITIS TREATMENT, COLO - </String>
+                                                            <String>*COLONOSCOPIES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA </String>
+                                                            <String>*- PALIATIVE CARE, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$500 EXCESS</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH </String>
+                                                            <String>*MEDI, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, KNEE - </String>
+                                                            <String>*KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PSYC </String>
+                                                            <String>*- PSYCHIATRIC TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - </String>
+                                                            <String>*REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; </String>
+                                                            <String>*INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**500.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*AMB - AMBULANCE SERVICES, ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH </String>
+                                                            <String>*MEDI, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, KNEE - </String>
+                                                            <String>*KNEE RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PSYC </String>
+                                                            <String>*- PSYCHIATRIC TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - </String>
+                                                            <String>*REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; </String>
+                                                            <String>*INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>BASIC HOSPITAL $500 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>77</Identifier>
+                                    <Label>Mid Hospital No Excess</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>MID_HOSP_NOEX - MID HOSPITAL NO EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>MID_HOSP_NOEX</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>MID HOSPITAL NO EXCESS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., OBS - OBSTETRICS-RELATED SERVICES, PALIA - PALIATIVE CARE, </String>
+                                                            <String>*PLAST - PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC </String>
+                                                            <String>*TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - REMOVAL OF </String>
+                                                            <String>*TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>MID HOSPITAL NO EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>69</Identifier>
+                                    <Label>Mid Hospital Excess $250</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>MID_HOSP_250 - MID HOSPITAL $250 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>MID_HOSP_250</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>MID HOSPITAL NO EXCESS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., OBS - OBSTETRICS-RELATED SERVICES, PALIA - PALIATIVE CARE, </String>
+                                                            <String>*PLAST - PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC </String>
+                                                            <String>*TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - REMOVAL OF </String>
+                                                            <String>*TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$250 EXCESS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., OBS - OBSTETRICS-RELATED SERVICES, PALIA - PALIATIVE CARE, </String>
+                                                            <String>*PLAST - PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC </String>
+                                                            <String>*TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - REMOVAL OF </String>
+                                                            <String>*TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**250.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>MID HOSPITAL $250 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>70</Identifier>
+                                    <Label>Mid Hospital Excess $500</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>MID_HOSP_500 - MID HOSPITAL $500 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>MID_HOSP_500</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>MID HOSPITAL NO EXCESS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., OBS - OBSTETRICS-RELATED SERVICES, PALIA - PALIATIVE CARE, </String>
+                                                            <String>*PLAST - PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC </String>
+                                                            <String>*TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - REMOVAL OF </String>
+                                                            <String>*TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>$500 EXCESS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., OBS - OBSTETRICS-RELATED SERVICES, PALIA - PALIATIVE CARE, </String>
+                                                            <String>*PLAST - PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC </String>
+                                                            <String>*TREATMENT, REHA - REHABILITATION TREATMENT, REMTA - REMOVAL OF </String>
+                                                            <String>*TONSILS &amp; ADENOIDS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**500.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, FERTI </String>
+                                                            <String>*- FERTILITY TREATMENT, HEA - HEART-RELATED SERVICES, HEASU - ACCESS </String>
+                                                            <String>*TO MI HEALTH SUPPORT SERVICES, KNEE - KNEE RECONSTRUCTION SURGERY &amp; </String>
+                                                            <String>*INVESTIG., PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, SHOU - SHOULDER </String>
+                                                            <String>*RECONST. SURGERY &amp; INVESTIG., SURWT - SURGICAL REMOVAL OF WISDOM </String>
+                                                            <String>*TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>MID HOSPITAL $500 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>82</Identifier>
+                                    <Label>Top Hospital No Excess</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_HOSP_NOEX - TOP HOSPITAL NO EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_HOSP_NOEX</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>HOSPITALIZATION</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                            <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                            <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                            <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PLAST - </String>
+                                                            <String>*PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA </String>
+                                                            <String>*- REHABILITATION TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, </String>
+                                                            <String>*REN - RENAL DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP HOSPITAL NO EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>71</Identifier>
+                                    <Label>Top Hospital $250</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_HOSP_250 - TOP HOSPITAL $250 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_HOSP_250</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>HOSPITALIZATION</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                            <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                            <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                            <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>HOSPITALIZATION</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                            <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                            <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                            <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**250.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PLAST - </String>
+                                                            <String>*PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA </String>
+                                                            <String>*- REHABILITATION TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, </String>
+                                                            <String>*REN - RENAL DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP HOSPITAL $250 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                                <Coverage>
+                                    <Eligibility>optional</Eligibility>
+                                    <Identifier>72</Identifier>
+                                    <Label>Top Hospital $500</Label>
+                                    <HealthCoverageDetail>
+                                        <AccidentOption>false</AccidentOption>
+                                        <AssignmentMode>family</AssignmentMode>
+                                        <AssignmentModeLabel>Family</AssignmentModeLabel>
+                                        <FormulaList>
+                                            <HealthFormula>
+                                                <DisplayId>TOP_HOSP_500 - TOP HOSPITAL $500 EXCESS of the theme MEDI</DisplayId>
+                                                <Identifier>TOP_HOSP_500</Identifier>
+                                                <ItemList>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>HOSPITALIZATION</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                            <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                            <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                            <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**25 % of the rate of convention</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>calculation_formula</Type>
+                                                        <TypeLabel>Basic Calculation</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>limitation</Type>
+                                                        <TypeLabel>Limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>HOSPITALIZATION</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., OBS - OBSTETRICS-RELATED </String>
+                                                            <String>*SERVICES, PALIA - PALIATIVE CARE, PLAST - PLASTIC &amp; RECONSTRUCTIVE </String>
+                                                            <String>*SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA - REHABILITATION </String>
+                                                            <String>*TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, REN - RENAL </String>
+                                                            <String>*DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., SURWT - </String>
+                                                            <String>*SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person</String>
+                                                            <String>**500.00 AUD</String>
+                                                            <String>**On  1 Year compared to entry date</String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>deductible</Type>
+                                                        <TypeLabel>Deductibles</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList>
+                                                            <String>2 MONTHS</String>
+                                                            <String>*ALLHO - ALL OTHER IN-HOSPITAL SERVICES WITH MEDI, AMB - AMBULANCE </String>
+                                                            <String>*SERVICES, APTR - APPENDICITIS TREATMENT, COLO - COLONOSCOPIES, EYES - </String>
+                                                            <String>*MAJOR EYE SURGERY INCL. CATARACT &amp; LENS, FERTI - FERTILITY TREATMENT, </String>
+                                                            <String>*HEA - HEART-RELATED SERVICES, HEASU - ACCESS TO MI HEALTH SUPPORT </String>
+                                                            <String>*SERVICES, HIP - HIP &amp; KNEE JOINT REPLACEMENT SURGERY, KNEE - KNEE </String>
+                                                            <String>*RECONSTRUCTION SURGERY &amp; INVESTIG., PALIA - PALIATIVE CARE, PLAST - </String>
+                                                            <String>*PLASTIC &amp; RECONSTRUCTIVE SURGERY, PSYC - PSYCHIATRIC TREATMENT, REHA </String>
+                                                            <String>*- REHABILITATION TREATMENT, REMTA - REMOVAL OF TONSILS &amp; ADENOIDS, </String>
+                                                            <String>*REN - RENAL DIALYSIS, SHOU - SHOULDER RECONST. SURGERY &amp; INVESTIG., </String>
+                                                            <String>*SURWT - SURGICAL REMOVAL OF WISDOM TEETH</String>
+                                                            <String>**By person   On  2 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                            <String>12 MONTHS</String>
+                                                            <String>*OBS - OBSTETRICS-RELATED SERVICES</String>
+                                                            <String>**By person   On  12 Months </String>
+                                                            <String>------------------------------------------------------------------------------------------------------------</String>
+                                                        </TextList>
+                                                        <Type>waiting_period</Type>
+                                                        <TypeLabel>Waiting periods</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>maximum_units</Type>
+                                                        <TypeLabel>Maximum acts</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>message</Type>
+                                                        <TypeLabel>Messages</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>age_limit</Type>
+                                                        <TypeLabel>Age limits</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                    <HealthFormulaItem>
+                                                        <TextList/>
+                                                        <Type>rspnsblty</Type>
+                                                        <TypeLabel>Responsibility</TypeLabel>
+                                                    </HealthFormulaItem>
+                                                </ItemList>
+                                                <Label>TOP HOSPITAL $500 EXCESS</Label>
+                                            </HealthFormula>
+                                        </FormulaList>
+                                        <Level>level_1</Level>
+                                        <LevelLabel>Base Coverage</LevelLabel>
+                                        <MaternityOption>false</MaternityOption>
+                                        <PayeeTitle>insured</PayeeTitle>
+                                        <PayeeTitleLabel>Insured</PayeeTitleLabel>
+                                    </HealthCoverageDetail>
+                                    <MaximumAge>100</MaximumAge>
+                                    <MinimumAge>16</MinimumAge>
+                                    <Type>health</Type>
+                                </Coverage>
+                            </CoverageList>
+                            <Identifier>51</Identifier>
+                            <Label>Hospital cover</Label>
+                        </Package>
+                    </PackageList>
+                </ProductOption>
+            </ProductOptionList>
+            <ReturnStatus>
+                <Code>WM_SUCCESS</Code>
+                <ErrorList/>
+            </ReturnStatus>
+        </ProductExtractResponse>
+    </soap:Body>
+</soap:Envelope>

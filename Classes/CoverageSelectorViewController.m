@@ -123,7 +123,7 @@
 {
     //  using local resource file in mockup mode
     NSString *XMLPath = nil ;
-    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponse.xml"];
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponseNew.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
 
@@ -246,7 +246,6 @@
 {
     UITableViewCell *cell = nil ;
 	int section = indexPath.section ;
-	NSArray *indexPaths = nil ;
     // Configure the cell...
     // http://themecraft.net/www/medibank.com.au
     // Young    0.4196	0.6510	0.8157
@@ -263,13 +262,13 @@
     switch (section) {
 		case 0:
 		{
-            cell = [tableView dequeueReusableCellWithIdentifier:@"QuoteCell"] ;
+            cell = (QuoteCell*)[tableView dequeueReusableCellWithIdentifier:@"QuoteCell"] ;
             break;
 		}
         case 1:
 		{
-            cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
-
+            cell = (CoverageViewCell*)[tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
+            [[(CoverageViewCell*)cell coverageLabel] setText:[[[self coverageArray] objectAtIndex: indexPath.row ]DisplayId]];
             switch (indexPath.row) {
                 case 0:
                     [cell setBackgroundColor: young] ;
@@ -290,15 +289,14 @@
                     [cell setBackgroundColor: [UIColor blackColor] ] ;
                     break;
             }
-
             break ;
 		}
     }
-    [self tableView:tableView viewForHeaderInSection:indexPath.section] ;
-    indexPaths = @[indexPath] ;
-    [tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
-
-    return cell;
+    //FIXME: why the hell do we have those lines
+    //[self tableView:tableView viewForHeaderInSection:indexPath.section] ;
+    //indexPaths = @[indexPath] ;
+    //[tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade] ;
+    return cell ;
 }
 //
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -372,6 +370,7 @@
 {
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
     [cell.checkview setHidden:FALSE];
+    //[cell coverageLabel] setText:[[self coverageArray] objectAtIndex: indexPath.row ];
 }
 #pragma mark - Segue Stuff
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -6,13 +6,16 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "CoverageDetailViewController.h"
+#import "CoverageHeaderViewController.h"
+#import "CoverageViewCell.h"
+#import "QuoteCell.h"
+#import "ServiceGetTariff.h"
+#import "fastQuoteModel.h"
 #import <Foundation/Foundation.h>
 #import <Foundation/NSException.h>
-#import "fastQuoteModel.h"
-#import "ServiceGetTariff.h"
-#import "CoverageHeaderViewController.h"
-#import "CoverageDetailViewController.h"
+#import <UIKit/UIKit.h>
+
 
 @interface CoverageSelectorViewController : UITableViewController
 

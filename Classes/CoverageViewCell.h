@@ -12,5 +12,6 @@
 @interface CoverageViewCell : UITableViewCell
 
 @property (nonatomic,strong) IBOutlet UIImageView *checkview;
+@property (nonatomic,strong) IBOutlet UILabel *coverageLabel ; 
 @property (nonatomic, strong) CSCCoverage *coverage ; 
 @end
