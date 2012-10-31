@@ -342,7 +342,14 @@
 		[_params addObject: [[SoapParameter alloc] initWithValue: ActivityRequest forName: @"ActivityRequest"]];
 		[_params addObject: [[SoapParameter alloc] initWithValue: Contract forName: @"Contract"]];
 		NSString* _envelope = [Soap createEnvelope: @"ProductExtract" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
-		SoapRequest* _request = [SoapRequest create: _target action: _action service: self soapAction: @"ProductExtract" postData: _envelope deserializeTo: [CSCContract alloc]];
+
+            //FIXME: I changed the deserialize to to CSCArrayOfProductOption
+            SoapRequest* _request = [SoapRequest create: _target
+                                             action: _action
+                                            service: self
+                                         soapAction: @"ProductExtract"
+                                           postData: _envelope
+                                      deserializeTo: [CSCArrayOfProductOption alloc]];
 		[_request send];
 		return _request;
 	}
