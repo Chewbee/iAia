@@ -28,4 +28,8 @@
 }
 */
 
+-(void) refresh
+{
+    [[self premiumAmount] setText:[NSString stringWithFormat:@" %2@ ",[[self coverage] Amount] ]];
+}
 @end

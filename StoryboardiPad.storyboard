@@ -166,7 +166,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPV-FU-1XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152" y="-1103"/>
+            <point key="canvasLocation" x="2205" y="-1103"/>
         </scene>
         <!--Coverage Selector View Controller-->
         <scene sceneID="lVz-mW-a9j">
@@ -280,7 +280,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWO-E1-NvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3108" y="42"/>
+            <point key="canvasLocation" x="3116" y="42"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AwN-oc-4r3">
@@ -470,10 +470,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </scenes>
     <resources>
         <image name="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" width="1000" height="315"/>
-        <image name="contract-icon.png" width="30" height="27"/>
+        <image name="contract-icon.png" width="33" height="30"/>
         <image name="get_quote_button.png" width="400" height="400"/>
         <image name="icon-checkmark.png" width="54" height="56"/>
-        <image name="request_quote_icon.png" width="30" height="41"/>
+        <image name="request_quote_icon.png" width="22" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>

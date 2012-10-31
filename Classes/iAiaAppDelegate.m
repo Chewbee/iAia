@@ -16,9 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Register the preference defaults early.
-    NSDictionary *appDefaults = [NSDictionary
-                                 dictionaryWithObjects:@[@"ec2-46-137-35-33.eu-west-1",@"PRSN0000430"] forKeys:@[@"server",@"number_preference"]];
+//    NSDictionary *appDefaults = [NSDictionary
+//                                 dictionaryWithObjects:@[@"ec2-46-137-35-33.eu-west-1",@"PRSN0000430"] forKeys:@[@"server",@"number_preference"]];
 
+    NSDictionary *appDefaults = @{
+    @"server"               : @"ec2-46-137-35-33.eu-west-1.compute.amazonaws.com:8080" ,
+    @"number_preference"    : @"PRSN0000430" ,
+    @"login_preference"     : @"CSCUSR1" ,
+    @"password_preference"  : @"CSCUSR1" ,
+    @"mocked"               : @"YES" };
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     //
     //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];

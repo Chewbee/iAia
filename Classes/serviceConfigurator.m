@@ -26,18 +26,20 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     NSString *theService = [[NSMutableString alloc] initWithString:@"http://"] ;
     theService =[theService stringByAppendingString: [defaults stringForKey:@"server" ]];
-    theService = [theService stringByAppendingString:@".compute.amazonaws.com:8080" ];
 
     [service setServiceUrl: theService] ;
     [service setNamespace:@"http://www.csc.com/graphtalk/aia/" ];
     [service setLogging:TRUE];
     // header for security
     NSMutableDictionary * headers = [[NSMutableDictionary alloc]init];
+    NSString *literalString = [NSString
+                               stringWithFormat:@"<userName>%@</userName><userPassword>%@</userPassword>",
+                               [defaults stringForKey:@"login_preference"],
+                               [defaults stringForKey:@"password-preference"]];
     SoapLiteral *soapLiteral =[SoapLiteral
-                               literalWithString: @"<user>CSCUSR1</user><password>CSCUSR1 's Password</password>"];
+                               literalWithString: literalString];
     [headers setValue:soapLiteral forKey:@"header"];
     [service setHeaders: headers];
-    
     return ;
 }
 

@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CSCCoverage.h"
 
 @interface QuoteCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *premiumAmount;
+
+@property (weak,nonatomic)CSCCoverage           *coverage ;
+
+
+@property (weak, nonatomic) IBOutlet UILabel    *premiumAmount;
+
+-(void) refresh ; 
 
 @end

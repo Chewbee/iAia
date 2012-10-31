@@ -316,12 +316,13 @@
     switch (section) {
 		case 0:
 		{
-            cell = (QuoteCell*)[tableView dequeueReusableCellWithIdentifier:@"QuoteCell"] ;
+            cell = [tableView dequeueReusableCellWithIdentifier:@"QuoteCell"] ;
+            [self setQuoteCell:(QuoteCell*)cell];
             break;
 		}
         case 1:
 		{
-            cell = (CoverageViewCell*)[tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
             
             // Assign the coverage itself to the cell
             [(CoverageViewCell*)cell setCoverage:[[self coverageArray] objectAtIndex: indexPath.row ]];
@@ -418,7 +419,13 @@
 {
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
     [cell.checkview setHidden:FALSE];
-    //[cell coverageLabel] setText:[[self coverageArray] objectAtIndex: indexPath.row ];
+    [self updatePremiumDisplay:[cell coverage]];
+}
+//
+-(void) updatePremiumDisplay:(CSCCoverage*)coverage
+{
+    [[self quoteCell]setCoverage:coverage];
+    [[self quoteCell] refresh];
 }
 #pragma mark - Segue Stuff
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -429,12 +436,6 @@
         [targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
     }
 }
-//
-//- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
-//{
-//
-//}
-//
 //
 #pragma mark - TOOLS
 -(NSData*) conformInputString:(NSData* )data
