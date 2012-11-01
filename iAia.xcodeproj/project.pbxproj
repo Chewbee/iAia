@@ -1205,7 +1205,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				DA0F0CAA1641A575001843F1 /* QuartzCore.framework */,
 				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iAiaAppDelegate.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -1244,6 +1243,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F0CAA1641A575001843F1 /* QuartzCore.framework */,
 				E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -1267,13 +1267,6 @@
 				DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */,
 			);
 			path = "Web Service CalculationOfPremium";
-			sourceTree = "<group>";
-		};
-		DAE4C3BC163C319900112C65 /* CollectionView stuff */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CollectionView stuff";
 			sourceTree = "<group>";
 		};
 		E6399C0E163EBAA400C8119A /* header */ = {
@@ -1310,7 +1303,6 @@
 				DA0F75C5163AF253001CB9E2 /* CoverageViewCell.m */,
 				DAE4C3CB163C701600112C65 /* QuoteCell.h */,
 				DAE4C3CC163C701600112C65 /* QuoteCell.m */,
-				DAE4C3BC163C319900112C65 /* CollectionView stuff */,
 				E694B825118A1AD7000B5D82 /* Footer */,
 				E686F4AF116E529800FE7ADE /* PersonTableViewCell.h */,
 				E686F4B0116E529800FE7ADE /* PersonTableViewCell.m */,

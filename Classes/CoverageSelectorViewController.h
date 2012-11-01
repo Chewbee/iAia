@@ -20,12 +20,12 @@
 
 @interface CoverageSelectorViewController : UITableViewController
 
-@property (nonatomic,strong) NSDictionary       *coverages ;
+@property (nonatomic,strong) NSArray            *coveragesId ;
 @property (nonatomic,strong) FastQuoteModel     *fastQuoteModel ;
 @property (nonatomic,strong) NSString           *familyStructure ;
 
 @property (nonatomic,strong) NSDictionary       *productOptions ;
-@property (nonatomic,strong) NSMutableArray     *coverageArray ;
+@property (nonatomic,strong) NSDictionary       *coverageDictionnary ;
 
 @property (nonatomic, weak) CSCContract         *contract;
 

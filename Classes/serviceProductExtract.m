@@ -343,7 +343,7 @@
 		[_params addObject: [[SoapParameter alloc] initWithValue: Contract forName: @"Contract"]];
 		NSString* _envelope = [Soap createEnvelope: @"ProductExtract" forNamespace: self.namespace withParameters: _params withHeaders: self.headers];
 
-            //FIXME: I changed the deserialize to to CSCArrayOfProductOption
+            //FIXME: I changed the deserialize to to CSCArrayOfProductOption == >> verify that works
             SoapRequest* _request = [SoapRequest create: _target
                                              action: _action
                                             service: self

@@ -21,30 +21,22 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        _coverages = @{
-        @67	: @"Young Hospital No Excess",
-        @52	: @"Basic Hospital Excess $250" ,
-        @68	: @"Basic Hospital Excess $500",
-        @53	: @"Mid Hospital No Excess",
-        @69	: @"Mid Hospital Excess $250",
-        @70	: @"Mid Hospital Excess $500",
-        @54	: @"Top Hospital No Excess",
-        @71	: @"Top Hospital $250",
-        @72	: @"Top Hospital $500",
-        @73	: @"Basic Extras 55% back",
-        @74	: @"Basic Extras 70% back",
-        @40	: @"Top Extras 55% back",
-        @41	: @"Top Extras 70% back",
-        @42	: @"Top Extras 85% back",
-        @63	: @"Ultra Health Cover"};
+    if (self)
+    {
     }
     return self;
 }
 #pragma mark - View related stuff
 //
--(void) viewWillLoad {
+-(void) viewWillLoad
+{
+    [self setCoveragesId:@[
+     @"75",
+     @"67",@"73",@"74",
+     @"77",@"69",@"70",
+     @"82",@"71",@"72"
+     ]];
+
     [self.tableView registerClass:[CoverageViewCell class] forCellReuseIdentifier:@"QuoteCell" ] ;
     // header view
     [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
@@ -53,13 +45,23 @@
 {
     [super viewDidLoad];
 
+    //
+    [self setCoveragesId:@[
+     @"67",@"73",@"74",
+     @"77",@"69",@"70",
+     @"82",@"71",@"72",
+     @"75"
+     ]];
+    // header view
+    [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
+
     // Uncomment the following line to preserve selection between presentations.
     self.clearsSelectionOnViewWillAppear = NO;
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self productExtract];
-    //[self getTariff] ;
+    [self getTariff] ;
 }
 //
 -(void) viewDidAppear:(BOOL)animated
@@ -137,7 +139,7 @@
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
 
     [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
-    [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
+    [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:(NSData*) XMLData]];
 
     [self hideRefreshingIndicators];
 }
@@ -207,7 +209,7 @@
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
 
     [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
-    [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
+    [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:(NSData*) XMLData]];
 
     [self hideRefreshingIndicators];
 }
@@ -248,9 +250,9 @@
     return result ;
 }
 //
--(NSMutableArray*) populateCoverageArrayWithData:(NSData*) XMLDataFlow
+-(NSMutableDictionary*) populateCoverageDictionnaryWithData:(NSData*) XMLDataFlow
 {
-    NSMutableArray *resultArray = [NSMutableArray array] ;
+    NSMutableDictionary *resultDictionnary = [[NSMutableDictionary alloc]initWithCapacity:5] ;
     NSError *err = nil ;
     NSData *XMLData =nil;
     XMLData = [self conformInputString: XMLDataFlow ];
@@ -270,8 +272,8 @@
             // creating contract objects from content
             CSCCoverage *coverage = nil;
             coverage = [CSCCoverage createWithNode:node];
-            if (coverage    ) {
-                [resultArray   addObject:coverage] ;
+            if (coverage ) {
+                [resultDictionnary setObject:coverage forKey:[coverage Identifier]] ;
             }
         }
     }
@@ -280,13 +282,12 @@
         // Beiing here prevents a crash ... but it is not a solution
     }
     //  NSArray* reversedArray = [[resultArray reverseObjectEnumerator] allObjects];
-    return resultArray ;
+    return resultDictionnary ;
 }
 //
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 2;
 }
 
@@ -296,7 +297,7 @@
 		case 0:
             return 1;
 		case 1:
-            return [[self coverageArray]count];
+            return [[self coveragesId]count];
     }
     return 0;
 }
@@ -330,7 +331,8 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
             
             // Assign the coverage itself to the cell
-            [(CoverageViewCell*)cell setCoverage:[[self coverageArray] objectAtIndex: indexPath.row ]];
+            [(CoverageViewCell*)cell setCoverage:[[self coverageDictionnary] objectForKey:[[self coveragesId ] objectAtIndex:[indexPath row]]]];
+            //
             NSString *coverageDisplayId = [[(CoverageViewCell*)cell coverage]DisplayId];
             [[(CoverageViewCell*)cell coverageLabel] setText:coverageDisplayId];
             
@@ -356,7 +358,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section==0) {
-        return [[self coverageHeaderView ]view] ;
+  //      return [[self coverageHeaderView ]view] ;
     }
     return nil;
 }
@@ -424,6 +426,8 @@
 {
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
     [cell.checkview setHidden:FALSE];
+    //TODO: get the tarif of the selected coverage
+
     [self updatePremiumDisplay:[cell coverage]];
 }
 //
@@ -460,6 +464,7 @@
 - (IBAction)refreshButtonPressed:(id)sender
 {
     [self getTariff];
+    [[self tableView] reloadData] ;
 }
 //
 -(NSData*) conformInputString:(NSData* )data
