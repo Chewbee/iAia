@@ -9,6 +9,8 @@
 #import "CoverageSelectorViewController.h"
 #import "CoverageViewCell.h"
 #import <Foundation/NSException.h>
+#import "FakeHUD.h"
+#import "UIView+Animation.h"
 
 @interface CoverageSelectorViewController ()
 
@@ -72,7 +74,7 @@
 #pragma mark - Get tarif Web Service stuff
 -(void) getTariff
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    [self displayRefreshingIndicators];
     //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     BOOL mocked = [defaults boolForKey:@"mocked"] ;
@@ -94,10 +96,11 @@
     }
 
 }
+
 // Handle the response from invokeServiceContractList.
 - (void) ServiceGetTariffHandler: (id) value
 {
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+	[self hideRefreshingIndicators];
     // Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
@@ -136,13 +139,15 @@
     [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
     [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
 
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self hideRefreshingIndicators];
 }
 //
 #pragma mark - productExtract Web Service stuff
+
+
 -(void) productExtract
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    [self displayRefreshingIndicators];
     //
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     BOOL mocked = [defaults boolForKey:@"mocked"] ;
@@ -167,7 +172,7 @@
 // Handle the response from invokeServiceContractList.
 - (void) ServiceProductExtractHandler: (id) value
 {
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self hideRefreshingIndicators];
     // Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
@@ -204,7 +209,7 @@
     [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
     [self setCoverageArray:[self populateCoverageArrayWithData:(NSData*) XMLData]];
 
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self hideRefreshingIndicators];
 }
 //
 -(NSMutableDictionary*) populateOptionArrayWithData:(NSData*) XMLDataFlow
@@ -438,6 +443,25 @@
 }
 //
 #pragma mark - TOOLS
+- (void)displayRefreshingIndicators
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    [self setTheSubView:[FakeHUD newFakeHUD]];
+    //[[self theSubView]gradient];
+	[self.view addSubviewWithFadeAnimation:[self theSubView] duration:1.0 option:UIViewAnimationOptionCurveEaseOut];
+}
+//
+- (void)hideRefreshingIndicators
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [[self theSubView]removeWithSinkAnimation:40 ];
+}
+//
+- (IBAction)refreshButtonPressed:(id)sender
+{
+    [self getTariff];
+}
+//
 -(NSData*) conformInputString:(NSData* )data
 {
     NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
@@ -456,5 +480,9 @@
     }
     NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
     return returnedData ;
+}
+- (void)viewDidUnload {
+    [self setRefreshButton:nil];
+    [super viewDidUnload];
 }
 @end

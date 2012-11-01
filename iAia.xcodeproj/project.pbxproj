@@ -13,6 +13,11 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
+		DA0F0C9E16418F81001843F1 /* FakeHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F0C9D16418F81001843F1 /* FakeHUD.m */; };
+		DA0F0CA116418FE4001843F1 /* FakeHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0F0CA016418FE4001843F1 /* FakeHUD.xib */; };
+		DA0F0CA316419011001843F1 /* FakeHUD.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0F0CA216419011001843F1 /* FakeHUD.png */; };
+		DA0F0CA9164192E1001843F1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F0CA8164192E1001843F1 /* UIView+Animation.m */; };
+		DA0F0CAB1641A575001843F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0F0CAA1641A575001843F1 /* QuartzCore.framework */; };
 		DA0F75C6163AF253001CB9E2 /* CoverageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75C5163AF253001CB9E2 /* CoverageViewCell.m */; };
 		DA0F75CB163AFAD4001CB9E2 /* CalculationOfPremium.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */; };
 		DA0F75CF163AFB97001CB9E2 /* ServiceGetTariff.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75CE163AFB97001CB9E2 /* ServiceGetTariff.m */; };
@@ -414,6 +419,13 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAia_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iAia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DA0F0C9C16418F81001843F1 /* FakeHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHUD.h; sourceTree = "<group>"; };
+		DA0F0C9D16418F81001843F1 /* FakeHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHUD.m; sourceTree = "<group>"; };
+		DA0F0CA016418FE4001843F1 /* FakeHUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FakeHUD.xib; sourceTree = "<group>"; };
+		DA0F0CA216419011001843F1 /* FakeHUD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FakeHUD.png; sourceTree = "<group>"; };
+		DA0F0CA7164192E1001843F1 /* UIView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		DA0F0CA8164192E1001843F1 /* UIView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		DA0F0CAA1641A575001843F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DA0F75C4163AF253001CB9E2 /* CoverageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageViewCell.h; sourceTree = "<group>"; };
 		DA0F75C5163AF253001CB9E2 /* CoverageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageViewCell.m; sourceTree = "<group>"; };
 		DA0F75C9163AFAD4001CB9E2 /* CalculationOfPremium.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CalculationOfPremium.wsdl; sourceTree = "<group>"; };
@@ -1157,6 +1169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0F0CAB1641A575001843F1 /* QuartzCore.framework in Frameworks */,
 				E6EA559816202D5B001FCF0D /* SystemConfiguration.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -1192,6 +1205,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F0CAA1641A575001843F1 /* QuartzCore.framework */,
 				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iAiaAppDelegate.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -1218,10 +1232,11 @@
 			children = (
 				DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */,
 				E6F8DD8E16207D070046F9B8 /* StoryboardPhone.storyboard */,
+				DAE4C3C9163C473800112C65 /* CoverageCell.xib */,
+				DA0F0CA016418FE4001843F1 /* FakeHUD.xib */,
 				E69EE1531622D3A9005C82C6 /* WSDL */,
 				E6F1D51E163EC67F00F7093F /* Images */,
 				8D1107310486CEB800E47090 /* iAia-Info.plist */,
-				DAE4C3C9163C473800112C65 /* CoverageCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1389,6 +1404,10 @@
 				E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */,
 				E66DA0BB163ED53300E74DA0 /* CoverageDetailViewController.h */,
 				E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */,
+				DA0F0C9C16418F81001843F1 /* FakeHUD.h */,
+				DA0F0C9D16418F81001843F1 /* FakeHUD.m */,
+				DA0F0CA7164192E1001843F1 /* UIView+Animation.h */,
+				DA0F0CA8164192E1001843F1 /* UIView+Animation.m */,
 			);
 			name = "View controllers";
 			sourceTree = "<group>";
@@ -2062,6 +2081,7 @@
 		E6F1D51E163EC67F00F7093F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				DA0F0CA216419011001843F1 /* FakeHUD.png */,
 				E64D806A16408A150036CE2D /* contract-icon.png */,
 				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
 				E64D804F163FC72A0036CE2D /* icon-checkmark.png */,
@@ -2191,6 +2211,8 @@
 				E64D806216402C7F0036CE2D /* Response Flow Variant 1_3.xml in Resources */,
 				E64D806416402C880036CE2D /* Response Flow Variant 2_3.xml in Resources */,
 				E64D806B16408A150036CE2D /* contract-icon.png in Resources */,
+				DA0F0CA116418FE4001843F1 /* FakeHUD.xib in Resources */,
+				DA0F0CA316419011001843F1 /* FakeHUD.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2580,6 +2602,8 @@
 				E6399C0C163EBA9800C8119A /* CoverageHeaderViewController.m in Sources */,
 				E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */,
 				E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */,
+				DA0F0C9E16418F81001843F1 /* FakeHUD.m in Sources */,
+				DA0F0CA9164192E1001843F1 /* UIView+Animation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

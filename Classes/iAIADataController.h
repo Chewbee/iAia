@@ -11,6 +11,8 @@
 #import "serviceListContract.h"
 #import "serviceContractGetSummary.h"
 #import "serviceProductExtract.h"
+#import "FakeHUD.h"
+#import "UIView+Animation.h"
 
 @class iAiaViewController ; 
 
@@ -22,7 +24,7 @@
 @property (nonatomic,strong) NSMutableArray         * contractsDetailed ;
 @property (atomic,strong) SoapRequest               *soapRequest ;
 @property (nonatomic, weak) iAiaViewController      *viewController ;
-
+@property (nonatomic,weak) FakeHUD                  *theSubView ; 
 #pragma mark Init stuff
 +(iAIADataController*) sharedInstance ;
 -(id)init ;

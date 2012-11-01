@@ -24,9 +24,9 @@
     UIColor *_top    ;
     UIColor *_ultra  ;
 }
-@property (nonatomic,strong) NSDictionary* coverages ;
-@property (nonatomic,strong)FastQuoteModel* fastQuoteModel ;
-@property (nonatomic,strong)NSString    *familyStructure ;
+@property (nonatomic,strong) NSDictionary   *coverages ;
+@property (nonatomic,strong)FastQuoteModel  *fastQuoteModel ;
+@property (nonatomic,strong)NSString        *familyStructure ;
 
 
 -(void) getTariff ;

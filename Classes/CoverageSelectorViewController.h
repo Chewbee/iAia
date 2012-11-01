@@ -15,6 +15,7 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/NSException.h>
 #import <UIKit/UIKit.h>
+#import "FakeHUD.h"
 
 
 @interface CoverageSelectorViewController : UITableViewController
@@ -29,7 +30,12 @@
 @property (nonatomic, weak) CSCContract         *contract;
 
 @property (nonatomic, weak) QuoteCell           *quoteCell ; 
+
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
+@property (nonatomic, weak) FakeHUD             *theSubView ;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+- (IBAction)refreshButtonPressed:(id)sender;
 
 
 -(void) getTariff ;

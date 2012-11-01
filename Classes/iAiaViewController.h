@@ -39,6 +39,7 @@
 @property (nonatomic, strong)  FinancialEventTableViewCell	* eventViewCell ; 
 @property (weak) iAIADataController* dataController ;
 
+
 - (IBAction)refreshPressed:(id)sender;
 -(void) customizeNavigationBar ; 
 -(void) customizeToolbar;
