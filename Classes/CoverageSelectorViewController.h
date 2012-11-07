@@ -31,6 +31,8 @@
 @property (nonatomic, weak) QuoteCell           *quoteCell ; 
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *turnIntoContractButton;
+- (IBAction)turnIntoContract:(id)sender;
 
 -(void) getTariff ;
 

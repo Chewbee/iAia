@@ -70,6 +70,9 @@
     // Dispose of any resources that can be recreated.
 }
 #pragma mark - Get tarif Web Service stuff
+- (IBAction)turnIntoContract:(id)sender {
+}
+
 -(void) getTariff
 {
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
@@ -456,5 +459,9 @@
     }
     NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
     return returnedData ;
+}
+- (void)viewDidUnload {
+    [self setTurnIntoContractButton:nil];
+    [super viewDidUnload];
 }
 @end

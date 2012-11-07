@@ -46,6 +46,7 @@
 		E64D806B16408A150036CE2D /* contract-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D806A16408A150036CE2D /* contract-icon.png */; };
 		E651540F162F4F8200EEC4CF /* CoverageSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */; };
 		E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */; };
+		E66D94F1164A55930033B54C /* ServiceContractCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = E66D94F0164A55930033B54C /* ServiceContractCreate.m */; };
 		E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */; };
 		E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */; };
 		E684CB9A161C3ACA001D3BDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E684CB99161C3ACA001D3BDC /* Default-568h@2x.png */; };
@@ -458,6 +459,8 @@
 		E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageSelectorViewController.m; sourceTree = "<group>"; };
 		E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+dataController.h"; sourceTree = "<group>"; };
 		E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+dataController.m"; sourceTree = "<group>"; };
+		E66D94EF164A55920033B54C /* ServiceContractCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceContractCreate.h; sourceTree = "<group>"; };
+		E66D94F0164A55930033B54C /* ServiceContractCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceContractCreate.m; sourceTree = "<group>"; };
 		E66DA0BB163ED53300E74DA0 /* CoverageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageDetailViewController.h; sourceTree = "<group>"; };
 		E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageDetailViewController.m; sourceTree = "<group>"; };
 		E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+contentFromSource.h"; sourceTree = "<group>"; };
@@ -1274,6 +1277,8 @@
 		E65E07D51625F740002034FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E66D94EF164A55920033B54C /* ServiceContractCreate.h */,
+				E66D94F0164A55930033B54C /* ServiceContractCreate.m */,
 				DA0F75CD163AFB97001CB9E2 /* ServiceGetTariff.h */,
 				DA0F75CE163AFB97001CB9E2 /* ServiceGetTariff.m */,
 				E6A4FCFC163A6A20004053CC /* serviceProductExtract.h */,
@@ -2580,6 +2585,7 @@
 				E6399C0C163EBA9800C8119A /* CoverageHeaderViewController.m in Sources */,
 				E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */,
 				E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */,
+				E66D94F1164A55930033B54C /* ServiceContractCreate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

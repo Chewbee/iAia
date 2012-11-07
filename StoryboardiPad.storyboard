@@ -246,8 +246,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="YVI-rQ-Sjh" id="e1G-Zg-PFm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vRs-uu-I74"/>
+                    <navigationItem key="navigationItem" id="vRs-uu-I74">
+                        <barButtonItem key="rightBarButtonItem" title="Turn Into contract" id="gs3-uh-DgS">
+                            <connections>
+                                <action selector="turnIntoContract:" destination="YVI-rQ-Sjh" id="QKD-eh-Vl5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="turnIntoContractButton" destination="gs3-uh-DgS" id="Fo1-go-HC8"/>
                         <segue destination="bmX-ra-J9w" kind="push" identifier="detailCoverage" id="rmu-9i-B3S"/>
                     </connections>
                 </tableViewController>

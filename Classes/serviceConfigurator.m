@@ -23,8 +23,9 @@
 //
 -(void) configureService:(SoapService*) service
 {
+    // https://ec2-176-34-72-149.eu-west-1.compute.amazonaws.com/graphtalk/soap/services
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-    NSString *theService = [[NSMutableString alloc] initWithString:@"http://"] ;
+    NSString *theService = [[NSMutableString alloc] initWithString:@""] ;
     theService =[theService stringByAppendingString: [defaults stringForKey:@"server" ]];
 
     [service setServiceUrl: theService] ;
@@ -35,7 +36,7 @@
     NSString *literalString = [NSString
                                stringWithFormat:@"<userName>%@</userName><userPassword>%@</userPassword>",
                                [defaults stringForKey:@"login_preference"],
-                               [defaults stringForKey:@"password-preference"]];
+                               [defaults stringForKey:@"password_preference"]];
     SoapLiteral *soapLiteral =[SoapLiteral
                                literalWithString: literalString];
     [headers setValue:soapLiteral forKey:@"header"];
