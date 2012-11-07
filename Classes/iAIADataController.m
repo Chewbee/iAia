@@ -36,9 +36,24 @@
 //
 -(void)query
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:YES] ;
+    [self displayRefreshingIndicators] ;
     [[self contracts]removeAllObjects];
     [self invokeServiceContractList] ;
+}
+//
+#pragma mark - TOOLS
+- (void)displayRefreshingIndicators
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
+    [self setTheSubView:[FakeHUD newFakeHUD]];
+    //[[self theSubView]gradient];
+	[[self viewController ].view addSubviewWithFadeAnimation:[self theSubView] duration:1.0 option:UIViewAnimationOptionCurveEaseOut];
+}
+//
+- (void)hideRefreshingIndicators
+{
+    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [[self theSubView]removeWithSinkAnimation:40 ];
 }
 //
 #pragma mark -
@@ -103,7 +118,7 @@
 // Handle the response from invokeServiceContractList.
 - (void) ServiceContractListHandler: (id) value
 {
-	[[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+	[self hideRefreshingIndicators] ;
     // Handle errors
 	if([value isKindOfClass:[NSError class]]) {
         NSString *errorMsg = [(NSError*)value localizedDescription] ;
@@ -181,7 +196,7 @@
 #pragma mark mockup
 - (void)wrappingUp
 {
-    [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
+    [self hideRefreshingIndicators] ;
     [[self viewController ] reload];
 }
 

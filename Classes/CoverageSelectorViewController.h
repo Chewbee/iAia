@@ -15,21 +15,27 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/NSException.h>
 #import <UIKit/UIKit.h>
+#import "FakeHUD.h"
 
 
 @interface CoverageSelectorViewController : UITableViewController
 
-@property (nonatomic,strong) NSDictionary       *coverages ;
+@property (nonatomic,strong) NSArray            *coveragesId ;
 @property (nonatomic,strong) FastQuoteModel     *fastQuoteModel ;
 @property (nonatomic,strong) NSString           *familyStructure ;
 
 @property (nonatomic,strong) NSDictionary       *productOptions ;
-@property (nonatomic,strong) NSMutableArray     *coverageArray ;
+@property (nonatomic,strong) NSDictionary       *coverageDictionnary ;
 
 @property (nonatomic, weak) CSCContract         *contract;
 
 @property (nonatomic, weak) QuoteCell           *quoteCell ; 
+
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
+@property (nonatomic, weak) FakeHUD             *theSubView ;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+- (IBAction)refreshButtonPressed:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *turnIntoContractButton;
 - (IBAction)turnIntoContract:(id)sender;

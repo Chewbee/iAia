@@ -9,6 +9,7 @@
 #import "iAiaViewController.h"
 #import "UITableViewCell+contentFromSource.h"
 
+
 #define PERSON_HEIGHT	149
 #define OTHER_HEIGHT	44
 
@@ -189,11 +190,9 @@
         [targetVC setDataController:dataController];
     }
 }
-//
 #pragma mark interactions
 - (IBAction)refreshPressed:(id)sender {
     [[self refreshButtonItem ] setEnabled:FALSE] ;
-    [[self activityIndicator] setHidden:FALSE];
     [[self dataController] query];
 }
 #pragma mark -
