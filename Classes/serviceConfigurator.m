@@ -23,7 +23,6 @@
 //
 -(void) configureService:(SoapService*) service
 {
-    // https://ec2-176-34-72-149.eu-west-1.compute.amazonaws.com/graphtalk/soap/services
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
     NSString *theService = [[NSMutableString alloc] initWithString:@""] ;
     theService =[theService stringByAppendingString: [defaults stringForKey:@"server" ]];
