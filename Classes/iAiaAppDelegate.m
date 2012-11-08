@@ -41,33 +41,36 @@
      #4b7daf navy blue
      #7dc8e1 sky blue
      */
-    UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f];
-    UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f];
-    UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f];
-    UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f];
-    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f];
-
-    UIImage *backImage = [UIImage imageNamed:@"cuir.png"];
-    UIImage *tabImage = [UIImage imageNamed:@"cuir80.png"];
-    
-    backImage = [backImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
-    tabImage = [tabImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f] ;
+    UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f] ;
+    UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f] ;
+    UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f] ;
+    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
+    // 
+    UIImage *navImage   = [UIImage imageNamed:@"navBar.png"] ;
+    UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
+    UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
+    //
+    //navImage = [navImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    //tabBar = [tabBar resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
     // Navigation bar
     UINavigationBar  *uinApp = [UINavigationBar  appearance];
     [uinApp setTintColor: naviBlueColor];
-    [uinApp setBackgroundImage:backImage forBarMetrics:UIBarMetricsDefault];
+    [uinApp setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
     // tableView
     UITableView *uitv = [UITableView appearance];
     [uitv setBackgroundColor:lightGraycolor];
+    UIImageView *uiv = [[UIImageView alloc] initWithImage:leatherBack] ;
+    [uitv setBackgroundView:uiv] ;
     [uitv setSeparatorColor:midGraycolor] ;
     [uitv setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     // Tab tab
     UITabBar *uitb = [UITabBar appearance];
-    [uitb setBackgroundImage:tabImage];
+    [uitb setBackgroundImage:tabBar];
     // Segmented control
     UISegmentedControl *uisc = [UISegmentedControl appearance];
     //[uisc setBackgroundColor:lightGraycolor];
-    [uisc setBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault] ;
+    //[uisc setBackgroundImage:navImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault] ;
     // [uisc setDividerImage:nil forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
     // Button
 }

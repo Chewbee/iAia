@@ -33,29 +33,33 @@
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="leatherWhite.png" id="Mah-cG-tSo">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" id="sOr-0a-yJf">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick you family" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YxU-mq-oAo">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pick your family" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YxU-mq-oAo">
                                 <rect key="frame" x="20" y="272" width="322" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.49019607840000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Enter your birthdate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JPf-IM-cCt">
                                 <rect key="frame" x="20" y="553" width="322" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.49019607840000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Select your state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HqQ-ev-wP5">
                                 <rect key="frame" x="426" y="272" width="322" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.49019607840000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="tn0-Wy-5dN">
@@ -277,11 +281,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="MU5-De-HK3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="leatherWhite.png" id="97N-MX-q28">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="MU5-De-HK3">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.29411764705882354" green="0.49019607843137253" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.49019607840000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -490,8 +497,84 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="contract-icon.png" width="33" height="30"/>
         <image name="get_quote_button.png" width="400" height="400"/>
         <image name="icon-checkmark.png" width="54" height="56"/>
+        <image name="leatherWhite.png" width="768" height="1024"/>
         <image name="request_quote_icon.png" width="40" height="40"/>
     </resources>
+    <classes>
+        <class className="ContractDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractDetailViewController.h"/>
+        </class>
+        <class className="ContractTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contractLblCtl" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CoverageDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="coverageTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="CoverageSelectorViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageSelectorViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshButtonPressed:"/>
+                <relationship kind="action" name="turnIntoContract:"/>
+                <relationship kind="outlet" name="refreshButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="turnIntoContractButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="CoverageViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="checkview" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="coverageLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FinancialEventTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FinancialEventTableViewCell.h"/>
+        </class>
+        <class className="PersonTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonTableViewCell.h"/>
+            <relationships>
+                <relationship kind="action" name="RefreshButtonPressed:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="clientNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateOfBirthLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastUpdateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="maritalStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="professionalStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="statusImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="QuoteCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuoteCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="premiumAmount" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="iAiaViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iAiaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refreshPressed:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="refreshButtonItem" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="iPadQuoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadQuoteViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="datePickerSelect:"/>
+                <relationship kind="action" name="segmentedClicked:"/>
+                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
+                <relationship kind="outlet" name="familyPicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="subscriberSegmented" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
