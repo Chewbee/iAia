@@ -6,6 +6,7 @@
 
 #import "SoapHandler.h"
 #import "SoapService.h"
+#import "SoapRequestProtocol.h"
 
 @interface SoapRequest : NSObject {
 	NSURL* url;
@@ -20,6 +21,10 @@
 	SEL action;
 	BOOL logging;
 	id<SoapDelegate> defaultHandler;
+
+    id<SoapRequestProtocol> _requestDelegate;
+    NSURLAuthenticationChallenge *confirmNeed;
+    UIAlertView *avConfirmation;
 }
 
 @property (strong, nonatomic) NSURL* url;
@@ -33,6 +38,8 @@
 @property SEL action;
 @property BOOL logging;
 @property (strong, nonatomic) id<SoapDelegate> defaultHandler;
+
+@property (nonatomic, strong) id<SoapRequestProtocol> requestDelegate;
 
 + (SoapRequest*) create: (SoapHandler*) handler urlString: (NSString*) urlString soapAction: (NSString*) soapAction postData: (NSString*) postData deserializeTo: (id) deserializeTo;
 + (SoapRequest*) create: (SoapHandler*) handler action: (SEL) action urlString: (NSString*) urlString soapAction: (NSString*) soapAction postData: (NSString*) postData deserializeTo: (id) deserializeTo;

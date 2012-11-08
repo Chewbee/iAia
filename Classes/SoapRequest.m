@@ -12,7 +12,7 @@
 
 @implementation SoapRequest
 
-@synthesize handler, url, soapAction, postData, receivedData, username, password, deserializeTo, action, logging, defaultHandler;
+@synthesize handler, url, soapAction, postData, receivedData, username, password, deserializeTo, action, logging, defaultHandler ;
 
 // Creates a request to submit from discrete values.
 + (SoapRequest*) create: (SoapHandler*) handler urlString: (NSString*) urlString soapAction: (NSString*) soapAction postData: (NSString*) postData deserializeTo: (id) deserializeTo {
@@ -185,18 +185,18 @@
 	conn = nil;
 }
 
-// Called if the HTTP request receives an authentication challenge.
--(void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-	if([challenge previousFailureCount] == 0) {
-		NSURLCredential *newCredential;
-        newCredential=[NSURLCredential credentialWithUser:self.username password:self.password persistence:NSURLCredentialPersistenceNone];
-        [[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
-    } else {
-        [[challenge sender] cancelAuthenticationChallenge:challenge];
-		NSError* error = [NSError errorWithDomain:@"SoapRequest" code:403 userInfo: @{NSLocalizedDescriptionKey: @"Could not authenticate this request"}];
-		[self handleError:error];
-    }
-}
+//// Called if the HTTP request receives an authentication challenge.
+//-(void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+//	if([challenge previousFailureCount] == 0) {
+//		NSURLCredential *newCredential;
+//        newCredential=[NSURLCredential credentialWithUser:self.username password:self.password persistence:NSURLCredentialPersistenceNone];
+//        [[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+//    } else {
+//        [[challenge sender] cancelAuthenticationChallenge:challenge];
+//		NSError* error = [NSError errorWithDomain:@"SoapRequest" code:403 userInfo: @{NSLocalizedDescriptionKey: @"Could not authenticate this request"}];
+//		[self handleError:error];
+//    }
+//}
 
 // Cancels the HTTP request.
 - (BOOL) cancel {
@@ -206,4 +206,154 @@
 	return YES;
 }
 
+// Called if the HTTP request receives an authentication challenge.
+- (BOOL)connection:(NSURLConnection *)aConnection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace {
+    BOOL res = [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+    return res;
+}
+
+- (void)connection:(NSURLConnection *)aConnection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    UIAlertView *av = nil;
+
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        SecTrustResultType trustEvalResult = kSecTrustResultInvalid;
+        OSStatus ossTrust = SecTrustEvaluate(challenge.protectionSpace.serverTrust, &trustEvalResult);
+        if(errSecSuccess != ossTrust) {
+            //NSLog(@"ossTrust error");
+            return;
+        }
+        switch(trustEvalResult) {
+            case kSecTrustResultUnspecified:
+                [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+                //NSLog(@"ResultUnspecified");
+                break;
+            case kSecTrustResultInvalid:
+                av = [[UIAlertView alloc] initWithTitle:@"error"
+                                                message:@"cert_obtain_error"
+                                               delegate:nil
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil];
+                [av show];
+                [[challenge sender] cancelAuthenticationChallenge:challenge];
+                //NSLog(@"Invalid");
+                break;
+            case kSecTrustResultConfirm:
+                [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+                //NSLog(@"Confirm");
+                break;
+            case kSecTrustResultProceed:
+                [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+                //NSLog(@"Proceed");
+                break;
+            case kSecTrustResultDeny:
+                av = [[UIAlertView alloc] initWithTitle:@"error"
+                                                message:@"cert_obtain_error"
+                                               delegate:nil
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil];
+                [av show];
+                [[challenge sender] cancelAuthenticationChallenge:challenge];
+                //NSLog(@"Deny");
+                break;
+            case kSecTrustResultRecoverableTrustFailure:
+                //NSLog(@"ResultRecoverableTrustFailure");
+                [self confirmUntrustedCert:challenge];
+                break;
+            case kSecTrustResultFatalTrustFailure:
+                av = [[UIAlertView alloc] initWithTitle:@"error"
+                                                message:@"cert_obtain_error"
+                                               delegate:nil
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil];
+                [av show];
+                [[challenge sender] cancelAuthenticationChallenge:challenge];
+                //NSLog(@"FatalTrustFailure");
+                break;
+            case kSecTrustResultOtherError:
+                av = [[UIAlertView alloc] initWithTitle:@"error"
+                                                message:@"cert_obtain_error"
+                                               delegate:nil
+                                      cancelButtonTitle:@"ok"
+                                      otherButtonTitles:nil];
+                [av show];
+                [[challenge sender] cancelAuthenticationChallenge:challenge];
+                //NSLog(@"OtherError");
+                break;
+            default:
+                [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
+                break;
+		}
+    }
+    else {
+        if([challenge previousFailureCount] == 0) {
+            NSURLCredential *newCredential;
+            newCredential=[NSURLCredential credentialWithUser:self.username password:self.password persistence:NSURLCredentialPersistenceNone];
+            [[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
+        } else {
+            [[challenge sender] cancelAuthenticationChallenge:challenge];
+            NSError* error = [NSError errorWithDomain:@"SoapRequest" code:403 userInfo: [NSDictionary dictionaryWithObjectsAndKeys:@"could_not_authenticate_request", NSLocalizedDescriptionKey,nil]];
+            [self handleError:error];
+        }
+    }
+}
+//
+- (void)confirmUntrustedCert:(NSURLAuthenticationChallenge*)challenge {
+    confirmNeed = challenge ;
+    // Here you need to check current serverTrust. Maybe it is already saved as trusted?
+    // In this example KeyChain is used.
+    /*
+     //FIXME: KeyChainManager
+     if([[KeyChainManager sharedManager] isSavedTrust:confirmNeed.protectionSpace.serverTrust]) {
+        if(nil != confirmNeed) {
+            [confirmNeed.sender useCredential:[NSURLCredential credentialForTrust:confirmNeed.protectionSpace.serverTrust] forAuthenticationChallenge:confirmNeed];
+            confirmNeed = nil;
+        }
+    }
+    else */{
+        if(nil != self.requestDelegate) {
+            if([self.requestDelegate respondsToSelector:@selector(requestNeedsUserInteraction)]) {
+                [self.requestDelegate requestNeedsUserInteraction];
+            }
+        }
+
+        avConfirmation = [[UIAlertView alloc] initWithTitle:@"untrusted certificate"
+                                                    message:@"What you would do?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"stop connection"
+                                          otherButtonTitles:@"proceed this time", @"add to trusted", nil];
+        [avConfirmation show];
+    }
+}
+//
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    avConfirmation = nil;
+
+    if(nil != self.requestDelegate) {
+        if([self.requestDelegate respondsToSelector:@selector(requestUserInteractionEnds)]) {
+            [self.requestDelegate requestUserInteractionEnds];
+        }
+    }
+    // "Stop connection"
+    if(0 == buttonIndex) {
+        [[confirmNeed sender] cancelAuthenticationChallenge:confirmNeed];
+    }
+    // "Proceed this time (once)"
+    if(1 == buttonIndex) {
+        if(nil != confirmNeed) {
+            [confirmNeed.sender useCredential:[NSURLCredential credentialForTrust:confirmNeed.protectionSpace.serverTrust] forAuthenticationChallenge:confirmNeed];
+        }
+    }
+    // "Add to trusted (always proceed without prompt)"
+    if(2 == buttonIndex) {
+        if(nil != confirmNeed) {
+            // Here you need to store the certificate for the future checks
+            // In this example KeyChain is used.
+           //FIXME:  [[KeyChainManager sharedManager] saveCertificatesFromTrust:confirmNeed.protectionSpace.serverTrust];
+            [confirmNeed.sender useCredential:[NSURLCredential credentialForTrust:confirmNeed.protectionSpace.serverTrust] forAuthenticationChallenge:confirmNeed];
+        }
+    }
+    if(nil != confirmNeed) {
+        confirmNeed = nil;
+    }
+}
 @end
