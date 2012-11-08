@@ -50,8 +50,10 @@
 		E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = E64D8066164080550036CE2D /* serviceConfigurator.m */; };
 		E64D806B16408A150036CE2D /* contract-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E64D806A16408A150036CE2D /* contract-icon.png */; };
 		E651540F162F4F8200EEC4CF /* CoverageSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */; };
+		E65423D8164BFA2D002C0668 /* quoteTab.png in Resources */ = {isa = PBXBuildFile; fileRef = E65423D7164BFA2D002C0668 /* quoteTab.png */; };
 		E65E07D8162604B6002034FC /* UITableViewCell+dataController.m in Sources */ = {isa = PBXBuildFile; fileRef = E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */; };
 		E66D94F1164A55930033B54C /* ServiceContractCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = E66D94F0164A55930033B54C /* ServiceContractCreate.m */; };
+		E66D9507164A793E0033B54C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66D9506164A793E0033B54C /* Security.framework */; };
 		E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */; };
 		E67CFC9E118C647200B2AFC1 /* UITableViewCell+contentFromSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CFC9D118C647200B2AFC1 /* UITableViewCell+contentFromSource.m */; };
 		E684CB9A161C3ACA001D3BDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E684CB99161C3ACA001D3BDC /* Default-568h@2x.png */; };
@@ -88,6 +90,10 @@
 		E6C877AD162F22260083218B /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AC162F22260083218B /* SubscriberViewController.m */; };
 		E6C877B0162F223B0083218B /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AF162F223B0083218B /* StateViewController.m */; };
 		E6C877B4162F24D40083218B /* fastQuoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877B3162F24D40083218B /* fastQuoteModel.m */; };
+		E6D3FC57164BB4AA00AC2E8A /* cuir.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC56164BB4AA00AC2E8A /* cuir.png */; };
+		E6D3FC59164BC0DF00AC2E8A /* cuir@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */; };
+		E6D3FC5B164BCAA500AC2E8A /* cuir80.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC5A164BCAA500AC2E8A /* cuir80.png */; };
+		E6D72AE2164C646E00ABBEAB /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */; };
 		E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF051190C046007AA368 /* ContractDetailViewController.m */; };
 		E6E5BF131190C0EE007AA368 /* FinancialEventsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF111190C0EE007AA368 /* FinancialEventsDetailsViewController.m */; };
 		E6EA544D16202B67001FCF0D /* CSCAcceptanceDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EA525E16202B66001FCF0D /* CSCAcceptanceDecision.m */; };
@@ -469,10 +475,13 @@
 		E64D806A16408A150036CE2D /* contract-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contract-icon.png"; sourceTree = "<group>"; };
 		E651540D162F4F8200EEC4CF /* CoverageSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageSelectorViewController.h; sourceTree = "<group>"; };
 		E651540E162F4F8200EEC4CF /* CoverageSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageSelectorViewController.m; sourceTree = "<group>"; };
+		E65423D7164BFA2D002C0668 /* quoteTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quoteTab.png; sourceTree = "<group>"; };
 		E65E07D6162604B6002034FC /* UITableViewCell+dataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+dataController.h"; sourceTree = "<group>"; };
 		E65E07D7162604B6002034FC /* UITableViewCell+dataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+dataController.m"; sourceTree = "<group>"; };
 		E66D94EF164A55920033B54C /* ServiceContractCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceContractCreate.h; sourceTree = "<group>"; };
 		E66D94F0164A55930033B54C /* ServiceContractCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceContractCreate.m; sourceTree = "<group>"; };
+		E66D9500164A70120033B54C /* SoapRequestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoapRequestProtocol.h; sourceTree = "<group>"; };
+		E66D9506164A793E0033B54C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E66DA0BB163ED53300E74DA0 /* CoverageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageDetailViewController.h; sourceTree = "<group>"; };
 		E66DA0BC163ED53300E74DA0 /* CoverageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageDetailViewController.m; sourceTree = "<group>"; };
 		E67CFC9C118C647200B2AFC1 /* UITableViewCell+contentFromSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+contentFromSource.h"; sourceTree = "<group>"; };
@@ -531,6 +540,11 @@
 		E6C877AF162F223B0083218B /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		E6C877B2162F24D40083218B /* fastQuoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fastQuoteModel.h; sourceTree = "<group>"; };
 		E6C877B3162F24D40083218B /* fastQuoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fastQuoteModel.m; sourceTree = "<group>"; };
+		E6D3FC56164BB4AA00AC2E8A /* cuir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cuir.png; path = images/cuir.png; sourceTree = "<group>"; };
+		E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cuir@x2.png"; path = "images/cuir@x2.png"; sourceTree = "<group>"; };
+		E6D3FC5A164BCAA500AC2E8A /* cuir80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cuir80.png; path = images/cuir80.png; sourceTree = "<group>"; };
+		E6D72AE0164C646E00ABBEAB /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
+		E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
 		E6E5BF041190C046007AA368 /* ContractDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDetailViewController.h; sourceTree = "<group>"; };
 		E6E5BF051190C046007AA368 /* ContractDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractDetailViewController.m; sourceTree = "<group>"; };
 		E6E5BF101190C0EE007AA368 /* FinancialEventsDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinancialEventsDetailsViewController.h; sourceTree = "<group>"; };
@@ -1172,6 +1186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66D9507164A793E0033B54C /* Security.framework in Frameworks */,
 				DA0F0CAB1641A575001843F1 /* QuartzCore.framework in Frameworks */,
 				E6EA559816202D5B001FCF0D /* SystemConfiguration.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -1186,6 +1201,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E65E07D51625F740002034FC /* Services */,
 				E6EA556E16202BBE001FCF0D /* TouchXML */,
 				E6EA554516202B81001FCF0D /* SOAP */,
 				E6EA525C16202B43001FCF0D /* CSC */,
@@ -1193,6 +1209,8 @@
 				E694B795118A018C000B5D82 /* Cells */,
 				E6C877B1162F249C0083218B /* View controllers */,
 				E6F36FF6163DB7A000C371BE /* Models */,
+				E6D72AE0164C646E00ABBEAB /* UIColor+CreateMethods.h */,
+				E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1208,6 +1226,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E66D9506164A793E0033B54C /* Security.framework */,
 				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iAiaAppDelegate.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -1301,6 +1320,14 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		E66D94FF164A6FE50033B54C /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				E66D9500164A70120033B54C /* SoapRequestProtocol.h */,
+			);
+			name = Certificates;
+			sourceTree = "<group>";
+		};
 		E694B795118A018C000B5D82 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1329,7 +1356,6 @@
 		E694B796118A01A4000B5D82 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				E65E07D51625F740002034FC /* Services */,
 				E694B797118A01CF000B5D82 /* PersonDataSource.h */,
 				E694B798118A01CF000B5D82 /* PersonDataSource.m */,
 				E619F0A816218C5600FED188 /* iAIADataController.h */,
@@ -2010,6 +2036,7 @@
 		E6EA554516202B81001FCF0D /* SOAP */ = {
 			isa = PBXGroup;
 			children = (
+				E66D94FF164A6FE50033B54C /* Certificates */,
 				E6EA554616202BA1001FCF0D /* NSData+Base64.h */,
 				E6EA554716202BA1001FCF0D /* NSData+Base64.m */,
 				E6EA554816202BA1001FCF0D /* NSMutableArray+Soap.h */,
@@ -2078,6 +2105,10 @@
 		E6F1D51E163EC67F00F7093F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E65423D7164BFA2D002C0668 /* quoteTab.png */,
+				E6D3FC5A164BCAA500AC2E8A /* cuir80.png */,
+				E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */,
+				E6D3FC56164BB4AA00AC2E8A /* cuir.png */,
 				DA0F0CA216419011001843F1 /* FakeHUD.png */,
 				E64D806A16408A150036CE2D /* contract-icon.png */,
 				E62A13CF1630457B00967FB8 /* request_quote_icon.png */,
@@ -2210,6 +2241,10 @@
 				E64D806B16408A150036CE2D /* contract-icon.png in Resources */,
 				DA0F0CA116418FE4001843F1 /* FakeHUD.xib in Resources */,
 				DA0F0CA316419011001843F1 /* FakeHUD.png in Resources */,
+				E6D3FC57164BB4AA00AC2E8A /* cuir.png in Resources */,
+				E6D3FC59164BC0DF00AC2E8A /* cuir@x2.png in Resources */,
+				E6D3FC5B164BCAA500AC2E8A /* cuir80.png in Resources */,
+				E65423D8164BFA2D002C0668 /* quoteTab.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2599,7 +2634,10 @@
 				E6399C0C163EBA9800C8119A /* CoverageHeaderViewController.m in Sources */,
 				E66DA0BD163ED53300E74DA0 /* CoverageDetailViewController.m in Sources */,
 				E64D8067164080550036CE2D /* serviceConfigurator.m in Sources */,
+				DA0F0C9E16418F81001843F1 /* FakeHUD.m in Sources */,
+				DA0F0CA9164192E1001843F1 /* UIView+Animation.m in Sources */,
 				E66D94F1164A55930033B54C /* ServiceContractCreate.m in Sources */,
+				E6D72AE2164C646E00ABBEAB /* UIColor+CreateMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

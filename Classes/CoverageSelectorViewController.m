@@ -52,6 +52,10 @@
      @"82",@"71",@"72",
      @"75"
      ]];
+    //
+    UIBarButtonItem *turnIntoContractButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose target:self action:@selector(turnIntoContract:)];
+	[[self navigationItem ] setRightBarButtonItems: [[[self navigationItem ]rightBarButtonItems] arrayByAddingObject: turnIntoContractButton]];
+    
     // header view
     [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
 
@@ -73,10 +77,39 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-#pragma mark - Get tarif Web Service stuff
-- (IBAction)turnIntoContract:(id)sender {
-}
+#pragma mark - turn into Contract Web Service stuff
+//
+- (IBAction)turnIntoContract:(id)sender
+{
+    [self displayRefreshingIndicators];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
+    BOOL mocked = [defaults boolForKey:@"mocked"] ;
+    // mocked is now a user setting
+    if (mocked) {
+        [self turnIntoContractfMockup];
+        return ;
+    } else {
+        NSString *login = [defaults stringForKey:@"login_preference" ] ;
+        NSString *password = [defaults stringForKey:@"password_preference" ] ;
+        ServiceContractCreate *service = [ServiceContractCreate serviceWithUsername:login andPassword:password];
+        // get the params
+        // Returns CSCContract*.
+        [service ContractCreate:self
+                         action:@selector(ContractCreateHandler:)
+                    Environment: [[CSCWMEnv alloc] init]
+                ActivityRequest: [[CSCActivityRequest alloc] init]
+                  SavingsScheme: [[CSCSavingsScheme alloc] init]
+                       Contract: [[CSCContract alloc] init]];
 
+    }
+}
+//
+-(void)turnIntoContractfMockup
+{
+
+}
+//
+#pragma mark - Get tarif Web Service stuff
 -(void) getTariff
 {
     [self displayRefreshingIndicators];
@@ -135,21 +168,17 @@
 }
 -(void) getTariffMockup
 {
+    [self hideRefreshingIndicators];
     //  using local resource file in mockup mode
     NSString *XMLPath = nil ;
-    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ProductExtractResponseNew.xml"];
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Response Flow Variant 1_3.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
-
-    [self setProductOptions:[self populateOptionArrayWithData:(NSData*) XMLData]] ;
-    [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:(NSData*) XMLData]];
-
-    [self hideRefreshingIndicators];
+    
 }
 //
 #pragma mark - productExtract Web Service stuff
-
-
+//
 -(void) productExtract
 {
     [self displayRefreshingIndicators];
@@ -158,7 +187,7 @@
     BOOL mocked = [defaults boolForKey:@"mocked"] ;
     // mocked is now a user setting
     if (mocked) {
-        [self getTariffMockup];
+        [self productExtractMockup];
         return ;
     } else {
         NSString *login = [defaults stringForKey:@"login_preference" ] ;
@@ -195,8 +224,8 @@
 		return;
     }
     // Do something with the * result which is a contract
-    CSCProductOption *producOptions = (CSCProductOption*) value ;
-//    for (CSCProductOption *pOption in contract.) {
+ //   [self setProductOptions:(CSCProductOption*) value]  ;
+//    for (CSCProductOption *pOption in value.) {
 //        ;
 //    }
 
@@ -300,7 +329,10 @@
 		case 0:
             return 1;
 		case 1:
-            return [[self coveragesId]count];
+            if ([[self productOptions]count]) {
+                 return  [[self coveragesId]count];
+            }
+            else return 0;
     }
     return 0;
 }
@@ -453,9 +485,13 @@
 - (void)displayRefreshingIndicators
 {
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
-    [self setTheSubView:[FakeHUD newFakeHUD]];
+    
+    if (self.theSubView == nil ) {
+        
+        [self setTheSubView:[FakeHUD newFakeHUD]];
+    }
     //[[self theSubView]gradient];
-	[self.view addSubviewWithFadeAnimation:[self theSubView] duration:1.0 option:UIViewAnimationOptionCurveEaseOut];
+    [self.view addSubviewWithFadeAnimation:[self theSubView] duration:1.0 option:UIViewAnimationOptionCurveEaseOut];
 }
 //
 - (void)hideRefreshingIndicators
@@ -490,6 +526,7 @@
     return returnedData ;
 }
 - (void)viewDidUnload {
+    [self setRefreshButton:nil];
     [self setTurnIntoContractButton:nil];
     [super viewDidUnload];
 }

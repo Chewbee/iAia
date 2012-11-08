@@ -8,6 +8,7 @@
 
 #import "iAiaAppDelegate.h"
 #import "iAiaViewController.h"
+#import "UIColor+CreateMethods.h"
 
 @implementation iAiaAppDelegate
 
@@ -16,24 +17,60 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Register the preference defaults early.
-//    NSDictionary *appDefaults = [NSDictionary
-//                                 dictionaryWithObjects:@[@"ec2-46-137-35-33.eu-west-1",@"PRSN0000430"] forKeys:@[@"server",@"number_preference"]];
-
     NSDictionary *appDefaults = @{
-    @"server"               : @"https://ec2-176-34-72-149.eu-west-1.compute.amazonaws.com/graphtalk/soap/services:8080" ,
-    // @"ec2-46-137-35-33.eu-west-1.compute.amazonaws.com:8080" ,
+    @"server"               : @"https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services" ,
     @"number_preference"    : @"PRSN0000430" ,
     @"login_preference"     : @"cscadmin" , // cscadmin
     @"password_preference"  : @"Physicpyrite" , // Physicpyrite
-    @"mocked"               : @"NO" };
+    @"mocked"               : @"NO" } ;
+
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
-    //
-    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+
+    [self themeColors];
     //
 	[self.window makeKeyAndVisible];
     return TRUE ;
 }
 //
+-(void) themeColors
+{
+    /*
+     #fafafa blanc
+     #e1e1e1 gris clair
+     #c8c8c8 gris moyen
+     #4b7daf navy blue
+     #7dc8e1 sky blue
+     */
+    UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f];
+    UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f];
+    UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f];
+    UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f];
+    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f];
+
+    UIImage *backImage = [UIImage imageNamed:@"cuir.png"];
+    UIImage *tabImage = [UIImage imageNamed:@"cuir80.png"];
+    
+    backImage = [backImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    tabImage = [tabImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    // Navigation bar
+    UINavigationBar  *uinApp = [UINavigationBar  appearance];
+    [uinApp setTintColor: naviBlueColor];
+    [uinApp setBackgroundImage:backImage forBarMetrics:UIBarMetricsDefault];
+    // tableView
+    UITableView *uitv = [UITableView appearance];
+    [uitv setBackgroundColor:lightGraycolor];
+    [uitv setSeparatorColor:midGraycolor] ;
+    [uitv setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    // Tab tab
+    UITabBar *uitb = [UITabBar appearance];
+    [uitb setBackgroundImage:tabImage];
+    // Segmented control
+    UISegmentedControl *uisc = [UISegmentedControl appearance];
+    //[uisc setBackgroundColor:lightGraycolor];
+    [uisc setBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault] ;
+    // [uisc setDividerImage:nil forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    // Button
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

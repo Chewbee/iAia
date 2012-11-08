@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="av8-dR-Ozp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="av8-dR-Ozp">
     <dependencies>
         <deployment version="1296" identifier="iOS"/>
         <development version="4500" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Quote-->
@@ -11,8 +11,10 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="PAc-tb-ozh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Quote" image="request_quote_icon.png" id="pg1-5B-BeP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vqL-wo-MZs">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -23,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="345" y="42"/>
         </scene>
-        <!--I Pad Quote View Controller-->
+        <!--I Pad Quote View Controller - Fast Quote-->
         <scene sceneID="mc3-oY-3Sc">
             <objects>
-                <viewController id="VqK-hK-U5A" customClass="iPadQuoteViewController" sceneMemberID="viewController">
+                <viewController title="Fast Quote" id="VqK-hK-U5A" customClass="iPadQuoteViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vln-Vd-bMc">
                         <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -140,7 +142,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" red="0.29411764705882354" green="0.49019607843137253" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SDI-kI-8YB"/>
+                    <navigationItem key="navigationItem" title="Fast Quote" id="SDI-kI-8YB"/>
                     <connections>
                         <outlet property="datePicker" destination="IEq-9L-w3G" id="7ka-LY-q2J"/>
                         <outlet property="familyPicker" destination="tWO-1F-cER" id="MZm-MF-DDm"/>
@@ -150,7 +152,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHE-nW-34v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="42"/>
+            <point key="canvasLocation" x="1269" y="42"/>
         </scene>
         <!--Contract Detail View Controller-->
         <scene sceneID="yp6-eQ-lBo">
@@ -168,14 +170,15 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2205" y="-1103"/>
         </scene>
-        <!--Coverage Selector View Controller-->
+        <!--Coverage Selector View Controller - Quote Summary-->
         <scene sceneID="lVz-mW-a9j">
             <objects>
                 <tableViewController id="YVI-rQ-Sjh" customClass="CoverageSelectorViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="15" rowHeight="98" sectionHeaderHeight="10" sectionFooterHeight="10" id="dAF-jq-G79">
                         <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.49019607843137253" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="98" id="ceB-EB-A40" customClass="QuoteCell">
                                 <rect key="frame" x="0.0" y="54" width="768" height="99"/>
@@ -208,7 +211,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="premiumAmount" destination="wtL-ci-44L" id="Kbr-F7-NZ7"/>
                                 </connections>
@@ -234,7 +237,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.41960784313725491" green="0.65098039215686276" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="checkview" destination="GTq-jG-Ruh" id="2be-yt-udp"/>
                                     <outlet property="coverageLabel" destination="epW-VO-EXF" id="Rxe-M1-v8o"/>
@@ -246,15 +249,19 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="YVI-rQ-Sjh" id="e1G-Zg-PFm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="vRs-uu-I74">
-                        <barButtonItem key="rightBarButtonItem" title="Turn Into contract" id="gs3-uh-DgS">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Quote Summary" id="vRs-uu-I74">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ScT-Il-6o3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="53N-d2-mUR">
                             <connections>
-                                <action selector="turnIntoContract:" destination="YVI-rQ-Sjh" id="QKD-eh-Vl5"/>
+                                <action selector="refreshButtonPressed:" destination="YVI-rQ-Sjh" id="JSJ-Ke-6Uu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="turnIntoContractButton" destination="gs3-uh-DgS" id="Fo1-go-HC8"/>
+                        <outlet property="refreshButton" destination="53N-d2-mUR" id="Sff-iN-flD"/>
                         <segue destination="bmX-ra-J9w" kind="push" identifier="detailCoverage" id="rmu-9i-B3S"/>
                     </connections>
                 </tableViewController>
@@ -268,13 +275,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <viewController id="bmX-ra-J9w" customClass="CoverageDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pn1-Kw-zEy">
                         <rect key="frame" x="0.0" y="64" width="768" height="916"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="MU5-De-HK3">
-                                <rect key="frame" x="15" y="178" width="733" height="718"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="backgroundColor" red="0.29411764705882354" green="0.49019607843137253" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -482,7 +490,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <image name="contract-icon.png" width="33" height="30"/>
         <image name="get_quote_button.png" width="400" height="400"/>
         <image name="icon-checkmark.png" width="54" height="56"/>
-        <image name="request_quote_icon.png" width="22" height="30"/>
+        <image name="request_quote_icon.png" width="40" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>

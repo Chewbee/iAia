@@ -22,7 +22,7 @@
 			<key>DefaultValue</key>
 			<string>CSCUSR1</string>
 			<key>IsSecure</key>
-			<true/>
+			<false/>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -40,7 +40,7 @@
 			<key>DefaultValue</key>
 			<string></string>
 			<key>IsSecure</key>
-			<true/>
+			<false/>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -58,7 +58,7 @@
 			<key>DefaultValue</key>
 			<string>PRSN0000430</string>
 			<key>IsSecure</key>
-			<true/>
+			<false/>
 			<key>KeyboardType</key>
 			<string>Alphabet</string>
 			<key>AutocapitalizationType</key>
@@ -90,16 +90,16 @@
 			<key>Key</key>
 			<string>server</string>
 			<key>DefaultValue</key>
-			<string>https://ec2-176-34-72-149.eu-west-1.compute.amazonaws.com/graphtalk/soap/services:8080</string>
+			<string>https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 			<key>Values</key>
 			<array>
-				<string>https://ec2-176-34-72-149.eu-west-1.compute.amazonaws.com/graphtalk/soap/services:8080</string>
+				<string>https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 				<string>http://20.250.185.11:26127</string>
 			</array>
 			<key>Titles</key>
 			<array>
-				<string>AWS Server</string>
-				<string>CSC Aus Server</string>
+				<string>AWS Californian Server</string>
+				<string>CSC Australian Server</string>
 			</array>
 		</dict>
 	</array>

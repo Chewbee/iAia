@@ -11,6 +11,7 @@
 #import "CoverageViewCell.h"
 #import "QuoteCell.h"
 #import "ServiceGetTariff.h"
+#import "ServiceContractCreate.h"
 #import "fastQuoteModel.h"
 #import <Foundation/Foundation.h>
 #import <Foundation/NSException.h>
@@ -34,11 +35,11 @@
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
 @property (nonatomic, weak) FakeHUD             *theSubView ;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem        *refreshButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem      *turnIntoContractButton;
+
 - (IBAction)refreshButtonPressed:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *turnIntoContractButton;
-- (IBAction)turnIntoContract:(id)sender;
 
 -(void) getTariff ;
 
