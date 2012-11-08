@@ -30,6 +30,8 @@
 
 -(void) refresh
 {
-    [[self premiumAmount] setText:[NSString stringWithFormat:@" %2@ ",[[self coverage] Amount] ]];
+    if ([[self coverage]AmountType]) {
+        [[self premiumAmount] setText:[NSString stringWithFormat:@" %2@ ",[[self coverage] Amount] ]];
+    }
 }
 @end
