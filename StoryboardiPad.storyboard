@@ -255,7 +255,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Quote Summary" id="vRs-uu-I74">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="K51-xn-qnx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="K51-xn-qnx">
                             <connections>
                                 <action selector="turnIntoContract:" destination="YVI-rQ-Sjh" id="6Wz-b5-x7J"/>
                             </connections>
@@ -273,7 +273,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="2205" y="42"/>
         </scene>
-        <!--Create Proposal View Controller-->
+        <!--Create Proposal View Controller - Turn Quote Into Proposal-->
         <scene sceneID="tfW-fF-Tgm">
             <objects>
                 <viewController id="VMp-oi-ggJ" customClass="CreateProposalViewController" sceneMemberID="viewController">
@@ -355,7 +355,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9bb-nc-xtn">
+                    <navigationItem key="navigationItem" title="Turn Quote Into Proposal" id="9bb-nc-xtn">
                         <barButtonItem key="backBarButtonItem" title="Back" id="lc2-or-McS"/>
                     </navigationItem>
                     <connections>
