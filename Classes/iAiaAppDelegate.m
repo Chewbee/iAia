@@ -41,22 +41,32 @@
      #4b7daf navy blue
      #7dc8e1 sky blue
      */
-    //UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f] ;
+    UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f] ;
     UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f] ;
     UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f] ;
     UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f] ;
     //UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
-    // 
+    //
+    UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0f] ; ;
+    NSDictionary *atts = @{
+UITextAttributeFont: font,
+    UITextAttributeTextColor : brokenWhiteColor,
+    UITextAttributeTextShadowColor : midGraycolor } ;
+
+
     UIImage *navImage   = [UIImage imageNamed:@"navBar.png"] ;
     UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
     UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
     //
     //navImage = [navImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
     //tabBar = [tabBar resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    
     // Navigation bar
     UINavigationBar  *uinApp = [UINavigationBar  appearance];
     [uinApp setTintColor: naviBlueColor];
     [uinApp setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    [uinApp setTitleTextAttributes:atts];
+    
     // tableView
     UITableView *uitv = [UITableView appearance];
     [uitv setBackgroundColor:lightGraycolor];
@@ -64,15 +74,26 @@
     [uitv setBackgroundView:uiv] ;
     [uitv setSeparatorColor:midGraycolor] ;
     [uitv setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+    //[uitv setTitleTextAttributes:atts];
+    
+    // Button
+    UIButton *uib = [UIButton appearance ];
+    [uib setBackgroundImage:nil forState:UIControlStateNormal];
+    //[uib setBackgroundColor:nil];
+
+    // UIBarButtonItem
+    UIBarButtonItem *uibbi = [UIBarButtonItem appearance]  ;
+    [uibbi    setBackButtonBackgroundImage:nil forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     // Tab tab
     UITabBar *uitb = [UITabBar appearance];
     [uitb setBackgroundImage:tabBar];
+    //[uitb setTitleTextAttributes:atts];
+
     // Segmented control
-//    UISegmentedControl *uisc = [UISegmentedControl appearance];
+    //UISegmentedControl *uisc = [UISegmentedControl appearance];
     //[uisc setBackgroundColor:lightGraycolor];
     //[uisc setBackgroundImage:navImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault] ;
     // [uisc setDividerImage:nil forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
-    // Button
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
