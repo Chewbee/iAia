@@ -22,6 +22,8 @@
 @interface CoverageSelectorViewController : UITableViewController
 
 @property (nonatomic,strong) NSArray            *coveragesId ;
+@property (nonatomic,strong) NSArray            *tarifArray ;
+
 @property (nonatomic,strong) FastQuoteModel     *fastQuoteModel ;
 @property (nonatomic,strong) NSString           *familyStructure ;
 
@@ -35,7 +37,7 @@
 @property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
 @property (nonatomic, weak) FakeHUD             *theSubView ;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem        *refreshButton;
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem      *turnIntoContractButton;
 
 - (IBAction)refreshButtonPressed:(id)sender;

@@ -26,11 +26,9 @@
 {
 	NSMutableString* s = [NSMutableString string];
 	[s appendString: @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"];
-	/*
-     [s appendFormat: @"<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns=\"%@\">", ns];
-     */
-    // FIXME: above commented replaced with below to remove the NS from the soap:Envelope
-    [s appendString: @"<soap:Envelope>"];
+
+     [s appendString: @"<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">" ];
+    // FIXME:
     //
 	if(headers != nil && headers.count > 0) {
 		[s appendString: @"<soap:Header>"];
@@ -43,10 +41,8 @@
 		}
 		[s appendString: @"</soap:Header>"];
 	}
-	//[s appendString: @"<soap:Body>"];
-    // FIXME: Above commented replaced with below to put all tne NS in the body part at martin request
-    [s appendFormat: @"<soap:Body xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns=\"%@\">", ns];
-    //
+	[s appendString: @"<soap:Body xmlns=\"http://www.csc.com/graphtalk/aia/\" >"];
+
 	[s appendFormat: @"<%@>%@</%@>", method,[params stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"], method];
 	[s appendString: @"</soap:Body>"];
 	[s appendString: @"</soap:Envelope>"];

@@ -164,7 +164,8 @@
 	} else {
 		CXMLNode* element = [[Soap getNode: [doc rootElement] withName: @"soap:Body"] childAtIndex:0];
 		if(deserializeTo == nil) {
-			output = [Soap deserialize:element];
+			//output = [Soap deserialize:element];
+            output = doc ; 
 		} else {
 			if([deserializeTo respondsToSelector: @selector(initWithNode:)]) {
 				element = [element childAtIndex:0];

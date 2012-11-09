@@ -349,7 +349,7 @@
                                             service: self
                                          soapAction: @"ProductExtract"
                                            postData: _envelope
-                                      deserializeTo: [CSCArrayOfProductOption alloc]];
+                                      deserializeTo: nil];
 		[_request send];
 		return _request;
 	}

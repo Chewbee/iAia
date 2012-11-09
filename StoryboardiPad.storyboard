@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" id="sOr-0a-yJf">
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="medibankLogo.png" id="sOr-0a-yJf">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -255,23 +255,116 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Quote Summary" id="vRs-uu-I74">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="ScT-Il-6o3"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="53N-d2-mUR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="compose" id="K51-xn-qnx">
                             <connections>
-                                <action selector="refreshButtonPressed:" destination="YVI-rQ-Sjh" id="JSJ-Ke-6Uu"/>
+                                <action selector="turnIntoContract:" destination="YVI-rQ-Sjh" id="6Wz-b5-x7J"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="refreshButton" destination="53N-d2-mUR" id="Sff-iN-flD"/>
+                        <outlet property="turnIntoContractButton" destination="K51-xn-qnx" id="u0L-UI-0tG"/>
                         <segue destination="bmX-ra-J9w" kind="push" identifier="detailCoverage" id="rmu-9i-B3S"/>
+                        <segue destination="VMp-oi-ggJ" kind="push" identifier="CreateProposal" id="9Lw-vA-LaS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58A-0N-LzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2205" y="42"/>
+        </scene>
+        <!--Create Proposal View Controller-->
+        <scene sceneID="tfW-fF-Tgm">
+            <objects>
+                <viewController id="VMp-oi-ggJ" customClass="CreateProposalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Adn-NH-5L7">
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="leatherWhite.png" id="8N7-Le-WCK">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tGh-vd-ePe">
+                                <rect key="frame" x="27" y="244" width="400" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lEf-cX-e38">
+                                <rect key="frame" x="444" y="293" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="BRK-7O-swa">
+                                <rect key="frame" x="444" y="407" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Zn7-Ah-pne">
+                                <rect key="frame" x="444" y="240" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="v6P-xg-d11">
+                                <rect key="frame" x="444" y="350" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jbi-Dm-dMS">
+                                <rect key="frame" x="27" y="297" width="400" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eGy-fM-ydX">
+                                <rect key="frame" x="27" y="354" width="400" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="E-Mail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wgh-Jd-vb5">
+                                <rect key="frame" x="27" y="411" width="400" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fZS-wo-mHD">
+                                <rect key="frame" x="219" y="853" width="329" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Queue proposal request to the Back Office" backgroundImage="cuir.png">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createProposal:" destination="VMp-oi-ggJ" eventType="touchUpInside" id="TOc-O5-OPi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9bb-nc-xtn"/>
+                    <connections>
+                        <outlet property="createProposalButton" destination="fZS-wo-mHD" id="1Hb-vS-JLj"/>
+                        <outlet property="emailTextField" destination="BRK-7O-swa" id="TkC-im-4ds"/>
+                        <outlet property="nameTextField" destination="Zn7-Ah-pne" id="IW7-Zw-N8b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUS-jr-anK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3196" y="1244"/>
         </scene>
         <!--Coverage Detail View Controller-->
         <scene sceneID="9nW-6D-F0v">
@@ -302,7 +395,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWO-E1-NvU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3116" y="42"/>
+            <point key="canvasLocation" x="3196" y="42"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="AwN-oc-4r3">
@@ -493,88 +586,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="Medibank-Logo+Tag-Spectrum1_CMYK.jpg" width="1000" height="315"/>
         <image name="contract-icon.png" width="33" height="30"/>
+        <image name="cuir.png" width="42" height="42"/>
         <image name="get_quote_button.png" width="400" height="400"/>
         <image name="icon-checkmark.png" width="54" height="56"/>
         <image name="leatherWhite.png" width="768" height="1024"/>
+        <image name="medibankLogo.png" width="768" height="242"/>
         <image name="request_quote_icon.png" width="40" height="40"/>
     </resources>
-    <classes>
-        <class className="ContractDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractDetailViewController.h"/>
-        </class>
-        <class className="ContractTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContractTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contractLblCtl" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CoverageDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="coverageTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="CoverageSelectorViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageSelectorViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshButtonPressed:"/>
-                <relationship kind="action" name="turnIntoContract:"/>
-                <relationship kind="outlet" name="refreshButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="turnIntoContractButton" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="CoverageViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="checkview" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="coverageLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="FinancialEventTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FinancialEventTableViewCell.h"/>
-        </class>
-        <class className="PersonTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PersonTableViewCell.h"/>
-            <relationships>
-                <relationship kind="action" name="RefreshButtonPressed:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="clientNumberLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="dateOfBirthLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastUpdateLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="maritalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="professionalStatusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="statusImage" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="QuoteCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuoteCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="premiumAmount" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="iAiaViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iAiaViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="refreshPressed:"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="refreshButtonItem" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="iPadQuoteViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/iPadQuoteViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="datePickerSelect:"/>
-                <relationship kind="action" name="segmentedClicked:"/>
-                <relationship kind="outlet" name="datePicker" candidateClass="UIDatePicker"/>
-                <relationship kind="outlet" name="familyPicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="statePicker" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="subscriberSegmented" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

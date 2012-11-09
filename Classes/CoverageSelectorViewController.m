@@ -11,6 +11,8 @@
 #import <Foundation/NSException.h>
 #import "FakeHUD.h"
 #import "UIView+Animation.h"
+#import "NSNumber+createWithNode.h"
+#import "CreateProposalViewController.h"
 
 @interface CoverageSelectorViewController ()
 
@@ -53,9 +55,9 @@
      @"75"
      ]];
     //
-    UIBarButtonItem *turnIntoContractButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose target:self action:@selector(turnIntoContract:)];
-	[[self navigationItem ] setRightBarButtonItems: [[[self navigationItem ]rightBarButtonItems] arrayByAddingObject: turnIntoContractButton]];
-    
+//    UIBarButtonItem *turnIntoContractButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose target:self action:@selector(turnIntoContract:)];
+//	[[self navigationItem ] setRightBarButtonItems: [[[self navigationItem ]rightBarButtonItems] arrayByAddingObject: turnIntoContractButton]];
+//    
     // header view
     [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
 
@@ -65,7 +67,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self productExtract];
-    [self getTariff] ;
+    //[self getTariff] ;
 }
 //
 -(void) viewDidAppear:(BOOL)animated
@@ -81,33 +83,9 @@
 //
 - (IBAction)turnIntoContract:(id)sender
 {
-    [self displayRefreshingIndicators];
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-    BOOL mocked = [defaults boolForKey:@"mocked"] ;
-    // mocked is now a user setting
-    if (mocked) {
-        [self turnIntoContractfMockup];
-        return ;
-    } else {
-        NSString *login = [defaults stringForKey:@"login_preference" ] ;
-        NSString *password = [defaults stringForKey:@"password_preference" ] ;
-        ServiceContractCreate *service = [ServiceContractCreate serviceWithUsername:login andPassword:password];
-        // get the params
-        // Returns CSCContract*.
-        [service ContractCreate:self
-                         action:@selector(ContractCreateHandler:)
-                    Environment: [[CSCWMEnv alloc] init]
-                ActivityRequest: [[CSCActivityRequest alloc] init]
-                  SavingsScheme: [[CSCSavingsScheme alloc] init]
-                       Contract: [[CSCContract alloc] init]];
-
-    }
+    [self performSegueWithIdentifier: @"CreateProposal" sender:self];
 }
-//
--(void)turnIntoContractfMockup
-{
 
-}
 //
 #pragma mark - Get tarif Web Service stuff
 -(void) getTariff
@@ -171,10 +149,45 @@
     [self hideRefreshingIndicators];
     //  using local resource file in mockup mode
     NSString *XMLPath = nil ;
-    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Response Flow Variant 1_3.xml"];
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Response Flow Variant 2_3.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
-    
+    [self populateTarifArrayWithData:XMLData];
+}
+//
+-(NSMutableArray*) populateTarifArrayWithData:(NSData*) XMLDataFlow
+{
+    NSMutableArray *result = [[NSMutableArray alloc]init] ;
+    NSError *err = nil ;
+    NSData *XMLData =nil;
+    XMLData = [self conformInputString: XMLDataFlow ];
+
+    CXMLDocument *doc = nil ;
+    doc = [[CXMLDocument alloc] initWithData:XMLData options:0 error:&err];
+    //
+    NSArray *nodes = nil ;
+    // namespace
+    NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
+    //  searching for Contract nodes
+    nodes = [doc nodesForXPath:@"//*[local-name()='PremiumList']" namespaceMappings:dict error:&err];
+    // namespace
+    @try {
+        for (CXMLNode *node in nodes)
+        {
+            // creating contract objects from content
+        // FIXME: we should have basic types returned
+            NSNumber *tarif = nil;
+            tarif = [NSNumber createWithNode:node];
+            if (tarif)
+                [result addObject:tarif ] ;
+        }
+    }
+    @catch ( NSException *exception )
+    {
+        // Being here prevents a crash in case the data are not in UTF-8
+        // BUT conformInputString solves the case for now
+    }
+    return result ;
 }
 //
 #pragma mark - productExtract Web Service stuff
@@ -223,12 +236,12 @@
         [alertView show] ;
 		return;
     }
-    // Do something with the * result which is a contract
- //   [self setProductOptions:(CSCProductOption*) value]  ;
-//    for (CSCProductOption *pOption in value.) {
-//        ;
-//    }
 
+    [self setProductOptions:[self populateOptionArrayWithData:[value XMLData]]] ;
+    [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:[value XMLData]]];
+
+    [self hideRefreshingIndicators];
+    
     [self.tableView  reloadData ] ;
 }
 //
@@ -479,6 +492,12 @@
         CoverageDetailViewController *targetVC = (CoverageDetailViewController*)segue.destinationViewController;
         [targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
     }
+    // CreateProposal
+    if ([segue.identifier isEqualToString:@"CreateProposal"])
+    {
+          CreateProposalViewController *targetVC = (CreateProposalViewController*)segue.destinationViewController;
+        //[targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
+    }
 }
 //
 #pragma mark - TOOLS
@@ -526,7 +545,6 @@
     return returnedData ;
 }
 - (void)viewDidUnload {
-    [self setRefreshButton:nil];
     [self setTurnIntoContractButton:nil];
     [super viewDidUnload];
 }

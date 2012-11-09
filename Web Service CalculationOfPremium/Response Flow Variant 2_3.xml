@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <soap:Body>
         <CalculationOfPremiumResponse xmlns="http://www.csc.com/graphtalk/aia/">
             <PremiumList>
-                <Premium>39.65</Premium>
+                <Real>59.62</Real>
             </PremiumList>
             <ReturnStatus>
                 <Code>WM_SUCCESS</Code>
