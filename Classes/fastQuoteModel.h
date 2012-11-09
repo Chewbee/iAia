@@ -13,19 +13,21 @@
 @interface FastQuoteModel : NSObject
 
 @property (nonatomic,assign)NSInteger           familyStructure;
-@property (nonatomic,strong)NSMutableDictionary *birthDates;
-@property (nonatomic,assign)NSInteger           state;
-@property (nonatomic,strong) NSMutableArray     *productDetail ;
-
-@property (nonatomic,strong)NSDictionary        *familyStructureDic ;
-@property (nonatomic,strong)NSDictionary        *statesDic ;
-
+@property (nonatomic,strong)NSArray             *familyCode ;
 @property (nonatomic,strong)NSArray             *familyStructureArray ;
+
+@property (nonatomic,assign)NSInteger           state;
 @property (nonatomic,strong)NSArray             *statesArray ;
+@property (nonatomic,strong)NSArray             *statesCode ;
+
+@property (nonatomic,strong)NSMutableDictionary *birthDates;
+
+@property (nonatomic,strong)NSMutableArray     *productDetail ;
+
 
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier;
 - (NSString*) familyString ;
 - (NSString*) stateString ;
--(NSArray*) birthDatesArray ; 
+- (NSArray*) birthDatesArray ; 
 
 @end

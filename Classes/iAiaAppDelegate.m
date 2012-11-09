@@ -41,11 +41,11 @@
      #4b7daf navy blue
      #7dc8e1 sky blue
      */
-    UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f] ;
+    //UIColor *brokenWhiteColor   = [UIColor colorWithHex:@"#fafafa" alpha:1.0f] ;
     UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f] ;
     UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f] ;
     UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f] ;
-    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
+    //UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
     // 
     UIImage *navImage   = [UIImage imageNamed:@"navBar.png"] ;
     UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
@@ -68,7 +68,7 @@
     UITabBar *uitb = [UITabBar appearance];
     [uitb setBackgroundImage:tabBar];
     // Segmented control
-    UISegmentedControl *uisc = [UISegmentedControl appearance];
+//    UISegmentedControl *uisc = [UISegmentedControl appearance];
     //[uisc setBackgroundColor:lightGraycolor];
     //[uisc setBackgroundImage:navImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault] ;
     // [uisc setDividerImage:nil forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];

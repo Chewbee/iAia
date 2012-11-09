@@ -50,7 +50,6 @@
     {
         [self.fastQuoteModel setState: [[self familyPicker]selectedRowInComponent:0]];
     }
-    //
     // if the family structure is only one adult, hide the segmented control
     if ([[self fastQuoteModel]familyStructure]== 0 || [[self fastQuoteModel]familyStructure]== 4) {
         [self.subscriberSegmented setHidden:TRUE];

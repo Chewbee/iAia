@@ -67,7 +67,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self productExtract];
-    //[self getTariff] ;
+    [self getTariff] ;
 }
 //
 -(void) viewDidAppear:(BOOL)animated
@@ -105,8 +105,8 @@
         // get the params
         [service  CalculationOfPremium: self action:@selector(ServiceGetTariffHandler:)
                            Environment: [[CSCWMEnv alloc] init]
-                       FamilyStructure: [[self fastQuoteModel] familyString]
-                                 State:[[self fastQuoteModel]stateString ]
+                       FamilyStructure:[NSString stringWithString:[[self fastQuoteModel] familyString]]
+                                 State:[NSString stringWithString:[[self fastQuoteModel] stateString ]]
                          BirthDateList:[NSMutableArray arrayWithArray:[[self fastQuoteModel] birthDatesArray]]
                               Contract: nil ];
     }
@@ -133,14 +133,7 @@
         [alertView show] ;
 		return;
     }
-    // Do something with the NSMutableArray* result
-    //TODO: Check Efficiency
-    NSMutableDictionary *dic = [[NSMutableDictionary alloc] initWithCapacity:2] ;
-    for (CSCProductOption *productOption  in value)
-    {
-            [dic setObject:productOption forKey:[productOption Label]] ;
-    }
-    [self setProductOptions: dic];
+    [self setTarifArray:value] ;
     [self.tableView  reloadData ] ;
 
 }
@@ -495,7 +488,7 @@
     // CreateProposal
     if ([segue.identifier isEqualToString:@"CreateProposal"])
     {
-          CreateProposalViewController *targetVC = (CreateProposalViewController*)segue.destinationViewController;
+        //CreateProposalViewController *targetVC = (CreateProposalViewController*)segue.destinationViewController;
         //[targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
     }
 }

@@ -355,7 +355,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9bb-nc-xtn"/>
+                    <navigationItem key="navigationItem" id="9bb-nc-xtn">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lc2-or-McS"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="createProposalButton" destination="fZS-wo-mHD" id="1Hb-vS-JLj"/>
                         <outlet property="emailTextField" destination="BRK-7O-swa" id="TkC-im-4ds"/>

@@ -18,34 +18,21 @@
         [self setState:0];
 
         // Do any additional setup after loading the view.
-        [self setFamilyStructureDic:@{
-         @"single3"         : @"Single",
-         @"partner1"        : @"Couple",
-         @"married"         : @"Family" ,
-         @"divorced"        : @"Family w/o minor" ,
-         @"divorced"        : @"Single family"
-         }] ;
-        [self setFamilyStructureArray:@[@"Single", @"Couple", @"Family" , @"Family w/o minor" , @"Single family"]] ;
 
-        [self setStatesDic:@{
-         @"ACT" : @"Australian Capital Territory",
-         @"NSW" : @"New South Wales",
-         @"QLD" : @"Queensland",
-         @"SA"  : @"Southern Australia",
-         @"TAS" : @"Tasmania",
-         @"VIC" : @"Victoria",
-         @"WA"  : @"Western Australia"}];
-        [self setStatesArray:@[@"Australian Capital Territory", @"New South Wales", @"Queensland", @"Southern Australia", @"Tasmania", @"Victoria",  @"Western Australia"]];
+        [self setFamilyStructureArray:@[    @"Single",  @"Couple",      @"Family" , @"Family w/o minor",    @"Single family"]] ;
+        [self setFamilyCode:@[               @"single3", @"partner1",    @"married", @"divorced",            @"divorced"]];
+        [self setStatesArray:@[@"Australian Capital Territory", @"New South Wales", @"Queensland",  @"Southern Australia",  @"Tasmania",@"Victoria",@"Western Australia"]];
+        [self setStatesCode: @[@"ACT",                          @"NSW",             @"QLD",         @"SA",                  @"TAS",     @"VIC",     @"WA"]];
     }
     return self ;
 }
 - (NSString*) familyString
 {
-    return ( [ [self familyStructureDic ]objectForKey:[[self familyStructureArray ]  objectAtIndex:[self familyStructure ]]] ) ;
+    return ( [ [self familyCode ] objectAtIndex:[self familyStructure ]]) ;
 }
 - (NSString*) stateString
 {
-    return ( [ [self statesDic ]objectForKey:[[self statesArray ]  objectAtIndex:[self state ]]] ) ;
+    return ( [ [self statesCode ] objectAtIndex:[self state ]] ) ;
 }
 -(NSArray*) birthDatesArray
 {
@@ -53,6 +40,7 @@
     
     if ([self.birthDates count] )
         resultArray = @[[self.birthDates objectForKey:@"subscriber"],[self.birthDates objectForKey:@"partner"]] ;
+    else resultArray = @[[NSDate dateWithTimeIntervalSinceNow: - 504576000]];
 
     return resultArray ;
 }
