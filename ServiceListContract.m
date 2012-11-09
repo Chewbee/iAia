@@ -263,17 +263,6 @@
 {
     if(self = [super init])
     {
-        //			// @"http://ec2-46-137-35-33.eu-west-1.compute.amazonaws.com:8080";
-        //            //
-        //            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults] ;
-        //            NSString *theService = [[NSMutableString alloc] initWithString:@"http://"] ;
-        //            theService =[theService stringByAppendingString: [defaults stringForKey:@"server" ]];
-        //            theService = [theService stringByAppendingString:@".compute.amazonaws.com:8080" ];
-        //
-        //            self.serviceUrl = theService;
-        //			self.namespace = @"http://www.csc.com/graphtalk/aia/";
-        //			self.headers = nil;
-        //			self.logging = NO;
         [[serviceConfigurator sharedInstance]configureService:self];
     }
     return self;

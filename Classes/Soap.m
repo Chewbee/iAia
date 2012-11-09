@@ -28,8 +28,7 @@
 	[s appendString: @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"];
 
      [s appendString: @"<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">" ];
-    // FIXME:
-    //
+
 	if(headers != nil && headers.count > 0) {
 		[s appendString: @"<soap:Header>"];
 		for(id key in [headers allKeys]) {
@@ -41,7 +40,7 @@
 		}
 		[s appendString: @"</soap:Header>"];
 	}
-	[s appendString: @"<soap:Body xmlns=\"http://www.csc.com/graphtalk/aia/\" >"];
+	[s appendFormat: @"<soap:Body xmlns=\"%@\">", ns];
 
 	[s appendFormat: @"<%@>%@</%@>", method,[params stringByReplacingOccurrencesOfString:@"&" withString:@"&amp;"], method];
 	[s appendString: @"</soap:Body>"];

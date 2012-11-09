@@ -46,7 +46,7 @@
 {
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:TRUE] ;
     [self setTheSubView:[FakeHUD newFakeHUD]];
-    //[[self theSubView]gradient];
+    //FIXME: commented out was ugly[[self theSubView]gradient];
 	[[self viewController ].view addSubviewWithFadeAnimation:[self theSubView] duration:1.0 option:UIViewAnimationOptionCurveEaseOut];
 }
 //
