@@ -45,26 +45,27 @@
     UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f] ;
     UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f] ;
     UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f] ;
-    //UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
+    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
     //
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0f] ; ;
     NSDictionary *atts = @{
-UITextAttributeFont: font,
-    UITextAttributeTextColor : brokenWhiteColor,
-    UITextAttributeTextShadowColor : midGraycolor } ;
+        UITextAttributeFont: font,
+        UITextAttributeTextColor : brokenWhiteColor,
+        UITextAttributeTextShadowColor : midGraycolor } ;
 
 
-    UIImage *navImage   = [UIImage imageNamed:@"navBar.png"] ;
+    UIImage *navImage   = [UIImage imageNamed:@"gh-leather-NDG-44x44.png"] ;
     UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
     UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
+    UIImage *buttonFrame= [UIImage imageNamed:@"buttonback.png"] ;
     //
-    //navImage = [navImage resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
-    //tabBar = [tabBar resizableImageWithCapInsets: UIEdgeInsetsMake (1.0f,1.0f,1.0f,1.0f)];
+    navImage = [navImage resizableImageWithCapInsets: UIEdgeInsetsMake (8.0f,8.0f,8.0f,8.0f)];
+    buttonFrame = [buttonFrame resizableImageWithCapInsets: UIEdgeInsetsMake (6,6,6,7)];
     
     // Navigation bar
     UINavigationBar  *uinApp = [UINavigationBar  appearance];
     [uinApp setTintColor: naviBlueColor];
-    [uinApp setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
+    //[uinApp setBackgroundImage:navImage forBarMetrics:UIBarMetricsDefault];
     [uinApp setTitleTextAttributes:atts];
     
     // tableView
@@ -74,19 +75,39 @@ UITextAttributeFont: font,
     [uitv setBackgroundView:uiv] ;
     [uitv setSeparatorColor:midGraycolor] ;
     [uitv setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-    //[uitv setTitleTextAttributes:atts];
-    
-    // Button
-    UIButton *uib = [UIButton appearance ];
-    [uib setBackgroundImage:nil forState:UIControlStateNormal];
-    //[uib setBackgroundColor:nil];
+    //[uitv setTitleTextAttributes:atts]; does not work 
 
-    // UIBarButtonItem
+    // UITableviewCell ==>> prevents the table cell accessory from changing with the nav bar
+    UIButton *uibt = [UIButton appearanceWhenContainedIn:[UITableViewCell class], nil];
+    [uibt setTintColor:naviBlueColor];
+    //[uibt setBackgroundImage:nil forState:UIControlStateNormal ];
+    // Button
+    /*
+     UIButton *uib = [UIButton appearance];
+    [uib setBackgroundImage:buttonFrame
+                   forState:UIControlStateNormal ];
+    [uib setTitleColor:brokenWhiteColor
+              forState:UIControlStateNormal];
+    [uib setTitleColor:lightGraycolor
+              forState:UIControlStateSelected];
+
+*/
+    // UIBarButtonItem >> manages the nav bar buttons
     UIBarButtonItem *uibbi = [UIBarButtonItem appearance]  ;
-    [uibbi    setBackButtonBackgroundImage:nil forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+/*   [uibbi    setBackButtonBackgroundImage:buttonFrame
+                                  forState:UIControlStateNormal
+                                barMetrics:UIBarMetricsDefault];
+    
+    [uibbi    setBackgroundImage:buttonFrame
+                        forState:UIControlStateNormal
+                      barMetrics:UIBarMetricsDefault];
+ */
+    //[uibbi setTitleTextAttributes:atts forState:UIControlStateNormal]; Works but looks poor
+
     // Tab tab
     UITabBar *uitb = [UITabBar appearance];
-    [uitb setBackgroundImage:tabBar];
+    [uitb setTintColor:naviBlueColor];
+    //[uitb setBackgroundImage:navImage];
     //[uitb setTitleTextAttributes:atts];
 
     // Segmented control

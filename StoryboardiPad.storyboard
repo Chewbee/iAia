@@ -73,7 +73,7 @@
                                     <action selector="segmentedClicked:" destination="VqK-hK-U5A" eventType="valueChanged" id="y0H-Al-aPC"/>
                                 </connections>
                             </segmentedControl>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="IEq-9L-w3G">
+                            <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="IEq-9L-w3G">
                                 <rect key="frame" x="20" y="603" width="322" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="372456328.600932">
@@ -114,13 +114,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <pickerView opaque="NO" contentMode="scaleAspectFit" id="tWO-1F-cER">
                                 <rect key="frame" x="20" y="329" width="322" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="VqK-hK-U5A" id="wxQ-g4-A9T"/>
                                     <outlet property="delegate" destination="VqK-hK-U5A" id="2t1-jN-mvM"/>
                                 </connections>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" id="XDb-p8-UQ0">
+                            <pickerView opaque="NO" contentMode="scaleToFill" id="XDb-p8-UQ0">
                                 <rect key="frame" x="426" y="329" width="322" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -178,13 +177,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <scene sceneID="lVz-mW-a9j">
             <objects>
                 <tableViewController id="YVI-rQ-Sjh" customClass="CoverageSelectorViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="15" rowHeight="98" sectionHeaderHeight="10" sectionFooterHeight="10" id="dAF-jq-G79">
+                    <tableView key="view" opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" sectionIndexMinimumDisplayRowCount="15" rowHeight="98" sectionHeaderHeight="10" sectionFooterHeight="10" id="dAF-jq-G79">
                         <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.29411764705882354" green="0.49019607843137253" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="98" id="ceB-EB-A40" customClass="QuoteCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="98" id="ceB-EB-A40" customClass="QuoteCell">
                                 <rect key="frame" x="0.0" y="54" width="768" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -215,12 +214,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="premiumAmount" destination="wtL-ci-44L" id="Kbr-F7-NZ7"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoverageCell" rowHeight="98" id="cNI-Gp-dK0" customClass="CoverageViewCell">
+                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="none" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoverageCell" rowHeight="98" id="cNI-Gp-dK0" customClass="CoverageViewCell">
                                 <rect key="frame" x="0.0" y="153" width="768" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -241,7 +239,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="checkview" destination="GTq-jG-Ruh" id="2be-yt-udp"/>
                                     <outlet property="coverageLabel" destination="epW-VO-EXF" id="Rxe-M1-v8o"/>
