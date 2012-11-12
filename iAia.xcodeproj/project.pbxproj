@@ -103,7 +103,6 @@
 		E6D72AEA164C6F6E00ABBEAB /* leatherBack.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AE9164C6F6E00ABBEAB /* leatherBack.png */; };
 		E6D72AEC164C71FC00ABBEAB /* leatherWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AEB164C71FC00ABBEAB /* leatherWhite.png */; };
 		E6D72AEE164C7A1D00ABBEAB /* medibankLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AED164C7A1D00ABBEAB /* medibankLogo.png */; };
-		E6D72AF1164C80D900ABBEAB /* NSNumber+createWithNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D72AF0164C80D900ABBEAB /* NSNumber+createWithNode.m */; };
 		E6D72B26164D09FD00ABBEAB /* CreateProposalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D72B25164D09FD00ABBEAB /* CreateProposalViewController.m */; };
 		E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF051190C046007AA368 /* ContractDetailViewController.m */; };
 		E6E5BF131190C0EE007AA368 /* FinancialEventsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF111190C0EE007AA368 /* FinancialEventsDetailsViewController.m */; };
@@ -562,8 +561,6 @@
 		E6D72AE9164C6F6E00ABBEAB /* leatherBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leatherBack.png; path = images/leatherBack.png; sourceTree = "<group>"; };
 		E6D72AEB164C71FC00ABBEAB /* leatherWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leatherWhite.png; path = images/leatherWhite.png; sourceTree = "<group>"; };
 		E6D72AED164C7A1D00ABBEAB /* medibankLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medibankLogo.png; path = images/medibankLogo.png; sourceTree = "<group>"; };
-		E6D72AEF164C80D900ABBEAB /* NSNumber+createWithNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+createWithNode.h"; sourceTree = "<group>"; };
-		E6D72AF0164C80D900ABBEAB /* NSNumber+createWithNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+createWithNode.m"; sourceTree = "<group>"; };
 		E6D72B24164D09FD00ABBEAB /* CreateProposalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateProposalViewController.h; sourceTree = "<group>"; };
 		E6D72B25164D09FD00ABBEAB /* CreateProposalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProposalViewController.m; sourceTree = "<group>"; };
 		E6E5BF041190C046007AA368 /* ContractDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractDetailViewController.h; sourceTree = "<group>"; };
@@ -1229,8 +1226,6 @@
 				E694B795118A018C000B5D82 /* Cells */,
 				E6C877B1162F249C0083218B /* View controllers */,
 				E6F36FF6163DB7A000C371BE /* Models */,
-				E6D72AEF164C80D900ABBEAB /* NSNumber+createWithNode.h */,
-				E6D72AF0164C80D900ABBEAB /* NSNumber+createWithNode.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -2672,7 +2667,6 @@
 				DA0F0CA9164192E1001843F1 /* UIView+Animation.m in Sources */,
 				E66D94F1164A55930033B54C /* ServiceContractCreate.m in Sources */,
 				E6D72AE2164C646E00ABBEAB /* UIColor+CreateMethods.m in Sources */,
-				E6D72AF1164C80D900ABBEAB /* NSNumber+createWithNode.m in Sources */,
 				E6D72B26164D09FD00ABBEAB /* CreateProposalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

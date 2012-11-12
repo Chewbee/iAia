@@ -13,6 +13,8 @@
 #import "UIView+Animation.h"
 #import "NSNumber+createWithNode.h"
 #import "CreateProposalViewController.h"
+#import "CXMLElement.h"
+#import "CXMLNode.h"
 
 @interface CoverageSelectorViewController ()
 
@@ -133,8 +135,8 @@
         [alertView show] ;
 		return;
     }
-    [self setTarifArray:value] ;
-    [self.tableView  reloadData ] ;
+    [self setTarifArray:[self populateTarifArrayWithData:value]];
+    [self.tableView reloadData ] ;
 
 }
 -(void) getTariffMockup
@@ -142,10 +144,11 @@
     [self hideRefreshingIndicators];
     //  using local resource file in mockup mode
     NSString *XMLPath = nil ;
-    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Response Flow Variant 2_3.xml"];
+    XMLPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Response Flow Variant 1_3.xml"];
     NSData *XMLData =nil;
     XMLData = [NSData dataWithContentsOfFile:XMLPath];
-    [self populateTarifArrayWithData:XMLData];
+
+    [self ServiceGetTariffHandler:XMLData];
 }
 //
 -(NSMutableArray*) populateTarifArrayWithData:(NSData*) XMLDataFlow
@@ -162,15 +165,13 @@
     // namespace
     NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
     //  searching for Contract nodes
-    nodes = [doc nodesForXPath:@"//*[local-name()='PremiumList']" namespaceMappings:dict error:&err];
+    nodes = [doc nodesForXPath:@"//*[local-name()='Real']" namespaceMappings:dict error:&err];
     // namespace
+    CXMLElement *node = nil ;
     @try {
-        for (CXMLNode *node in nodes)
+        for (node in nodes)
         {
-            // creating contract objects from content
-        // FIXME: we should have basic types returned
-            NSNumber *tarif = nil;
-            tarif = [NSNumber createWithNode:node];
+            NSNumber *tarif = [[NSNumber alloc] initWithFloat:[[node stringValue]doubleValue]];
             if (tarif)
                 [result addObject:tarif ] ;
         }

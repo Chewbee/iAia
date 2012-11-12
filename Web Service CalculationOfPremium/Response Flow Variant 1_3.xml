@@ -3,21 +3,21 @@
     <soap:Body>
         <CalculationOfPremiumResponse xmlns="http://www.csc.com/graphtalk/aia/">
             <PremiumList>
-                <Premium>14.87</Premium>
-                <Premium>27.65</Premium>
-                <Premium>24.41</Premium>
-                <Premium>48.05</Premium>
-                <Premium>42.83</Premium>
-                <Premium>38.75</Premium>
-                <Premium>50.1</Premium>
-                <Premium>44.4</Premium>
-                <Premium>40.14</Premium>
-                <Premium>29.16</Premium>
-                <Premium>10.49</Premium>
-                <Premium>17.02</Premium>
-                <Premium>24.63</Premium>
-                <Premium>32.18</Premium>
-                <Premium>112.46</Premium>
+                <Real>14.87</Real>
+                <Real>27.65</Real>
+                <Real>24.41</Real>
+                <Real>48.05</Real>
+                <Real>42.83</Real>
+                <Real>38.75</Real>
+                <Real>50.1</Real>
+                <Real>44.4</Real>
+                <Real>40.14</Real>
+                <Real>29.16</Real>
+                <Real>10.49</Real>
+                <Real>17.02</Real>
+                <Real>24.63</Real>
+                <Real>32.18</Real>
+                <Real>112.46</Real>
             </PremiumList>
             <ReturnStatus>
                 <Code>WM_SUCCESS</Code>
