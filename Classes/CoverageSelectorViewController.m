@@ -11,10 +11,7 @@
 #import <Foundation/NSException.h>
 #import "FakeHUD.h"
 #import "UIView+Animation.h"
-#import "NSNumber+createWithNode.h"
 #import "CreateProposalViewController.h"
-#import "CXMLElement.h"
-#import "CXMLNode.h"
 
 @interface CoverageSelectorViewController ()
 

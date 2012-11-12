@@ -45,7 +45,7 @@
     UIColor *lightGraycolor     = [UIColor colorWithHex:@"#e1e1e1" alpha:1.0f] ;
     UIColor *midGraycolor       = [UIColor colorWithHex:@"#c8c8c8" alpha:1.0f] ;
     UIColor *naviBlueColor      = [UIColor colorWithHex:@"#4b7daf" alpha:1.0f] ;
-    UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
+    //UIColor *skyBluecolor       = [UIColor colorWithHex:@"#7dc8e1" alpha:1.0f] ;
     //
     UIFont *font = [UIFont fontWithName:@"Helvetica" size:22.0f] ; ;
     NSDictionary *atts = @{
@@ -55,7 +55,7 @@
 
 
     UIImage *navImage   = [UIImage imageNamed:@"gh-leather-NDG-44x44.png"] ;
-    UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
+    //UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
     UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
     UIImage *buttonFrame= [UIImage imageNamed:@"buttonback.png"] ;
     //
@@ -93,7 +93,7 @@
 
 */
     // UIBarButtonItem >> manages the nav bar buttons
-    UIBarButtonItem *uibbi = [UIBarButtonItem appearance]  ;
+    //UIBarButtonItem *uibbi = [UIBarButtonItem appearance]  ;
 /*   [uibbi    setBackButtonBackgroundImage:buttonFrame
                                   forState:UIControlStateNormal
                                 barMetrics:UIBarMetricsDefault];
