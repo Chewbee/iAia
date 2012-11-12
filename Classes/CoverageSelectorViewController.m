@@ -458,7 +458,7 @@
 	int section = indexPath.section ;
 	switch (section) {
 		case 0:
-			return 98;
+			return 132;
 			break;
 		case 1:
 			return 64 ;
