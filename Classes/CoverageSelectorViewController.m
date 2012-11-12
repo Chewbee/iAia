@@ -464,8 +464,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
+    [[cell coverage] setAmount:[[self tarifArray]objectAtIndex:[indexPath row] ] ];
     [cell.checkview setHidden:FALSE];
-    //TODO: get the tarif of the selected coverage
 
     [self updatePremiumDisplay:[cell coverage]];
 }
