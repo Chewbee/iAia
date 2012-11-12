@@ -46,17 +46,59 @@
 {
     [super viewDidLoad];
 
+    /*
+     Old Identifier			Label				New Identifier
+     -----------------------------------------------------------------------------------------
+     ["Pr_Young_Hos", "67"], 	%Young Hospital No Excess
+     ["Pr_Basic_250", "52"], 	%Basic Hospital Excess $250	["Pr_Basic_250", "76"]
+     ["Pr_Basic_500", "68"], 	%Basic Hospital Excess $500
+     ["Pr_Mid_Noex", "53"], 	 	%Mid Hospital No Excess		["Pr_Mid_Noex", "77"]
+     ["Pr_Mid_250", "69"], 		%Mid Hospital Excess $250
+     ["Pr_Mid_500", "70"], 		%Mid Hospital Excess $500
+     ["Pr_Top_Noex", "54"], 		%Top Hospital No Excess		["Pr_Top_Noex", "82"]
+     ["Pr_Top_250", "71"], 		%Top Hospital $250
+     ["Pr_Top_500", "72"], 		%Top Hospital $500
+     ["Pr_BasicEx_55", "73"], 	%Basic Extras 55% back
+     ["Pr_BasicEx_70", "74"], 	%Basic Extras 70% back
+     ["Pr_TopExt_55", "40"], 	%Top Extras 55% back		["Pr_TopExt_55", "79"]
+     ["Pr_TopEx_70", "41"], 	 	%Top Extras 70% back		["Pr_TopEx_70", "80"]
+     ["Pr_TopEx_85", "42"], 		%Top Extras 85% back		["Pr_TopEx_85", "81"]
+     ["Pr_Ultra_Health", "63"] 	%Ultra Health Cover		["Pr_Ultra_Health", "75"]
+     */
     //
     [self setCoveragesId:@[
-     @"67",@"73",@"74",
+     @"67",
+     @"73",@"74",
      @"77",@"69",@"70",
      @"82",@"71",@"72",
      @"75"
      ]];
-    //
-//    UIBarButtonItem *turnIntoContractButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose target:self action:@selector(turnIntoContract:)];
-//	[[self navigationItem ] setRightBarButtonItems: [[[self navigationItem ]rightBarButtonItems] arrayByAddingObject: turnIntoContractButton]];
-//    
+    [self setCoveragesRef:@[
+     @"67",
+     @"52", @"68",
+     @"53", @"69", @"70",
+     @"54", @"71", @"72",
+     @"73" , @"74",
+     @"40", @"41", @"42",
+     @"63"
+     ]];
+    /*
+     Val_1	67	Young Hospital No Excess
+     Val_2	52	Basic Hospital Excess $250
+     Val_3	68	Basic Hospital Excess $500
+     Val_4	53	Mid Hospital No Excess
+     Val_5	69	Mid Hospital Excess $250
+     Val_6	70	Mid Hospital Excess $500
+     Val_7	54	Top Hospital No Excess
+     Val_8	71	Top Hospital $250
+     Val_9	72	Top Hospital $500
+     Val_10	73	Basic Extras 55% back
+     Val_11	74	Basic Extras 70% back
+     Val_12	40	Top Extras 55% back
+     Val_13	41	Top Extras 70% back
+     Val_14	42	Top Extras 85% back
+     Val_15	63	Ultra Health Cover
+     */
     // header view
     [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
 
@@ -132,7 +174,7 @@
         [alertView show] ;
 		return;
     }
-    [self setTarifArray:[self populateTarifArrayWithData:value]];
+    [self setTarifDictionary:[self populateTarifDictionaryWithData:value]];
     [self.tableView reloadData ] ;
 
 }
@@ -148,9 +190,9 @@
     [self ServiceGetTariffHandler:XMLData];
 }
 //
--(NSMutableArray*) populateTarifArrayWithData:(NSData*) XMLDataFlow
+-(NSMutableDictionary*) populateTarifDictionaryWithData:(NSData*) XMLDataFlow
 {
-    NSMutableArray *result = [[NSMutableArray alloc]init] ;
+    NSMutableDictionary *result = [[NSMutableDictionary alloc]init] ;
     NSError *err = nil ;
     NSData *XMLData =nil;
     XMLData = [self conformInputString: XMLDataFlow ];
@@ -165,12 +207,13 @@
     nodes = [doc nodesForXPath:@"//*[local-name()='Real']" namespaceMappings:dict error:&err];
     // namespace
     CXMLElement *node = nil ;
+    integer_t i=0;
     @try {
         for (node in nodes)
         {
             NSNumber *tarif = [[NSNumber alloc] initWithFloat:[[node stringValue]doubleValue]];
-            if (tarif)
-                [result addObject:tarif ] ;
+            if (tarif && (i <= [[self coveragesRef]count]) )
+                [result setValue:tarif forKey: [[self coveragesRef] objectAtIndex:i++]] ;
         }
     }
     @catch ( NSException *exception )
@@ -405,9 +448,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 220 ;
+        return 0; // was 220
     }
-    return 0 ;
+    return 0 ; 
+}
+//
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	int section = indexPath.section ;
+	switch (section) {
+		case 0:
+			return 98;
+			break;
+		case 1:
+			return 64 ;
+			break;
+	}
+	return 0 ;
 }
 /*
  // Override to support conditional editing of the table view.
@@ -464,7 +521,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
-    [[cell coverage] setAmount:[[self tarifArray]objectAtIndex:[indexPath row] ] ];
+    [[cell coverage] setAmount:[[self tarifDictionary] objectForKey:[[cell coverage]Identifier ]] ];
     [cell.checkview setHidden:FALSE];
 
     [self updatePremiumDisplay:[cell coverage]];

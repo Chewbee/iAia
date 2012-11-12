@@ -22,7 +22,9 @@
 @interface CoverageSelectorViewController : UITableViewController
 
 @property (nonatomic,strong) NSArray            *coveragesId ;
-@property (nonatomic,strong) NSArray            *tarifArray ;
+@property (nonatomic,strong) NSArray            *coveragesRef ;
+
+@property (nonatomic,strong) NSDictionary       *tarifDictionary ;
 
 @property (nonatomic,strong) FastQuoteModel     *fastQuoteModel ;
 @property (nonatomic,strong) NSString           *familyStructure ;

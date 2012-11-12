@@ -56,7 +56,7 @@
 
     UIImage *navImage   = [UIImage imageNamed:@"gh-leather-NDG-44x44.png"] ;
     //UIImage *tabBar     = [UIImage imageNamed:@"tabBar.png"] ;
-    UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
+    //UIImage *leatherBack= [UIImage imageNamed:@"leatherWhite.png"] ;
     UIImage *buttonFrame= [UIImage imageNamed:@"buttonback.png"] ;
     //
     navImage = [navImage resizableImageWithCapInsets: UIEdgeInsetsMake (8.0f,8.0f,8.0f,8.0f)];
@@ -71,8 +71,8 @@
     // tableView
     UITableView *uitv = [UITableView appearance];
     [uitv setBackgroundColor:lightGraycolor];
-    UIImageView *uiv = [[UIImageView alloc] initWithImage:leatherBack] ;
-    [uitv setBackgroundView:uiv] ;
+    //UIImageView *uiv = [[UIImageView alloc] initWithImage:leatherBack] ;
+    //[uitv setBackgroundView:uiv] ;
     [uitv setSeparatorColor:midGraycolor] ;
     [uitv setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
     //[uitv setTitleTextAttributes:atts]; does not work 
