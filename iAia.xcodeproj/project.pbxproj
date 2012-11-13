@@ -23,14 +23,8 @@
 		DA0F75D6163AFD2C001CB9E2 /* CSCArrayOfDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D5163AFD2C001CB9E2 /* CSCArrayOfDate.m */; };
 		DA0F75DA163AFD5F001CB9E2 /* CSCArrayOfReal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */; };
 		DA52BD67164FB0040044D8FF /* buttonback.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD66164FB0040044D8FF /* buttonback.png */; };
-		DA52BD71164FBD060044D8FF /* gh-leather-NDG-44x44.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD68164FBD060044D8FF /* gh-leather-NDG-44x44.png */; };
-		DA52BD72164FBD060044D8FF /* gh-leather-44x44.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD69164FBD060044D8FF /* gh-leather-44x44.png */; };
-		DA52BD73164FBD060044D8FF /* gh-button-rayon8.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6A164FBD060044D8FF /* gh-button-rayon8.png */; };
 		DA52BD74164FBD060044D8FF /* get_quote_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6B164FBD060044D8FF /* get_quote_button.png */; };
 		DA52BD75164FBD060044D8FF /* icon-checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6C164FBD060044D8FF /* icon-checkmark.png */; };
-		DA52BD76164FBD060044D8FF /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6D164FBD060044D8FF /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */; };
-		DA52BD77164FBD060044D8FF /* lg-alertO-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6E164FBD060044D8FF /* lg-alertO-glass.png */; };
-		DA52BD78164FBD060044D8FF /* lg-failed-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6F164FBD060044D8FF /* lg-failed-glass.png */; };
 		DA52BD79164FBD060044D8FF /* lg-success-glass.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD70164FBD060044D8FF /* lg-success-glass.png */; };
 		DAA1A16F1633381800AB7704 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */; };
 		DAA1A17316333CFB00AB7704 /* iPadQuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA1A17216333CFB00AB7704 /* iPadQuoteViewController.m */; };
@@ -94,14 +88,7 @@
 		E6C877AD162F22260083218B /* SubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AC162F22260083218B /* SubscriberViewController.m */; };
 		E6C877B0162F223B0083218B /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877AF162F223B0083218B /* StateViewController.m */; };
 		E6C877B4162F24D40083218B /* fastQuoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C877B3162F24D40083218B /* fastQuoteModel.m */; };
-		E6D3FC57164BB4AA00AC2E8A /* cuir.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC56164BB4AA00AC2E8A /* cuir.png */; };
-		E6D3FC59164BC0DF00AC2E8A /* cuir@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */; };
-		E6D3FC5B164BCAA500AC2E8A /* cuir80.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D3FC5A164BCAA500AC2E8A /* cuir80.png */; };
 		E6D72AE2164C646E00ABBEAB /* UIColor+CreateMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */; };
-		E6D72AE7164C6E7800ABBEAB /* navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AE4164C6E7700ABBEAB /* navBar.png */; };
-		E6D72AE8164C6E7800ABBEAB /* tabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AE5164C6E7800ABBEAB /* tabBar.png */; };
-		E6D72AEA164C6F6E00ABBEAB /* leatherBack.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AE9164C6F6E00ABBEAB /* leatherBack.png */; };
-		E6D72AEC164C71FC00ABBEAB /* leatherWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AEB164C71FC00ABBEAB /* leatherWhite.png */; };
 		E6D72AEE164C7A1D00ABBEAB /* medibankLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D72AED164C7A1D00ABBEAB /* medibankLogo.png */; };
 		E6D72B26164D09FD00ABBEAB /* CreateProposalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D72B25164D09FD00ABBEAB /* CreateProposalViewController.m */; };
 		E6E5BF071190C046007AA368 /* ContractDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E5BF051190C046007AA368 /* ContractDetailViewController.m */; };
@@ -449,14 +436,8 @@
 		DA0F75D8163AFD5F001CB9E2 /* CSCArrayOfReal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfReal.h; sourceTree = "<group>"; };
 		DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfReal.m; sourceTree = "<group>"; };
 		DA52BD66164FB0040044D8FF /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonback.png; sourceTree = "<group>"; };
-		DA52BD68164FBD060044D8FF /* gh-leather-NDG-44x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gh-leather-NDG-44x44.png"; path = "images/gh-leather-NDG-44x44.png"; sourceTree = "<group>"; };
-		DA52BD69164FBD060044D8FF /* gh-leather-44x44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gh-leather-44x44.png"; path = "images/gh-leather-44x44.png"; sourceTree = "<group>"; };
-		DA52BD6A164FBD060044D8FF /* gh-button-rayon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gh-button-rayon8.png"; path = "images/gh-button-rayon8.png"; sourceTree = "<group>"; };
 		DA52BD6B164FBD060044D8FF /* get_quote_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = get_quote_button.png; path = images/get_quote_button.png; sourceTree = "<group>"; };
 		DA52BD6C164FBD060044D8FF /* icon-checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-checkmark.png"; path = "images/icon-checkmark.png"; sourceTree = "<group>"; };
-		DA52BD6D164FBD060044D8FF /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Medibank-Logo+Tag-Spectrum1_CMYK.jpg"; path = "images/Medibank-Logo+Tag-Spectrum1_CMYK.jpg"; sourceTree = "<group>"; };
-		DA52BD6E164FBD060044D8FF /* lg-alertO-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lg-alertO-glass.png"; path = "images/lg-alertO-glass.png"; sourceTree = "<group>"; };
-		DA52BD6F164FBD060044D8FF /* lg-failed-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lg-failed-glass.png"; path = "images/lg-failed-glass.png"; sourceTree = "<group>"; };
 		DA52BD70164FBD060044D8FF /* lg-success-glass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lg-success-glass.png"; path = "images/lg-success-glass.png"; sourceTree = "<group>"; };
 		DAA1A16E1633381800AB7704 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
 		DAA1A17116333CFB00AB7704 /* iPadQuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPadQuoteViewController.h; sourceTree = "<group>"; };
@@ -472,6 +453,8 @@
 		E6399C09163EBA9800C8119A /* CoverageHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverageHeaderViewController.h; sourceTree = "<group>"; };
 		E6399C0A163EBA9800C8119A /* CoverageHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverageHeaderViewController.m; sourceTree = "<group>"; };
 		E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverageHeaderViewController.xib; sourceTree = "<group>"; };
+		E63D7541165239EF0066A577 /* KeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainManager.h; sourceTree = "<group>"; };
+		E63D7542165239EF0066A577 /* KeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainManager.m; sourceTree = "<group>"; };
 		E64D8051163FDE0C0036CE2D /* ProductExtractResponseNew.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ProductExtractResponseNew.xml; sourceTree = "<group>"; };
 		E64D80531640184F0036CE2D /* Request Flow Variant 2_4.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_4.xml"; sourceTree = "<group>"; };
 		E64D80541640184F0036CE2D /* Request Flow Variant 2_3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Request Flow Variant 2_3.xml"; sourceTree = "<group>"; };
@@ -551,15 +534,8 @@
 		E6C877AF162F223B0083218B /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
 		E6C877B2162F24D40083218B /* fastQuoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fastQuoteModel.h; sourceTree = "<group>"; };
 		E6C877B3162F24D40083218B /* fastQuoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fastQuoteModel.m; sourceTree = "<group>"; };
-		E6D3FC56164BB4AA00AC2E8A /* cuir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cuir.png; path = images/cuir.png; sourceTree = "<group>"; };
-		E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cuir@x2.png"; path = "images/cuir@x2.png"; sourceTree = "<group>"; };
-		E6D3FC5A164BCAA500AC2E8A /* cuir80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cuir80.png; path = images/cuir80.png; sourceTree = "<group>"; };
 		E6D72AE0164C646E00ABBEAB /* UIColor+CreateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CreateMethods.h"; sourceTree = "<group>"; };
 		E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CreateMethods.m"; sourceTree = "<group>"; };
-		E6D72AE4164C6E7700ABBEAB /* navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navBar.png; path = images/navBar.png; sourceTree = "<group>"; };
-		E6D72AE5164C6E7800ABBEAB /* tabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabBar.png; path = images/tabBar.png; sourceTree = "<group>"; };
-		E6D72AE9164C6F6E00ABBEAB /* leatherBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leatherBack.png; path = images/leatherBack.png; sourceTree = "<group>"; };
-		E6D72AEB164C71FC00ABBEAB /* leatherWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leatherWhite.png; path = images/leatherWhite.png; sourceTree = "<group>"; };
 		E6D72AED164C7A1D00ABBEAB /* medibankLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = medibankLogo.png; path = images/medibankLogo.png; sourceTree = "<group>"; };
 		E6D72B24164D09FD00ABBEAB /* CreateProposalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateProposalViewController.h; sourceTree = "<group>"; };
 		E6D72B25164D09FD00ABBEAB /* CreateProposalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProposalViewController.m; sourceTree = "<group>"; };
@@ -1216,6 +1192,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E63D7540165239EF0066A577 /* KeyChain */,
 				E6D72AE0164C646E00ABBEAB /* UIColor+CreateMethods.h */,
 				E6D72AE1164C646E00ABBEAB /* UIColor+CreateMethods.m */,
 				E65E07D51625F740002034FC /* Services */,
@@ -1314,6 +1291,15 @@
 				E6399C0B163EBA9800C8119A /* CoverageHeaderViewController.xib */,
 			);
 			name = header;
+			sourceTree = "<group>";
+		};
+		E63D7540165239EF0066A577 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				E63D7541165239EF0066A577 /* KeyChainManager.h */,
+				E63D7542165239EF0066A577 /* KeyChainManager.m */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		E65E07D51625F740002034FC /* Services */ = {
@@ -2123,23 +2109,10 @@
 			isa = PBXGroup;
 			children = (
 				DA52BD66164FB0040044D8FF /* buttonback.png */,
-				DA52BD68164FBD060044D8FF /* gh-leather-NDG-44x44.png */,
-				DA52BD69164FBD060044D8FF /* gh-leather-44x44.png */,
-				DA52BD6A164FBD060044D8FF /* gh-button-rayon8.png */,
 				DA52BD6B164FBD060044D8FF /* get_quote_button.png */,
 				DA52BD6C164FBD060044D8FF /* icon-checkmark.png */,
-				DA52BD6D164FBD060044D8FF /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg */,
-				DA52BD6E164FBD060044D8FF /* lg-alertO-glass.png */,
-				DA52BD6F164FBD060044D8FF /* lg-failed-glass.png */,
 				DA52BD70164FBD060044D8FF /* lg-success-glass.png */,
 				E6D72AED164C7A1D00ABBEAB /* medibankLogo.png */,
-				E6D72AEB164C71FC00ABBEAB /* leatherWhite.png */,
-				E6D72AE9164C6F6E00ABBEAB /* leatherBack.png */,
-				E6D72AE4164C6E7700ABBEAB /* navBar.png */,
-				E6D72AE5164C6E7800ABBEAB /* tabBar.png */,
-				E6D3FC5A164BCAA500AC2E8A /* cuir80.png */,
-				E6D3FC58164BC0DF00AC2E8A /* cuir@x2.png */,
-				E6D3FC56164BB4AA00AC2E8A /* cuir.png */,
 				E64D806A16408A150036CE2D /* contract-icon.png */,
 				E684CB99161C3ACA001D3BDC /* Default-568h@2x.png */,
 				E62497F6118F816C00D9BA93 /* icon.png */,
@@ -2256,23 +2229,10 @@
 				E64D806416402C880036CE2D /* Response Flow Variant 2_3.xml in Resources */,
 				E64D806B16408A150036CE2D /* contract-icon.png in Resources */,
 				DA0F0CA116418FE4001843F1 /* FakeHUD.xib in Resources */,
-				E6D3FC57164BB4AA00AC2E8A /* cuir.png in Resources */,
-				E6D3FC59164BC0DF00AC2E8A /* cuir@x2.png in Resources */,
-				E6D3FC5B164BCAA500AC2E8A /* cuir80.png in Resources */,
-				E6D72AE7164C6E7800ABBEAB /* navBar.png in Resources */,
-				E6D72AE8164C6E7800ABBEAB /* tabBar.png in Resources */,
-				E6D72AEA164C6F6E00ABBEAB /* leatherBack.png in Resources */,
-				E6D72AEC164C71FC00ABBEAB /* leatherWhite.png in Resources */,
 				E6D72AEE164C7A1D00ABBEAB /* medibankLogo.png in Resources */,
 				DA52BD67164FB0040044D8FF /* buttonback.png in Resources */,
-				DA52BD71164FBD060044D8FF /* gh-leather-NDG-44x44.png in Resources */,
-				DA52BD72164FBD060044D8FF /* gh-leather-44x44.png in Resources */,
-				DA52BD73164FBD060044D8FF /* gh-button-rayon8.png in Resources */,
 				DA52BD74164FBD060044D8FF /* get_quote_button.png in Resources */,
 				DA52BD75164FBD060044D8FF /* icon-checkmark.png in Resources */,
-				DA52BD76164FBD060044D8FF /* Medibank-Logo+Tag-Spectrum1_CMYK.jpg in Resources */,
-				DA52BD77164FBD060044D8FF /* lg-alertO-glass.png in Resources */,
-				DA52BD78164FBD060044D8FF /* lg-failed-glass.png in Resources */,
 				DA52BD79164FBD060044D8FF /* lg-success-glass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
