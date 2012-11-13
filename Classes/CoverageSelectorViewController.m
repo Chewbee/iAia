@@ -75,30 +75,13 @@
      ]];
     [self setCoveragesRef:@[
      @"67",
-     @"52", @"68",
-     @"53", @"69", @"70",
-     @"54", @"71", @"72",
+     @"76", @"68",
+     @"77", @"69", @"70",
+     @"82", @"71", @"72",
      @"73" , @"74",
-     @"40", @"41", @"42",
-     @"63"
+     @"79", @"80", @"81",
+     @"75"
      ]];
-    /*
-     Val_1	67	Young Hospital No Excess
-     Val_2	52	Basic Hospital Excess $250
-     Val_3	68	Basic Hospital Excess $500
-     Val_4	53	Mid Hospital No Excess
-     Val_5	69	Mid Hospital Excess $250
-     Val_6	70	Mid Hospital Excess $500
-     Val_7	54	Top Hospital No Excess
-     Val_8	71	Top Hospital $250
-     Val_9	72	Top Hospital $500
-     Val_10	73	Basic Extras 55% back
-     Val_11	74	Basic Extras 70% back
-     Val_12	40	Top Extras 55% back
-     Val_13	41	Top Extras 70% back
-     Val_14	42	Top Extras 85% back
-     Val_15	63	Ultra Health Cover
-     */
     // header view
     [self setCoverageHeaderView:[[CoverageHeaderViewController alloc]initWithNibName:@"CoverageHeaderViewController" bundle:[NSBundle mainBundle ]]];
 
@@ -144,11 +127,12 @@
         NSString *password = [defaults stringForKey:@"password_preference" ] ;
         ServiceGetTariff  *service = [ServiceGetTariff serviceWithUsername:login andPassword:password] ;
         // get the params
+        CSCArrayOfDate *dateArray = [[self fastQuoteModel] birthDatesArray] ; 
         [service  CalculationOfPremium: self action:@selector(ServiceGetTariffHandler:)
                            Environment: [[CSCWMEnv alloc] init]
                        FamilyStructure:[NSString stringWithString:[[self fastQuoteModel] familyString]]
                                  State:[NSString stringWithString:[[self fastQuoteModel] stateString ]]
-                         BirthDateList:[NSMutableArray arrayWithArray:[[self fastQuoteModel] birthDatesArray]]
+                         BirthDateList: dateArray
                               Contract: nil ];
     }
 
@@ -174,7 +158,11 @@
         [alertView show] ;
 		return;
     }
-    [self setTarifDictionary:[self populateTarifDictionaryWithData:value]];
+    if ([value isKindOfClass:[CSCArrayOfReal class]]) {
+        [self setTarifDictionary:[self populateTarifDictionaryWithArray:value]];
+    }
+    else
+        [self setTarifDictionary:[self populateTarifDictionaryWithData:value]];
     [self.tableView reloadData ] ;
 
 }
@@ -224,6 +212,27 @@
     return result ;
 }
 //
+-(NSMutableDictionary*) populateTarifDictionaryWithArray:(CSCArrayOfReal*) array
+{
+    NSMutableDictionary *result = [[NSMutableDictionary alloc]init] ;
+
+    integer_t i=0;
+    @try {
+        for (NSDecimalNumber *node in array)
+        {
+            if (i <= [[self coveragesRef]count])
+                [result setValue:node forKey: [[self coveragesRef] objectAtIndex:i++]] ;
+        }
+    }
+    @catch ( NSException *exception )
+    {
+        // Being here prevents a crash in case the data are not in UTF-8
+        // BUT conformInputString solves the case for now
+    }
+    return result ;
+}
+//
+
 #pragma mark - productExtract Web Service stuff
 //
 -(void) productExtract

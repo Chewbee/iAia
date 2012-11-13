@@ -7,6 +7,7 @@
 //
 
 #import "FastQuoteModel.h"
+#import "CSCArrayOfDate.h"
 
 @implementation FastQuoteModel
 
@@ -34,13 +35,17 @@
 {
     return ( [ [self statesCode ] objectAtIndex:[self state ]] ) ;
 }
--(NSArray*) birthDatesArray
+-(CSCArrayOfDate*) birthDatesArray
 {
-    NSArray *resultArray = nil ;
+    CSCArrayOfDate *resultArray = [[CSCArrayOfDate alloc]init] ;
     
     if ([self.birthDates count] )
-        resultArray = @[[self.birthDates objectForKey:@"subscriber"],[self.birthDates objectForKey:@"partner"]] ;
-    else resultArray = @[[NSDate dateWithTimeIntervalSinceNow: - 504576000]];
+    {
+        [resultArray addObject: [self.birthDates objectForKey:@"subscriber"] ];
+        [resultArray addObject: [self.birthDates objectForKey:@"partner"] ];
+     }
+    else
+        [resultArray addObject:[NSDate dateWithTimeIntervalSinceNow: - 603720000]];
 
     return resultArray ;
 }

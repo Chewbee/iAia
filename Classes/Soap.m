@@ -456,7 +456,8 @@
 		NSLocale* enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
 		[formatter setLocale: enUS];
 		[formatter setLenient: YES];
-		[formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS"];
+		//[formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS"];
+        [formatter setDateFormat:@"yyyy-MM-dd"];
 	}
 	return formatter;
 }

@@ -232,8 +232,8 @@
 @interface ServiceGetTariff : SoapService
 		
 	/* Returns NSMutableArray*.  */
-	- (SoapRequest*) CalculationOfPremium: (id <SoapDelegate>) handler Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (NSMutableArray*) BirthDateList Contract: (CSCContract*) Contract;
-	- (SoapRequest*) CalculationOfPremium: (id) target action: (SEL) action Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (NSMutableArray*) BirthDateList Contract: (CSCContract*) Contract;
+	- (SoapRequest*) CalculationOfPremium: (id <SoapDelegate>) handler Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (CSCArrayOfDate*) BirthDateList Contract: (CSCContract*) Contract;
+	- (SoapRequest*) CalculationOfPremium: (id) target action: (SEL) action Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (CSCArrayOfDate*) BirthDateList Contract: (CSCContract*) Contract;
 
 		
 	+ (ServiceGetTariff*) service;

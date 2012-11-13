@@ -257,13 +257,15 @@
 
 
 /* Returns NSMutableArray*.  */
-- (SoapRequest*) CalculationOfPremium: (id <SoapDelegate>) handler Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (NSMutableArray*) BirthDateList Contract: (CSCContract*) Contract
+- (SoapRequest*) CalculationOfPremium: (id <SoapDelegate>) handler Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (CSCArrayOfDate*) BirthDateList Contract: (CSCContract*) Contract
 {
     return [self CalculationOfPremium: handler action: nil Environment: Environment FamilyStructure: FamilyStructure State: State BirthDateList: BirthDateList Contract: Contract];
 }
 
-- (SoapRequest*) CalculationOfPremium: (id) _target action: (SEL) _action Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (NSMutableArray*) BirthDateList Contract: (CSCContract*) Contract
+- (SoapRequest*) CalculationOfPremium: (id) _target action: (SEL) _action Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (CSCArrayOfDate*) BirthDateList Contract: (CSCContract*) Contract
 {
+    [self setLogging:YES];
+    
     NSMutableArray* _params = [NSMutableArray array];
 
     [_params addObject: [[SoapParameter alloc] initWithValue: Environment forName: @"Environment"]];

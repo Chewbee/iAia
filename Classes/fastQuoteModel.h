@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "serviceProductExtract.h"
+#import "CSCArrayOfDate.h"
 
 
 @interface FastQuoteModel : NSObject
@@ -28,6 +29,6 @@
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier;
 - (NSString*) familyString ;
 - (NSString*) stateString ;
-- (NSArray*) birthDatesArray ; 
+- (CSCArrayOfDate*) birthDatesArray ;
 
 @end
