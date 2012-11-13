@@ -577,7 +577,12 @@
 {
     NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
 
-    responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    if ([data isKindOfClass:[NSData class]])
+    {
+        responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    }
+    else return nil ;
+
     if (!responseStringASCII) // ASCII is not working, will try utf-8!
         responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     else
