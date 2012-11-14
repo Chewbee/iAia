@@ -385,7 +385,11 @@
 		case 0:
             return 1;
 		case 1:
-            if ([[self productOptions]count]) {
+            if ([[self productOptions]count])
+            {
+                if (! [[self fastQuoteModel]isElligibleForYoung]) {
+                    return  ([[self coveragesId]count]-1);
+                }
                  return  [[self coveragesId]count];
             }
             else return 0;
@@ -420,20 +424,19 @@
         case 1:
 		{
             cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
-            
+            //
+            int row = [indexPath row] ; 
+            //
+            if ( ! [[self fastQuoteModel]isElligibleForYoung])
+                row ++ ;
+
             // Assign the coverage itself to the cell
             CSCCoverage *cover = [[self coverageDictionnary]
                                   objectForKey:[[self coveragesId ]
-                                                objectAtIndex:[indexPath row]]];
+                                                objectAtIndex:row]];
+
             [(CoverageViewCell*)cell setCoverage:cover] ;
-            /*
-            if ([[cover DisplayId]hasPrefix:@"YOUNG"] && ! [[self fastQuoteModel]isElligibleForYoung])
-            {
-                [(CoverageViewCell*)cell setCoverage:nil] ;
-                [cell setAlpha:0.0f];
-            }
-             */
-            //
+
             NSString *coverageDisplayId = [[(CoverageViewCell*)cell coverage]DisplayId];
             [[(CoverageViewCell*)cell coverageLabel] setText:coverageDisplayId];
             
