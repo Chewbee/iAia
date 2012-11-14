@@ -15,6 +15,6 @@
 
 @interface CoverageDetailViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextView *coverageTextView;
+@property (weak, nonatomic) IBOutlet UIWebView *coverageWebView;
 @property (nonatomic, strong) CSCCoverage *coverage ; 
 @end

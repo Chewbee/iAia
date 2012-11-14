@@ -13,6 +13,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iAiaViewController.m */; };
+		DA0B65821654298B00631519 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = DA0B65811654298B00631519 /* index.html */; };
 		DA0F0C9E16418F81001843F1 /* FakeHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F0C9D16418F81001843F1 /* FakeHUD.m */; };
 		DA0F0CA116418FE4001843F1 /* FakeHUD.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0F0CA016418FE4001843F1 /* FakeHUD.xib */; };
 		DA0F0CA9164192E1001843F1 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F0CA8164192E1001843F1 /* UIView+Animation.m */; };
@@ -420,6 +421,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iAia_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAia_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iAia-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAia-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DA0B65811654298B00631519 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		DA0F0C9C16418F81001843F1 /* FakeHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FakeHUD.h; sourceTree = "<group>"; };
 		DA0F0C9D16418F81001843F1 /* FakeHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FakeHUD.m; sourceTree = "<group>"; };
 		DA0F0CA016418FE4001843F1 /* FakeHUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FakeHUD.xib; sourceTree = "<group>"; };
@@ -1250,6 +1252,7 @@
 				DA0F0CA016418FE4001843F1 /* FakeHUD.xib */,
 				E6F1D51E163EC67F00F7093F /* Images */,
 				8D1107310486CEB800E47090 /* iAia-Info.plist */,
+				DA0B65811654298B00631519 /* index.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -2234,6 +2237,7 @@
 				DA52BD74164FBD060044D8FF /* get_quote_button.png in Resources */,
 				DA52BD75164FBD060044D8FF /* icon-checkmark.png in Resources */,
 				DA52BD79164FBD060044D8FF /* lg-success-glass.png in Resources */,
+				DA0B65821654298B00631519 /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
