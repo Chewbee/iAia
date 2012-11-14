@@ -390,7 +390,7 @@
                 if (! [[self fastQuoteModel]isElligibleForYoung]) {
                     return  ([[self coveragesId]count]-1);
                 }
-                 return  [[self coveragesId]count];
+                return  [[self coveragesId]count];
             }
             else return 0;
     }
@@ -528,7 +528,7 @@
  */
 
 #pragma mark - Table view delegate
-// trick to allow accesory segue in IOS 5 (usually do not work)
+// trick to allow accesory segue in IOS 5 (otherwise it does not work)
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     [self performSegueWithIdentifier: @"detailCoverage" sender: [tableView cellForRowAtIndexPath: indexPath]];
@@ -536,17 +536,24 @@
 //
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
-    [cell.checkview setHidden:TRUE];
+    if ([indexPath section ] != 0) {
+        CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
+        [cell.checkview setHidden:TRUE];
+    }
 }
 //
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([indexPath section]==0) {
+     //   [self slideOutWebView];
+        return;
+    }
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
     [[cell coverage] setAmount:[[self tarifDictionary] objectForKey:[[cell coverage]Identifier ]] ];
     [cell.checkview setHidden:FALSE];
 
     [self updatePremiumDisplay:[cell coverage]];
+   // [self slideInWebViewfor];
 }
 //
 -(void) updatePremiumDisplay:(CSCCoverage*)coverage
@@ -570,6 +577,84 @@
     }
 }
 //
+#pragma mark - WebView for details
+- (void)slideInWebViewfor
+{
+    [self composeCoverageDetaislPage];
+    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:pathAndFileName isDirectory:NO]];
+    [[self webDetails] loadRequest:request];
+    //[[self webDetails] setDelegate:self];
+    //
+	//CGRect webFrame = [[self webDetails ]frame] ;
+
+    CGRect webFrame = CGRectMake(0, 768, 768, 874);
+    [[self webDetails] setFrame:webFrame];
+
+	[UIView beginAnimations:@"Web" context:nil] ;
+	webFrame.origin.y = 150 ;
+	[[self webDetails] setFrame:webFrame];
+	[[self view] bringSubviewToFront:[self webDetails]] ;
+	[UIView commitAnimations] ;
+}
+//
+- (void)slideOutWebView
+{
+    CGRect webFrame = [[self webDetails]frame] ;
+
+	[UIView beginAnimations:nil context:nil] ;
+	webFrame.origin.y = 1024 ;
+	[[self webDetails] setFrame:webFrame];
+	[UIView commitAnimations] ;
+}
+//
+-(void)composeCoverageDetaislPage
+{
+    NSMutableString *HTMLpage = [ NSMutableString stringWithString:@"<HTML><HEADER> <style type=\"text/css\"> h2 { color: #4B7DAF; }  </style> </HEADER><BODY bgcolor=\"#e1e1e1\">"] ;
+    //
+    CSCHealthCoverageDetail *hcd = [[[self quoteCell] coverage] HealthCoverageDetail] ;
+    NSMutableArray *formulasArray = [hcd FormulaList] ;
+    for (CSCHealthFormula *formula in formulasArray){
+        for (CSCHealthFormulaItem *formulaItem in [formula ItemList]){
+            if ([[formulaItem TextList]count]>0) {
+                for (NSString *detailText in formulaItem.TextList) {
+                    if (! [detailText hasPrefix:@"<Health"])
+                    {
+                        NSString *line = [NSString stringWithString:detailText];
+                        [HTMLpage appendFormat:@"%@",[self HTMLFromText:[line capitalizedString]] ] ;
+                    }
+                }
+            }
+        }
+    }
+    //
+    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSError *error = nil ;
+    [HTMLpage appendString:@"</BODY></HTML>"];
+    [HTMLpage writeToFile:pathAndFileName atomically:YES encoding: NSUTF8StringEncoding error:&error];
+}
+//
+//
+-(NSString*) HTMLFromText: (NSString*) text
+{
+    NSMutableString *returnString = [NSMutableString stringWithString:@""];
+
+    if ([text hasPrefix:@"**"]) {
+        [returnString appendFormat:@"%@<br>",text];
+
+    } else if ([text hasPrefix:@"*"]){
+        [returnString appendFormat:@"<H3>%@</H3>",text];
+
+    } else if ([text hasPrefix:@"-"]) {
+        [returnString appendString:@"<hr width=\"75%\"      >"];
+
+    } else if ([text isEqualToString:@"\n" ])
+        [returnString appendString:@"<br>"];
+    else
+        [returnString appendFormat:@"<H2>%@</H2>",text];
+
+    return returnString ;
+}
 #pragma mark - TOOLS
 - (void)displayRefreshingIndicators
 {

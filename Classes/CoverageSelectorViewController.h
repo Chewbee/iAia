@@ -36,9 +36,11 @@
 
 @property (nonatomic, weak) QuoteCell           *quoteCell ; 
 
-@property (nonatomic, strong) CoverageHeaderViewController *coverageHeaderView ;
-@property (nonatomic, weak) FakeHUD             *theSubView ;
+@property (nonatomic, strong) CoverageHeaderViewController  *coverageHeaderView ;
+@property (nonatomic, weak) FakeHUD                         *theSubView ;
+@property (nonatomic, strong) IBOutlet UIWebView            *webDetails ;
 
+@property (nonatomic, assign)BOOL               selection ;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem      *turnIntoContractButton;
 

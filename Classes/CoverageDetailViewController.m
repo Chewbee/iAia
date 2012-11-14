@@ -48,14 +48,12 @@
             }
         }
     }
-    //
-    NSString *pathAndFileName = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    
-    NSError *error = nil ;
+    NSString * docsDir = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString * path = [docsDir stringByAppendingPathComponent:@"index.html"];
     [HTMLpage appendString:@"</BODY></HTML>"];
-    [HTMLpage writeToFile:pathAndFileName atomically:YES encoding: NSUTF8StringEncoding error:&error];
+    [HTMLpage writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
     //
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:pathAndFileName isDirectory:NO]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path isDirectory:NO]];
     //
     [[self coverageWebView] loadRequest:request];
 }
