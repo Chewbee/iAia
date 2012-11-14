@@ -422,7 +422,17 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"CoverageCell"] ;
             
             // Assign the coverage itself to the cell
-            [(CoverageViewCell*)cell setCoverage:[[self coverageDictionnary] objectForKey:[[self coveragesId ] objectAtIndex:[indexPath row]]]];
+            CSCCoverage *cover = [[self coverageDictionnary]
+                                  objectForKey:[[self coveragesId ]
+                                                objectAtIndex:[indexPath row]]];
+            [(CoverageViewCell*)cell setCoverage:cover] ;
+            /*
+            if ([[cover DisplayId]hasPrefix:@"YOUNG"] && ! [[self fastQuoteModel]isElligibleForYoung])
+            {
+                [(CoverageViewCell*)cell setCoverage:nil] ;
+                [cell setAlpha:0.0f];
+            }
+             */
             //
             NSString *coverageDisplayId = [[(CoverageViewCell*)cell coverage]DisplayId];
             [[(CoverageViewCell*)cell coverageLabel] setText:coverageDisplayId];

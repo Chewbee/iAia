@@ -30,5 +30,6 @@
 - (NSString*) familyString ;
 - (NSString*) stateString ;
 - (CSCArrayOfDate*) birthDatesArray ;
-
+-(BOOL) isElligibleForYoung ;
+-(NSTimeInterval) oldest ;
 @end

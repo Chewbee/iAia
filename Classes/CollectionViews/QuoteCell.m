@@ -30,6 +30,6 @@
 
 -(void) refresh
 {
-    [[self premiumAmount] setText:[NSString stringWithFormat:@" %2@ ",[[self coverage] Amount] ]];
+    [[self premiumAmount] setText:[NSString stringWithFormat:@" %2.2f ",[[[self coverage] Amount]floatValue] ]];
 }
 @end

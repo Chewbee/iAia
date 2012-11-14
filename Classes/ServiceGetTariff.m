@@ -264,8 +264,6 @@
 
 - (SoapRequest*) CalculationOfPremium: (id) _target action: (SEL) _action Environment: (CSCWMEnv*) Environment FamilyStructure: (NSString*) FamilyStructure State: (NSString*) State BirthDateList: (CSCArrayOfDate*) BirthDateList Contract: (CSCContract*) Contract
 {
-    [self setLogging:YES];
-    
     NSMutableArray* _params = [NSMutableArray array];
 
     [_params addObject: [[SoapParameter alloc] initWithValue: Environment forName: @"Environment"]];

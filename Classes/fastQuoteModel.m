@@ -38,16 +38,55 @@
 -(CSCArrayOfDate*) birthDatesArray
 {
     CSCArrayOfDate *resultArray = [[CSCArrayOfDate alloc]init] ;
-    
-    if ([self.birthDates count] )
+
+    if ([self.birthDates count] == 1)
+    {
+        [resultArray addObject: [self.birthDates objectForKey:@"subscriber"] ];
+    }
+    else if ([self.birthDates count] == 2)
     {
         [resultArray addObject: [self.birthDates objectForKey:@"subscriber"] ];
         [resultArray addObject: [self.birthDates objectForKey:@"partner"] ];
-     }
-    else
-        [resultArray addObject:[NSDate dateWithTimeIntervalSinceNow: - 603720000]];
+    }
+    [resultArray addObject:[NSDate dateWithTimeIntervalSinceNow: - 603720000]];
 
     return resultArray ;
+}
+-(BOOL) isElligibleForYoung
+{
+    if ([[self birthDates] count]<2 &&
+        ([self familyStructure]==0) &&
+        ([self oldest] < 35)) {
+        return true ; 
+    }
+    return false ;
+}
+//
+-(NSTimeInterval) oldest
+{
+    NSDate *now = [NSDate date];
+    NSTimeInterval age1 = 0 ;
+    NSTimeInterval age2 = 0 ;
+    switch ([[self birthDates]count]) {
+        case 1:
+            age1 = [now timeIntervalSinceDate:[self.birthDates objectForKey:@"subscriber"]];
+            break;
+        case 2:
+        {
+            age1 = [now timeIntervalSinceDate:[self.birthDates objectForKey:@"subscriber"]];
+            age2 = [now timeIntervalSinceDate:[self.birthDates objectForKey:@"partner"]];
+        }
+            break;
+        default:
+            break;
+    }
+    age1 = age1 / (3600*24*365);
+    age2 = age2 / (3600*24*365);
+
+    if (age1 > age2)
+        return age1;
+    else
+        return age2;
 }
 //
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier {
