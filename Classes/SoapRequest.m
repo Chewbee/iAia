@@ -9,6 +9,7 @@
 #import "SoapFault.h"
 #import "Soap.h"
 #import <objc/message.h>
+#import "KeyChainManager.h"
 
 @implementation SoapRequest
 
@@ -302,15 +303,14 @@
     confirmNeed = challenge ;
     // Here you need to check current serverTrust. Maybe it is already saved as trusted?
     // In this example KeyChain is used.
-    /*
-     //FIXME: KeyChainManager
-     if([[KeyChainManager sharedManager] isSavedTrust:confirmNeed.protectionSpace.serverTrust]) {
+    if([[KeyChainManager sharedManager] isSavedTrust:confirmNeed.protectionSpace.serverTrust]) {
         if(nil != confirmNeed) {
             [confirmNeed.sender useCredential:[NSURLCredential credentialForTrust:confirmNeed.protectionSpace.serverTrust] forAuthenticationChallenge:confirmNeed];
             confirmNeed = nil;
         }
     }
-    else */{
+    else
+    {
         if(nil != self.requestDelegate) {
             if([self.requestDelegate respondsToSelector:@selector(requestNeedsUserInteraction)]) {
                 [self.requestDelegate requestNeedsUserInteraction];
@@ -349,7 +349,7 @@
         if(nil != confirmNeed) {
             // Here you need to store the certificate for the future checks
             // In this example KeyChain is used.
-           //FIXME:  [[KeyChainManager sharedManager] saveCertificatesFromTrust:confirmNeed.protectionSpace.serverTrust];
+            [[KeyChainManager sharedManager] saveCertificatesFromTrust:confirmNeed.protectionSpace.serverTrust];
             [confirmNeed.sender useCredential:[NSURLCredential credentialForTrust:confirmNeed.protectionSpace.serverTrust] forAuthenticationChallenge:confirmNeed];
         }
     }

@@ -13,6 +13,7 @@
 
 @interface FastQuoteModel : NSObject
 
+//refenrential props
 @property (nonatomic,assign)NSInteger           familyStructure;
 @property (nonatomic,strong)NSArray             *familyCode ;
 @property (nonatomic,strong)NSArray             *familyStructureArray ;
@@ -25,6 +26,9 @@
 
 @property (nonatomic,strong)NSMutableArray     *productDetail ;
 
+@property (nonatomic, strong)CSCContract        *contract ;
+@property (nonatomic,strong) CSCCoverage        *coverage ;
+@property (nonatomic,strong) CSCWMStatus        *status ; 
 
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier;
 - (NSString*) familyString ;
@@ -32,4 +36,5 @@
 - (CSCArrayOfDate*) birthDatesArray ;
 -(BOOL) isElligibleForYoung ;
 -(NSTimeInterval) oldest ;
+-(void) setContractFromXMLFlow:(NSData*)XMLFlow ; 
 @end

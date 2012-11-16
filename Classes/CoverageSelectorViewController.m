@@ -282,6 +282,7 @@
 
     [self setProductOptions:[self populateOptionArrayWithData:[value XMLData]]] ;
     [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:[value XMLData]]];
+    [[self fastQuoteModel] setContract:[self populateContractFromData:[value XMLData]]];
 
     [self hideRefreshingIndicators];
     
@@ -300,6 +301,31 @@
     [self setCoverageDictionnary:[self populateCoverageDictionnaryWithData:(NSData*) XMLData]];
 
     [self hideRefreshingIndicators];
+}
+//
+-(CSCContract*) populateContractFromData:(NSData*) XMLDataFlow
+{
+    CSCContract *contract = nil ;
+
+    NSError *err = nil ;
+    NSData *XMLData =nil;
+    XMLData = [self conformInputString: XMLDataFlow ];
+
+    CXMLDocument *doc = nil ;
+    doc = [[CXMLDocument alloc] initWithData:XMLData options:0 error:&err];
+    //
+    NSArray *nodes = nil ;
+    // namespace
+    NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
+    //  searching for Contract nodes
+    nodes = [doc nodesForXPath:@"//*[local-name()='Contract']" namespaceMappings:dict error:&err];
+    // namespace
+    for (CXMLNode *node in nodes)
+    {
+        // creating contract objects from content
+        contract = [CSCContract createWithNode:node];
+    }
+    return contract;
 }
 //
 -(NSMutableDictionary*) populateOptionArrayWithData:(NSData*) XMLDataFlow
@@ -540,6 +566,7 @@
         CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
         [cell.checkview setHidden:TRUE];
     }
+    [[self fastQuoteModel] setCoverage:nil];
 }
 //
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -550,6 +577,7 @@
     }
     CoverageViewCell *cell = (CoverageViewCell*)[tableView cellForRowAtIndexPath:indexPath] ;
     [[cell coverage] setAmount:[[self tarifDictionary] objectForKey:[[cell coverage]Identifier ]] ];
+    [[self fastQuoteModel] setCoverage:[cell coverage]];
     [cell.checkview setHidden:FALSE];
 
     [self updatePremiumDisplay:[cell coverage]];
@@ -572,8 +600,8 @@
     // CreateProposal
     if ([segue.identifier isEqualToString:@"CreateProposal"])
     {
-        //CreateProposalViewController *targetVC = (CreateProposalViewController*)segue.destinationViewController;
-        //[targetVC setCoverage:[(CoverageViewCell*)sender coverage]] ;
+        CreateProposalViewController *targetVC = (CreateProposalViewController*)segue.destinationViewController;
+        [targetVC setFastQuoteModel:[self fastQuoteModel]] ;
     }
 }
 //

@@ -1,0 +1,26 @@
+<Billing xmlns="http://www.csc.com/graphtalk/aia/" xmlns:gtx="graphtalk.aia.extension">
+    <BillReceiver>owner</BillReceiver>
+    <Frequency>monthly</Frequency>
+    <FrequencyType>anniversary</FrequencyType>
+    <PaymentType>direct_credit</PaymentType>
+    <DueDateType>in_advance</DueDateType>
+    <Payer>
+        <Person>
+            <ClientNumber2>99999</ClientNumber2>
+            <FirstName>Test_HE_MEDI01_insured_NND_1</FirstName>
+            <LastName>HE_MEDI01</LastName>
+            <BirthDate>1978-01-01</BirthDate>
+            <BankAccountList>
+                <BankAccount>
+                    <CountryCode>FR</CountryCode>
+                    <Preferred>true</Preferred>
+                    <BankCode>10057</BankCode>
+                    <BankName>SOCBOR</BankName>
+                    <BranchCode>19160</BranchCode>
+                    <AccountKey>85</AccountKey>
+                    <AccountNumber>11111111111</AccountNumber>
+                </BankAccount>
+            </BankAccountList>
+        </Person>
+    </Payer>
+</Billing>

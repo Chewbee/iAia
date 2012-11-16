@@ -32,9 +32,7 @@
 @property (nonatomic,strong) NSDictionary       *productOptions ;
 @property (nonatomic,strong) NSDictionary       *coverageDictionnary ;
 
-@property (nonatomic, weak) CSCContract         *contract;
-
-@property (nonatomic, weak) QuoteCell           *quoteCell ; 
+@property (nonatomic, weak) QuoteCell           *quoteCell ;
 
 @property (nonatomic, strong) CoverageHeaderViewController  *coverageHeaderView ;
 @property (nonatomic, weak) FakeHUD                         *theSubView ;

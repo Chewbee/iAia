@@ -23,6 +23,21 @@
 		DA0F75CF163AFB97001CB9E2 /* ServiceGetTariff.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75CE163AFB97001CB9E2 /* ServiceGetTariff.m */; };
 		DA0F75D6163AFD2C001CB9E2 /* CSCArrayOfDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D5163AFD2C001CB9E2 /* CSCArrayOfDate.m */; };
 		DA0F75DA163AFD5F001CB9E2 /* CSCArrayOfReal.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */; };
+		DA37D51E1656309800946346 /* HE_MEDI01-flow.docx in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5111656309800946346 /* HE_MEDI01-flow.docx */; };
+		DA37D51F1656309800946346 /* ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5121656309800946346 /* ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml */; };
+		DA37D5201656309800946346 /* ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5131656309800946346 /* ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml */; };
+		DA37D5211656309800946346 /* ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5141656309800946346 /* ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml */; };
+		DA37D5221656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5151656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit.xml */; };
+		DA37D5231656309800946346 /* ContractCreate.wsdl in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5161656309800946346 /* ContractCreate.wsdl */; };
+		DA37D5241656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5171656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml */; };
+		DA37D5251656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - Check.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5181656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - Check.xml */; };
+		DA37D5261656309800946346 /* ContractCreate OldPerson OldSpouse NewChild - Check.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D5191656309800946346 /* ContractCreate OldPerson OldSpouse NewChild - Check.xml */; };
+		DA37D5271656309800946346 /* ContractCreate OldPerson OldSpouse - DirectDebit.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D51A1656309800946346 /* ContractCreate OldPerson OldSpouse - DirectDebit.xml */; };
+		DA37D5281656309800946346 /* ContractCreate OldPerson NewSpouse - Check.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D51B1656309800946346 /* ContractCreate OldPerson NewSpouse - Check.xml */; };
+		DA37D5291656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D51C1656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml */; };
+		DA37D52A1656309800946346 /* ContractCreate OldPersonOldSpouse - Check.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D51D1656309800946346 /* ContractCreate OldPersonOldSpouse - Check.xml */; };
+		DA37D52F1656420300946346 /* Billing.xml in Resources */ = {isa = PBXBuildFile; fileRef = DA37D52E1656420300946346 /* Billing.xml */; };
+		DA37D530165689B400946346 /* KeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E63D7542165239EF0066A577 /* KeyChainManager.m */; };
 		DA52BD67164FB0040044D8FF /* buttonback.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD66164FB0040044D8FF /* buttonback.png */; };
 		DA52BD74164FBD060044D8FF /* get_quote_button.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6B164FBD060044D8FF /* get_quote_button.png */; };
 		DA52BD75164FBD060044D8FF /* icon-checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = DA52BD6C164FBD060044D8FF /* icon-checkmark.png */; };
@@ -437,6 +452,20 @@
 		DA0F75D5163AFD2C001CB9E2 /* CSCArrayOfDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfDate.m; sourceTree = "<group>"; };
 		DA0F75D8163AFD5F001CB9E2 /* CSCArrayOfReal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCArrayOfReal.h; sourceTree = "<group>"; };
 		DA0F75D9163AFD5F001CB9E2 /* CSCArrayOfReal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCArrayOfReal.m; sourceTree = "<group>"; };
+		DA37D5111656309800946346 /* HE_MEDI01-flow.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HE_MEDI01-flow.docx"; sourceTree = "<group>"; };
+		DA37D5121656309800946346 /* ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D5131656309800946346 /* ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D5141656309800946346 /* ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D5151656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate NewPerson NewSpouse - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D5161656309800946346 /* ContractCreate.wsdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ContractCreate.wsdl; sourceTree = "<group>"; };
+		DA37D5171656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D5181656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - Check.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse OldChild - Check.xml"; sourceTree = "<group>"; };
+		DA37D5191656309800946346 /* ContractCreate OldPerson OldSpouse NewChild - Check.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse NewChild - Check.xml"; sourceTree = "<group>"; };
+		DA37D51A1656309800946346 /* ContractCreate OldPerson OldSpouse - DirectDebit.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson OldSpouse - DirectDebit.xml"; sourceTree = "<group>"; };
+		DA37D51B1656309800946346 /* ContractCreate OldPerson NewSpouse - Check.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPerson NewSpouse - Check.xml"; sourceTree = "<group>"; };
+		DA37D51C1656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml"; sourceTree = "<group>"; };
+		DA37D51D1656309800946346 /* ContractCreate OldPersonOldSpouse - Check.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ContractCreate OldPersonOldSpouse - Check.xml"; sourceTree = "<group>"; };
+		DA37D52E1656420300946346 /* Billing.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Billing.xml; sourceTree = "<group>"; };
 		DA52BD66164FB0040044D8FF /* buttonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonback.png; sourceTree = "<group>"; };
 		DA52BD6B164FBD060044D8FF /* get_quote_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = get_quote_button.png; path = images/get_quote_button.png; sourceTree = "<group>"; };
 		DA52BD6C164FBD060044D8FF /* icon-checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-checkmark.png"; path = "images/icon-checkmark.png"; sourceTree = "<group>"; };
@@ -1286,6 +1315,27 @@
 			path = "Web Service CalculationOfPremium";
 			sourceTree = "<group>";
 		};
+		DA37D38816562FA900946346 /* ContractCreate */ = {
+			isa = PBXGroup;
+			children = (
+				DA37D5111656309800946346 /* HE_MEDI01-flow.docx */,
+				DA37D5121656309800946346 /* ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml */,
+				DA37D5131656309800946346 /* ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml */,
+				DA37D5141656309800946346 /* ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml */,
+				DA37D5151656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit.xml */,
+				DA37D5161656309800946346 /* ContractCreate.wsdl */,
+				DA37D5171656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml */,
+				DA37D5181656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - Check.xml */,
+				DA37D5191656309800946346 /* ContractCreate OldPerson OldSpouse NewChild - Check.xml */,
+				DA37D51A1656309800946346 /* ContractCreate OldPerson OldSpouse - DirectDebit.xml */,
+				DA37D51B1656309800946346 /* ContractCreate OldPerson NewSpouse - Check.xml */,
+				DA37D51C1656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml */,
+				DA37D51D1656309800946346 /* ContractCreate OldPersonOldSpouse - Check.xml */,
+				DA37D52E1656420300946346 /* Billing.xml */,
+			);
+			path = ContractCreate;
+			sourceTree = "<group>";
+		};
 		E6399C0E163EBAA400C8119A /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1380,6 +1430,7 @@
 		E69EE1531622D3A9005C82C6 /* WSDL */ = {
 			isa = PBXGroup;
 			children = (
+				DA37D38816562FA900946346 /* ContractCreate */,
 				E69EE16D1622DB96005C82C6 /* SearchContractRequest */,
 				E6F1D51F163EC6C000F7093F /* ContractGetSummary */,
 				DA0F75C8163AFAD4001CB9E2 /* Web Service CalculationOfPremium */,
@@ -2238,6 +2289,20 @@
 				DA52BD75164FBD060044D8FF /* icon-checkmark.png in Resources */,
 				DA52BD79164FBD060044D8FF /* lg-success-glass.png in Resources */,
 				DA0B65821654298B00631519 /* index.html in Resources */,
+				DA37D51E1656309800946346 /* HE_MEDI01-flow.docx in Resources */,
+				DA37D51F1656309800946346 /* ContractCreate OldPerson OldSpouse OldChild WithoutBankAddrss - DirectDebit.xml in Resources */,
+				DA37D5201656309800946346 /* ContractCreate OldPerson OldSpouse WithoutBankAddrss - DirectDebit.xml in Resources */,
+				DA37D5211656309800946346 /* ContractCreate NewPerson NewSpouse NewChild - DirectDebit.xml in Resources */,
+				DA37D5221656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit.xml in Resources */,
+				DA37D5231656309800946346 /* ContractCreate.wsdl in Resources */,
+				DA37D5241656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - DirectDebit.xml in Resources */,
+				DA37D5251656309800946346 /* ContractCreate OldPerson OldSpouse OldChild - Check.xml in Resources */,
+				DA37D5261656309800946346 /* ContractCreate OldPerson OldSpouse NewChild - Check.xml in Resources */,
+				DA37D5271656309800946346 /* ContractCreate OldPerson OldSpouse - DirectDebit.xml in Resources */,
+				DA37D5281656309800946346 /* ContractCreate OldPerson NewSpouse - Check.xml in Resources */,
+				DA37D5291656309800946346 /* ContractCreate NewPerson NewSpouse - DirectDebit - Response.xml in Resources */,
+				DA37D52A1656309800946346 /* ContractCreate OldPersonOldSpouse - Check.xml in Resources */,
+				DA37D52F1656420300946346 /* Billing.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2277,6 +2342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA37D530165689B400946346 /* KeyChainManager.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iAiaAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* iAiaViewController.m in Sources */,

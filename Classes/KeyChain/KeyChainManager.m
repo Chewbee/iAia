@@ -65,7 +65,7 @@ static KeyChainManager *sharedManager = nil;
 	
     NSData *encodedIdentifier = [identifier dataUsingEncoding:NSUTF8StringEncoding];
     [searchDictionary setObject:encodedIdentifier forKey:(__bridge id)kSecAttrGeneric];
-    [searchDictionary setObject:encodedIdentifier forKey:(id)kSecAttrAccount];
+    [searchDictionary setObject:encodedIdentifier forKey:(id)CFBridgingRelease(kSecAttrAccount)];
     [searchDictionary setObject:[[NSBundle mainBundle] bundleIdentifier] forKey:(__bridge id)kSecAttrService];
 	
     return searchDictionary; 
@@ -97,18 +97,18 @@ static KeyChainManager *sharedManager = nil;
 - (NSString *)searchKeychainCopyMatching:(NSString *)identifier {
     NSMutableDictionary *searchDictionary = [self newSearchDictionary:identifier];
 
-    [searchDictionary setObject:(id)kSecMatchLimitOne forKey:(__br__bridge SecMatchLimit];
+    [searchDictionary setObject:(id)CFBridgingRelease(kSecMatchLimitOne) forKey:(id)CFBridgingRelease(kSecMatchLimit)];
 	[searchDictionary setObject:(id)kCFBooleanTrue forKey:(__bridge id)kSecReturnData];
-	
-    NSData *result = nil;
-	SecItemCopyMatching((CFDictionaryRef)searchDictionary,
-                        (CFTypeRef *)&result);
-    [searchDictionary release];
-	
+
+    CFTypeRef result = nil ;
+    SecItemCopyMatching((__bridge CFDictionaryRef)searchDictionary, &result);
+
 	NSString *res = nil;
-	if (result) {
-        res = [[[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding] autorelease];
-        [result release];
+
+     if (result)
+     {
+         res = [[NSString alloc] initWithData:[NSData dataWithBytes:(result) length: sizeof(result)] encoding:NSUTF8StringEncoding];
+         result = nil ; 
     }	
     return res;
 }
@@ -116,10 +116,10 @@ static KeyChainManager *sharedManager = nil;
 - (BOOL)createKeychainCert:(SecCertificateRef)cert forIdentifier:(NSString *)identifier {
 	NSMutableDictionary *dictionary = [self newSearchDictionaryCert:identifier];
 	
-	[dictionary setObject:(id)cert forKey:(id)kSecValueRef];
+	[dictionary setObject:(id)CFBridgingRelease(cert) forKey:(id)CFBridgingRelease(kSecValueRef)];
 	
-	OSStatus status = SecItemAdd((CFDictionaryRef)dictionary, NULL);
-    [dictionary release];
+	OSStatus status = SecItemAdd((CFDictionaryRef)CFBridgingRetain(dictionary), NULL);
+    dictionary = nil ;
 	
     if (status == errSecSuccess) {
         return YES;
@@ -131,10 +131,10 @@ static KeyChainManager *sharedManager = nil;
     NSMutableDictionary *dictionary = [self newSearchDictionary:identifier];
 	
     NSData *valueData = [value dataUsingEncoding:NSUTF8StringEncoding];
-    [dictionary setObject:valueData forKey:(id)kSecValueData];
+    [dictionary setObject:valueData forKey:(id)CFBridgingRelease(kSecValueData)];
 	
-	OSStatus status = SecItemAdd((CFDictionaryRef)dictionary, NULL);
-    [dictionary release];
+	OSStatus status = SecItemAdd((CFDictionaryRef)CFBridgingRetain(dictionary), NULL);
+    dictionary = nil ;
 	
     if (status == errSecSuccess) {
         return YES;
@@ -146,12 +146,12 @@ static KeyChainManager *sharedManager = nil;
     NSMutableDictionary *searchDictionary = [self newSearchDictionary:identifier];
     NSMutableDictionary *updateDictionary = [[NSMutableDictionary alloc] init];
     NSData *valueData = [value dataUsingEncoding:NSUTF8StringEncoding];
-    [updateDictionary setObject:valueData forKey:(id)kSecValueData];
+    [updateDictionary setObject:valueData forKey:(id)CFBridgingRelease(kSecValueData)];
 	
-    OSStatus status = SecItemUpdate((CFDictionaryRef)searchDictionary, (CFDictionaryRef)updateDictionary);
+    OSStatus status = SecItemUpdate((CFDictionaryRef)CFBridgingRetain(searchDictionary), (CFDictionaryRef)CFBridgingRetain(updateDictionary));
 	
-    [searchDictionary release];
-    [updateDictionary release];
+    searchDictionary =nil ;
+    updateDictionary =nil;
 	
     if (status == errSecSuccess) {
         return YES;
@@ -161,8 +161,8 @@ static KeyChainManager *sharedManager = nil;
 
 - (void)deleteKeychainValue:(NSString *)identifier {
     NSMutableDictionary *searchDictionary = [self newSearchDictionary:identifier];
-    SecItemDelete((CFDictionaryRef)searchDictionary);
-    [searchDictionary release];
+    SecItemDelete((CFDictionaryRef)CFBridgingRetain(searchDictionary));
+    searchDictionary =nil ;
 }
 
 #pragma mark Public methods section
@@ -219,8 +219,9 @@ static KeyChainManager *sharedManager = nil;
 	if(0 < count) {
 		SecCertificateRef AnchorCert = SecTrustGetCertificateAtIndex(trustRef, count - 1);
 		CFStringRef certSummary = SecCertificateCopySubjectSummary(AnchorCert);
-		
-		[self createKeychainCert:AnchorCert forIdentifier:(NSString *)certSummary];
+        NSString *certString = (__bridge NSString *)certSummary;
+
+		[self createKeychainCert:AnchorCert forIdentifier:certString];
 	}
 }
 
@@ -231,7 +232,7 @@ static KeyChainManager *sharedManager = nil;
 		SecCertificateRef AnchorCert = SecTrustGetCertificateAtIndex(trustRef, count - 1);
 		CFStringRef certSummary = SecCertificateCopySubjectSummary(AnchorCert);
 		
-		result = [self searchKeychainCopyMatchingCert:(NSString *)certSummary];
+		result = [self searchKeychainCopyMatchingCert:(NSString *)CFBridgingRelease(certSummary)];
 	}
 	return result;
 }

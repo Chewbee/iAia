@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ContractCreateResponse xmlns="http://www.csc.com/graphtalk/aia/">
+            <Contract>
+                <BillingList>
+                    <Billing/>
+                </BillingList>
+                <Number>HINC0000454</Number>
+                <ProductLabel>Private Health Insurance</ProductLabel>
+                <Status>in_force</Status>
+            </Contract>
+            <ReturnStatus>
+                <Code>WM_SUCCESS</Code>
+                <ErrorList>
+                    <Error>
+                        <Code>prsn_nmbr</Code>
+                        <Level>audi</Level>
+                        <Message>Mr Test_he_medi01_insured_nnd_1 HE_MEDI01 No. is PRSN0002856.</Message>
+                        <Source>prsnorg:cp_prsn_org</Source>
+                    </Error>
+                    <Error>
+                        <Code>contract_nmbr</Code>
+                        <Level>audi</Level>
+                        <Message>Contract No. is HINC0000454</Message>
+                        <Source>header:cp_contract9qDH</Source>
+                    </Error>
+                </ErrorList>
+            </ReturnStatus>
+        </ContractCreateResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -177,4 +177,54 @@
     [[UIApplication sharedApplication ]setNetworkActivityIndicatorVisible:NO] ;
 }
 //
+-(void) setContractFromXMLFlow:(NSData*)XMLFlow
+{
+    CSCContract *contract = nil ;
+
+    NSError *err = nil ;
+    NSData *XMLData =nil;
+    XMLData = [self conformInputString: XMLFlow ];
+
+    CXMLDocument *doc = nil ;
+    doc = [[CXMLDocument alloc] initWithData:XMLData options:0 error:&err];
+    //
+    NSArray *nodes = nil ;
+    // namespace
+    NSDictionary *dict = @{ @"http://www.csc.com/graphtalk/aia" : @"aia"  };
+    //  searching for Contract nodes
+    nodes = [doc nodesForXPath:@"//*[local-name()='Contract']" namespaceMappings:dict error:&err];
+    // namespace
+    for (CXMLNode *node in nodes)
+    {
+        // creating contract objects from content
+        contract = [CSCContract createWithNode:node];
+    }
+    return ;
+}
+//
+-(NSData*) conformInputString:(NSData* )data
+{
+    NSString *responseString, *responseStringASCII, *responseStringUTF8 ;
+
+    if ([data isKindOfClass:[NSData class]])
+    {
+        responseStringASCII = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    }
+    else return nil ;
+
+    if (!responseStringASCII) // ASCII is not working, will try utf-8!
+        responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    else
+    {
+        //  ASCII is working, but check if UTF8 gives less characters
+        responseStringUTF8  = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if(responseStringUTF8 != nil && [responseStringUTF8 length] < [responseStringASCII length])
+            responseString  =   responseStringUTF8 ;
+        else
+            responseString  =   responseStringASCII ;
+    }
+    NSData *returnedData = [ responseString dataUsingEncoding:NSUTF8StringEncoding];
+    return returnedData ;
+}
+
 @end
