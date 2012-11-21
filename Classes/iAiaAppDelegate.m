@@ -22,7 +22,8 @@
     @"number_preference"    : @"PRSN0000430" ,
     @"login_preference"     : @"cscadmin" , // cscadmin
     @"password_preference"  : @"Physicpyrite" , // Physicpyrite
-    @"mocked"               : @"NO" } ;
+    @"mocked"               : @"NO",
+    @"logging"              : @"YES"} ;
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 

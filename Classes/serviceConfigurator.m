@@ -29,7 +29,7 @@
 
     [service setServiceUrl: theService] ;
     [service setNamespace:@"http://www.csc.com/graphtalk/aia/" ];
-    [service setLogging:NO];
+    [service setLogging:[defaults boolForKey:@"logging"]];
     // header for security
     NSMutableDictionary * headers = [[NSMutableDictionary alloc]init];
     NSString *literalString = [NSString

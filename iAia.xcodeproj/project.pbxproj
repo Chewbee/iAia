@@ -1249,7 +1249,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				E66D9506164A793E0033B54C /* Security.framework */,
 				1D3623240D0F684500981E51 /* iAiaAppDelegate.h */,
 				1D3623250D0F684500981E51 /* iAiaAppDelegate.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -1289,6 +1288,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E66D9506164A793E0033B54C /* Security.framework */,
 				DA0F0CAA1641A575001843F1 /* QuartzCore.framework */,
 				E6EA559716202D5B001FCF0D /* SystemConfiguration.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
