@@ -19,23 +19,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.1</string>
+	<string>1.0.18</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	<string>42</string>
-=======
-	<string>40</string>
->>>>>>> improving the turn into contract screen
-=======
-	<string>1</string>
->>>>>>> version
-=======
-	<string>2</string>
->>>>>>> turnintocontract outlet
+	<string>45</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

@@ -705,13 +705,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CoverageSelectorViewController.h"/>
             <relationships>
                 <relationship kind="action" name="refreshButtonPressed:"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                <relationship kind="action" name="turnIntoContract:"/>
->>>>>>> improving the turn into contract screen
-=======
->>>>>>> turnintocontract outlet
                 <relationship kind="outlet" name="turnIntoContractButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="webDetails" candidateClass="UIWebView"/>
             </relationships>
@@ -728,15 +721,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="createProposal:"/>
                 <relationship kind="outlet" name="cityTextField" candidateClass="UITextField"/>
-<<<<<<< HEAD
-                <relationship kind="outlet" name="createProposalButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
-=======
                 <relationship kind="outlet" name="coverageTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="createProposalButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="familyTextField" candidateClass="UITextField"/>
->>>>>>> improving the turn into contract screen
                 <relationship kind="outlet" name="firstName" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="state" candidateClass="UITextField"/>
