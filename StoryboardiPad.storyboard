@@ -706,9 +706,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <relationships>
                 <relationship kind="action" name="refreshButtonPressed:"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <relationship kind="action" name="turnIntoContract:"/>
 >>>>>>> improving the turn into contract screen
+=======
+>>>>>>> turnintocontract outlet
                 <relationship kind="outlet" name="turnIntoContractButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="webDetails" candidateClass="UIWebView"/>
             </relationships>

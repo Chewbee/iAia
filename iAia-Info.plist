@@ -25,6 +25,7 @@
 	<key>CFBundleVersion</key>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<string>42</string>
 =======
 	<string>40</string>
@@ -32,6 +33,9 @@
 =======
 	<string>1</string>
 >>>>>>> version
+=======
+	<string>2</string>
+>>>>>>> turnintocontract outlet
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
