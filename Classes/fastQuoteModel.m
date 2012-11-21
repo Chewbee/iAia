@@ -35,6 +35,15 @@
 {
     return ( [ [self statesCode ] objectAtIndex:[self state ]] ) ;
 }
+//
+- (NSString*) longFamilyString
+{
+    return ( [ [self familyStructureArray ] objectAtIndex:[self familyStructure ]]) ;
+}
+- (NSString*) longStateString
+{
+    return ( [ [self statesArray ] objectAtIndex:[self state ]] ) ;
+}
 -(CSCArrayOfDate*) birthDatesArray
 {
     CSCArrayOfDate *resultArray = [[CSCArrayOfDate alloc]init] ;

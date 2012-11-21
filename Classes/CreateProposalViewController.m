@@ -138,13 +138,26 @@
 		return;
     }
     [[self fastQuoteModel] setStatus:value ];
+    if ([[[self fastQuoteModel]status]Code ]== @"WM_SUCCESS")
+    {
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Your request will be processed shortly by the back Office" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+    } else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Failure" message:@"The request did not succeed please try again later" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alertView setDelegate:self ] ;
+        [alertView show] ;
+    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [[self state]setText:[[self fastQuoteModel]stateString]];
+    [[self state]setText:[[self fastQuoteModel]longStateString]];
+    [[self coverageTextField]setText:[[[self fastQuoteModel]coverage]DisplayId]];
+    [[self familyTextField]setText:[[self fastQuoteModel]longFamilyString]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -162,6 +175,8 @@
     [self setZipCode:nil];
     [self setState:nil];
     [self setCityTextField:nil];
+    [self setFamilyTextField:nil];
+    [self setCoverageTextField:nil];
     [super viewDidUnload];
 }
 - (IBAction)createProposal:(id)sender {

@@ -33,6 +33,8 @@
 - (void)invokeServiceProductExtract:(NSString*) productIdentifier;
 - (NSString*) familyString ;
 - (NSString*) stateString ;
+- (NSString*) longFamilyString;
+- (NSString*) longStateString;
 - (CSCArrayOfDate*) birthDatesArray ;
 -(BOOL) isElligibleForYoung ;
 -(NSTimeInterval) oldest ;

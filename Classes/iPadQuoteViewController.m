@@ -31,6 +31,7 @@
     [self setFastQuoteModel:[[FastQuoteModel alloc]init]];
     [self setFamilyStructure:[[self fastQuoteModel] familyStructureArray] ] ;
     [self setStates:[[self fastQuoteModel] statesArray ]];
+    [[[self fastQuoteModel] birthDates] setValue:[NSDate dateWithTimeInterval:(-16*365*24*3600) sinceDate:[NSDate date]] forKey:@"subscriber"];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
