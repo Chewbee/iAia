@@ -215,10 +215,11 @@
 -(NSMutableDictionary*) populateTarifDictionaryWithArray:(CSCArrayOfReal*) array
 {
     NSMutableDictionary *result = [[NSMutableDictionary alloc]init] ;
+    NSDecimalNumber *node = nil ;
 
     integer_t i=0;
     @try {
-        for (NSDecimalNumber *node in array)
+        for (node in array)
         {
             if (i <= [[self coveragesRef]count])
                 [result setValue:node forKey: [[self coveragesRef] objectAtIndex:i++]] ;

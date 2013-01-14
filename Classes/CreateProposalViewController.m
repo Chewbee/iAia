@@ -65,7 +65,7 @@
         // Distributor --------------------------------------------------------------------------------------------
         CSCPartyRole *roleDistributor = [[CSCPartyRole alloc]init];
         [roleDistributor setRoleType:@"disT"];
-        [roleDistributor setIdentifier:@"AP00000001"];
+        [roleDistributor setIdentifier:@"AP00000035"];
         [roleDistributor setMain:TRUE];
         //[roleDistributor setStartDate:[NSDate dateWithTimeIntervalSinceNow:-10000000 ]];
         // Role Owner ---------------------------------------------------------------------------------------------
@@ -111,7 +111,7 @@
         [service ContractCreate:self
                          action:@selector(ContractCreateHandler:)
                     Environment: env
-                ActivityRequest: [[CSCActivityRequest alloc]init]
+                ActivityRequest: activityRequest
                   SavingsScheme: [[CSCSavingsScheme alloc] init]
                        Contract: theContract];
     }

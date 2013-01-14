@@ -38,7 +38,7 @@
 			<key>Key</key>
 			<string>password_preference</string>
 			<key>DefaultValue</key>
-			<string></string>
+			<string>Longpassword</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
@@ -82,7 +82,7 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
-        <dict>
+		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
@@ -100,17 +100,17 @@
 			<key>Key</key>
 			<string>server</string>
 			<key>DefaultValue</key>
-			<string>https://ec2-54-252-116-97.ap-southeast-2.compute.amazonaws.com/graphtalk/soap/services</string>
+			<string>https://ec2-176-34-181-226.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 			<key>Values</key>
 			<array>
 				<string>https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
-				<string>http://20.250.185.11:26127</string>
+				<string>https://ec2-176-34-181-226.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 				<string>https://ec2-54-252-116-97.ap-southeast-2.compute.amazonaws.com/graphtalk/soap/services</string>
 			</array>
 			<key>Titles</key>
 			<array>
 				<string>AWS Californian Datacenter</string>
-				<string>CSC Australian Server</string>
+				<string>AWS Ireland Server</string>
 				<string>AWS Sidney Datacenter</string>
 			</array>
 		</dict>

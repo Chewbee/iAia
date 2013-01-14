@@ -18,10 +18,10 @@
 
     // Register the preference defaults early.
     NSDictionary *appDefaults = @{
-    @"server"               : @"https://ec2-54-252-116-97.ap-southeast-2.compute.amazonaws.com/graphtalk/soap/services" ,
+    @"server"               : @"https://ec2-176-34-181-226.eu-west-1.compute.amazonaws.com/graphtalk/soap/services" ,
     @"number_preference"    : @"PRSN0000430" ,
-    @"login_preference"     : @"cscadmin" , // cscadmin
-    @"password_preference"  : @"Physicpyrite" , // Physicpyrite
+    @"login_preference"     : @"cscusr1" ,         // cscadmin
+    @"password_preference"  : @"Longpassword" ,     // Physicpyrite
     @"mocked"               : @"NO",
     @"logging"              : @"YES"} ;
 
