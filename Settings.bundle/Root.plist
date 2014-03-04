@@ -56,7 +56,7 @@
 			<key>Key</key>
 			<string>number_preference</string>
 			<key>DefaultValue</key>
-			<string>PRSN0000430</string>
+			<string>PRSN0339660</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>KeyboardType</key>
@@ -80,7 +80,7 @@
 			<key>Key</key>
 			<string>mocked</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -100,11 +100,11 @@
 			<key>Key</key>
 			<string>server</string>
 			<key>DefaultValue</key>
-			<string>https://ec2-176-34-181-226.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
+			<string>https://ec2-54-220-59-199.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 			<key>Values</key>
 			<array>
 				<string>https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
-				<string>https://ec2-176-34-181-226.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
+				<string>https://ec2-54-220-59-199.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
 				<string>https://ec2-54-252-116-97.ap-southeast-2.compute.amazonaws.com/graphtalk/soap/services</string>
 			</array>
 			<key>Titles</key>
