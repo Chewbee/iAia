@@ -138,7 +138,7 @@
 		return;
     }
     [[self fastQuoteModel] setStatus:value ];
-    if ([[[self fastQuoteModel]status]Code ]== @"WM_SUCCESS")
+    if ([[[[self fastQuoteModel]status]Code ] isEqual: @"WM_SUCCESS"])
     {
         UIAlertView* alertView = [[UIAlertView alloc]initWithTitle:@"Success" message:@"Your request will be processed shortly by the back Office" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         [alertView setDelegate:self ] ;
