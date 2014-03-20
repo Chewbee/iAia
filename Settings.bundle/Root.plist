@@ -100,12 +100,12 @@
 			<key>Key</key>
 			<string>server</string>
 			<key>DefaultValue</key>
-			<string>https://ec2-54-220-59-199.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
+			<string>https://ec2-46-51-143-240.eu-west-1.compute.amazonaws.com/graphtalk/soap</string>
 			<key>Values</key>
 			<array>
-				<string>https://ec2-54-241-1-254.us-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
-				<string>https://ec2-54-220-59-199.eu-west-1.compute.amazonaws.com/graphtalk/soap/services</string>
-				<string>https://ec2-54-252-116-97.ap-southeast-2.compute.amazonaws.com/graphtalk/soap/services</string>
+				<string></string>
+				<string>https://ec2-46-51-143-240.eu-west-1.compute.amazonaws.com/graphtalk/soap</string>
+				<string></string>
 			</array>
 			<key>Titles</key>
 			<array>

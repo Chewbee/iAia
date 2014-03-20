@@ -73,7 +73,7 @@
 			break;
 		case 1:
         {
-            NSString *contractHeader = [ NSString stringWithFormat:@"List of the %d In-force contracts",[[self dataController] contractCount ]]  ;
+            NSString *contractHeader = [ NSString stringWithFormat:@"List of the %ld In-force contracts",(long)[[self dataController] contractCount ]]  ;
             [headerText setString:contractHeader ] ;
         }
 			break;
@@ -110,7 +110,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	int section = indexPath.section ;
+	int section = (int) indexPath.section ;
 	switch (section) {
 		case 0:
 			return PERSON_HEIGHT;
@@ -139,7 +139,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	UITableViewCell *cell = nil ;
-	int section = indexPath.section ;
+	int section = (int)indexPath.section ;
 	NSArray *indexPaths = nil ;
 	
 	switch (section) {

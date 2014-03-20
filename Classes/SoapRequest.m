@@ -75,6 +75,12 @@
 		[request setHTTPMethod: @"POST"];
 		[request addValue: @"text/xml; charset=utf-8" forHTTPHeaderField: @"Content-Type"];
 		[request setHTTPBody: [postData dataUsingEncoding: NSUTF8StringEncoding]];
+        //
+        NSString *guid = @"7c1146f9-7ee6-4551-bcbe-10f09c3e59d5" ;
+        NSString *secretKey = @"KWVJwI/sIgx2uuSWt6kNk0dKPOu8A5J64EixWuCV2kf58jYxHsGmf89RRWd+6LomxAEBL/v9Z3E/Usepe1Ahfw==" ;
+        [request signWithAIAHmac:guid secretKey:secretKey body:postData];
+        
+
 		if(self.logging) {
 			NSLog(@"Postdata: %@", postData);
 		}
@@ -238,10 +244,6 @@
                 [av show];
                 [[challenge sender] cancelAuthenticationChallenge:challenge];
                 //NSLog(@"Invalid");
-                break;
-            case kSecTrustResultConfirm:
-                [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];
-                //NSLog(@"Confirm");
                 break;
             case kSecTrustResultProceed:
                 [[challenge sender] continueWithoutCredentialForAuthenticationChallenge:challenge];

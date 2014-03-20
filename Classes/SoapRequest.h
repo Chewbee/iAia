@@ -7,6 +7,8 @@
 #import "SoapHandler.h"
 #import "SoapService.h"
 #import "SoapRequestProtocol.h"
+#import "NSMutableURLRequest+AIAHmac.h"
+
 
 @interface SoapRequest : NSObject {
 	NSURL* url;
